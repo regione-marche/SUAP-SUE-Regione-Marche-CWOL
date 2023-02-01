@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="proAnatsp" el_tipo="1" el_colonne="1" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[#proAnatsp]]></action>
+               <class><![CDATA[ita-app ita-dialog ita-layout-diag {title:"Gestione Tipologia Spedizione",width:900,height:400,modal:false,position:'center'}]]></class>
+          </properties>
+          <engineElement el_nome="workSpace" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[width:700;height:350;]]></style>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+               </properties>
+               <engineElement el_nome="divRicerca" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <label class="sx ui-widget input"><![CDATA[Ricerca]]></label>
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="Tspcod" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:100px"><![CDATA[Codice]]></label>
+                         <properties>
+                              <maxlength><![CDATA[4]]></maxlength>
+                              <size><![CDATA[4]]></size>
+                              <class><![CDATA[ita-edit-onblur]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="Tspdes" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:100px"><![CDATA[Descrizione]]></label>
+                         <properties>
+                              <maxlength><![CDATA[36]]></maxlength>
+                              <size><![CDATA[45]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_nome="divRisultato" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[height:100%;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="gridAnatsp" el_tipo="91" el_colonne="2" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-jqGrid" tipo_tag="table">
+                         <properties>
+                              <class><![CDATA[ita-jqGrid {caption: "Ricerca Tipologia spedizione",sortname:'TSPDES',rowNum:15,rowList:[],width:680,height:250,navGrid:true,navButtonDel:false,navButtonAdd:false, navButtonEdit:true,navButtonExcel:true,navButtonPrint:true,navButtonRefresh:true,shrinkToFit:true,resizeToParent:true}]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-jqGrid]]></class>
+                         </tipoProperties>
+                         <engineElement el_nome="Tspcod" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Codice]]></label>
+                         </engineElement>
+                         <engineElement el_nome="Tspdes" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Descrizione]]></label>
+                         </engineElement>
+                         <engineElement el_nome="TSPCOD" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[100]]></width>
+                                   <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                              </properties>
+                         </engineElement>
+                         <engineElement el_nome="TSPDES" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[500]]></width>
+                                   <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                              </properties>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_nome="divGestione" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="ANATSP[TSPCOD]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:100px"><![CDATA[Codice]]></label>
+                         <properties>
+                              <maxlength><![CDATA[4]]></maxlength>
+                              <size><![CDATA[4]]></size>
+                              <class><![CDATA[ita-edit-onblur required]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANATSP[TSPDES]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:100px"><![CDATA[Descrizione]]></label>
+                         <properties>
+                              <maxlength><![CDATA[36]]></maxlength>
+                              <size><![CDATA[45]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANATSP[TSPTIPO]" el_tipo="80" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-select" tipo_tag="select">
+                         <label class="sx input" style="width:100px"><![CDATA[Tipologia]]></label>
+                         <tipoProperties>
+                              <class><![CDATA[ita-select ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANATSP[TSPGRACC]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                         <label class="sx input" style="width:100px"><![CDATA[Attiva Gestione Raccomandata]]></label>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-checkbox]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="" el_tipo="72" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="br">
+                    </engineElement>
+                    <engineElement el_nome="" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                         <properties>
+                              <title><![CDATA[Fino a Grammi]]></title>
+                              <style><![CDATA[width:100px;float:left;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                              <style><![CDATA[font-size:0.8em;]]></style>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-header" tipo_tag="div">
+                         <properties>
+                              <title><![CDATA[Importo Tassa]]></title>
+                              <style><![CDATA[width:100px;margin-left:10px;float:left;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                              <style><![CDATA[font-size:0.8em;]]></style>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="" el_tipo="72" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="br">
+                    </engineElement>
+                    <engineElement el_nome="ANATSP[TSPPES__1]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <properties>
+                              <maxlength><![CDATA[5]]></maxlength>
+                              <size><![CDATA[6]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANATSP[TSPTAR__1]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:50px"><![CDATA[&nbsp;]]></label>
+                         <properties>
+                              <maxlength><![CDATA[5]]></maxlength>
+                              <size><![CDATA[6]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANATSP[TSPPES__2]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <properties>
+                              <maxlength><![CDATA[5]]></maxlength>
+                              <size><![CDATA[6]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANATSP[TSPTAR__2]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:50px"><![CDATA[&nbsp;]]></label>
+                         <properties>
+                              <maxlength><![CDATA[5]]></maxlength>
+                              <size><![CDATA[6]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANATSP[TSPPES__3]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <properties>
+                              <maxlength><![CDATA[5]]></maxlength>
+                              <size><![CDATA[6]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANATSP[TSPTAR__3]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:50px"><![CDATA[&nbsp;]]></label>
+                         <properties>
+                              <maxlength><![CDATA[5]]></maxlength>
+                              <size><![CDATA[6]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANATSP[TSPPES__4]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <properties>
+                              <maxlength><![CDATA[5]]></maxlength>
+                              <size><![CDATA[6]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANATSP[TSPTAR__4]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:50px"><![CDATA[&nbsp;]]></label>
+                         <properties>
+                              <maxlength><![CDATA[5]]></maxlength>
+                              <size><![CDATA[6]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANATSP[TSPPES__5]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <properties>
+                              <maxlength><![CDATA[5]]></maxlength>
+                              <size><![CDATA[6]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANATSP[TSPTAR__5]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:50px"><![CDATA[&nbsp;]]></label>
+                         <properties>
+                              <maxlength><![CDATA[5]]></maxlength>
+                              <size><![CDATA[6]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANATSP[TSPPES__6]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <properties>
+                              <maxlength><![CDATA[5]]></maxlength>
+                              <size><![CDATA[6]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANATSP[TSPTAR__6]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:50px"><![CDATA[&nbsp;]]></label>
+                         <properties>
+                              <maxlength><![CDATA[5]]></maxlength>
+                              <size><![CDATA[6]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANATSP[TSPPES__7]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <properties>
+                              <maxlength><![CDATA[5]]></maxlength>
+                              <size><![CDATA[6]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANATSP[TSPTAR__7]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:50px"><![CDATA[&nbsp;]]></label>
+                         <properties>
+                              <maxlength><![CDATA[5]]></maxlength>
+                              <size><![CDATA[6]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANATSP[TSPPES__8]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <properties>
+                              <maxlength><![CDATA[5]]></maxlength>
+                              <size><![CDATA[6]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANATSP[TSPTAR__8]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:50px"><![CDATA[&nbsp;]]></label>
+                         <properties>
+                              <maxlength><![CDATA[5]]></maxlength>
+                              <size><![CDATA[6]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANATSP[TSPPES__9]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <properties>
+                              <maxlength><![CDATA[5]]></maxlength>
+                              <size><![CDATA[6]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANATSP[TSPTAR__9]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:50px"><![CDATA[&nbsp;]]></label>
+                         <properties>
+                              <maxlength><![CDATA[5]]></maxlength>
+                              <size><![CDATA[6]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANATSP[TSPPES__10]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <properties>
+                              <maxlength><![CDATA[5]]></maxlength>
+                              <size><![CDATA[6]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANATSP[TSPTAR__10]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:50px"><![CDATA[&nbsp;]]></label>
+                         <properties>
+                              <maxlength><![CDATA[5]]></maxlength>
+                              <size><![CDATA[6]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANATSP[TSPPES__11]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <properties>
+                              <maxlength><![CDATA[5]]></maxlength>
+                              <size><![CDATA[6]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANATSP[TSPTAR__11]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:50px"><![CDATA[&nbsp;]]></label>
+                         <properties>
+                              <maxlength><![CDATA[5]]></maxlength>
+                              <size><![CDATA[6]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+          <engineElement el_nome="buttonBar" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[width:160px;]]></style>
+                    <class><![CDATA[ita-layout-east ita-buttonbar ita-buttonbar-medium]]></class>
+               </properties>
+               <engineElement el_nome="Nuovo" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <Value><![CDATA[F2-Nuovo]]></Value>
+                         <class><![CDATA[ita-button-new {iconLeft:'ui-icon ui-icon-document',shortCut:'f2'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="Aggiungi" el_tipo="66" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button-validate" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F5-Aggiungi]]></value>
+                         <class><![CDATA[ita-button-commit {iconLeft:'ui-icon ui-icon-disk',shortCut:'f5'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button-validate ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="Aggiorna" el_tipo="66" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button-validate" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F6-Aggiorna]]></value>
+                         <class><![CDATA[ita-button-commit {iconLeft:'ui-icon ui-icon-disk',shortCut:'f6'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button-validate ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="Cancella" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F7-Cancella]]></value>
+                         <class><![CDATA[ita-button-delete {iconLeft:'ui-icon ui-icon-trash',shortCut:'f7'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="Elenca" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F4-Elenca]]></value>
+                         <class><![CDATA[{iconLeft:'ui-icon ui-icon-search',shortCut:'f4'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="AltraRicerca" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F3-Altra Ricerca]]></value>
+                         <class><![CDATA[{iconLeft:'ui-icon ui-icon-arrowreturnthick-1-w',shortCut:'f3'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="TornaElenco" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F4-Torna Elenco]]></value>
+                         <class><![CDATA[{iconLeft:'ui-icon ui-icon-arrowreturnthick-1-w',shortCut:'f4'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+          </engineElement>
+          <engineElement el_nome="divAppoggio" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-hidden]]></class>
+               </properties>
+               <engineElement el_nome="ANATSP[ROWID]" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="invisible" tipo_tag="text">
+                    <tipoProperties>
+                         <style><![CDATA[visibility: hidden;]]></style>
+                    </tipoProperties>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[12/12/2018]]></date>
+          <time><![CDATA[12:17:56]]></time>
+          <user><![CDATA[s.bianchini]]></user>
+          <modelSHA><![CDATA[24dcf2b21566cbb1c61cfa03541fb720e3702587]]></modelSHA>
+     </info></itaEngine>

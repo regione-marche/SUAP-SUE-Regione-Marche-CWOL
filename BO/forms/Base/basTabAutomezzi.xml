@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="basTabAutomezzi" el_tipo="1" el_colonne="1" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[basTabAutomezzi]]></action>
+               <class><![CDATA[ita-dialog ita-app ita-layout-diag {title:"Anagrafica Automezzi",width:700,height:500,modal:false,position:'center'}]]></class>
+          </properties>
+          <engineElement el_nome="workSpace" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[width:600px;height:400px;]]></style>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+               </properties>
+               <engineElement el_nome="divRicerca" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <label class="sx ui-widget input"><![CDATA[Ricerca]]></label>
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="Codice" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:100px"><![CDATA[Codice]]></label>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="Descrizione" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:100px"><![CDATA[Descrizione]]></label>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="Targa" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:100px"><![CDATA[Targa]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_nome="divRisultato" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[height:100%;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="gridAutomezzi" el_tipo="91" el_colonne="5" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-jqGrid" tipo_tag="table">
+                         <properties>
+                              <class><![CDATA[ita-jqGrid {readerId:'ID',cellEdit:true,caption: "Automezzi",shrinkToFit:true,width:500,rowNum:100000,rowList:[],navGrid:true,navButtonDel:true,navButtonAdd:true, navButtonEdit:true,navButtonExcel:true, navButtonPrint:true, navButtonRefresh:true,resizeToParent:true,pgbuttons:false,pginput:false,filterToolbar:true}]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-jqGrid]]></class>
+                         </tipoProperties>
+                         <engineElement el_nome="Auto" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Cod.]]></label>
+                         </engineElement>
+                         <engineElement el_nome="DescAuto" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Descrizione]]></label>
+                         </engineElement>
+                         <engineElement el_nome="Targa" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Targa]]></label>
+                         </engineElement>
+                         <engineElement el_nome="KmPart" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Km.Part.]]></label>
+                         </engineElement>
+                         <engineElement el_nome="Comitato" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Comando]]></label>
+                         </engineElement>
+                         <engineElement el_nome="AUTO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                         </engineElement>
+                         <engineElement el_nome="DESCAUTO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                         </engineElement>
+                         <engineElement el_nome="TARGA" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                         </engineElement>
+                         <engineElement el_nome="KMPART" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                         </engineElement>
+                         <engineElement el_nome="COMITATO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_nome="divGestione" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <properties>
+                         <class><![CDATA[ita-edit-page]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="ANA_AUTOMEZZI[AUTO]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:100px"><![CDATA[Codice]]></label>
+                         <properties>
+                              <class><![CDATA[required]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANA_AUTOMEZZI[DESCAUTO]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:100px"><![CDATA[Descrizione]]></label>
+                         <properties>
+                              <class><![CDATA[required]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANA_AUTOMEZZI[TARGA]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:100px"><![CDATA[Targa]]></label>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANA_AUTOMEZZI[VTELAIO]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:100px"><![CDATA[Telaio]]></label>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANA_AUTOMEZZI[VCILINDRATA]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:100px"><![CDATA[Cilindrata]]></label>
+                         <properties>
+                              <size><![CDATA[5]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANA_AUTOMEZZI[VPOSTI]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:100px"><![CDATA[Posti]]></label>
+                         <properties>
+                              <size><![CDATA[5]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANA_AUTOMEZZI[VDISELECO]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:150px"><![CDATA[Disel ECO (S/N)]]></label>
+                         <properties>
+                              <size><![CDATA[1]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANA_AUTOMEZZI[VCATALITICA]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:100px"><![CDATA[Catalitica (S/N)]]></label>
+                         <properties>
+                              <size><![CDATA[5]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANA_AUTOMEZZI[VPORTATA]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:100px"><![CDATA[Portata]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANA_AUTOMEZZI[VDATAIMM]" el_tipo="61" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-datepicker" tipo_tag="text">
+                         <label class="sx input" style="width:100px"><![CDATA[Data Immatric.]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-datepicker ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANA_AUTOMEZZI[VKW]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:100px"><![CDATA[Kw]]></label>
+                         <properties>
+                              <size><![CDATA[5]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANA_AUTOMEZZI[VTARA]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:100px"><![CDATA[Tara]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANA_AUTOMEZZI[VHP]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:100px"><![CDATA[Hp]]></label>
+                         <properties>
+                              <size><![CDATA[5]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANA_AUTOMEZZI[VASSI]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:100px"><![CDATA[Assi]]></label>
+                         <properties>
+                              <size><![CDATA[3]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANA_AUTOMEZZI[CODICEPRESTAZIONE]" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="invisible" tipo_tag="text">
+                         <label class="sx input" style="width:100px"><![CDATA[Cod.Prestazione]]></label>
+                         <properties>
+                              <size><![CDATA[2]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <style><![CDATA[visibility: hidden;]]></style>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANA_AUTOMEZZI[TIPMEZZO]" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="invisible" tipo_tag="text">
+                         <label class="sx input" style="width:100px"><![CDATA[Tipologia Trasporto]]></label>
+                         <properties>
+                              <size><![CDATA[2]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <style><![CDATA[visibility: hidden;]]></style>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ANA_AUTOMEZZI[NOTE]" el_tipo="84" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit-multiline" tipo_tag="textarea">
+                         <label class="sx input" style="width:100px"><![CDATA[Note]]></label>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-edit-multiline]]></class>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+          <engineElement el_nome="buttonBar" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[width:170px;]]></style>
+                    <class><![CDATA[ita-layout-east ita-buttonbar ita-buttonbar-small]]></class>
+               </properties>
+               <engineElement el_nome="Nuovo" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <Value><![CDATA[F2-Nuovo]]></Value>
+                         <class><![CDATA[ita-button-new {iconLeft:'ui-icon ui-icon-document',shortCut:'f2'}]]></class>
+                         <style><![CDATA[width:140px;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="Aggiungi" el_tipo="66" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button-validate" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F5-Aggiungi]]></value>
+                         <class><![CDATA[ita-button-commit {iconLeft:'ui-icon ui-icon-disk',shortCut:'f5'}]]></class>
+                         <style><![CDATA[width:140px;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button-validate ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="Aggiorna" el_tipo="66" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button-validate" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F6-Aggiorna]]></value>
+                         <class><![CDATA[ita-button-commit {iconLeft:'ui-icon ui-icon-disk',shortCut:'f6'}]]></class>
+                         <style><![CDATA[width:140px;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button-validate ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="Cancella" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F7-Cancella]]></value>
+                         <class><![CDATA[ita-button-delete {iconLeft:'ui-icon ui-icon-trash',shortCut:'f7'}]]></class>
+                         <style><![CDATA[width:140px;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="Elenca" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F4-Elenca]]></value>
+                         <class><![CDATA[{iconLeft:'ui-icon ui-icon-search',shortCut:'f4'}]]></class>
+                         <style><![CDATA[width:140px;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="AltraRicerca" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F3-Altra Ricerca]]></value>
+                         <class><![CDATA[{iconLeft:'ui-icon ui-icon-arrowreturnthick-1-w',shortCut:'f3'}]]></class>
+                         <style><![CDATA[width:140px;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+          </engineElement>
+          <engineElement el_nome="divAppoggio" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-hidden]]></class>
+               </properties>
+               <engineElement el_nome="ANA_AUTOMEZZI[ID]" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="invisible" tipo_tag="text">
+                    <tipoProperties>
+                         <style><![CDATA[visibility: hidden;]]></style>
+                    </tipoProperties>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[23/11/2017]]></date>
+          <time><![CDATA[13:28:04]]></time>
+          <user><![CDATA[tania]]></user>
+          <modelSHA><![CDATA[2dc4b5f77374b2c1a7e95555db165394fc890dec]]></modelSHA>
+     </info></itaEngine>

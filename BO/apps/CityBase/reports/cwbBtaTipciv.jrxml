@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cwbBtaRgruna" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ad6788f5-7388-4dc5-b686-838d690a0f38">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.jasperserver.reportUnit" value="/italsoft/reports/apps/CityBase/cwbBtaTipciv"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver/services/repository"/>
+	<parameter name="Sql" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[$P!{Sql} ORDER BY TIPONCIV]]>
+	</queryString>
+	<field name="DESTIPCIV" class="java.lang.String"/>
+	<field name="F_PASSO" class="java.lang.String"/>
+	<field name="F_ABITAZ" class="java.lang.String"/>
+	<field name="TIPONCIV" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="67" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="a1c79104-4e3a-4705-9c00-9a2a0f2d9bb4" x="1" y="22" width="554" height="38"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo Civico]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="3a9f9304-671a-4dd3-8da6-3c188654f533" x="1" y="0" width="69" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH.mm.ss">
+				<reportElement uuid="ebf08f44-3368-407f-b48c-62976057ebb8" x="70" y="0" width="69" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="d33416ac-8671-43b3-904b-2cde7f6c10c8" x="2" y="6" width="307" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descrizione tipo civico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9292d42b-9cb7-4fe6-9548-a345103c44b1" x="309" y="6" width="82" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Passo carrabile]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="81b8d322-20c8-45ae-bb89-5b8275519621" x="391" y="6" width="75" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Abitazione]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2ff9d09a-b66d-4042-a1e3-6bc0da1e9f9d" x="466" y="6" width="88" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="de655591-d4a7-4d87-ad5c-26208dcd028a" x="2" y="30" width="550" height="1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="3dc2880e-21cd-44d2-810c-6d2b89d578c7" x="2" y="5" width="307" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{DESTIPCIV}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="31361de5-feee-4db9-bbd5-97a06c05028b" x="466" y="5" width="88" height="20"/>
+				<textElement textAlignment="Center">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TIPONCIV}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="3939a0a6-ec2f-49fe-a47a-365baad00ee2" x="309" y="5" width="82" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[(($F{F_PASSO}.equals("1")) ? "Si" : "No")]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement uuid="1bc37cf3-807c-4be4-b75b-275d34cadb03" x="391" y="5" width="75" height="20"/>
+				<textElement textAlignment="Center">
+					<font isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(($F{F_ABITAZ}.equals("1")) ? "Si" : "No")]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement uuid="0336225c-9dbe-4a69-97fa-a7dcb345cc03" x="435" y="3" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" di"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="097af3c6-e002-4cc8-b2b7-20f6ec479e01" x="515" y="3" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

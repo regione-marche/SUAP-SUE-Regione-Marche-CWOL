@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="cwbDuplicaAutorizzazioni" el_tipo="1" el_colonne="0" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[#cwbDuplicaAutorizzazioni]]></action>
+               <class><![CDATA[ita-app ita-dialog ita-layout-diag {title:"Duplica", width:900, height:500, modal:true, position:'center', modelBackend:'cwbDuplicaAutorizzazioni'}]]></class>
+          </properties>
+          <engineElement el_nome="workspace" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+                    <title><![CDATA[Duplica autorizzazioni]]></title>
+               </properties>
+               <tipoProperties>
+                    <class><![CDATA[ita-data-page]]></class>
+               </tipoProperties>
+               <engineElement el_nome="divContainer" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[height:100%;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="divUtenteRuoloOrigine" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="generico" tipo_tag="div">
+                         <engineElement el_nome="divRicUtenteOrigine" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                              <properties>
+                                   <class><![CDATA[ita-hidden]]></class>
+                              </properties>
+                              <engineElement el_nome="CODUTE_ORIG" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                   <label class="sx input" style="width:130px"><![CDATA[Utente origine]]></label>
+                                   <properties>
+                                        <style><![CDATA[width: 100px]]></style>
+                                        <class><![CDATA[ita-edit-onchange]]></class>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="NOMEUTE_ORIG" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-readonly" tipo_tag="text">
+                                   <properties>
+                                        <style><![CDATA[width: 300px]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <readonly><![CDATA[readonly]]></readonly>
+                                        <class><![CDATA[ita-readonly ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                         <engineElement el_nome="divRicRuoloOrigine" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                              <properties>
+                                   <class><![CDATA[ita-hidden]]></class>
+                              </properties>
+                              <engineElement el_nome="KRUOLO_ORIG" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                   <label class="sx input" style="width:130px"><![CDATA[Ruolo origine]]></label>
+                                   <properties>
+                                        <style><![CDATA[width: 100px]]></style>
+                                        <class><![CDATA[{formatter: 'number', formatterOptions: { precision: 0,decimal: '', thousand: ''}} ita-edit-onchange]]></class>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="DES_RUOLO_ORIG" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-readonly" tipo_tag="text">
+                                   <properties>
+                                        <style><![CDATA[width: 300px]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <readonly><![CDATA[readonly]]></readonly>
+                                        <class><![CDATA[ita-readonly ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                    </engineElement>
+                    <engineElement el_nome="divUtenteRuoloDestinazione" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="generico" tipo_tag="div">
+                         <engineElement el_nome="divRicUtenteDestinazione" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                              <properties>
+                                   <class><![CDATA[ita-hidden]]></class>
+                              </properties>
+                              <engineElement el_nome="CODUTE_DEST" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                   <label class="sx input" style="width:130px"><![CDATA[Utente destinazione]]></label>
+                                   <properties>
+                                        <style><![CDATA[width: 100px]]></style>
+                                        <class><![CDATA[ita-edit-onchange]]></class>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="NOMEUTE_DEST" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-readonly" tipo_tag="text">
+                                   <properties>
+                                        <style><![CDATA[width: 300px]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <readonly><![CDATA[readonly]]></readonly>
+                                        <class><![CDATA[ita-readonly ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                         <engineElement el_nome="divRicRuoloDestinazione" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                              <properties>
+                                   <class><![CDATA[ita-hidden]]></class>
+                              </properties>
+                              <engineElement el_nome="KRUOLO_DEST" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                   <label class="sx input" style="width:130px"><![CDATA[Ruolo destinazione]]></label>
+                                   <properties>
+                                        <style><![CDATA[width: 100px]]></style>
+                                        <class><![CDATA[{formatter: 'number', formatterOptions: { precision: 0,decimal: '', thousand: ''}} ita-edit-onchange]]></class>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="DES_RUOLO_DEST" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-readonly" tipo_tag="text">
+                                   <properties>
+                                        <style><![CDATA[width: 300px]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <readonly><![CDATA[readonly]]></readonly>
+                                        <class><![CDATA[ita-readonly ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                    </engineElement>
+                    <engineElement el_nome="AREE" el_tipo="80" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-select" tipo_tag="select">
+                         <label class="sx input" style="width:130px"><![CDATA[Area da duplicare]]></label>
+                         <properties>
+                              <style><![CDATA[width:200px;]]></style>
+                              <class><![CDATA[ita-edit-onchange]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-select ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="br" el_tipo="72" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="br">
+                    </engineElement>
+                    <engineElement el_nome="spanModuliDaDuplicare" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-span" tipo_tag="span">
+                         <properties>
+                              <value><![CDATA[Moduli da duplicare]]></value>
+                              <style><![CDATA[width: 125px; text-align: right;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-span]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="divModuli" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-box" tipo_tag="div">
+                         <tipoProperties>
+                              <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="SOST_AUT_ES" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                         <label class="sx input" style="width:220px"><![CDATA[Sostituzione autorizzazioni esistenti]]></label>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-checkbox]]></class>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+          <engineElement el_nome="buttonBar" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[width:200px;]]></style>
+                    <class><![CDATA[ita-layout-east ita-buttonbar ita-buttonbar-medium-center ita-buttonbar-medium-center]]></class>
+               </properties>
+               <engineElement el_nome="btnDuplica" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                    <label class="sx input" style="width:120px"><![CDATA[Duplica]]></label>
+                    <properties>
+                         <Value><![CDATA[Duplica]]></Value>
+                         <class><![CDATA[{iconLeft:'ui-icon ui-icon-copy'}]]></class>
+                         <style><![CDATA[width:140px;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[21/08/2019]]></date>
+          <time><![CDATA[16:44:11]]></time>
+          <user><![CDATA[CED]]></user>
+          <modelSHA><![CDATA[cf0fdcb8d75bc6f9d0ce8db24169969de204b119]]></modelSHA>
+     </info></itaEngine>

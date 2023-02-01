@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="cwbDaemonDetail" el_tipo="1" el_colonne="0" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[#cwbDaemonDetail]]></action>
+               <class><![CDATA[ita-app ita-dialog ita-layout-diag {title:"Dettaglio del demone",width:900,height:500,modal:true,position:'center',modelBackend:'cwbDaemonDetail'}]]></class>
+          </properties>
+          <engineElement el_nome="workSpace" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+               </properties>
+               <tipoProperties>
+                    <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+               </tipoProperties>
+               <engineElement el_nome="name" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                    <tipoProperties>
+                         <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                         <style><![CDATA[font-size:0.8em;]]></style>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="dettagli" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[display: inline-block;]]></style>
+                    </properties>
+                    <engineElement el_nome="start_label" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-span" tipo_tag="span">
+                         <properties>
+                              <style><![CDATA[width: 200px]]></style>
+                              <value><![CDATA[Tipo di avvio:]]></value>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-span]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="start_value" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-span" tipo_tag="span">
+                         <properties>
+                              <style><![CDATA[font-weight: bold;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-span]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="status_label" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-span" tipo_tag="span">
+                         <properties>
+                              <style><![CDATA[width: 200px;]]></style>
+                              <value><![CDATA[Stato del demone:]]></value>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-span]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="status_value" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-span" tipo_tag="span">
+                         <properties>
+                              <style><![CDATA[width: 150px; font-weight: bold;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-span]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="status_icon" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="generico" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[width: 24px; height: 24px; display: inline-block; vertical-align: middle;]]></style>
+                         </properties>
+                    </engineElement>
+                    <engineElement el_nome="ping_label" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-span" tipo_tag="span">
+                         <properties>
+                              <style><![CDATA[width: 200px]]></style>
+                              <value><![CDATA[Ultima interazione demone:]]></value>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-span]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ping_value" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-span" tipo_tag="span">
+                         <properties>
+                              <style><![CDATA[font-weight: bold;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-span]]></class>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_nome="azioni" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="generico" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[display: inline-block; vertical-align: top; margin-top: 10px;]]></style>
+                    </properties>
+                    <engineElement el_nome="action_start" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                         <label class="sx input" style="width:120px"><![CDATA[Updater]]></label>
+                         <properties>
+                              <value><![CDATA[start]]></value>
+                              <class><![CDATA[ita-button-delete {iconLeft:'ui-icon ui-icon-play'}]]></class>
+                              <style><![CDATA[width:140px; height: 40px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="action_stop" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                         <label class="sx input" style="width:120px"><![CDATA[Updater]]></label>
+                         <properties>
+                              <value><![CDATA[stop]]></value>
+                              <class><![CDATA[ita-button-delete {iconLeft:'ui-icon ui-icon-stop'}]]></class>
+                              <style><![CDATA[width:140px; height: 40px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="action_resume" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                         <label class="sx input" style="width:120px"><![CDATA[Updater]]></label>
+                         <properties>
+                              <value><![CDATA[resume]]></value>
+                              <class><![CDATA[ita-button-delete {iconLeft:'ui-icon ui-icon-play'}]]></class>
+                              <style><![CDATA[width:140px; height: 40px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="action_pause" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                         <label class="sx input" style="width:120px"><![CDATA[Updater]]></label>
+                         <properties>
+                              <value><![CDATA[pause]]></value>
+                              <class><![CDATA[ita-button-delete {iconLeft:'ui-icon ui-icon-pause'}]]></class>
+                              <style><![CDATA[width:140px; height: 40px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_nome="daemonMessage" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                    <engineElement el_nome="msg_label" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-span" tipo_tag="span">
+                         <properties>
+                              <style><![CDATA[width: 200px;]]></style>
+                              <value><![CDATA[Ultimo messaggio dal demone:]]></value>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-span]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="msg_value" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-span" tipo_tag="span">
+                         <tipoProperties>
+                              <class><![CDATA[ita-span]]></class>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[25/07/2017]]></date>
+          <time><![CDATA[15:23:48]]></time>
+          <user><![CDATA[italsoft]]></user>
+          <modelSHA><![CDATA[3518e41dff19f06f6fbf98fc3620c42faaa1baeb]]></modelSHA>
+     </info></itaEngine>

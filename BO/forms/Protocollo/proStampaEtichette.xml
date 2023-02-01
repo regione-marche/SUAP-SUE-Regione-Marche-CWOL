@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_id="30449" el_nome="proStampaEtichette" el_tipo="1" el_colonne="0" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[#proStampaEtichette]]></action>
+               <class><![CDATA[ita-dialog ita-app ita-layout-diag {title:"Stampa Etichette",width:670,height:400,modal:false,position:'center'}]]></class>
+          </properties>
+          <engineElement el_id="30450" el_nome="workSpace" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+               </properties>
+               <engineElement el_id="30451" el_nome="divSelezione" el_tipo="74" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-div" tipo_tag="div">
+                    <properties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-div]]></class>
+                    </tipoProperties>
+                    <engineElement el_id="30452" el_nome="headerStampa" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                         <properties>
+                              <Title><![CDATA[Seleziona da che numero a che numero Protocollo vuoi Stampare le Etichette:]]></Title>
+                              <class><![CDATA[ui-widget-header ui-corner-all]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                              <style><![CDATA[font-size:0.8em;]]></style>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_id="30453" el_nome="br1" el_tipo="72" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="br">
+                    </engineElement>
+                    <engineElement el_id="30461" el_nome="Anno" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:150px"><![CDATA[Anno]]></label>
+                         <properties>
+                              <maxlength><![CDATA[4]]></maxlength>
+                              <size><![CDATA[6]]></size>
+                              <class><![CDATA[ required]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_id="30459" el_nome="DaProt" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                         <label class="sx input" style="width:150px"><![CDATA[Da Numero Protocollo]]></label>
+                         <properties>
+                              <maxlength><![CDATA[6]]></maxlength>
+                              <size><![CDATA[9]]></size>
+                              <class><![CDATA[ita-edit-onchange required]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_id="30460" el_nome="AProt" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                         <label class="sx input" style="width:150px"><![CDATA[A Numero Protocollo]]></label>
+                         <properties>
+                              <maxlength><![CDATA[6]]></maxlength>
+                              <size><![CDATA[9]]></size>
+                              <class><![CDATA[ita-edit-onchange required]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_id="125069" el_nome="tipo" el_tipo="80" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-select" tipo_tag="select">
+                         <label class="sx input" style="width:150px"><![CDATA[Tipo]]></label>
+                         <tipoProperties>
+                              <class><![CDATA[ita-select ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+          <engineElement el_id="30457" el_nome="buttonBar" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[width:160px;]]></style>
+                    <class><![CDATA[ita-layout-east ita-buttonbar]]></class>
+               </properties>
+               <engineElement el_id="30458" el_nome="Stampa" el_tipo="66" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button-validate" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F5-Stampa]]></value>
+                         <class><![CDATA[ita-button-commit {iconLeft:'ui-icon ui-icon-print',shortCut:'f5'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button-validate ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[11/12/2015]]></date>
+          <time><![CDATA[14:37:31]]></time>
+          <user><![CDATA[michele]]></user>
+          <modelSHA><![CDATA[d4be48a30f21f7248198c68279dcf783f1c5069a]]></modelSHA>
+     </info></itaEngine>

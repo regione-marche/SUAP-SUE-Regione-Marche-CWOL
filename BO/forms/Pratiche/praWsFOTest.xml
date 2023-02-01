@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="praWsFOTest" el_tipo="1" el_colonne="0" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[#praWsFOTest]]></action>
+               <class><![CDATA[ita-app ita-dialog ita-layout-diag {title:"Test pra WS FO"}]]></class>
+          </properties>
+          <engineElement el_nome="workSpace" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[width:800px;height:600px;]]></style>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+               </properties>
+               <engineElement el_nome="divGestione" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="CONFIG[wsEndpoint]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[ws-Endpoint]]></label>
+                         <properties>
+                              <Size><![CDATA[100]]></Size>
+                              <Maxchar><![CDATA[200]]></Maxchar>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="CONFIG[wsWsdl]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[ws-Wsdl]]></label>
+                         <properties>
+                              <Size><![CDATA[100]]></Size>
+                              <Maxchar><![CDATA[200]]></Maxchar>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="CONFIG[wsUser]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[ws-Utente]]></label>
+                         <properties>
+                              <Size><![CDATA[50]]></Size>
+                              <Maxchar><![CDATA[100]]></Maxchar>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="CONFIG[wsPassword]" el_tipo="69" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-password" tipo_tag="password">
+                         <label class="sx input" style="width:200px"><![CDATA[ws-Password]]></label>
+                         <properties>
+                              <Size><![CDATA[50]]></Size>
+                              <Maxchar><![CDATA[100]]></Maxchar>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-password ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="CONFIG[wsCodiceEnte]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Codice Ente]]></label>
+                         <properties>
+                              <Size><![CDATA[10]]></Size>
+                              <Maxchar><![CDATA[20]]></Maxchar>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="tabTest" el_tipo="75" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tab" tipo_tag="div">
+                         <tipoProperties>
+                              <class><![CDATA[ita-tab]]></class>
+                         </tipoProperties>
+                         <engineElement el_nome="paneLogin" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[GetItaEngineContextToken]]></Title>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="callLogin" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                   <properties>
+                                        <Value><![CDATA[Send]]></Value>
+                                        <class><![CDATA[{iconLeft:'ui-icon ui-icon-play'}]]></class>
+                                        <style><![CDATA[left:200px;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-button ita-element-animate]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                         <engineElement el_nome="paneGetAllegatoRichiesta" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[GetAllegatoRichiestaForRowid]]></Title>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="token1" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx ui-widget input" style="width:100px"><![CDATA[Token]]></label>
+                                   <properties>
+                                        <size><![CDATA[50]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="rowid" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx ui-widget input" style="width:100px"><![CDATA[Rowid]]></label>
+                                   <properties>
+                                        <cols><![CDATA[50]]></cols>
+                                        <rows><![CDATA[3]]></rows>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="callGetAllegatoRichiesta" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                   <properties>
+                                        <Value><![CDATA[Send]]></Value>
+                                        <class><![CDATA[{iconLeft:'ui-icon ui-icon-play'}]]></class>
+                                        <style><![CDATA[left:200px;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-button ita-element-animate]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="divBase64" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                         <engineElement el_nome="paneSyncFascicolo" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[SyncFascicolo]]></Title>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="token2" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx ui-widget input" style="width:100px"><![CDATA[Token]]></label>
+                                   <properties>
+                                        <size><![CDATA[50]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="gesnum" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx ui-widget input" style="width:100px"><![CDATA[Numero Fascicolo]]></label>
+                                   <properties>
+                                        <cols><![CDATA[50]]></cols>
+                                        <rows><![CDATA[3]]></rows>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="callSyncFascicolo" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                   <properties>
+                                        <Value><![CDATA[Send Fascicolo]]></Value>
+                                        <class><![CDATA[{iconLeft:'ui-icon ui-icon-play'}]]></class>
+                                        <style><![CDATA[left:200px;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-button ita-element-animate]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                         <engineElement el_nome="paneSyncPasso" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[SyncPasso]]></Title>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="tokenPasso" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx ui-widget input" style="width:100px"><![CDATA[Token]]></label>
+                                   <properties>
+                                        <size><![CDATA[50]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="propak" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx ui-widget input" style="width:100px"><![CDATA[PROPAK del passo]]></label>
+                                   <properties>
+                                        <cols><![CDATA[50]]></cols>
+                                        <rows><![CDATA[3]]></rows>
+                                        <size><![CDATA[40]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="callSyncPasso" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                   <properties>
+                                        <Value><![CDATA[Send Passo]]></Value>
+                                        <class><![CDATA[{iconLeft:'ui-icon ui-icon-play'}]]></class>
+                                        <style><![CDATA[left:200px;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-button ita-element-animate]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                         <engineElement el_nome="paneSyncAllegatiInfo" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[SyncAllegatiInfo]]></Title>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="tokenAllegatoInfo" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx ui-widget input" style="width:100px"><![CDATA[Token]]></label>
+                                   <properties>
+                                        <size><![CDATA[50]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="propakInfo" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx ui-widget input" style="width:100px"><![CDATA[PROPAK del passo]]></label>
+                                   <properties>
+                                        <cols><![CDATA[50]]></cols>
+                                        <rows><![CDATA[3]]></rows>
+                                        <size><![CDATA[40]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="callSyncAllegatiInfo" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                   <properties>
+                                        <Value><![CDATA[Send Allegati Info]]></Value>
+                                        <class><![CDATA[{iconLeft:'ui-icon ui-icon-play'}]]></class>
+                                        <style><![CDATA[left:200px;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-button ita-element-animate]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                         <engineElement el_nome="paneDeleteAllegatoPasso" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[DeleteAllegatoPasso]]></Title>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="tokenDeleteAllegato" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx ui-widget input" style="width:100px"><![CDATA[Token]]></label>
+                                   <properties>
+                                        <size><![CDATA[50]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="propakDelete" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx ui-widget input" style="width:100px"><![CDATA[PROPAK del passo]]></label>
+                                   <properties>
+                                        <cols><![CDATA[50]]></cols>
+                                        <rows><![CDATA[3]]></rows>
+                                        <size><![CDATA[40]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="improntaFileDelete" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx ui-widget input" style="width:100px"><![CDATA[Impronta del File]]></label>
+                                   <properties>
+                                        <cols><![CDATA[50]]></cols>
+                                        <rows><![CDATA[3]]></rows>
+                                        <size><![CDATA[50]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="callDeleteAllegatoPasso" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                   <properties>
+                                        <Value><![CDATA[Delete Allegato]]></Value>
+                                        <class><![CDATA[{iconLeft:'ui-icon ui-icon-play'}]]></class>
+                                        <style><![CDATA[left:200px;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-button ita-element-animate]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                         <engineElement el_nome="paneSyncAllegatiDelete" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[SyncAllegatiDelete]]></Title>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="tokenAllegatiDelete" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx ui-widget input" style="width:100px"><![CDATA[Token]]></label>
+                                   <properties>
+                                        <size><![CDATA[50]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="callSyncAllegatiDelete" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                   <properties>
+                                        <Value><![CDATA[Send Allegati Delete]]></Value>
+                                        <class><![CDATA[{iconLeft:'ui-icon ui-icon-play'}]]></class>
+                                        <style><![CDATA[left:200px;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-button ita-element-animate]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[28/10/2019]]></date>
+          <time><![CDATA[11:52:22]]></time>
+          <user><![CDATA[simone]]></user>
+          <modelSHA><![CDATA[ccd0d5ce741247d989a733a1c06173fd979354ba]]></modelSHA>
+     </info></itaEngine>

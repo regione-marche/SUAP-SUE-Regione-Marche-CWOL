@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="envMigrationConsole" el_tipo="1" el_colonne="0" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <class><![CDATA[ita-app  ita-dialog ita-layout-diag {title:"Console Migrations",width:940,height:550,modal:true,position:'center'}]]></class>
+               <action><![CDATA[#envMigrationConsole]]></action>
+          </properties>
+          <engineElement el_nome="workSpace" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[width:800px;height:600px;]]></style>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+               </properties>
+               <tipoProperties>
+                    <class><![CDATA[ita-data-page]]></class>
+               </tipoProperties>
+               <engineElement el_nome="migration_box" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                    <tipoProperties>
+                         <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="migrationFilterToapply" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                         <label class="sx input" style="width:200px"><![CDATA[Vedi solo quelle da applicare]]></label>
+                         <properties>
+                              <class><![CDATA[ita-edit-onchange]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-checkbox]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="migration_title" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                         <properties>
+                              <Title><![CDATA[Elenco migrations]]></Title>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                              <style><![CDATA[font-size:0.8em;]]></style>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="migration_grid" el_tipo="91" el_colonne="16" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-jqGrid" tipo_tag="table">
+                         <properties>
+                              <class><![CDATA[ita-jqGrid {caption:false,readerId:'ID',shrinkToFit:true,rowNum:50000,rowList:[],navButtonRefresh:true,resizeToParent:true}]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-jqGrid]]></class>
+                         </tipoProperties>
+                         <engineElement el_nome="thID" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[ID]]></label>
+                         </engineElement>
+                         <engineElement el_nome="thAUTHOR" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Autore]]></label>
+                         </engineElement>
+                         <engineElement el_nome="thDESCRIPTION" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Descrizione]]></label>
+                         </engineElement>
+                         <engineElement el_nome="thCONTEXT" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Ambito]]></label>
+                         </engineElement>
+                         <engineElement el_nome="thCTXMENU" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Azioni]]></label>
+                         </engineElement>
+                         <engineElement el_nome="ID" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[80]]></width>
+                              </properties>
+                         </engineElement>
+                         <engineElement el_nome="AUTHOR" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[70]]></width>
+                              </properties>
+                         </engineElement>
+                         <engineElement el_nome="DESCRIPTION" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                         </engineElement>
+                         <engineElement el_nome="CONTEXT" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[70]]></width>
+                              </properties>
+                         </engineElement>
+                         <engineElement el_nome="CTXMENU" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[20]]></width>
+                                   <style><![CDATA[cursor:pointer]]></style>
+                                   <class><![CDATA[ui-state-default ui-corner-all {itaSelectable:true, sortable: false, search: false}]]></class>
+                              </properties>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_nome="migration_info" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[margin-top: 20px;]]></style>
+                    </properties>
+                    <engineElement el_nome="migrationInfoHeader" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                         <properties>
+                              <title><![CDATA[Info operazioni]]></title>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                              <style><![CDATA[font-size:0.8em;]]></style>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="migrationInfoBox" el_tipo="86" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box-highlight" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[font-size: .9em; padding: .5em 1em; margin-bottom: 20px; max-height: 200px; overflow-y: scroll; line-height: 1.6em;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-box-highlight]]></class>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[31/08/2018]]></date>
+          <time><![CDATA[11:32:58]]></time>
+          <user><![CDATA[italsoft]]></user>
+          <modelSHA><![CDATA[6220564d305f34a29303e0bfefd176b89e0071c7]]></modelSHA>
+     </info></itaEngine>

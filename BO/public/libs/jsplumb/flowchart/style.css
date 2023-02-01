@@ -1,0 +1,173 @@
+.ita-flowchart .jtk-miniview {
+    box-sizing: border-box;
+    position: absolute;
+    opacity: 1;
+    background: #fff;
+    right: 0;
+    z-index: 1;
+}
+
+.jtk-endpoint { z-index: 10; }
+
+.endpoint-hover { cursor: pointer; }
+.endpoint-hover svg * { fill: red; }
+.jtk-endpoint-drop-allowed svg * { fill: lightgreen; }
+/*.jtk-hover * { stroke: red; }*/
+
+.ita-jtk-actionbar {
+    position: absolute;
+    z-index: 1;
+    background: #fff;
+    right: 0;
+    top: 135px;
+    width: 125px;
+    box-sizing: border-box;
+}
+
+.ita-jtk-anchor-container {
+    position: absolute;
+    box-sizing: border-box;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.ita-jtk-anchor.ita-jtk-selected { background-color: red; visibility: visible; }
+.flowchart-object.ita-jtk-selected svg * { fill: red; }
+
+.flowchart-edge-break { visibility: hidden; }
+.flowchart-edge-break.ita-jtk-selected { visibility: visible; }
+
+.jtk-connector.jtk-surface-selected-connection > path:not(.jtk-connector-outline) { stroke: red; fill: red; }
+[class="jtk-connector"] > path:not(.jtk-connector-outline)[stroke=""],
+[class="jtk-connector"] > path:not(.jtk-connector-outline)[stroke="none"] { stroke: #445566; fill: #445566; }
+
+.ita-flowchart .jtk-surface-selected-element { border: 0 !important; }
+.jtk-draw-handle { width: 10px; height: 10px; }
+.jtk-draw-handle-tl { border-radius: 0 0 10px 0; }
+.jtk-draw-handle-tr { border-radius: 0 0 0 10px; }
+.jtk-draw-handle-bl { border-radius: 0 10px 0 0; }
+.jtk-draw-handle-br { border-radius: 10px 0 0 0; }
+
+.ita-jtk-svg-container {
+    position: relative;
+    left: 5px; top: 5px;
+}
+
+.ita-jtk-anchor {
+    cursor: move;
+    z-index: 100;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+.flowchart-object .flowchart-text {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    vertical-align: middle;
+    position: absolute;
+    z-index: 1;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flowchart-object.flowchart-question .flowchart-text {
+    width: 45%;
+    height: 45%;
+    left: 27.5%;
+    top: 27.5%;
+}
+
+.jtk-overlay:empty { display: none !important; }
+
+.jtk-draw-skeleton { outline-color: red !important; }
+.jtk-draw-skeleton > .jtk-draw-handle { background-color: red; }
+.flowchart-object svg text { white-space: pre-line; }
+
+.jtk-miniview-collapse {
+    top: -3px;
+    right: 4px;
+}
+
+.jtk-endpoint-invisible {
+    visibility: hidden !important;
+    z-index: 1;
+}
+
+.jtk-overlay {
+    border: 1px solid #ccc;
+    padding: 4px 6px;
+    background: #fff;
+    white-space: nowrap;
+}
+
+.flowchart-object {
+    position: absolute;
+    text-align: center;
+    font-size: 12px;
+
+    z-index: 10;
+    background: none;
+    box-shadow: none;
+    /*border: 2px solid transparent;*/
+    padding: 0;
+    border-radius: 0;
+    min-width: 0;
+    min-height: 0;
+}
+
+.jtk-node svg {
+    position: absolute;
+    stroke: black;
+    stroke-width: 2;
+    fill: LightGreen;
+    left: 0;
+    top: 0;
+}
+
+.jtk-node.flowchart-edge-break svg {
+    stroke-width: 0;
+}
+
+.flowchart-object text {
+    stroke: none;
+    fill: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.flowchart-object .drag-start {
+    cursor: pointer;
+}
+
+.flowchart-object .outer {
+    fill: gray;
+    opacity: .6;
+    cursor: pointer;
+}
+
+.flowchart-object:hover .outer {
+    opacity: 1;
+}
+
+.flowchart-object .inner {
+    cursor: move !important;
+}
+
+.connection-drop svg {
+    fill: #ccc;
+}
+
+.connection-drop text {
+    fill: black;
+}

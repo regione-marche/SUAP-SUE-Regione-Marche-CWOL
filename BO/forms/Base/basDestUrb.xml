@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="basDestUrb" el_tipo="1" el_colonne="1" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[#basDestUso]]></action>
+               <class><![CDATA[ita-dialog ita-app ita-layout-diag {title:"Anagrafiche Destinazioni Urbanistica",width:940,height:600,modal:false,position:'center'}]]></class>
+          </properties>
+          <engineElement el_nome="workSpace" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[width:850px;height:350px;]]></style>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+               </properties>
+               <engineElement el_nome="divRicerca" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <label class="sx ui-widget input" style="width:200px"><![CDATA[Ricerca]]></label>
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="Ruocod" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Codice]]></label>
+                         <properties>
+                              <maxlength><![CDATA[4]]></maxlength>
+                              <size><![CDATA[6]]></size>
+                              <class><![CDATA[ita-edit-onblur]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="Ruodes" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Descrizione]]></label>
+                         <properties>
+                              <maxlength><![CDATA[60]]></maxlength>
+                              <size><![CDATA[45]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_nome="divRisultato" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[height:100%;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="gridDestinazione" el_tipo="91" el_colonne="5" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-jqGrid" tipo_tag="table">
+                         <properties>
+                              <class><![CDATA[ita-jqGrid {caption: "Ricerca Destinazione Urbanistica",sortname:'ID_DESTINAZIONE',rowNum:1000,rowList:[] ,width:400,height:200,navGrid:true,navButtonDel:true,navButtonAdd:false, navButtonEdit:true,navButtonExcel:true,navButtonPrint:true,navButtonRefresh:true,shrinkToFit:true,resizeToParent:true,pginput:false,pgbuttons:false,readerId:"ROW_ID"}]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-jqGrid]]></class>
+                         </tipoProperties>
+                         <engineElement el_nome="id_destinazione" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input" style="width:200px"><![CDATA[Codice]]></label>
+                         </engineElement>
+                         <engineElement el_nome="desc_destinazione" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input" style="width:200px"><![CDATA[Descrizione]]></label>
+                         </engineElement>
+                         <engineElement el_nome="ID_DESTINAZIONE" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[150]]></width>
+                                   <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                              </properties>
+                         </engineElement>
+                         <engineElement el_nome="DESC_DESTINAZIONE" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[350]]></width>
+                                   <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                              </properties>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_nome="divGestione" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[ID_DESTINAZIONE]" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-readonly" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Codice]]></label>
+                         <properties>
+                              <maxlength><![CDATA[4]]></maxlength>
+                              <size><![CDATA[6]]></size>
+                              <class><![CDATA[ita-edit-onblur required]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <readonly><![CDATA[readonly]]></readonly>
+                              <class><![CDATA[ita-readonly ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[ROW_ID]" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="invisible" tipo_tag="text">
+                         <properties>
+                              <size><![CDATA[6]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <style><![CDATA[visibility: hidden;]]></style>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[DESC_DESTINAZIONE]" el_tipo="84" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit-multiline" tipo_tag="textarea">
+                         <label class="sx input" style="width:200px"><![CDATA[Descrizione]]></label>
+                         <properties>
+                              <size><![CDATA[60]]></size>
+                              <class><![CDATA[required]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-edit-multiline]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="hd1" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                         <properties>
+                              <Title><![CDATA[Indici e Parametri]]></Title>
+                              <style><![CDATA[clear: both;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                              <style><![CDATA[font-size:0.8em;]]></style>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[INDICE_DENSITA_FONDIARIA]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Ind. densita fondiaria]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                              <class><![CDATA[{ formatter: 'number', formatterOptions: { suffix: '%', precision: 3 } }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[INDICE_UTILIZZAZIONE_SUPERFICIE]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Ind. utilizzazione superficie]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                              <class><![CDATA[{ formatter: 'number', formatterOptions: { suffix: '/mq', precision: 3 } }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[INDICE_COPERTURA]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Indice copertura]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                              <class><![CDATA[{ formatter: 'number', formatterOptions: { suffix: '%', precision: 3 } }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[INDICE_VOLUMETRIA_ACCESSORIA]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Indice volumetria accessoria]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                              <class><![CDATA[{ formatter: 'number', formatterOptions: { suffix: 'mc', precision: 2 } }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[ALTEZZA_MASSIMA_EDIFICIO]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Altezza MAX edificio]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                              <class><![CDATA[{ formatter: 'number', formatterOptions: { suffix: 'm', precision: 2 } }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[NUMERO_MASSIMO_PIANI]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Numero MAX piani]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                              <class><![CDATA[{ formatter: 'number', formatterOptions: { suffix: '', precision: 0 } }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[PERCENTUALE_A_VERDE]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Percentuale Verde]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                              <class><![CDATA[{ formatter: 'number', formatterOptions: { suffix: '%', precision: 3 } }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[DISTANZA_STRADALE_MINIMA]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Distanza stradale MIN]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                              <class><![CDATA[{ formatter: 'number', formatterOptions: { suffix: 'm', precision: 2} }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[SUPERFICIE_LOTTO_MINIMO]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Superficie lotto MIN]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                              <class><![CDATA[{ formatter: 'number', formatterOptions: { suffix: 'mq', precision: 2 } }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="CostuzioneaConfine" el_tipo="80" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-select" tipo_tag="select">
+                         <label class="sx input" style="width:200px"><![CDATA[Costruzione a Confine]]></label>
+                         <tipoProperties>
+                              <class><![CDATA[ita-select ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="hd1" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                         <properties>
+                              <Title><![CDATA[Distanze Minime tra Confini]]></Title>
+                              <style><![CDATA[clear: both;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                              <style><![CDATA[font-size:0.8em;]]></style>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[DISTANZA_MINIMA_CONFINI_NORD]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Nord]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                              <class><![CDATA[{ formatter: 'number', formatterOptions: { suffix: 'm', precision: 2 } }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[DISTANZA_MINIMA_CONFINI_EST]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Est]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                              <class><![CDATA[{ formatter: 'number', formatterOptions: { suffix: 'm', precision: 2 } }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[DISTANZA_MINIMA_CONFINI_SUD]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Sud]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                              <class><![CDATA[{ formatter: 'number', formatterOptions: { suffix: 'm', precision: 2 } }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[DISTANZA_MINIMA_CONFINI_OVEST]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Ovest]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                              <class><![CDATA[{ formatter: 'number', formatterOptions: { suffix: 'm', precision: 2 } }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="hd1" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-header" tipo_tag="div">
+                         <properties>
+                              <Title><![CDATA[Distanze Minime tra Edifici]]></Title>
+                              <style><![CDATA[clear: both;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                              <style><![CDATA[font-size:0.8em;]]></style>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[DISTANZA_MINIMA_EDIFICI_NORD]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Nord]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                              <class><![CDATA[{ formatter: 'number', formatterOptions: { suffix: 'm', precision: 2 } }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[DISTANZA_MINIMA_EDIFICI_EST]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Est]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                              <class><![CDATA[{ formatter: 'number', formatterOptions: { suffix: 'm', precision: 2 } }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[DISTANZA_MINIMA_EDIFICI_SUD]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Sud]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                              <class><![CDATA[{ formatter: 'number', formatterOptions: { suffix: 'm', precision: 2 } }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[DISTANZA_MINIMA_EDIFICI_OVEST]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Ovest]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                              <class><![CDATA[{ formatter: 'number', formatterOptions: { suffix: 'm', precision: 2 } }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="hd1" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                         <properties>
+                              <Title><![CDATA[Parcheggi]]></Title>
+                              <style><![CDATA[clear: both;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                              <style><![CDATA[font-size:0.8em;]]></style>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[NUMERO_POSTI_AUTO]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[N posti auto R.E]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                              <class><![CDATA[{ formatter: 'number', formatterOptions: { suffix: '', precision: 2 } }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[SUPERFICIE_PARCHEGGIO]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Sup parcheggio]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                              <class><![CDATA[{ formatter: 'number', formatterOptions: { suffix: '%', precision: 2 } }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[NUMERO_POSTI_AUTO_USO_PUBBLICO]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[N posti auto uso pubblico S.L.P.]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                              <class><![CDATA[{ formatter: 'number', formatterOptions: { suffix: '', precision: 2 } }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[PERC_PUBBLICO_AUTO_USO_PUBBLICO]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[percentuale uso pubblico]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                              <class><![CDATA[{ formatter: 'number', formatterOptions: { suffix: '%', precision: 3 } }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[PERC_PRIVATO_AUTO_USO_PUBBLICO]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[percentuale uso privato]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                              <class><![CDATA[{ formatter: 'number', formatterOptions: { suffix: '%', precision: 3 } }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[NUMERO_POSTI_AUTO_USO_INDUSTRIALE]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[N posti auto uso industriale S.L.P]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                              <class><![CDATA[{ formatter: 'number', formatterOptions: { suffix: '', precision: 2 } }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[PERC_PUBBLICO_AUTO_USO_INDUSTRIALE]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[percentuale uso pubblico]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                              <class><![CDATA[{ formatter: 'number', formatterOptions: { suffix: '%', precision: 3 } }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[PERC_PRIVATO_AUTO_USO_INDUSTRIALE]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[percentuale uso privato]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                              <class><![CDATA[{ formatter: 'number', formatterOptions: { suffix: '%', precision: 3 } }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="hd1" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                         <properties>
+                              <Title><![CDATA[Altro]]></Title>
+                              <style><![CDATA[clear: both;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                              <style><![CDATA[font-size:0.8em;]]></style>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[STATO]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Stato]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[ARTICOLO_NTA]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Articolo NTA]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[SUPERFICIE_LOTTO_MASSIMO]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Sup lotto MAX]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[PERC_RESIDENZIALE_MINIMO]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[% residenziale MIN]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[PERC_RESIDENZIALE_MASSIMO]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[% residenziale MAX]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[PERC_ACCESSORI_RESIDENZIALE]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[% accessori residenziale]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[PERC_NON_RESIDENZIALE]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[% Non Residenziale]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[PERC_PARCHEGGI_PRIVATI]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[% parcheggi privati]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[PERC_PARCHEGGI_PRIVATI_ALTRI_USI]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[% parcheggi privati altri usi]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[PERC_PARCHEGGI_PUBBLICI]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[% parcheggi pubblici]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[INDICE_PIANTUMAZIONE]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[indice piantumazione]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[DISTANZA_MINIMA_CONFINI]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Distanza MIN Confini]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[DISTANZA_MINIMA_EDIFICI]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Distanza MIN Edifici]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[DISTANZA_FERROVIARIA_MINIMA]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Distanza MIN Ferrovia]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[DISTANZA_ALTA_TENSIONE_MINIMA]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Distanza MIN Alta tensione]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PRG_DESTINAZIONI_URBANISTICHE[PERCENTUALE_SUPERFICIE_DRENANTE]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Percentuale Sup. Drenante]]></label>
+                         <properties>
+                              <size><![CDATA[10]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+          <engineElement el_nome="buttonBar" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[width:160px;]]></style>
+                    <class><![CDATA[ita-layout-east ita-buttonbar ita-buttonbar-medium]]></class>
+               </properties>
+               <engineElement el_nome="Nuovo" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <Value><![CDATA[F2 - Nuovo]]></Value>
+                         <class><![CDATA[{iconLeft:'ui-icon ui-icon-document',shortCut:'f2'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="Aggiungi" el_tipo="66" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button-validate" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F5-Aggiungi]]></value>
+                         <class><![CDATA[ita-button-commit {iconLeft:'ui-icon ui-icon-disk',shortCut:'f5'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button-validate ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="Aggiorna" el_tipo="66" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button-validate" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F6-Aggiorna]]></value>
+                         <class><![CDATA[ita-button-commit {iconLeft:'ui-icon ui-icon-disk',shortCut:'f6'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button-validate ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="Cancella" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F7-Cancella]]></value>
+                         <class><![CDATA[ita-button-delete {iconLeft:'ui-icon ui-icon-trash',shortCut:'f7'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="Elenca" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F4-Elenca]]></value>
+                         <class><![CDATA[{iconLeft:'ui-icon ui-icon-search',shortCut:'f4'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="TornaElenco" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F4-Torna Elenco]]></value>
+                         <class><![CDATA[{iconLeft:'ui-icon ui-icon-arrowreturnthick-1-w',shortCut:'f4'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="AltraRicerca" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F3-Altra Ricerca]]></value>
+                         <class><![CDATA[{iconLeft:'ui-icon ui-icon-arrowreturnthick-1-w',shortCut:'f3'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+          </engineElement>
+          <engineElement el_nome="divAppoggio" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-hidden]]></class>
+               </properties>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[16/07/2018]]></date>
+          <time><![CDATA[11:42:01]]></time>
+          <user><![CDATA[tania]]></user>
+          <modelSHA><![CDATA[bb5f8ada9b308f902fa491d678b6ba050661d321]]></modelSHA>
+     </info></itaEngine>

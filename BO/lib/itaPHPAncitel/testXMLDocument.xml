@@ -1,0 +1,297 @@
+POST /acipra-ws-server/ws/wsAcipr HTTP/1.0
+Host: aci.ancitel.it
+User-Agent: NuSOAP/0.9.5 (1.123)
+Content-Type: text/xml; charset=UTF-8
+SOAPAction: ""
+Content-Length: 858
+
+<?xml version="1.0" encoding="UTF-8"?><SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:vtt="http://aci.ancitel.it/ws/visure/schema/beans/vtt">
+    <SOAP-ENV:Body>
+        <vtt:visura-targa-telaio-request>
+            <username>VSCDNL63H26G157R</username>
+            <password>P.M.osimo2</password>
+            <DatiRichiesta>
+                <DataRichiesta>11/04/2017</DataRichiesta>
+                <TipoRichiesta>Targa</TipoRichiesta>
+                <SerieTarga>1</SerieTarga>
+                <Targa>FA801CC</Targa>
+            </DatiRichiesta>
+            <DatiRichiesta>
+                <DataRichiesta>11/04/2017</DataRichiesta>
+                <TipoRichiesta>Targa</TipoRichiesta>
+                <SerieTarga>1</SerieTarga>
+                <Targa>ET657DJ</Targa>
+            </DatiRichiesta>
+            <canale>ITALSOFT</canale>
+        </vtt:visura-targa-telaio-request>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+
+
+HTTP/1.1 200 OK
+Date: Tue, 18 Apr 2017 15:39:03 GMT
+Server: Apache/2.2.3 (Red Hat)
+Accept: text/xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+SOAPAction: ""
+Content-Length: 6558
+Connection: close
+Content-Type: text/xml;charset=utf-8
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header/>
+    <SOAP-ENV:Body>
+        <ns0:visura-targa-telaio-response xmlns:ns0="http://aci.ancitel.it/ws/visure/schema/beans/vtt">
+            <DatiRisposta>
+                <DatiRichiesta>
+                    <DataRichiesta>11/04/2017</DataRichiesta>
+                    <TipoRichiesta>Targa</TipoRichiesta>
+                    <SerieTarga>1</SerieTarga>
+                    <Targa>FA801CC</Targa>
+                </DatiRichiesta>
+                <Esito>
+                    <CodiceEsito>VTT000</CodiceEsito>
+                    <DescrizioneEsito>Dati Recuperati</DescrizioneEsito>
+                </Esito>
+                <DatiRecuperati>
+                    <DatiVeicolo>
+                        <FlagGiuridico>N</FlagGiuridico>
+                        <SerieTarga>
+                            <Descrizione>AUTOVEICOLO</Descrizione>
+                        </SerieTarga>
+                        <Targa>FA801CC</Targa>
+                        <UltimaFormalita>
+                            <Descrizione>DENUNCIA DI CESSAZIONE DELLA CIRCOLAZIONE</Descrizione>
+                            <Data>2016-07-12+02:00</Data>
+                            <Rp>
+                                <Settore>A</Settore>
+                                <Progressivo>433634</Progressivo>
+                                <Controllo>J</Controllo>
+                            </Rp>
+                            <Atto/>
+                            <CausaleRadiazione>ESPORTAZIONE VERSO UNIONE EUROPEA</CausaleRadiazione>
+                            <DataConsegnaDemolitore>2016-06-24+02:00</DataConsegnaDemolitore>
+                        </UltimaFormalita>
+                    </DatiVeicolo>
+                    <DatiDtt>
+                        <Categoria>M1</Categoria>
+                        <DirettivaEuro>630/2012</DirettivaEuro>
+                        <Co2>104</Co2>
+                        <Esito>OMOLOGAZIONE</Esito>
+                        <Fap>S</Fap>
+                        <NormativaEuro>E5</NormativaEuro>
+                        <Pm10>0</Pm10>
+                    </DatiDtt>
+                    <DatiTecnici>
+                        <Classe>
+                            <Descrizione>AUTOVETTURA</Descrizione>
+                        </Classe>
+                        <Uso>
+                            <Descrizione>PRIVATO LOCAZIONE SENZA CONDUCENTE</Descrizione>
+                        </Uso>
+                        <Specialita/>
+                        <Carrozzeria>
+                            <Descrizione>FAMILIARE</Descrizione>
+                        </Carrozzeria>
+                        <Benzina/>
+                        <Alimentazione>
+                            <Descrizione>GASOLIO</Descrizione>
+                        </Alimentazione>
+                        <DataPrimaImmatricolazione>2015-06-25+02:00</DataPrimaImmatricolazione>
+                        <Telaio>VF73D9HC8FJ703735</Telaio>
+                        <CodiceOmologazione>OEVF751EST06G</CodiceOmologazione>
+                        <TipoOmologato>CITROEN 3 D9HC8 2PSM</TipoOmologato>
+                        <ModelloCommerciale>
+                            <Fabbrica>CITROEN</Fabbrica>
+                            <Tipo>C4 PICASSO</Tipo>
+                        </ModelloCommerciale>
+                        <Kilowatt>85,00</Kilowatt>
+                        <Cilindrata>1560</Cilindrata>
+                        <Posti>5</Posti>
+                        <PesoComplessivo>1940</PesoComplessivo>
+                        <Portata>570</Portata>
+                        <Tara>1370</Tara>
+                        <Assi>2</Assi>
+                        <NormativaAntinquinamento>SI</NormativaAntinquinamento>
+                    </DatiTecnici>
+                    <DatiIntestazione>
+                        <Formalita>
+                            <Data>2016-03-01+01:00</Data>
+                            <Rp>
+                                <Settore>A</Settore>
+                                <Progressivo>133227</Progressivo>
+                                <Controllo>T</Controllo>
+                            </Rp>
+                            <Atto>
+                                <Descrizione>SCRITTURA PRIVATA</Descrizione>
+                                <Data>2016-02-24+01:00</Data>
+                            </Atto>
+                        </Formalita>
+                        <ImportoVeicolo>16061.38</ImportoVeicolo>
+                        <NumeroIntestatari>1</NumeroIntestatari>
+                        <Intestatario>
+                            <Denominazione>
+                                <Cognome>CITROEN ITALIA</Cognome>
+                                <TipoSocieta>SOCIETA' PER AZIONI</TipoSocieta>
+                                <PartitaIva>00775790157</PartitaIva>
+                            </Denominazione>
+                            <Nascita/>
+                            <Residenza>
+                                <Stato>ITALIA</Stato>
+                                <Provincia>MI</Provincia>
+                                <Comune>MILANO</Comune>
+                                <Dug>VIA</Dug>
+                                <Toponimo>GATTAMELATA</Toponimo>
+                                <NumeroCivico>41</NumeroCivico>
+                                <Cap>20149</Cap>
+                                <ComuneResidenzaFinanze>F205</ComuneResidenzaFinanze>
+                                <ComuneResidenzaIstat>146</ComuneResidenzaIstat>
+                            </Residenza>
+                            <RuoloSoggetto>4</RuoloSoggetto>
+                        </Intestatario>
+                    </DatiIntestazione>
+                    <DatiLocazione/>
+                    <DatiVincolo/>
+                    <DatiPrd/>
+                    <DatiUsufrutto/>
+                    <DatiIpoteca/>
+                    <Annotazioni>
+                        <Annotazione>Numero precedenti intestazioni 1</Annotazione>
+                        <Annotazione>Rilasciato certificato di radiazione</Annotazione>
+                        <Annotazione>Non risultano iscritte ipoteche/privilegi</Annotazione>
+                        <Annotazione>Non risultano iscritti gravami</Annotazione>
+                    </Annotazioni>
+                </DatiRecuperati>
+                <DataDiSistema>18/04/2017 17:39:03</DataDiSistema>
+            </DatiRisposta>
+            <DatiRisposta>
+                <DatiRichiesta>
+                    <DataRichiesta>11/04/2017</DataRichiesta>
+                    <TipoRichiesta>Targa</TipoRichiesta>
+                    <SerieTarga>1</SerieTarga>
+                    <Targa>ET657DJ</Targa>
+                </DatiRichiesta>
+                <Esito>
+                    <CodiceEsito>VTT000</CodiceEsito>
+                    <DescrizioneEsito>Dati Recuperati</DescrizioneEsito>
+                </Esito>
+                <DatiRecuperati>
+                    <DatiVeicolo>
+                        <FlagGiuridico>N</FlagGiuridico>
+                        <SerieTarga>
+                            <Descrizione>AUTOVEICOLO</Descrizione>
+                        </SerieTarga>
+                        <Targa>ET657DJ</Targa>
+                        <UltimaFormalita>
+                            <Descrizione>TRASFERIMENTO DI PROPRIETA'</Descrizione>
+                            <Data>2014-05-19+02:00</Data>
+                            <Rp>
+                                <Settore>A</Settore>
+                                <Progressivo>010134</Progressivo>
+                                <Controllo>S</Controllo>
+                            </Rp>
+                            <Atto/>
+                        </UltimaFormalita>
+                    </DatiVeicolo>
+                    <DatiDtt>
+                        <Categoria>M1</Categoria>
+                        <DirettivaEuro>715/2007*692/2008</DirettivaEuro>
+                        <Co2>115</Co2>
+                        <Esito>OMOLOGAZIONE</Esito>
+                        <Fap>N</Fap>
+                        <NormativaEuro>E5</NormativaEuro>
+                    </DatiDtt>
+                    <DatiTecnici>
+                        <Classe>
+                            <Descrizione>AUTOVETTURA</Descrizione>
+                        </Classe>
+                        <Uso>
+                            <Descrizione>PRIVATO TRASPORTO PERSONE</Descrizione>
+                        </Uso>
+                        <Specialita/>
+                        <Carrozzeria>
+                            <Descrizione>VEICOLO MULTIUSO</Descrizione>
+                        </Carrozzeria>
+                        <Benzina/>
+                        <Alimentazione>
+                            <Descrizione>BENZINA E METANO</Descrizione>
+                        </Alimentazione>
+                        <DataPrimaImmatricolazione>2014-01-27+01:00</DataPrimaImmatricolazione>
+                        <Telaio>ZFA1990000P040901</Telaio>
+                        <CodiceOmologazione>OEZFA12EST03EAB</CodiceOmologazione>
+                        <TipoOmologato>FIAT 199 BXB1A 03E</TipoOmologato>
+                        <ModelloCommerciale>
+                            <Fabbrica>FIAT</Fabbrica>
+                            <Tipo>PUNTO</Tipo>
+                        </ModelloCommerciale>
+                        <Kilowatt>57,00</Kilowatt>
+                        <Cilindrata>1368</Cilindrata>
+                        <Posti>5</Posti>
+                        <PesoComplessivo>1645</PesoComplessivo>
+                        <Portata>385</Portata>
+                        <Tara>1260</Tara>
+                        <Assi>2</Assi>
+                        <NormativaAntinquinamento>SI</NormativaAntinquinamento>
+                        <DataAggiornamentoCC>2014-05-19+02:00</DataAggiornamentoCC>
+                    </DatiTecnici>
+                    <DatiIntestazione>
+                        <Formalita>
+                            <Data>2014-05-19+02:00</Data>
+                            <Rp>
+                                <Settore>A</Settore>
+                                <Progressivo>010134</Progressivo>
+                                <Controllo>S</Controllo>
+                            </Rp>
+                            <Atto>
+                                <Descrizione>SCRITTURA PRIVATA</Descrizione>
+                                <Data>2014-05-02+02:00</Data>
+                            </Atto>
+                        </Formalita>
+                        <ImportoVeicolo>11500</ImportoVeicolo>
+                        <NumeroIntestatari>1</NumeroIntestatari>
+                        <Intestatario>
+                            <Denominazione>
+                                <Cognome>MAZZA</Cognome>
+                                <Nome>MARIO</Nome>
+                                <Sesso>MASCHILE</Sesso>
+                                <CodiceFiscale>MZZMRA82D22F522Q</CodiceFiscale>
+                            </Denominazione>
+                            <Nascita>
+                                <Data>1982-04-22+02:00</Data>
+                                <Stato>ITALIA</Stato>
+                                <Provincia>AP</Provincia>
+                                <Comune>MONTEGRANARO</Comune>
+                                <ComuneNascitaFinanze>F522</ComuneNascitaFinanze>
+                                <ComuneNascitaIstat>041</ComuneNascitaIstat>
+                            </Nascita>
+                            <Residenza>
+                                <Stato>ITALIA</Stato>
+                                <Provincia>FM</Provincia>
+                                <Comune>MONTEGRANARO</Comune>
+                                <Dug>VIA</Dug>
+                                <Toponimo>FONTANA</Toponimo>
+                                <NumeroCivico>35</NumeroCivico>
+                                <Cap>63812</Cap>
+                                <ComuneResidenzaFinanze>F522</ComuneResidenzaFinanze>
+                                <ComuneResidenzaIstat>018</ComuneResidenzaIstat>
+                            </Residenza>
+                            <RuoloSoggetto>4</RuoloSoggetto>
+                        </Intestatario>
+                    </DatiIntestazione>
+                    <DatiLocazione/>
+                    <DatiVincolo/>
+                    <DatiPrd/>
+                    <DatiUsufrutto/>
+                    <DatiIpoteca/>
+                    <Annotazioni>
+                        <Annotazione>Numero precedenti intestazioni 2</Annotazione>
+                        <Annotazione>Rilasciato certificato di proprieta' a seguito dell'ultima formalita'</Annotazione>
+                        <Annotazione>Non risultano iscritte ipoteche/privilegi</Annotazione>
+                        <Annotazione>Non risultano iscritti gravami</Annotazione>
+                    </Annotazioni>
+                </DatiRecuperati>
+                <DataDiSistema>18/04/2017 17:39:04</DataDiSistema>
+            </DatiRisposta>
+        </ns0:visura-targa-telaio-response>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

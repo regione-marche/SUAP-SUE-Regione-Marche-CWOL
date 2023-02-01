@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_id="2600" el_nome="proElencoMail" el_tipo="1" el_colonne="1" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[#proElencoMail]]></action>
+               <class><![CDATA[ita-dialog ita-layout-diag {title:"Elenco Mail",width:950,height:600,modal:true,position:'top',resizable:false,closeButton:true}]]></class>
+          </properties>
+          <engineElement el_id="2601" el_nome="workSpace" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[width:700;height:600;]]></style>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+               </properties>
+               <engineElement el_id="2603" el_nome="divRisultato" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_id="2605" el_nome="gridElencoMail" el_tipo="91" el_colonne="10" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-jqGrid" tipo_tag="table">
+                         <properties>
+                              <class><![CDATA[ita-jqGrid {caption: "Elenco Mail",rowNum:15,sortname:'rowid',rowList:[],width:730, height:420,shrinkToFit:false, autowidth:false,filterToolbar:false,navGrid:true,navButtonDel:true,navButtonAdd:true, navButtonEdit:true,navButtonRefresh:true,readerId:'idx'}]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-jqGrid]]></class>
+                         </tipoProperties>
+                         <engineElement el_id="2606" el_nome="PresAllegati" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[All.]]></label>
+                         </engineElement>
+                         <engineElement el_id="2609" el_nome="Mittente" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Mittente]]></label>
+                         </engineElement>
+                         <engineElement el_id="2608" el_nome="Oggetto" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Oggetto]]></label>
+                         </engineElement>
+                         <engineElement el_id="2613" el_nome="Data" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Data]]></label>
+                         </engineElement>
+                         <engineElement el_id="24615" el_nome="Segnatura" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Segn.]]></label>
+                         </engineElement>
+                         <engineElement el_id="24622" el_nome="Interoperabile" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[IntOp.]]></label>
+                         </engineElement>
+                         <engineElement el_id="2610" el_nome="PRESALLEGATI" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[30]]></width>
+                                   <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                              </properties>
+                         </engineElement>
+                         <engineElement el_id="2611" el_nome="MITTENTE" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[200]]></width>
+                                   <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                              </properties>
+                         </engineElement>
+                         <engineElement el_id="2612" el_nome="OGGETTO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[290]]></width>
+                                   <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                              </properties>
+                         </engineElement>
+                         <engineElement el_id="2614" el_nome="DATA" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[80]]></width>
+                                   <class><![CDATA[ui-state-default ui-corner-all ui-state-default ui-corner-all {formatter:eqdate}]]></class>
+                              </properties>
+                         </engineElement>
+                         <engineElement el_id="24616" el_nome="SEGNATURA" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[40]]></width>
+                                   <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                              </properties>
+                         </engineElement>
+                         <engineElement el_id="24623" el_nome="INTEROPERABILE" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[40]]></width>
+                                   <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                              </properties>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_id="2604" el_nome="divDettaglio" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_id="2624" el_nome="divDettaglio" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                         <tipoProperties>
+                              <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                         </tipoProperties>
+                         <engineElement el_id="2625" el_nome="Mittente" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-decode" tipo_tag="text">
+                              <label class="sx input" style="width:100px"><![CDATA[Mittente]]></label>
+                              <properties>
+                                   <size><![CDATA[60]]></size>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-decode]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                         <engineElement el_id="2626" el_nome="Oggetto" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-decode" tipo_tag="text">
+                              <label class="sx input" style="width:100px"><![CDATA[Oggetto]]></label>
+                              <properties>
+                                   <size><![CDATA[90]]></size>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-decode]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                         <engineElement el_id="2627" el_nome="Data" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                              <label class="sx input" style="width:100px"><![CDATA[Data]]></label>
+                              <properties>
+                                   <maxlength><![CDATA[10]]></maxlength>
+                                   <size><![CDATA[12]]></size>
+                                   <class><![CDATA[ita-date ita-readonly]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-edit]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                         <engineElement el_id="9347" el_nome="Ora" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-decode" tipo_tag="text">
+                              <label class="sx input"><![CDATA[Ora]]></label>
+                              <properties>
+                                   <maxlength><![CDATA[12]]></maxlength>
+                                   <size><![CDATA[12]]></size>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-decode]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                    </engineElement>
+                    <engineElement el_id="2970" el_nome="divSoggetto" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[height:220px;overflow:auto;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_id="2616" el_nome="divGrigliaAllegati" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                         <tipoProperties>
+                              <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                         </tipoProperties>
+                         <engineElement el_id="2617" el_nome="gridAllegati" el_tipo="91" el_colonne="4" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-jqGrid" tipo_tag="table">
+                              <properties>
+                                   <class><![CDATA[ita-jqGrid {caption: "Allegati",rowNum:15,sortname:'rowid',rowList:[],width:620,height:140,shrinkToFit:false,autowidth:false,filterToolbar:false}]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-jqGrid]]></class>
+                              </tipoProperties>
+                              <engineElement el_id="2618" el_nome="rid" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Id]]></label>
+                              </engineElement>
+                              <engineElement el_id="2619" el_nome="Filename" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Filename]]></label>
+                              </engineElement>
+                              <engineElement el_id="2621" el_nome="ROWID" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[50]]></width>
+                                        <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_id="2622" el_nome="FILENAME" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[400]]></width>
+                                        <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                   </properties>
+                              </engineElement>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+          <engineElement el_id="2602" el_nome="buttonBar" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[width:160px;]]></style>
+                    <class><![CDATA[ita-layout-east ita-buttonbar]]></class>
+               </properties>
+               <engineElement el_id="2629" el_nome="Protocolla" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F5-Carica]]></value>
+                         <style><![CDATA[width:130px;]]></style>
+                         <class><![CDATA[ita-button-commit {iconLeft:'ui-icon ui-icon-disk',shortCut:'f5'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_id="2630" el_nome="Elenca" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F8-Elenco]]></value>
+                         <style><![CDATA[width:130px;]]></style>
+                         <class><![CDATA[{iconLeft:'ui-icon ui-icon-arrowreturnthick-1-w',shortCut:'f8'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_id="4296" el_nome="divInfoMail" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                    <properties>
+                         <width><![CDATA[50]]></width>
+                         <heigth><![CDATA[50]]></heigth>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                    </tipoProperties>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[11/12/2015]]></date>
+          <time><![CDATA[14:37:21]]></time>
+          <user><![CDATA[michele]]></user>
+          <modelSHA><![CDATA[0db12622aeae17e86c2ebdf41d6344b05dce5a7e]]></modelSHA>
+     </info></itaEngine>

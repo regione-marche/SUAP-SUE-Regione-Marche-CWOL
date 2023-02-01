@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="praIteObb" el_tipo="1" el_colonne="0" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[#praIteObb]]></action>
+               <class><![CDATA[ita-app ita-dialog ita-layout-diag {title:"Procedimento Obbligatorio",width:850,height:400,modal:true,position:'center'}]]></class>
+          </properties>
+          <engineElement el_nome="workSpace" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[width:600px;height:400px;]]></style>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+               </properties>
+               <engineElement el_nome="divGestione" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <properties>
+                         <class><![CDATA[ita-edit-page]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="ITEPRAOBB[OBBPRA]" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-readonly" tipo_tag="text">
+                         <label class="sx ui-widget input" style="width:200px"><![CDATA[Procedimento Padre]]></label>
+                         <properties>
+                              <maxlength><![CDATA[6]]></maxlength>
+                              <size><![CDATA[9]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <readonly><![CDATA[readonly]]></readonly>
+                              <class><![CDATA[ita-readonly ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="DescrizionePadre" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-readonly" tipo_tag="text">
+                         <label class="sx ui-widget input"><![CDATA[&nbsp;]]></label>
+                         <properties>
+                              <size><![CDATA[45]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <readonly><![CDATA[readonly]]></readonly>
+                              <class><![CDATA[ita-readonly ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ITEPRAOBB[OBBEVCOD]" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                         <label class="sx ui-widget input" style="width:200px"><![CDATA[Evento Padre]]></label>
+                         <properties>
+                              <maxlength><![CDATA[6]]></maxlength>
+                              <size><![CDATA[9]]></size>
+                              <class><![CDATA[ita-edit-onblur required]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="EventoPadre" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-decode" tipo_tag="text">
+                         <properties>
+                              <maxlength><![CDATA[60]]></maxlength>
+                              <size><![CDATA[60]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-decode]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="Spazio" el_tipo="72" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="br">
+                    </engineElement>
+                    <engineElement el_nome="ITEPRAOBB[OBBSUBPRA]" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Procedimento Obbligatorio]]></label>
+                         <properties>
+                              <maxlength><![CDATA[6]]></maxlength>
+                              <size><![CDATA[9]]></size>
+                              <class><![CDATA[ita-edit-onblur required]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ProcedimentoObbligatorio" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-decode" tipo_tag="text">
+                         <properties>
+                              <maxlength><![CDATA[60]]></maxlength>
+                              <size><![CDATA[60]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-decode]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ITEPRAOBB[OBBSUBEVCOD]" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                         <label class="sx input" style="width:200px"><![CDATA[Evento Procedim. Obbligatorio]]></label>
+                         <properties>
+                              <maxlength><![CDATA[6]]></maxlength>
+                              <size><![CDATA[9]]></size>
+                              <class><![CDATA[ita-edit-onblur required]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="EventoProcedObbilgatorio" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-decode" tipo_tag="text">
+                         <properties>
+                              <maxlength><![CDATA[60]]></maxlength>
+                              <size><![CDATA[60]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-decode]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="Spazio1" el_tipo="72" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="br">
+                    </engineElement>
+                    <engineElement el_nome="AttivaEspressione" el_tipo="84" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-multiline" tipo_tag="textarea">
+                         <label class="sx input" style="width:160px"><![CDATA[Ulteriore Condizione]]></label>
+                         <properties>
+                              <cols><![CDATA[70]]></cols>
+                              <row><![CDATA[10]]></row>
+                              <class><![CDATA[ita-edit-onblur]]></class>
+                              <style><![CDATA[width: 440px; height: 97px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-edit-multiline]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ApriAttivaExpr" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                         <label class="sx ui-widget input"><![CDATA[Apri]]></label>
+                         <properties>
+                              <class><![CDATA[{iconLeft:'ui-icon ui-icon-wrench'}]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+          <engineElement el_nome="buttonBar" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[width:140px;]]></style>
+                    <class><![CDATA[ita-layout-east ita-buttonbar]]></class>
+               </properties>
+               <engineElement el_nome="Aggiungi" el_tipo="66" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button-validate" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F5 - Aggiungi]]></value>
+                         <class><![CDATA[ita-button-commit { iconLeft: 'ui-icon ui-icon-disk', shortCut: 'f5' }]]></class>
+                         <style><![CDATA[width: 98%; padding: 3px 0;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button-validate ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="Aggiorna" el_tipo="66" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button-validate" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F6 - Aggiorna]]></value>
+                         <class><![CDATA[ita-button-commit { iconLeft: 'ui-icon ui-icon-disk', shortCut: 'f6' }]]></class>
+                         <style><![CDATA[width: 98%; padding: 3px 0;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button-validate ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+          </engineElement>
+          <engineElement el_nome="divAppoggio" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-hidden]]></class>
+               </properties>
+               <engineElement el_nome="ITEPRAOBB[ROWID]" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="invisible" tipo_tag="text">
+                    <tipoProperties>
+                         <style><![CDATA[visibility: hidden;]]></style>
+                    </tipoProperties>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[27/01/2017]]></date>
+          <time><![CDATA[18:22:12]]></time>
+          <user><![CDATA[andrea]]></user>
+          <modelSHA><![CDATA[3673332b2f7194287f53abd1ebcc12a86998c9d2]]></modelSHA>
+     </info></itaEngine>

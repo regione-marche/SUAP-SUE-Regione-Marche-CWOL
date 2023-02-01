@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cwbBtaRgruna" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ad6788f5-7388-4dc5-b686-838d690a0f38">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.jasperserver.reportUnit" value="/italsoft/reports/apps/CityBase/cwbBtaCivint"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver/services/repository"/>
+	<parameter name="Sql" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[$P!{Sql} ORDER BY PROGINT]]>
+	</queryString>
+	<field name="PROGINT" class="java.lang.String"/>
+	<field name="DESTIPCIV" class="java.lang.String"/>
+	<field name="SCALA" class="java.lang.String"/>
+	<field name="INTERNO" class="java.lang.String"/>
+	<field name="PIANO" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="58" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="fc421c3f-3065-473b-84d6-8ce147aa333f" x="0" y="22" width="555" height="31"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Numeri Civici Interni]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="19a762fd-4f55-440a-aa56-c9f7c7b17147" x="0" y="0" width="69" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH.mm.ss">
+				<reportElement uuid="58c5ed6c-f45a-4f92-9ea8-2a60d492a2a1" x="69" y="0" width="69" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="9abfebf7-a19b-4048-8acd-bfdd3f708bf1" x="1" y="11" width="78" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prog.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8b42d7a3-5f36-48c3-b416-d4e37b86be68" x="79" y="11" width="166" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6f5f35be-a4b8-4a08-a5a2-0905edb7670e" x="245" y="11" width="88" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Scala]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="818cea8d-5d64-4cb6-9f39-c086408fd9ec" x="333" y="11" width="111" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Interno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ae14fc9b-0d74-465d-a4b0-d907befe1d16" x="444" y="11" width="110" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Piano]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="1afe5dfd-77b7-460a-94b6-e4f3b4543f82" x="1" y="37" width="553" height="1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="26" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="81c97158-ed91-4328-9088-474a2d5e221e" x="1" y="4" width="78" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{PROGINT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="9ae96f27-252c-40e5-b09b-ec18ddf0a4a9" x="79" y="4" width="166" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{DESTIPCIV}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="33430976-e315-4d82-9592-73863c0edf0d" x="245" y="4" width="88" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{SCALA}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="75fec0e0-ac07-44b4-b601-b4ee06802f8e" x="333" y="4" width="111" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{INTERNO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="cabf6a91-fccc-49e5-a093-72eafb8f2933" x="444" y="4" width="110" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{PIANO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement uuid="c4e4d1df-5c86-4b6e-b917-ab92a7ad860f" x="434" y="2" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" di"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="2a6662ff-67e2-40cc-b2c8-3528561ccf22" x="514" y="2" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

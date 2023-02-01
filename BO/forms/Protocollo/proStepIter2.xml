@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_id="4342" el_nome="proStepIter2" el_tipo="1" el_colonne="0" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[#proStepIter2]]></action>
+               <class><![CDATA[ita-dialog ita-layout-diag {title:"Gestione Passo Procedimento Amministrativo",width:1220,height:620,modal:true,position:'center',resizable:false}]]></class>
+          </properties>
+          <engineElement el_id="4343" el_nome="workspace" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+               </properties>
+               <engineElement el_id="4344" el_nome="divElenco" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                    <engineElement el_id="4345" el_nome="tabElenco" el_tipo="75" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tab" tipo_tag="div">
+                         <tipoProperties>
+                              <class><![CDATA[ita-tab]]></class>
+                         </tipoProperties>
+                         <engineElement el_id="4346" el_nome="paneProtocollo" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[Protocollo]]></Title>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_id="4347" el_nome="gridStepIter" el_tipo="91" el_colonne="8" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-jqGrid" tipo_tag="table">
+                                   <properties>
+                                        <class><![CDATA[ita-jqGrid {caption: "Documenti in Carico",rowNum:20,rowList:[],width:970,height:400,autowidth:false,rowList:[],navGrid:true,navButtonAdd:false,navButtonDel:false, navButtonEdit:true,navButtonRefresh:true}]]></class>
+                                        <style><![CDATA[font-size:75%;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-jqGrid]]></class>
+                                   </tipoProperties>
+                                   <engineElement el_id="4348" el_nome="thAnno" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Anno]]></label>
+                                   </engineElement>
+                                   <engineElement el_id="4349" el_nome="thNumero" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Numero]]></label>
+                                   </engineElement>
+                                   <engineElement el_id="4350" el_nome="thDataRegistrazione" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Data Reg.]]></label>
+                                   </engineElement>
+                                   <engineElement el_id="4351" el_nome="thOggetto" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Oggetto]]></label>
+                                   </engineElement>
+                                   <engineElement el_id="4352" el_nome="thProvenienza" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Provenienza]]></label>
+                                   </engineElement>
+                                   <engineElement el_id="4353" el_nome="thStato" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   </engineElement>
+                                   <engineElement el_id="4354" el_nome="thNDestProt" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[DesProt]]></label>
+                                   </engineElement>
+                                   <engineElement el_id="4355" el_nome="thNDestIter" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[DesIter]]></label>
+                                   </engineElement>
+                                   <engineElement el_id="4356" el_nome="ANNO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <width><![CDATA[30]]></width>
+                                             <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_id="4357" el_nome="NUMERO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <width><![CDATA[40]]></width>
+                                             <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_id="4358" el_nome="PRODAR" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <width><![CDATA[40]]></width>
+                                             <class><![CDATA[ui-state-default ui-corner-all {formatter:eqdate}]]></class>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_id="4359" el_nome="OGGETTO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <width><![CDATA[150]]></width>
+                                             <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_id="4360" el_nome="PROVENIENZA" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <width><![CDATA[170]]></width>
+                                             <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_id="4361" el_nome="STATO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <width><![CDATA[20]]></width>
+                                             <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_id="4362" el_nome="NDESTPROT" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <width><![CDATA[40]]></width>
+                                             <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_id="4363" el_nome="NDESTITER" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <width><![CDATA[30]]></width>
+                                             <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                        </properties>
+                                   </engineElement>
+                              </engineElement>
+                         </engineElement>
+                         <engineElement el_id="4364" el_nome="paneComunicazione" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[Comunicazione]]></Title>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_id="4365" el_nome="gridStepComun" el_tipo="91" el_colonne="8" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-jqGrid" tipo_tag="table">
+                                   <properties>
+                                        <class><![CDATA[ita-jqGrid {caption: "Comunicazioni in Carico",rowNum:20,rowList:[],width:970,height:400,autowidth:false,rowList:[],navGrid:true,navButtonAdd:false,navButtonDel:false, navButtonEdit:true,navButtonRefresh:true}]]></class>
+                                        <style><![CDATA[font-size:75%;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-jqGrid]]></class>
+                                   </tipoProperties>
+                                   <engineElement el_id="4366" el_nome="Anno" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Anno]]></label>
+                                   </engineElement>
+                                   <engineElement el_id="4367" el_nome="Numero" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Numero]]></label>
+                                   </engineElement>
+                                   <engineElement el_id="4368" el_nome="DataRegistrazione" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Data Reg.]]></label>
+                                   </engineElement>
+                                   <engineElement el_id="4369" el_nome="Oggetto" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Oggetto]]></label>
+                                   </engineElement>
+                                   <engineElement el_id="4370" el_nome="Provenienza" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Provenienza]]></label>
+                                   </engineElement>
+                                   <engineElement el_id="4371" el_nome="Stato" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   </engineElement>
+                                   <engineElement el_id="4372" el_nome="NDestProt" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Dest.Prot.]]></label>
+                                   </engineElement>
+                                   <engineElement el_id="4373" el_nome="NDestIter" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Dest.Iter]]></label>
+                                   </engineElement>
+                                   <engineElement el_id="4374" el_nome="ANNO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <width><![CDATA[50]]></width>
+                                             <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_id="4375" el_nome="NUMERO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <width><![CDATA[70]]></width>
+                                             <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_id="4376" el_nome="PRODAR" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <width><![CDATA[80]]></width>
+                                             <class><![CDATA[ui-state-default ui-corner-all {formatter:eqdate}]]></class>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_id="4377" el_nome="OGGETTO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <width><![CDATA[290]]></width>
+                                             <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_id="4378" el_nome="PROVENIENZA" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <width><![CDATA[290]]></width>
+                                             <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_id="4379" el_nome="STATO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <width><![CDATA[30]]></width>
+                                             <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_id="4380" el_nome="NDESTPROT" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <width><![CDATA[70]]></width>
+                                             <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_id="4381" el_nome="NDESTITER" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <width><![CDATA[70]]></width>
+                                             <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                        </properties>
+                                   </engineElement>
+                              </engineElement>
+                         </engineElement>
+                         <engineElement el_id="4758" el_nome="paneProcedimenti" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[Fascicoli Elettronici]]></Title>
+                                   <style><![CDATA[font-size:75%;]]></style>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_id="4759" el_nome="gridStepProced" el_tipo="91" el_colonne="7" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-jqGrid" tipo_tag="table">
+                                   <properties>
+                                        <class><![CDATA[ita-jqGrid {caption: "Procedimenti Amministrativi",rowNum:20,rowList:[],width:970,height:400,autowidth:false,rowList:[],navGrid:true,navButtonAdd:false,navButtonDel:false, navButtonEdit:true,navButtonRefresh:true}]]></class>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-jqGrid]]></class>
+                                   </tipoProperties>
+                                   <engineElement el_id="4760" el_nome="Anno" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Anno]]></label>
+                                   </engineElement>
+                                   <engineElement el_id="4761" el_nome="Pratica" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Pratica]]></label>
+                                   </engineElement>
+                                   <engineElement el_id="4762" el_nome="DataRegistrazione" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Data Reg.]]></label>
+                                   </engineElement>
+                                   <engineElement el_id="4763" el_nome="Intestatario" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Intestatario]]></label>
+                                   </engineElement>
+                                   <engineElement el_id="4764" el_nome="Procedimento" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Procedimento]]></label>
+                                   </engineElement>
+                                   <engineElement el_id="4765" el_nome="StatoProcedimento" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   </engineElement>
+                                   <engineElement el_id="4910" el_nome="StatoIter" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   </engineElement>
+                                   <engineElement el_id="4768" el_nome="ANNO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <width><![CDATA[50]]></width>
+                                             <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_id="4769" el_nome="PRATICA" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <width><![CDATA[70]]></width>
+                                             <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_id="4770" el_nome="DATAPRATICA" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <width><![CDATA[80]]></width>
+                                             <class><![CDATA[ui-state-default ui-corner-all {formatter:eqdate}]]></class>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_id="4771" el_nome="INTESTATARIO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <width><![CDATA[290]]></width>
+                                             <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_id="4772" el_nome="PROCEDIMENTO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <width><![CDATA[290]]></width>
+                                             <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_id="4773" el_nome="STATOPROCEDIMENTO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <width><![CDATA[30]]></width>
+                                             <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_id="4909" el_nome="STATOITER" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <width><![CDATA[30]]></width>
+                                             <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                        </properties>
+                                   </engineElement>
+                              </engineElement>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_id="4382" el_nome="divDettaglio" el_tipo="7" el_colonne="2" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                    <engineElement el_id="4405" el_nome="divLeft" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[height:530px;width:300px;]]></style>
+                         </properties>
+                         <engineElement el_id="4469" el_nome="divProcedimento" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                              <tipoProperties>
+                                   <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                              </tipoProperties>
+                              <engineElement el_id="4470" el_nome="" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                                   <properties>
+                                        <Title><![CDATA[Dati Procedimento Amministrativo]]></Title>
+                                        <style><![CDATA[font-size:1em;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                                        <style><![CDATA[font-size:0.8em;]]></style>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_id="4406" el_nome="PROGES[GESNUM]" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-readonly" tipo_tag="text">
+                                   <label class="sx input" style="width:60px"><![CDATA[N.Pratica]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[10]]></maxlength>
+                                        <size><![CDATA[12]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <readonly><![CDATA[readonly]]></readonly>
+                                        <class><![CDATA[ita-readonly ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_id="5394" el_nome="Dettaglio" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                                   <properties>
+                                        <class><![CDATA[ita-button-commit {iconLeft:'ui-icon ui-icon-pencil'}]]></class>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-button ita-element-animate]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_id="4472" el_nome="PROGES[GESDRE]" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-readonly" tipo_tag="text">
+                                   <label class="sx input" style="width:40px"><![CDATA[Data]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[10]]></maxlength>
+                                        <size><![CDATA[8]]></size>
+                                        <class><![CDATA[ita-date]]></class>
+                                   </properties>
+                                   <tipoProperties>
+                                        <readonly><![CDATA[readonly]]></readonly>
+                                        <class><![CDATA[ita-readonly ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_id="5393" el_nome="PRASTA[STADES]" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-decode" tipo_tag="text">
+                                   <properties>
+                                        <class><![CDATA[ui-state-highlight]]></class>
+                                        <style><![CDATA[color:red;font-weight:bold;text-align:right;]]></style>
+                                        <size><![CDATA[35]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-decode]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_id="4475" el_nome="ANADES[DESNOM]" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-readonly" tipo_tag="text">
+                                   <label class="top input" style="width:100px"><![CDATA[Nominativo]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[30]]></maxlength>
+                                        <size><![CDATA[32]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <readonly><![CDATA[readonly]]></readonly>
+                                        <class><![CDATA[ita-readonly ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_id="4474" el_nome="ANADES[DESIND]" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-readonly" tipo_tag="text">
+                                   <label class="top input" style="width:100px"><![CDATA[Indirizzo]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[30]]></maxlength>
+                                        <size><![CDATA[32]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <readonly><![CDATA[readonly]]></readonly>
+                                        <class><![CDATA[ita-readonly ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_id="4477" el_nome="ANADES[DESCIT]" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-readonly" tipo_tag="text">
+                                   <label class="top input" style="width:100px"><![CDATA[Residenza]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[20]]></maxlength>
+                                        <size><![CDATA[20]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <readonly><![CDATA[readonly]]></readonly>
+                                        <class><![CDATA[ita-readonly ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_id="4478" el_nome="ANADES[DESPRO]" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-readonly" tipo_tag="text">
+                                   <label class="top input" style="width:100px"><![CDATA[&nbsp;]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[4]]></maxlength>
+                                        <size><![CDATA[3]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <readonly><![CDATA[readonly]]></readonly>
+                                        <class><![CDATA[ita-readonly ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_id="4479" el_nome="ANAPRA[PRADES__1]" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-readonly" tipo_tag="text">
+                                   <label class="top input" style="width:200px"><![CDATA[Descrizione procedimento]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[70]]></maxlength>
+                                        <size><![CDATA[50]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <readonly><![CDATA[readonly]]></readonly>
+                                        <class><![CDATA[ita-readonly ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                         <engineElement el_id="4467" el_nome="divNotifica" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                              <tipoProperties>
+                                   <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                              </tipoProperties>
+                              <engineElement el_id="4468" el_nome="" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                                   <properties>
+                                        <Title><![CDATA[Provenienza]]></Title>
+                                        <style><![CDATA[font-size:1em;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                                        <style><![CDATA[font-size:0.8em;]]></style>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_id="4471" el_nome="ANAPRO[PRONUM]" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-readonly" tipo_tag="text">
+                                   <label class="sx input" style="width:100px"><![CDATA[N.Protocollo]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[10]]></maxlength>
+                                        <size><![CDATA[12]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <readonly><![CDATA[readonly]]></readonly>
+                                        <class><![CDATA[ita-readonly ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_id="4407" el_nome="ANAPRO[PRODAR]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx input" style="width:100px"><![CDATA[Data Arrivo]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[10]]></maxlength>
+                                        <size><![CDATA[12]]></size>
+                                        <class><![CDATA[ita-date ita-readonly]]></class>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_id="4408" el_nome="ANAPRO[PRODAS]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx input" style="width:100px"><![CDATA[Data del Documento]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[10]]></maxlength>
+                                        <size><![CDATA[12]]></size>
+                                        <class><![CDATA[ita-date ita-readonly]]></class>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_id="4409" el_nome="ANAPRO[PRONAF]" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-readonly" tipo_tag="text">
+                                   <label class="sx input" style="width:100px"><![CDATA[N.Allegati]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[4]]></maxlength>
+                                        <size><![CDATA[4]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <readonly><![CDATA[readonly]]></readonly>
+                                        <class><![CDATA[ita-readonly ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_id="4410" el_nome="Propre1" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-readonly" tipo_tag="text">
+                                   <label class="sx input" style="width:100px"><![CDATA[N.Antecedente]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[6]]></maxlength>
+                                        <size><![CDATA[8]]></size>
+                                        <class><![CDATA[ita-edit-onblur]]></class>
+                                   </properties>
+                                   <tipoProperties>
+                                        <readonly><![CDATA[readonly]]></readonly>
+                                        <class><![CDATA[ita-readonly ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_id="4411" el_nome="Propre2" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-readonly" tipo_tag="text">
+                                   <label class="sx input" style="width:100px"><![CDATA[Anno]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[4]]></maxlength>
+                                        <size><![CDATA[4]]></size>
+                                        <class><![CDATA[ita-edit-onblur]]></class>
+                                   </properties>
+                                   <tipoProperties>
+                                        <readonly><![CDATA[readonly]]></readonly>
+                                        <class><![CDATA[ita-readonly ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_id="4412" el_nome="Oggetto" el_tipo="84" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit-multiline" tipo_tag="textarea">
+                                   <label class="sx input" style="width:100px"><![CDATA[Oggetto]]></label>
+                                   <properties>
+                                        <rows><![CDATA[2]]></rows>
+                                        <cols><![CDATA[48]]></cols>
+                                        <class><![CDATA[ita-readonly]]></class>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit ita-edit-multiline]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_id="4413" el_nome="ANAPRO[PRONOM]" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-readonly" tipo_tag="text">
+                                   <label class="sx input" style="width:150px"><![CDATA[Mittente / Destinatario]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[60]]></maxlength>
+                                        <size><![CDATA[50]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <readonly><![CDATA[readonly]]></readonly>
+                                        <class><![CDATA[ita-readonly ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_id="7228" el_nome="ANAPRO[PROIND]" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-readonly" tipo_tag="text">
+                                   <label class="sx input" style="width:150px"><![CDATA[Indirizzo]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[30]]></maxlength>
+                                        <size><![CDATA[35]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <readonly><![CDATA[readonly]]></readonly>
+                                        <class><![CDATA[ita-readonly ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_id="7229" el_nome="ANAPRO[PROCIT]" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-readonly" tipo_tag="text">
+                                   <label class="sx input" style="width:150px"><![CDATA[Citta']]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[20]]></maxlength>
+                                        <size><![CDATA[24]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <readonly><![CDATA[readonly]]></readonly>
+                                        <class><![CDATA[ita-readonly ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_id="7230" el_nome="ANAPRO[PROPRO]" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-readonly" tipo_tag="text">
+                                   <label class="sx input"><![CDATA[Provincia]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[4]]></maxlength>
+                                        <size><![CDATA[4]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <readonly><![CDATA[readonly]]></readonly>
+                                        <class><![CDATA[ita-readonly ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_id="7231" el_nome="ANAPRO[PROCAP]" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-readonly" tipo_tag="text">
+                                   <label class="sx input"><![CDATA[Cap]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[5]]></maxlength>
+                                        <size><![CDATA[6]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <readonly><![CDATA[readonly]]></readonly>
+                                        <class><![CDATA[ita-readonly ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_id="4453" el_nome="StatoIter" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-decode" tipo_tag="text">
+                                   <label class="sx input" style="width:100px"><![CDATA[&nbsp;]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[30]]></maxlength>
+                                        <size><![CDATA[30]]></size>
+                                        <style><![CDATA[font-size:120%;font-weight:bolder;color:red]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-decode]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                    </engineElement>
+                    <engineElement el_id="4466" el_nome="divRight" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[height:530px;px;width:710px;]]></style>
+                         </properties>
+                         <engineElement el_id="4383" el_nome="tabProtocollo" el_tipo="75" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tab" tipo_tag="div">
+                              <properties>
+                                   <style><![CDATA[height:525px;]]></style>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tab]]></class>
+                              </tipoProperties>
+                              <engineElement el_id="4384" el_nome="paneIter" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                                   <properties>
+                                        <Title><![CDATA[Iter]]></Title>
+                                        <style><![CDATA[height:400px;]]></style>
+                                        <class><![CDATA[ita-data-page]]></class>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-tabpane]]></class>
+                                   </tipoProperties>
+                                   <engineElement el_id="4385" el_nome="gridIter" el_tipo="91" el_colonne="9" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-jqGrid" tipo_tag="table">
+                                        <properties>
+                                             <class><![CDATA[ita-jqGrid {caption: "Iter del Documento",sortname:'ROWID',rowNum:20,rowList:[], shrinkToFit:false,width:690,height:190,autowidth:false, navGrid:true,navButtonAdd:false,navButtonDel:false,navButtonEdit:false,navButtonExcel:false,readerId:'idx',treeGrid:true,treeGridModel:'adjacency',ExpandColumn :'ITERDATA'}]]></class>
+                                             <style><![CDATA[font-size:75%;]]></style>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-jqGrid]]></class>
+                                        </tipoProperties>
+                                        <engineElement el_id="4386" el_nome="iterKey" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                             <label class="sx ui-widget input"><![CDATA[Data]]></label>
+                                        </engineElement>
+                                        <engineElement el_id="4387" el_nome="iterData" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                             <label class="sx ui-widget input"><![CDATA[Data]]></label>
+                                        </engineElement>
+                                        <engineElement el_id="4388" el_nome="iterGiorni" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                             <label class="sx ui-widget input"><![CDATA[Gg]]></label>
+                                        </engineElement>
+                                        <engineElement el_id="4389" el_nome="iterCodDest" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                             <label class="sx ui-widget input"><![CDATA[Cod.]]></label>
+                                        </engineElement>
+                                        <engineElement el_id="4390" el_nome="iterDestinatario" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                             <label class="sx ui-widget input"><![CDATA[Destinatario]]></label>
+                                        </engineElement>
+                                        <engineElement el_id="4391" el_nome="iterAnnotazioni" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                             <label class="sx ui-widget input"><![CDATA[Annotazioni]]></label>
+                                        </engineElement>
+                                        <engineElement el_id="4392" el_nome="iterChiuso" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                             <label class="sx ui-widget input"><![CDATA[Chiuso]]></label>
+                                        </engineElement>
+                                        <engineElement el_id="4393" el_nome="iterGest" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                             <label class="sx ui-widget input"><![CDATA[<span class="ui-icon ui-icon-pencil">&nbsp;</span>]]></label>
+                                             <properties>
+                                                  <Class></Class>
+                                             </properties>
+                                        </engineElement>
+                                        <engineElement el_id="4394" el_nome="iterStato" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                             <label class="sx ui-widget input"><![CDATA[&nbsp;]]></label>
+                                        </engineElement>
+                                        <engineElement el_id="4395" el_nome="ITEKEY" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                             <properties>
+                                                  <width><![CDATA[1]]></width>
+                                                  <class><![CDATA[ui-state-default ui-corner-all {hidden:true,key:true}]]></class>
+                                             </properties>
+                                        </engineElement>
+                                        <engineElement el_id="4396" el_nome="ITERDATA" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                             <properties>
+                                                  <width><![CDATA[108]]></width>
+                                                  <class><![CDATA[ui-state-default ui-corner-all {formatter:eqdate}]]></class>
+                                             </properties>
+                                        </engineElement>
+                                        <engineElement el_id="4397" el_nome="ITERGIORNI" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                             <properties>
+                                                  <width><![CDATA[20]]></width>
+                                                  <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                             </properties>
+                                        </engineElement>
+                                        <engineElement el_id="4398" el_nome="ITERCODDEST" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                             <properties>
+                                                  <width><![CDATA[40]]></width>
+                                                  <class><![CDATA[ui-state-default ui-corner-all {hidden:true}]]></class>
+                                             </properties>
+                                        </engineElement>
+                                        <engineElement el_id="4399" el_nome="ITERDESTINATARIO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                             <properties>
+                                                  <width><![CDATA[250]]></width>
+                                                  <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                             </properties>
+                                        </engineElement>
+                                        <engineElement el_id="4400" el_nome="ITERANNOTAZIONI" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                             <properties>
+                                                  <width><![CDATA[150]]></width>
+                                                  <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                             </properties>
+                                        </engineElement>
+                                        <engineElement el_id="4401" el_nome="ITERCHIUSO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                             <properties>
+                                                  <width><![CDATA[80]]></width>
+                                                  <class><![CDATA[ui-state-default ui-corner-all ui-state-default ui-corner-all {formatter:eqdate}]]></class>
+                                             </properties>
+                                        </engineElement>
+                                        <engineElement el_id="4402" el_nome="ITERGEST" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                             <properties>
+                                                  <width><![CDATA[20]]></width>
+                                                  <align><![CDATA[center]]></align>
+                                                  <class><![CDATA[ui-state-default ui-corner-all ui-state-default ui-corner-all {formatter:'checkbox', formatoptions:{disabled:true}}]]></class>
+                                             </properties>
+                                        </engineElement>
+                                        <engineElement el_id="4403" el_nome="ITERSTATO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                             <properties>
+                                                  <width><![CDATA[25]]></width>
+                                                  <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                             </properties>
+                                        </engineElement>
+                                   </engineElement>
+                                   <engineElement el_id="4437" el_nome="divDaAllegare" el_tipo="7" el_colonne="2" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                                        <engineElement el_id="4443" el_nome="gridDestinatari" el_tipo="91" el_colonne="2" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-jqGrid" tipo_tag="table">
+                                             <properties>
+                                                  <class><![CDATA[ita-jqGrid {caption: "Invia a.....",width:340,height:100,autowidth:false,rowNum:20,rowList:[],navGrid:true,navButtonAdd:true,navButtonDel:true,navButtonEdit:false,readerId:'idx',cellEdit:true}]]></class>
+                                                  <style><![CDATA[font-size:85%;]]></style>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-jqGrid]]></class>
+                                             </tipoProperties>
+                                             <engineElement el_id="4445" el_nome="Desnom" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                                  <label class="sx ui-widget input"><![CDATA[Destinatario]]></label>
+                                             </engineElement>
+                                             <engineElement el_id="4447" el_nome="MedGest" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                                  <label class="sx ui-widget input"><![CDATA[Gest.]]></label>
+                                             </engineElement>
+                                             <engineElement el_id="4449" el_nome="DESNOM" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                                  <properties>
+                                                       <width><![CDATA[270]]></width>
+                                                       <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                                  </properties>
+                                             </engineElement>
+                                             <engineElement el_id="4451" el_nome="DESGES" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                                  <properties>
+                                                       <width><![CDATA[40]]></width>
+                                                       <align><![CDATA[center]]></align>
+                                                       <class><![CDATA[ui-state-default ui-corner-all {formatter:itacheckbox }]]></class>
+                                                  </properties>
+                                             </engineElement>
+                                        </engineElement>
+                                        <engineElement el_id="4438" el_nome="gridDaAllegare" el_tipo="91" el_colonne="1" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-jqGrid" tipo_tag="table">
+                                             <properties>
+                                                  <class><![CDATA[ita-jqGrid {caption: "Allega per l'invio.....",width:340,height:100,autowidth:false,rowNum:20,rowList:[],navGrid:true,navButtonAdd:true,navButtonDel:true,navButtonEdit:true,readerId:'idx',cellEdit:true}]]></class>
+                                                  <style><![CDATA[font-size:85%;]]></style>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-jqGrid]]></class>
+                                             </tipoProperties>
+                                             <engineElement el_id="4440" el_nome="DaInfo" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                                  <label class="sx ui-widget input"><![CDATA[Descrizione]]></label>
+                                             </engineElement>
+                                             <engineElement el_id="4442" el_nome="FILEINFO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                                  <properties>
+                                                       <width><![CDATA[60]]></width>
+                                                       <class><![CDATA[ui-state-default ui-corner-all {editable:true,cellEdit:true}]]></class>
+                                                  </properties>
+                                             </engineElement>
+                                        </engineElement>
+                                   </engineElement>
+                                   <engineElement el_id="4452" el_nome="Annotazioni" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                                        <label class="sx input" style="width:100px"><![CDATA[Annotazioni:]]></label>
+                                        <properties>
+                                             <maxlength><![CDATA[80]]></maxlength>
+                                             <size><![CDATA[80]]></size>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-edit]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                              </engineElement>
+                              <engineElement el_id="4436" el_nome="panePassi" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                                   <properties>
+                                        <Title><![CDATA[Passi del Procedimento]]></Title>
+                                        <style><![CDATA[height:400px;]]></style>
+                                        <class><![CDATA[ita-data-page]]></class>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-tabpane]]></class>
+                                   </tipoProperties>
+                                   <engineElement el_id="4480" el_nome="gridPassi" el_tipo="91" el_colonne="7" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-jqGrid" tipo_tag="table">
+                                        <properties>
+                                             <class><![CDATA[ita-jqGrid {caption: "Elenco Passi Procedimento",width:690,height:340,autowidth:false,rowNum:20,rowList:[],navGrid:true,navButtonEdit:true,navButtonAdd:true}]]></class>
+                                             <style><![CDATA[font-size:75%;]]></style>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-jqGrid]]></class>
+                                        </tipoProperties>
+                                        <engineElement el_id="4481" el_nome="Seq" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                             <label class="sx ui-widget input"><![CDATA[Seq.]]></label>
+                                        </engineElement>
+                                        <engineElement el_id="5501" el_nome="Data" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                             <label class="sx ui-widget input"><![CDATA[Data]]></label>
+                                        </engineElement>
+                                        <engineElement el_id="4483" el_nome="Addetto" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                             <label class="sx ui-widget input"><![CDATA[Addetto]]></label>
+                                        </engineElement>
+                                        <engineElement el_id="4482" el_nome="TipoPasso" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                             <label class="sx ui-widget input"><![CDATA[Tipo Passo]]></label>
+                                        </engineElement>
+                                        <engineElement el_id="4487" el_nome="DesPasso" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                             <label class="sx ui-widget input"><![CDATA[Descrizione]]></label>
+                                        </engineElement>
+                                        <engineElement el_id="4488" el_nome="Giorni" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                             <label class="sx ui-widget input"><![CDATA[Gg]]></label>
+                                        </engineElement>
+                                        <engineElement el_id="4492" el_nome="StatoPasso" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                             <label class="sx ui-widget input"><![CDATA[Stato]]></label>
+                                        </engineElement>
+                                        <engineElement el_id="4484" el_nome="PROSEQ" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                             <properties>
+                                                  <width><![CDATA[10]]></width>
+                                                  <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                             </properties>
+                                        </engineElement>
+                                        <engineElement el_id="5500" el_nome="PRORIS" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                             <properties>
+                                                  <width><![CDATA[30]]></width>
+                                                  <class><![CDATA[ui-state-default ui-corner-all ui-state-default ui-corner-all {formatter:eqdate}]]></class>
+                                             </properties>
+                                        </engineElement>
+                                        <engineElement el_id="4490" el_nome="RESPONSABILE" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                             <properties>
+                                                  <width><![CDATA[50]]></width>
+                                                  <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                             </properties>
+                                        </engineElement>
+                                        <engineElement el_id="4486" el_nome="PRODTP" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                             <properties>
+                                                  <width><![CDATA[60]]></width>
+                                                  <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                             </properties>
+                                        </engineElement>
+                                        <engineElement el_id="4489" el_nome="PRODPA" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                             <properties>
+                                                  <width><![CDATA[90]]></width>
+                                                  <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                             </properties>
+                                        </engineElement>
+                                        <engineElement el_id="4485" el_nome="PROGIO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                             <properties>
+                                                  <width><![CDATA[10]]></width>
+                                                  <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                             </properties>
+                                        </engineElement>
+                                        <engineElement el_id="4491" el_nome="STATOPASSO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                             <properties>
+                                                  <width><![CDATA[10]]></width>
+                                                  <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                             </properties>
+                                        </engineElement>
+                                   </engineElement>
+                              </engineElement>
+                              <engineElement el_id="4911" el_nome="paneAllegati" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                                   <properties>
+                                        <Title><![CDATA[Documenti Allegati]]></Title>
+                                        <style><![CDATA[height:400px;]]></style>
+                                        <class><![CDATA[ita-data-page]]></class>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-tabpane]]></class>
+                                   </tipoProperties>
+                                   <engineElement el_id="4415" el_nome="gridAllegati" el_tipo="91" el_colonne="3" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-jqGrid" tipo_tag="table">
+                                        <properties>
+                                             <class><![CDATA[ita-jqGrid {caption: "Elenco Allegati",width:690,height:140,autowidth:false,rowNum:20,rowList:[],navGrid:true,navButtonEdit:true}]]></class>
+                                             <style><![CDATA[font-size:75%;]]></style>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-jqGrid]]></class>
+                                        </tipoProperties>
+                                        <engineElement el_id="4416" el_nome="Allegato" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                             <label class="sx ui-widget input"><![CDATA[Nome File]]></label>
+                                        </engineElement>
+                                        <engineElement el_id="4417" el_nome="InfoAllegato" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                             <label class="sx ui-widget input"><![CDATA[Descrizione]]></label>
+                                        </engineElement>
+                                        <engineElement el_id="4418" el_nome="Provenienza" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                             <label class="sx ui-widget input"><![CDATA[Provenienza]]></label>
+                                        </engineElement>
+                                        <engineElement el_id="4419" el_nome="FILENAME" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                             <properties>
+                                                  <width><![CDATA[60]]></width>
+                                                  <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                             </properties>
+                                        </engineElement>
+                                        <engineElement el_id="4420" el_nome="FILEINFO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                             <properties>
+                                                  <width><![CDATA[60]]></width>
+                                                  <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                             </properties>
+                                        </engineElement>
+                                        <engineElement el_id="4421" el_nome="PROVENIENZA" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                             <properties>
+                                                  <width><![CDATA[60]]></width>
+                                                  <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                             </properties>
+                                        </engineElement>
+                                   </engineElement>
+                              </engineElement>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+          <engineElement el_id="4454" el_nome="buttonBar" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[width:150px;]]></style>
+                    <class><![CDATA[ita-layout-east ita-buttonbar]]></class>
+               </properties>
+               <engineElement el_id="4455" el_nome="Invia" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <Value><![CDATA[F5 - Invia]]></Value>
+                         <class><![CDATA[ita-button-commit {iconLeft:'ui-icon ui-icon-circle-arrow-e',shortCut:'f5'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_id="4456" el_nome="Chiudi" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <Value><![CDATA[F7 - Chiudi Iter]]></Value>
+                         <class><![CDATA[ita-button-commit {iconLeft:'ui-icon ui-icon-circle-close',shortCut:'f7'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_id="4457" el_nome="Indietro" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <Value><![CDATA[F3 - Indietro]]></Value>
+                         <class><![CDATA[{iconLeft:'ui-icon ui-icon-arrowreturnthick-1-w',shortCut:'f3'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_id="4458" el_nome="Protocolla" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <Value><![CDATA[F6 - Protocolla]]></Value>
+                         <class><![CDATA[ita-button-commit {iconLeft:'ui-icon ui-icon-pencil',shortCut:'f6'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_id="4459" el_nome="ApriProcedimento" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <Value><![CDATA[Apri Proced.]]></Value>
+                         <class><![CDATA[ita-button-commit {iconLeft:'ui-icon ui-icon-folder-open'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_id="4460" el_nome="" el_tipo="72" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="br">
+               </engineElement>
+               <engineElement el_id="4461" el_nome="Chiusi" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                    <label class="sx input"><![CDATA[Vedi Chiusi]]></label>
+                    <properties>
+                         <class><![CDATA[ita-edit-onchange]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-edit ita-checkbox]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_id="4462" el_nome="Inviati" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                    <label class="sx input"><![CDATA[Vedi Inviati]]></label>
+                    <properties>
+                         <class><![CDATA[ita-edit-onchange]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-edit ita-checkbox]]></class>
+                    </tipoProperties>
+               </engineElement>
+          </engineElement>
+          <engineElement el_id="4463" el_nome="divAppoggio" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-hidden]]></class>
+               </properties>
+               <engineElement el_id="4464" el_nome="ITEKEY" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="invisible" tipo_tag="text">
+                    <tipoProperties>
+                         <style><![CDATA[visibility: hidden;]]></style>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_id="4465" el_nome="ARCITE[ROWID]" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="invisible" tipo_tag="text">
+                    <tipoProperties>
+                         <style><![CDATA[visibility: hidden;]]></style>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_id="5395" el_nome="PROGES[ROWID]" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="invisible" tipo_tag="text">
+                    <tipoProperties>
+                         <style><![CDATA[visibility: hidden;]]></style>
+                    </tipoProperties>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[11/12/2015]]></date>
+          <time><![CDATA[14:37:33]]></time>
+          <user><![CDATA[michele]]></user>
+          <modelSHA><![CDATA[1927bff3f4e476836f6f877dd4eeb14529393c3a]]></modelSHA>
+     </info></itaEngine>

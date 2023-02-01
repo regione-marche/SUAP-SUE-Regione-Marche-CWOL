@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cwbBtaRgruna" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ad6788f5-7388-4dc5-b686-838d690a0f38">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.jasperserver.reportUnit" value="/italsoft/reports/apps/CityBase/cwbBtaViegco"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver/services/repository"/>
+	<parameter name="Sql" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[$P!{Sql}]]>
+	</queryString>
+	<field name="DESVIA" class="java.lang.String"/>
+	<field name="PARI_DISP" class="java.lang.String"/>
+	<field name="NUMCIV" class="java.lang.String"/>
+	<field name="NUMCIV_F" class="java.lang.String"/>
+	<field name="DESLOCAL" class="java.lang.String"/>
+	<field name="CAP" class="java.lang.String"/>
+	<field name="TOPONIMO" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="58" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="79b5227f-abce-4c72-b874-f2bbb9326fb6" x="1" y="22" width="554" height="33"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vie e CAP dei grandi Comuni]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="abbed714-9a34-4052-83da-549d7cfedc92" x="1" y="1" width="69" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH.mm.ss">
+				<reportElement uuid="9fbf1594-3961-4d15-9f72-e139de5ea54b" x="70" y="1" width="69" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="ee6e2a41-77d6-4f55-b24a-387fdff277d7" x="1" y="4" width="227" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descrizione]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1d1b8679-6bba-4192-8329-20dc1b55bb1e" x="228" y="4" width="45" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Parità]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ac7a74ea-d96f-4ed8-b064-3413d2ceb1f3" x="273" y="4" width="49" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dal Nr.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0baf6bf6-967a-4484-ba3f-2cf3fba3094d" x="322" y="4" width="46" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Al Nr.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6cf80db8-f132-416a-8906-d1db9abfe694" x="368" y="4" width="148" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Località]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="855b9c92-95fb-43f4-ae33-9b8bb3eaed1c" x="516" y="4" width="39" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CAP]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="25c71584-9429-4770-9d8b-37b8bedcfa44" x="1" y="27" width="553" height="1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="cdf5a36d-6bb7-4231-a444-e8137995fb31" x="1" y="4" width="227" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{TOPONIMO}.trim().concat( ' ' ).concat( $F{DESVIA} )]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="461b5f31-8f79-4334-9c27-a4bec0544f2c" x="228" y="4" width="45" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{PARI_DISP}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="8f545e56-8bfb-4de2-bd94-3bf5f6bd6db0" x="273" y="4" width="49" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{NUMCIV}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="28e66deb-f32c-4db9-b4df-3efdf47211f6" x="322" y="4" width="46" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{NUMCIV_F}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="dc98c739-802e-4d20-ab5b-635482965722" x="368" y="4" width="148" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{DESLOCAL}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="fd37dafc-215d-4c93-ae6a-529af02e8347" x="516" y="4" width="39" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CAP}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement uuid="1b2f400b-40d4-43bd-8815-70ed941fd98c" x="434" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" di"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="04e64761-b47e-4e5f-9f21-31102aacfab3" x="514" y="0" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

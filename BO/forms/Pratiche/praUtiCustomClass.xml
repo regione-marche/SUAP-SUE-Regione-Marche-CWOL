@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="praUtiCustomClass" el_tipo="1" el_colonne="0" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[#praUtiCustomClass]]></action>
+               <class><![CDATA[ita-app ita-dialog ita-layout-diag { maximized: true, title: "Configura Custom Class", width: 600, height: 500, modal: true }]]></class>
+          </properties>
+          <engineElement el_nome="workSpace" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+               </properties>
+               <engineElement el_nome="divNavigator" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[width: 97%; font-size: 1.2em; padding: 6px 10px; margin-bottom: 10px; font-weight: bold;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="divRisultato" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[height: 92%;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="divGridListing" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[height: 100%;]]></style>
+                         </properties>
+                         <engineElement el_nome="gridListing" el_tipo="91" el_colonne="10" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-jqGrid" tipo_tag="table">
+                              <properties>
+                                   <class><![CDATA[ita-jqGrid { caption: 'Listing', sortable: false, rowNum: 10000, rowList: [], readerId: 'idx', navGrid: true, navButtonRefresh: true, navButtonAdd: true, navButtonEdit: true, navButtonDel: true, resizeToParent: true, pginput: false, pgbuttons: false, shrinkToFit: true }]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-jqGrid]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="NOMEFILE" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[File]]></label>
+                              </engineElement>
+                              <engineElement el_nome="CONTENUTO" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Contenuto]]></label>
+                              </engineElement>
+                              <engineElement el_nome="SCARICA" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                              </engineElement>
+                              <engineElement el_nome="MODIFICA" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                              </engineElement>
+                              <engineElement el_nome="filename" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[100]]></width>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="filecount" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[10]]></width>
+                                        <class><![CDATA[{ align: 'right' }]]></class>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="download" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[5]]></width>
+                                        <class><![CDATA[{ itaSelectable: true, align: 'center' }]]></class>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="edit" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[5]]></width>
+                                        <class><![CDATA[{ align: 'center', itaSelectable: true }]]></class>
+                                   </properties>
+                              </engineElement>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_nome="divGestione" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[width: 98%; height: 92%;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="codeMirror" el_tipo="6" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="generico" tipo_tag="textarea">
+                         <properties>
+                              <class><![CDATA[ita-code-editor]]></class>
+                         </properties>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+          <engineElement el_nome="buttonBar" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[width: 180px;]]></style>
+                    <class><![CDATA[ita-layout-east ita-buttonbar]]></class>
+               </properties>
+               <engineElement el_nome="Elenco" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <Value><![CDATA[F4 - Torna Elenco]]></Value>
+                         <class><![CDATA[{ iconLeft: 'ui-icon ui-icon-arrowreturnthick-1-w', shortCut: 'f4' }]]></class>
+                         <style><![CDATA[width: 98%; margin-bottom: 15px; padding: 4px 0;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="Salva" el_tipo="66" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button-validate" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F6 - Salva]]></value>
+                         <class><![CDATA[ita-button-commit { iconLeft: 'ui-icon ui-icon-disk', shortCut: 'f6' }]]></class>
+                         <style><![CDATA[width: 98%; padding: 4px 0;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button-validate ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+          </engineElement>
+          <engineElement el_nome="divAppoggio" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[21/04/2017]]></date>
+          <time><![CDATA[18:24:06]]></time>
+          <user><![CDATA[carlo]]></user>
+          <modelSHA><![CDATA[78b9a39f81417eff038c173447ad08c89c762955]]></modelSHA>
+     </info></itaEngine>

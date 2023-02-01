@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="praCompDatiAggiuntivi" el_tipo="7" el_colonne="0" tipo_nome="generico" tipo_tag="div">
+          <properties>
+               <action><![CDATA[#praCompDatiAggiuntivi]]></action>
+               <class><![CDATA[ita-model ita-app ita-dialog ita-layout-diag { title: "Dati Aggiuntivi", width: 800, height: 600, modal: true, position: 'top', modelBackend: 'praCompDatiAggiuntivi' }]]></class>
+          </properties>
+          <engineElement el_nome="workSpace" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+                    <style><![CDATA[height: 100%;]]></style>
+               </properties>
+               <engineElement el_nome="divGestione" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[height: 100%;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="divGridDati" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[height:400px;]]></style>
+                         </properties>
+                         <engineElement el_nome="gridDatiAggiuntivi" el_tipo="91" el_colonne="20" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-jqGrid" tipo_tag="table">
+                              <properties>
+                                   <class><![CDATA[ita-jqGrid { caption: "", rowNum: 20000, rowList: [], shrinkToFit: true, filterToolbar: true, navGrid: true, navButtonAdd: true, navButtonDel: true, navButtonEdit: false, navButtonRefresh: true, readerId : 'idx', resizeToParent: true, pgbuttons: false, pginput: false, sortorder: 'asc', cellEdit: true }]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-jqGrid]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="Provenienza" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Provenienza]]></label>
+                              </engineElement>
+                              <engineElement el_nome="Nome" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Nome]]></label>
+                              </engineElement>
+                              <engineElement el_nome="Descrizione" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Descrizione]]></label>
+                              </engineElement>
+                              <engineElement el_nome="Valore" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Valore]]></label>
+                              </engineElement>
+                              <engineElement el_nome="Note" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              </engineElement>
+                              <engineElement el_nome="OrdineElemento" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Ordine]]></label>
+                              </engineElement>
+                              <engineElement el_nome="PROVENIENZA_DATO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[15]]></width>
+                                        <class><![CDATA[{ search: true, stype: 'select', editoptions: { value: {} } }]]></class>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="DAGKEY" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[40]]></width>
+                                        <class><![CDATA[{ hidden: true, search: true, stype: 'select', editoptions: { value: {} }, sortable: false }]]></class>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="DAGDES" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[40]]></width>
+                                        <class><![CDATA[{ sortable: false }]]></class>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="RENDER" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[60]]></width>
+                                        <class><![CDATA[{ sortable: false }]]></class>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="NOTE" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[20]]></width>
+                                        <class><![CDATA[{ fixed: true, resizable: false, search: false, sortable: false }]]></class>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="DAGSFL" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[5]]></width>
+                                        <class><![CDATA[{ align: 'center', editable: true, search:false}]]></class>
+                                   </properties>
+                              </engineElement>
+                         </engineElement>
+                    </engineElement>
+                    <engineElement el_nome="CaricaDatiDeiPassi" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                         <properties>
+                              <value><![CDATA[Visualizza Dati Aggiuntivi dei Passi]]></value>
+                              <class><![CDATA[ita-button-commit {iconLeft:'ui-icon ui-icon-copy'}]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[19/10/2018]]></date>
+          <time><![CDATA[10:06:18]]></time>
+          <user><![CDATA[andrea]]></user>
+          <modelSHA><![CDATA[4be3e027adb4c66788c43fb36b3fa2a6bf719a9b]]></modelSHA>
+     </info></itaEngine>

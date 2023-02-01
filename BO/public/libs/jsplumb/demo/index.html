@@ -1,0 +1,284 @@
+<!doctype html>
+<html>
+    <head>
+        <title>jsPlumb</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+
+        <link rel="stylesheet" href="../jsplumbtoolkit-defaults.css">
+        <link rel="stylesheet" href="../flowchart/style.css">
+        <link rel="stylesheet" type="text/css" href="../../../../lib/jqueryui-1.10.3/jquery-ui.css" />
+        <style>html, body { width: 100%; height: 100%; overflow: hidden; padding: 0; margin: 0; }</style>
+        <script src="../../../../lib/jquery/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="../../../../lib/jqueryui-1.10.3/js/jquery-ui-1.10.3.custom.min.js"></script>
+    </head>
+    <body data-demo-id="flowchart">
+        <div class="jtk-demo-main" style="width: 100%; height: 100%;">
+            <div class="jtk-demo-canvas canvas-wide flowchart-demo jtk-surface" id="canvas" style="height: 100%;"></div>
+        </div>
+
+        <!-- JS -->
+        <script src="../jsplumbtoolkit.min.js"></script>
+        <script type="text/x-jtk-templates" src="../flowchart/templates.html"></script>
+        <!-- /JS -->
+        <script>
+            var toolkit, renderer;
+            $(document).ready(function () {
+                setTimeout(function () {
+                    jsPlumb.ready(function () {
+                        toolkit = jsPlumbToolkit.newInstance({
+                            portDataProperty: 'anchors',
+                            idFunction: function (e) {
+                                return e.id;
+                            },
+                            typeFunction: function (e) {
+                                return e.type;
+                            },
+                            beforeConnect: function (source, target) {
+                                if (source.objectType !== 'Node') {
+                                    source = source.getNode();
+                                }
+
+                                if (target.objectType !== 'Node') {
+                                    target = target.getNode();
+                                }
+
+                                return source !== target;
+                            }
+                        });
+
+                        renderer = toolkit.render({
+                            container: 'canvas',
+                            enablePanButtons: false,
+//                            elementsDroppable: true,
+//                            elementsDraggable: false,
+                            view: {
+                                nodes: {
+                                    'default': {
+                                        events: {
+                                            tap: function (params) {
+                                                toolkit.setSelection(params.node);
+                                            },
+                                            mousedown: function (params) {
+                                                if ($(params.e.target).is('.jtk-draw-handle')) {
+                                                    params.el._isResizing = true;
+                                                }
+                                            },
+                                            mousemove: function (params) {
+                                                if (params.el._isResizing === true) {
+                                                    var node = renderer.getObjectInfo(params.el),
+                                                        data = node.obj.data;
+
+                                                    data.w = Math.round(data.w / 10) * 10;
+                                                    data.h = Math.round(data.h / 10) * 10;
+
+                                                    console.log(params.el, node, data);
+                                                    $(params.el).css({
+                                                        width: data.w + 'px',
+                                                        height: data.h + 'px'
+                                                    });
+
+                                                    toolkit.updateNode(node.obj, data);
+                                                    renderer.repaint(node);
+                                                }
+                                            },
+                                            mouseup: function (params) {
+                                                if (params.el._isResizing === true) {
+                                                    var node = renderer.getObjectInfo(params.el),
+                                                        data = node.obj.data;
+
+                                                    data.w = Math.round(data.w / 10) * 10;
+                                                    data.h = Math.round(data.h / 10) * 10;
+
+                                                    toolkit.updateNode(node.obj, data);
+                                                    renderer.repaint(node);
+
+                                                    params.el._isResizing = false;
+                                                }
+                                            }
+                                        }
+                                    },
+                                    'start': {parent: 'default', template: 'templateStart'},
+                                    'question': {parent: 'default', template: 'templateQuestion'},
+                                    'router': {parent: 'default', template: 'templateRouter'},
+                                    'action': {parent: 'default', template: 'templateAction'},
+                                    'output': {parent: 'default', template: 'templateOutput'}
+                                },
+                                edges: {
+                                    'default': {
+                                        endpoint: ['Rectangle', {width: '20', height: 20}],
+                                        connector: ['Flowchart'],
+                                        paintStyle: {strokeWidth: 2, stroke: '#445566', outlineWidth: 3, outlineStroke: 'transparent'},
+                                        hoverPaintStyle: {strokeWidth: 0.5, stroke: 'red', outlineWidth: 0},
+                                        events: {
+                                            'dblclick': function (params) {
+                                                toolkit.removeEdge(params.edge);
+                                            }
+                                        }
+                                    },
+                                    'conlapunta': {
+                                        overlays: [
+                                            ["Arrow", {width: 10, length: 30, location: 1, id: "arrow"}],
+                                            ["Label", {label: "foo", id: "label"}]
+                                        ],
+                                        events: {
+                                            'dblclick': function (params) {
+                                                toolkit.removeEdge(params.edge);
+                                            }
+                                        }
+                                    }
+                                },
+                                ports: {
+                                    'default': {
+                                        endpoint: ['Dot', {cssClass: 'jtk-endpoint-invisible'}],
+                                        maxConnections: -1,
+                                        isTarget: false,
+                                        isSource: false
+                                    }
+                                }
+                            },
+                            dragOptions: {
+                                grid: [10, 10],
+                                filter: '.jtk-draw-handle, .node-action, .node-action i, .ita-jtk-anchor'
+                            }
+                        });
+
+
+
+                        function getDistance(x1, y1, x2, y2) {
+                            return Math.abs(x1 - x2) + Math.abs(y1 - y2);
+                        }
+
+                        var updateNodeAnchor = function (e, ui) {
+                            var id = $(this).closest('.ita-flowchart').attr('id'),
+                                node = this.parentNode,
+                                info = renderer.getObjectInfo(this),
+                                data = info.obj.data,
+                                w = node.clientWidth - 10,
+                                h = node.clientHeight - 10;
+
+                            /*
+                             * Correggo la posizione a seconda dello zoom
+                             */
+                            var scale = parseFloat(node.parentNode.style.transform.replace(/[^0-9.]/g, ''));
+
+                            ui.position.left /= scale;
+                            ui.position.top /= scale;
+
+                            var x = ui.position.left, y = ui.position.top;
+
+                            if (x < 0) {
+                                x = 0;
+                            } else if (x > w) {
+                                x = w;
+                            }
+
+                            if (y < 0) {
+                                y = 0;
+                            } else if (y > h) {
+                                y = h;
+                            }
+
+                            var t = getDistance(x, y, w / 2, 0),
+                                r = getDistance(x, y, w, h / 2),
+                                b = getDistance(x, y, w / 2, h),
+                                l = getDistance(x, y, 0, h / 2),
+                                arrValues = [t, r, b, l],
+                                m = Math.min.apply(Math, arrValues);
+
+                            console.log('pre', x, y, arrValues, m);
+
+                            switch (m) {
+                                case arrValues[0]:
+                                    x = w / 2;
+                                    y = 0;
+                                    break;
+
+                                case arrValues[1]:
+                                    x = w;
+                                    y = h / 2;
+                                    break;
+
+                                case arrValues[2]:
+                                    x = w / 2;
+                                    y = h;
+                                    break;
+
+                                case arrValues[3]:
+                                    x = 0;
+                                    y = h / 2;
+                                    break;
+                            }
+
+                            ui.position.left = x;
+                            ui.position.top = y;
+
+                            data.x = ui.position.left;
+                            data.y = ui.position.top;
+
+                            toolkit.updatePort(info.obj, data);
+                            renderer.repaint(info.obj.getNode());
+                        };
+
+                        toolkit.bind('dataLoadEnd', function () {
+                            $('.ita-jtk-anchor').on("click", function () {
+//                                alert(this.id);
+                            }).each(function () {
+                                var nodeid = $(this).closest('.flowchart-object').attr('data-jtk-node-id');
+
+                                $(this).draggable({
+                                    drag: updateNodeAnchor,
+                                    stop: updateNodeAnchor
+                                });
+
+//                                jsPlumb.addEndpoint(this);
+                            });
+                        });
+
+                        toolkit.load({
+                            type: 'json',
+                            data: {
+                                'nodes': [
+                                    {'id': 'foo', 'name': 'foo', type: 'action', w: 80, h: 80, text: 'foo', anchors: [
+                                            {id: 1, x: 0, y: 0},
+                                            {id: 2, x: 30, y: 0}
+                                        ]},
+                                    {
+                                        'id': 'router',
+                                        type: 'action',
+                                        w: 80,
+                                        h: 80,
+                                        text: 'action',
+                                        size_anchor: 10,
+                                        anchors: [
+                                            {id: 1, x: 0, y: 0},
+                                            {id: 2, x: 30, y: 0},
+                                            {id: 3, x: 70, y: 0}
+                                        ]
+                                    },
+                                    {'id': 'bar', 'name': 'bar', type: 'action', w: 80, h: 80, text: 'bar', anchors: [
+                                            {id: 1, x: 0, y: 0, dx: 0, dy: 0},
+                                            {id: 2, x: 30, y: 0}
+                                        ]}
+                                ],
+                                'edges': [
+                                    {
+                                        source: 'foo.1',
+                                        target: 'bar.1'
+                                    }
+                                ]
+                            }
+                        });
+
+                        new jsPlumbToolkit.DrawingTools({
+                            renderer: renderer
+                        });
+
+                        setTimeout(function () {
+                            renderer.relayout();
+                        }, 1);
+                    });
+                }, 500);
+            });
+        </script>
+    </body>
+</html>

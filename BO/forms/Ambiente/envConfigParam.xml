@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="envConfigParam" el_tipo="1" el_colonne="0" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[#envConfigParam]]></action>
+               <class><![CDATA[ita-dialog ita-app ita-layout-diag {title:"Configurazione Parametri",width:800,height:700,modal:false,position:'center'}]]></class>
+          </properties>
+          <engineElement el_nome="workSpace" el_tipo="74" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-div" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+                    <style><![CDATA[width:950;]]></style>
+               </properties>
+               <tipoProperties>
+                    <class><![CDATA[ita-div]]></class>
+               </tipoProperties>
+               <engineElement el_nome="divGestione" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[height:500px;]]></style>
+                    </properties>
+                    <engineElement el_nome="gridConfig" el_tipo="91" el_colonne="15" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-jqGrid" tipo_tag="table">
+                         <properties>
+                              <class><![CDATA[ita-jqGrid {caption: "Configura Parametri",rowList:[],rowNum:10000,width:700,height:200, filterToolbar:true, navGrid:true,navButtonAdd:false,navButtonDel:false,navButtonEdit:true, pgbuttons:false,pginput:false,readerId:'idx', resizeToParent:true}]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-jqGrid]]></class>
+                         </tipoProperties>
+                         <engineElement el_nome="MultiIstanza" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Multi]]></label>
+                         </engineElement>
+                         <engineElement el_nome="MULTIISTANZA" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[10]]></width>
+                                   <class><![CDATA[ui-state-default ui-corner-all ui-state-default ui-corner-all {formatter:'checkbox',search:false , formatoptions:{disabled:true}}]]></class>
+                                   <aling><![CDATA[center]]></aling>
+                              </properties>
+                         </engineElement>
+                         <engineElement el_nome="Descrizione" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Descrizione]]></label>
+                         </engineElement>
+                         <engineElement el_nome="DESCRIZIONE" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[160]]></width>
+                                   <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                              </properties>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_nome="divDettaglio" el_tipo="74" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-div" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[height:500px;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-div]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="gridConfigMulti" el_tipo="91" el_colonne="15" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-jqGrid" tipo_tag="table">
+                         <properties>
+                              <class><![CDATA[ita-jqGrid {caption: "Configurazione Multi Parametri",height:250,autowidth:true,cellEdit:true,rowNum:1000,rowList:[],shrinkToFit:true,resizeToParent:true,navGrid:true,navButtonAdd:true,navButtonDel:true,navButtonEdit:true,navButtonRefresh:true,readerId:'idx',pginput:false,pgbuttons:false,filterToolbar:false}]]></class>
+                              <style><![CDATA[font-size:100%;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-jqGrid]]></class>
+                         </tipoProperties>
+                         <engineElement el_nome="thDescrizione_codice_classe" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Parametri Classe]]></label>
+                         </engineElement>
+                         <engineElement el_nome="Config" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Descrizione Instanza]]></label>
+                         </engineElement>
+                         <engineElement el_nome="DESCRIZIONE_CODICE_CLASSE" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[100]]></width>
+                                   <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                              </properties>
+                         </engineElement>
+                         <engineElement el_nome="DESCRIZIONE_ISTANZA" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[100]]></width>
+                                   <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                              </properties>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+          <engineElement el_nome="buttonBar" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-layout-east ita-buttonbar ita-buttonbar-medium]]></class>
+                    <style><![CDATA[width:170px;]]></style>
+               </properties>
+               <engineElement el_nome="Torna" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[Torna Elenco]]></value>
+                         <style><![CDATA[width:140px;]]></style>
+                         <class><![CDATA[{iconLeft:'ui-icon ui-icon-arrowreturnthick-1-w'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="Semafori" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[Semafori]]></value>
+                         <style><![CDATA[width:140px;]]></style>
+                         <class><![CDATA[{iconLeft:'ita-icon-semaforo-blue-32x32'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="ClassEventi" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[Classificazione<br>Eventi]]></value>
+                         <style><![CDATA[width:140px;]]></style>
+                         <class><![CDATA[{iconLeft:'ita-icon-spreadsheet-32x32'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[03/11/2017]]></date>
+          <time><![CDATA[17:18:39]]></time>
+          <user><![CDATA[tania]]></user>
+          <modelSHA><![CDATA[6e15cf53a6507221c4b1421cd4c266aaa2a14db2]]></modelSHA>
+     </info></itaEngine>

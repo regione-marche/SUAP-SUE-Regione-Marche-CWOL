@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_id="160288" el_nome="proSeleFascicolo" el_tipo="1" el_colonne="0" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[#proSeleFascicolo]]></action>
+               <class><![CDATA[ita-dialog  ita-layout-diag {title:"Selezione Fascicolo",width:1050,height:620,modal:true,position:'center'}]]></class>
+          </properties>
+          <engineElement el_id="160289" el_nome="workSpace" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[width:600px;height:400px;]]></style>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+               </properties>
+               <engineElement el_id="160290" el_nome="divRisultato" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[height:95%;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_id="160291" el_nome="divDescrizione" el_tipo="74" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-div" tipo_tag="div">
+                         <tipoProperties>
+                              <class><![CDATA[ita-div]]></class>
+                         </tipoProperties>
+                         <engineElement el_id="160292" el_nome="divDescrizioneFascicolo" el_tipo="86" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box-highlight" tipo_tag="div">
+                              <properties>
+                                   <style><![CDATA[display:inline-block;vertical-align:top; width:700px; padding:5px;]]></style>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-box-highlight]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                         <engineElement el_id="160293" el_nome="divBottoni" el_tipo="74" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-div" tipo_tag="div">
+                              <properties>
+                                   <style><![CDATA[display:inline-block;vertical-align:top; width:100px; padding:2px;]]></style>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-div]]></class>
+                              </tipoProperties>
+                              <engineElement el_id="160294" el_nome="AltroTitolario" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                   <properties>
+                                        <value><![CDATA[Altro<br>Titolario]]></value>
+                                        <class><![CDATA[{iconLeft:'ui-icon ui-icon-search'}]]></class>
+                                        <style><![CDATA[width:98%;height:40px;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-button ita-element-animate]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_id="160319" el_nome="CercaAperti" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                   <properties>
+                                        <value><![CDATA[Fascicoli<br/>Aperti]]></value>
+                                        <class><![CDATA[{iconLeft:'ui-icon ui-icon-folder-open'}]]></class>
+                                        <style><![CDATA[width:98%;height:40px;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-button ita-element-animate]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                    </engineElement>
+                    <engineElement el_id="160295" el_nome="divFascicoli" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="generico" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[height:400px;]]></style>
+                         </properties>
+                         <engineElement el_id="160296" el_nome="gridFascicoli" el_tipo="91" el_colonne="10" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-jqGrid" tipo_tag="table">
+                              <properties>
+                                   <class><![CDATA[{caption: "Elenco Fascicoli", shrinkToFit:true, width:1000, height:400, sortname:'GESOGG', rowNum:10000, rowList:[], navGrid:true, navButtonDel:false, navButtonAdd:true, navButtonEdit:false, navButtonExcel:false, navButtonPrint:false, navButtonRefresh:true, resizeToParent:true, pginput:false, pgbuttons:false ,cellEdit:true, filterToolbar:true }]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-jqGrid]]></class>
+                              </tipoProperties>
+                              <engineElement el_id="160297" el_nome="thTitolario" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Titolario]]></label>
+                              </engineElement>
+                              <engineElement el_id="160298" el_nome="thAnno" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Anno]]></label>
+                              </engineElement>
+                              <engineElement el_id="160299" el_nome="thCodice" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Codice]]></label>
+                              </engineElement>
+                              <engineElement el_id="160300" el_nome="thFascicolo" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Fascicolo]]></label>
+                              </engineElement>
+                              <engineElement el_id="160301" el_nome="thResp" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Responsabile]]></label>
+                              </engineElement>
+                              <engineElement el_id="160302" el_nome="thSottofas" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Sottofascicoli]]></label>
+                              </engineElement>
+                              <engineElement el_id="160303" el_nome="ORGCCF" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[100]]></width>
+                                        <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_id="160304" el_nome="ORGANN" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[50]]></width>
+                                        <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_id="160305" el_nome="ORGCOD" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[90]]></width>
+                                        <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_id="160306" el_nome="GESOGG" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[260]]></width>
+                                        <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_id="160307" el_nome="NOME_RESPONSABILE" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[100]]></width>
+                                        <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_id="160308" el_nome="SOTTOFASCICOLI_FAS" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[60]]></width>
+                                        <class><![CDATA[ui-state-default ui-corner-all {sortable:false, itaSelectable:true}]]></class>
+                                   </properties>
+                              </engineElement>
+                         </engineElement>
+                    </engineElement>
+                    <engineElement el_id="160309" el_nome="divSottoFascicoli" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="generico" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[height:400px;]]></style>
+                         </properties>
+                         <engineElement el_id="160310" el_nome="gridSottoFascicoli" el_tipo="91" el_colonne="10" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-jqGrid" tipo_tag="table">
+                              <properties>
+                                   <class><![CDATA[ita-jqGrid {caption: "Elenco Sottofascicoli", shrinkToFit:true, width:1000, height:400, sortname:'OGGOGG', rowNum:10000, rowList:[], navGrid:true, navButtonDel:false, navButtonAdd:false, navButtonEdit:false, navButtonExcel:false, navButtonPrint:false, navButtonRefresh:true, resizeToParent:true, pginput:false, pgbuttons:false, cellEdit:true, filterToolbar:true }]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-jqGrid]]></class>
+                              </tipoProperties>
+                              <engineElement el_id="160311" el_nome="thCodiceSotto" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Codice]]></label>
+                              </engineElement>
+                              <engineElement el_id="160312" el_nome="thDescrizioneSotto" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Descrizione]]></label>
+                              </engineElement>
+                              <engineElement el_id="160313" el_nome="thRespon" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Resonsabile]]></label>
+                              </engineElement>
+                              <engineElement el_id="160314" el_nome="thSottoFascicolo" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Sottofascicoli S/N]]></label>
+                              </engineElement>
+                              <engineElement el_id="160315" el_nome="PROSUBKEY" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[75]]></width>
+                                        <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_id="160316" el_nome="OGGOGG" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[260]]></width>
+                                        <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_id="160317" el_nome="NOME_RESPON_SF" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[150]]></width>
+                                        <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_id="160318" el_nome="SOTTOFASCICOLI" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[60]]></width>
+                                        <class><![CDATA[ui-state-default ui-corner-all {sortable:false, itaSelectable:true}]]></class>
+                                   </properties>
+                              </engineElement>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[04/08/2016]]></date>
+          <time><![CDATA[17:05:25]]></time>
+          <user><![CDATA[m.moscioni]]></user>
+          <modelSHA><![CDATA[701b01bb2daed99f41205e9dda5c17775ff80218]]></modelSHA>
+     </info></itaEngine>

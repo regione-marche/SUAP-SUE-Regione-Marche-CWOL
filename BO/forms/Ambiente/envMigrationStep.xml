@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="envMigrationStep" el_tipo="1" el_colonne="0" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[#envMigrationStep]]></action>
+               <class><![CDATA[ita-app  ita-dialog ita-layout-diag {title:"Passo Migration",width:700,height:400,modal:true,position:'center'}]]></class>
+          </properties>
+          <engineElement el_nome="workSpace" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[width:600px;height:400px;]]></style>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+               </properties>
+               <tipoProperties>
+                    <class><![CDATA[ita-data-page]]></class>
+               </tipoProperties>
+               <engineElement el_nome="TIPO" el_tipo="80" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-select" tipo_tag="select">
+                    <label class="sx input" style="width:100px"><![CDATA[Tipo]]></label>
+                    <properties>
+                         <class><![CDATA[ita-edit-onchange]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-select ita-edit]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="SEQUENZA" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                    <label class="sx input" style="width:100px"><![CDATA[Sequenza]]></label>
+                    <properties>
+                         <maxlength><![CDATA[4]]></maxlength>
+                         <size><![CDATA[6]]></size>
+                         <class><![CDATA[{formatter: 'number', formatterOptions: { precision: 0,decimal: '', thousand: ''}}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-edit]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="DESCRIZIONE" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                    <label class="sx input Sequenza" style="width:100px"><![CDATA[Descrizione]]></label>
+                    <properties>
+                         <maxlength><![CDATA[60]]></maxlength>
+                         <size><![CDATA[60]]></size>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-edit]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="divMethod" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                    <engineElement el_nome="METODO_EXECUTOR_UP" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input Sequenza" style="width:100px"><![CDATA[Metodo UP]]></label>
+                         <properties>
+                              <maxlength><![CDATA[60]]></maxlength>
+                              <size><![CDATA[60]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="METODO_EXECUTOR_DOWN" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input Sequenza" style="width:100px"><![CDATA[Metodo DOWN]]></label>
+                         <properties>
+                              <maxlength><![CDATA[60]]></maxlength>
+                              <size><![CDATA[60]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_nome="divScript" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                    <engineElement el_nome="SCRIPT_ALIAS_DB" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input Sequenza" style="width:100px"><![CDATA[Alias DB]]></label>
+                         <properties>
+                              <maxlength><![CDATA[40]]></maxlength>
+                              <size><![CDATA[40]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="SCRIPT_SQL" el_tipo="84" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit-multiline" tipo_tag="textarea">
+                         <label class="sx input Sequenza" style="width:100px"><![CDATA[Script SQL]]></label>
+                         <properties>
+                              <maxlength><![CDATA[2000]]></maxlength>
+                              <cols><![CDATA[60]]></cols>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-edit-multiline]]></class>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_nome="MULTITENANT" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                    <label class="sx input" style="width:100px"><![CDATA[Multitenant]]></label>
+                    <tipoProperties>
+                         <class><![CDATA[ita-edit ita-checkbox]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="br1" el_tipo="72" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="br">
+               </engineElement>
+               <engineElement el_nome="btnConferma" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                    <label class="sx ui-widget input"><![CDATA[Conferma]]></label>
+                    <properties>
+                         <value><![CDATA[Conferma]]></value>
+                         <style><![CDATA[width:140px;]]></style>
+                         <class><![CDATA[ita-button-delete {iconLeft:'ui-icon ui-icon-check'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[04/09/2018]]></date>
+          <time><![CDATA[12:20:46]]></time>
+          <user><![CDATA[italsoft]]></user>
+          <modelSHA><![CDATA[c29c923bcc637fd1a0481cc333913d8c53d107fe]]></modelSHA>
+     </info></itaEngine>

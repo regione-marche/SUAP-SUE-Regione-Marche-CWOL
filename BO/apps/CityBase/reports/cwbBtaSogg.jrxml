@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cwbBtaRgruna" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ad6788f5-7388-4dc5-b686-838d690a0f38">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.jasperserver.reportUnit" value="/italsoft/reports/apps/CityBase/cwbBtaTipciv"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver/services/repository"/>
+	<parameter name="Sql" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[$P!{Sql}]]>
+	</queryString>
+	<field name="COGNOME" class="java.lang.String"/>
+	<field name="NOME" class="java.lang.String"/>
+	<field name="CODFISCALE" class="java.lang.String"/>
+	<field name="PROGSOGG" class="java.lang.String"/>
+	<field name="PARTIVA" class="java.lang.String"/>
+	<field name="DATAVALID" class="java.lang.String"/>
+	<field name="DESLOCAL" class="java.lang.String"/>
+	<sortField name="PROGSOGG"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="a1c79104-4e3a-4705-9c00-9a2a0f2d9bb4" x="1" y="22" width="554" height="32"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Archivio Unico Soggetti]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="3a9f9304-671a-4dd3-8da6-3c188654f533" x="1" y="0" width="69" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH.mm.ss">
+				<reportElement uuid="ebf08f44-3368-407f-b48c-62976057ebb8" x="70" y="0" width="69" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="59" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="d33416ac-8671-43b3-904b-2cde7f6c10c8" x="2" y="6" width="245" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nominativo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2ff9d09a-b66d-4042-a1e3-6bc0da1e9f9d" x="502" y="26" width="50" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="de655591-d4a7-4d87-ad5c-26208dcd028a" x="2" y="53" width="550" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="a982a1c0-1116-4216-891b-35d6d771b628" x="2" y="26" width="245" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cod.Fiscale]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="42177536-132e-4b36-ad96-9fd40249a178" x="247" y="26" width="81" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Partita IVA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8ca72ec1-3a89-486a-802c-e328a25006b1" x="328" y="26" width="69" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data nascita]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8197e24b-17da-4530-bcf2-35a4b548f253" x="397" y="26" width="105" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Località di Nascita]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="57" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="3dc2880e-21cd-44d2-810c-6d2b89d578c7" x="2" y="11" width="245" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{COGNOME}.trim().concat( ' ' ).concat( $F{NOME} )]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="31361de5-feee-4db9-bbd5-97a06c05028b" x="502" y="31" width="50" height="20" forecolor="#0099FF"/>
+				<textElement textAlignment="Center">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PROGSOGG}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="d9878d3f-a12d-441d-b89a-7a3c67866776" x="2" y="31" width="245" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CODFISCALE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1266d585-681e-4536-8f1a-e1eb3305512a" x="247" y="31" width="81" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{PARTIVA}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement uuid="ab45dfa6-e88b-4a4a-9de8-672b4f214b60" x="328" y="31" width="69" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{DATAVALID}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="dd1b463a-0e43-4c6e-90e6-5f546b68427c" x="397" y="31" width="105" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{DESLOCAL}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement uuid="0336225c-9dbe-4a69-97fa-a7dcb345cc03" x="432" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" di"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="097af3c6-e002-4cc8-b2b7-20f6ec479e01" x="512" y="0" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Segnatura">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Intestazione"/>
+        <xs:element ref="Riferimenti" minOccurs="0"/>
+        <xs:element ref="Descrizione"/>
+        <xs:element ref="PiuInfo" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="versione" type="xs:string" fixed="aaaa-mm-gg"/>
+      <xs:attribute name="xml-lang" type="xs:string" fixed="it"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Intestazione">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Identificatore"/>
+        <xs:element ref="PrimaRegistrazione" minOccurs="0"/>
+        <xs:element ref="OraRegistrazione" minOccurs="0"/>
+        <xs:element ref="Origine"/>
+        <xs:element ref="Destinazione" maxOccurs="unbounded"/>
+        <xs:element ref="PerConoscenza" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="Risposta" minOccurs="0"/>
+        <xs:element ref="Riservato" minOccurs="0"/>
+        <xs:element ref="InterventoOperatore" minOccurs="0"/>
+        <xs:element ref="RiferimentoDocumentiCartacei" minOccurs="0"/>
+        <xs:element ref="RiferimentiTelematici" minOccurs="0"/>
+        <xs:element ref="Oggetto"/>
+        <xs:element ref="Classifica" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="Note" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Identificatore">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="CodiceAmministrazione"/>
+        <xs:element ref="CodiceAOO"/>
+        <xs:element ref="CodiceRegistro"/>
+        <xs:element ref="NumeroRegistrazione"/>
+        <xs:element ref="DataRegistrazione"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CodiceAmministrazione" type="xs:string"/>
+  <xs:element name="CodiceAOO" type="xs:string"/>
+  <xs:element name="CodiceRegistro" type="xs:string"/>
+  <xs:element name="NumeroRegistrazione" type="xs:string"/>
+  <xs:element name="DataRegistrazione" type="xs:string"/>
+  <xs:element name="PrimaRegistrazione">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Identificatore"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OraRegistrazione">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="tempo" default="locale">
+            <xs:simpleType>
+              <xs:restriction base="xs:NMTOKEN">
+                <xs:enumeration value="locale"/>
+                <xs:enumeration value="spc"/>
+                <xs:enumeration value="NMTOKEN"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Origine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="IndirizzoTelematico"/>
+        <xs:element ref="Mittente"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Destinazione">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="IndirizzoTelematico"/>
+        <xs:element ref="Destinatario" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="confermaRicezione" default="no">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="si"/>
+            <xs:enumeration value="no"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PerConoscenza">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="IndirizzoTelematico"/>
+        <xs:element ref="Destinatario" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="confermaRicezione" default="no">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="si"/>
+            <xs:enumeration value="no"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Risposta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="IndirizzoTelematico"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IndirizzoTelematico">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="tipo" default="smtp">
+            <xs:simpleType>
+              <xs:restriction base="xs:NMTOKEN">
+                <xs:enumeration value="smtp"/>
+                <xs:enumeration value="uri"/>
+                <xs:enumeration value="NMTOKEN"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="note" type="xs:string"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InterventoOperatore" type="xs:string"/>
+  <xs:element name="Riservato" type="xs:string"/>
+  <xs:element name="RiferimentoDocumentiCartacei">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="RiferimentiTelematici">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="Oggetto" type="xs:string"/>
+  <xs:element name="Classifica">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="CodiceAmministrazione" minOccurs="0"/>
+        <xs:element ref="CodiceAOO" minOccurs="0"/>
+        <xs:element ref="Denominazione" minOccurs="0"/>
+        <xs:element ref="Livello" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Denominazione" type="xs:string"/>
+  <xs:element name="Livello">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="nome" type="xs:string"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Identificativo" type="xs:string"/>
+  <xs:element name="Note" type="xs:string"/>
+  <xs:element name="Mittente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Amministrazione"/>
+        <xs:element ref="AOO"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Destinatario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice>
+          <xs:sequence>
+            <xs:element ref="Amministrazione"/>
+            <xs:element ref="AOO" minOccurs="0"/>
+          </xs:sequence>
+          <xs:sequence>
+            <xs:element ref="Denominazione"/>
+            <xs:element ref="Persona" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+          <xs:element ref="Persona" maxOccurs="unbounded"/>
+        </xs:choice>
+        <xs:element ref="IndirizzoTelematico" minOccurs="0"/>
+        <xs:element ref="Telefono" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="Fax" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="IndirizzoPostale" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Amministrazione">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Denominazione"/>
+        <xs:element ref="CodiceAmministrazione" minOccurs="0"/>
+        <xs:choice>
+          <xs:element ref="UnitaOrganizzativa"/>
+          <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element ref="Ruolo"/>
+              <xs:element ref="Persona"/>
+            </xs:choice>
+            <xs:element ref="IndirizzoPostale"/>
+            <xs:element ref="IndirizzoTelematico" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="Telefono" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="Fax" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnitaOrganizzativa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Denominazione"/>
+        <xs:element ref="Identificativo" minOccurs="0"/>
+        <xs:choice>
+          <xs:element ref="UnitaOrganizzativa"/>
+          <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element ref="Ruolo"/>
+              <xs:element ref="Persona"/>
+            </xs:choice>
+            <xs:element ref="IndirizzoPostale"/>
+            <xs:element ref="IndirizzoTelematico" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="Telefono" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="Fax" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="tipo" default="permanente">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="permanente"/>
+            <xs:enumeration value="temporanea"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AOO">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Denominazione"/>
+        <xs:element ref="CodiceAOO" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ruolo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Denominazione"/>
+        <xs:element ref="Identificativo" minOccurs="0"/>
+        <xs:element ref="Persona" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Persona">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice>
+          <xs:element ref="Denominazione"/>
+          <xs:sequence>
+            <xs:element ref="Nome" minOccurs="0"/>
+            <xs:element ref="Cognome"/>
+            <xs:element ref="Titolo" minOccurs="0"/>
+            <xs:element ref="CodiceFiscale" minOccurs="0"/>
+          </xs:sequence>
+        </xs:choice>
+        <xs:element ref="Identificativo" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string"/>
+      <xs:attribute name="rife" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Nome" type="xs:string"/>
+  <xs:element name="Cognome" type="xs:string"/>
+  <xs:element name="Titolo" type="xs:string"/>
+  <xs:element name="CodiceFiscale" type="xs:string"/>
+  <xs:element name="IndirizzoPostale">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="Denominazione"/>
+        <xs:sequence>
+          <xs:element ref="Toponimo"/>
+          <xs:element ref="Civico"/>
+          <xs:element ref="CAP"/>
+          <xs:element ref="Comune"/>
+          <xs:element ref="Provincia"/>
+          <xs:element ref="Nazione" minOccurs="0"/>
+        </xs:sequence>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Toponimo">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="dug" type="xs:string"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Civico" type="xs:string"/>
+  <xs:element name="CAP" type="xs:string"/>
+  <xs:element name="Comune">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="codiceISTAT" type="xs:string"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Provincia" type="xs:string"/>
+  <xs:element name="Nazione" type="xs:string"/>
+  <xs:element name="Telefono">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="note" type="xs:string"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Fax">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="note" type="xs:string"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Riferimenti">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="Messaggio"/>
+        <xs:element ref="ContestoProcedurale"/>
+        <xs:element ref="Procedimento"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Messaggio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice>
+          <xs:element ref="Identificatore"/>
+          <xs:element ref="DescrizioneMessaggio"/>
+        </xs:choice>
+        <xs:element ref="PrimaRegistrazione" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DescrizioneMessaggio" type="xs:string"/>
+  <xs:element name="ContestoProcedurale">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="CodiceAmministrazione"/>
+        <xs:element ref="CodiceAOO"/>
+        <xs:element ref="Identificativo"/>
+        <xs:element ref="TipoContestoProcedurale" minOccurs="0"/>
+        <xs:element ref="Oggetto" minOccurs="0"/>
+        <xs:element ref="Classifica" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="DataAvvio" minOccurs="0"/>
+        <xs:element ref="Note" minOccurs="0"/>
+        <xs:element ref="PiuInfo" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string"/>
+      <xs:attribute name="rife" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TipoContestoProcedurale" type="xs:string"/>
+  <xs:element name="DataAvvio" type="xs:string"/>
+  <xs:element name="Procedimento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="CodiceAmministrazione"/>
+        <xs:element ref="CodiceAOO"/>
+        <xs:element ref="Identificativo"/>
+        <xs:element ref="TipoProcedimento" minOccurs="0"/>
+        <xs:element ref="Oggetto" minOccurs="0"/>
+        <xs:element ref="Classifica" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="Responsabile" minOccurs="0"/>
+        <xs:element ref="DataAvvio" minOccurs="0"/>
+        <xs:element ref="DataTermine" minOccurs="0"/>
+        <xs:element ref="Note" minOccurs="0"/>
+        <xs:element ref="PiuInfo" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string"/>
+      <xs:attribute name="rife" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TipoProcedimento" type="xs:string"/>
+  <xs:element name="Responsabile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Persona"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataTermine" type="xs:string"/>
+  <xs:element name="Descrizione">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice>
+          <xs:element ref="Documento"/>
+          <xs:element ref="TestoDelMessaggio"/>
+        </xs:choice>
+        <xs:element ref="Allegati" minOccurs="0"/>
+        <xs:element ref="Note" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Documento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:sequence minOccurs="0">
+          <xs:element ref="CollocazioneTelematica"/>
+          <xs:element ref="Impronta" minOccurs="0"/>
+        </xs:sequence>
+        <xs:element ref="TitoloDocumento" minOccurs="0"/>
+        <xs:element ref="PrimaRegistrazione" minOccurs="0"/>
+        <xs:element ref="TipoDocumento" minOccurs="0"/>
+        <xs:element ref="Oggetto" minOccurs="0"/>
+        <xs:element ref="Classifica" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="NumeroPagine" minOccurs="0"/>
+        <xs:element ref="Note" minOccurs="0"/>
+        <xs:element ref="PiuInfo" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string"/>
+      <xs:attribute name="rife" type="xs:string"/>
+      <xs:attribute name="nome" type="xs:string"/>
+      <xs:attribute name="tipoMIME" type="xs:string"/>
+      <xs:attribute name="tipoRiferimento" default="MIME">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="MIME"/>
+            <xs:enumeration value="telematico"/>
+            <xs:enumeration value="cartaceo"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TitoloDocumento" type="xs:string"/>
+  <xs:element name="TipoDocumento" type="xs:string"/>
+  <xs:element name="NumeroPagine" type="xs:string"/>
+  <xs:element name="CollocazioneTelematica" type="xs:string"/>
+  <xs:element name="Impronta">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="algoritmo" type="xs:string" fixed="SHA-256"/>
+          <xs:attribute name="codifica" type="xs:string" fixed="base64"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TestoDelMessaggio">
+    <xs:complexType>
+      <xs:attribute name="id" type="xs:string"/>
+      <xs:attribute name="tipoMIME" type="xs:string"/>
+      <xs:attribute name="tipoRiferimento" type="xs:string" fixed="MIME"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Allegati">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="Documento"/>
+        <xs:element ref="Fascicolo"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Fascicolo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="CodiceAmministrazione" minOccurs="0"/>
+        <xs:element ref="CodiceAOO" minOccurs="0"/>
+        <xs:element ref="Oggetto" minOccurs="0"/>
+        <xs:element ref="Identificativo" minOccurs="0"/>
+        <xs:element ref="Classifica" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="Note" minOccurs="0"/>
+        <xs:element ref="PiuInfo" minOccurs="0"/>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element ref="Documento"/>
+          <xs:element ref="Fascicolo"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string"/>
+      <xs:attribute name="rife" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PiuInfo">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="MetadatiInterni"/>
+        <xs:element ref="MetadatiEsterni"/>
+      </xs:choice>
+      <xs:attribute name="XMLSchema" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MetadatiInterni" type="xs:string"/>
+  <xs:element name="MetadatiEsterni">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="NomeFile"/>
+        <xs:element ref="Impronta" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="codifica" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="7bit"/>
+            <xs:enumeration value="8bit"/>
+            <xs:enumeration value="binary"/>
+            <xs:enumeration value="base64"/>
+            <xs:enumeration value="quotedprintable"/>
+            <xs:enumeration value="xtoken"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="estensione" type="xs:string"/>
+      <xs:attribute name="formato" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NomeFile" type="xs:string"/>
+  <xs:element name="ConfermaRicezione">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Identificatore"/>
+        <xs:element ref="MessaggioRicevuto"/>
+        <xs:element ref="Riferimenti" minOccurs="0"/>
+        <xs:element ref="Descrizione" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="versione" type="xs:string" fixed="aaaa-mm-gg"/>
+      <xs:attribute name="xml-lang" type="xs:string" fixed="it"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MessaggioRicevuto">
+    <xs:complexType>
+      <xs:choice>
+        <xs:sequence>
+          <xs:element ref="Identificatore"/>
+          <xs:element ref="PrimaRegistrazione" minOccurs="0"/>
+        </xs:sequence>
+        <xs:element ref="DescrizioneMessaggio"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AggiornamentoConferma">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Identificatore"/>
+        <xs:element ref="MessaggioRicevuto"/>
+        <xs:element ref="Riferimenti" minOccurs="0"/>
+        <xs:element ref="Descrizione" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="versione" type="xs:string" fixed="aaaa-mm-gg"/>
+      <xs:attribute name="xml-lang" type="xs:string" fixed="it"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NotificaEccezione">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Identificatore" minOccurs="0"/>
+        <xs:element ref="MessaggioRicevuto"/>
+        <xs:element ref="Motivo"/>
+      </xs:sequence>
+      <xs:attribute name="versione" type="xs:string" fixed="aaaa-mm-gg"/>
+      <xs:attribute name="xml-lang" type="xs:string" fixed="it"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Motivo" type="xs:string"/>
+  <xs:element name="AnnullamentoProtocollazione">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Identificatore"/>
+        <xs:element ref="Motivo"/>
+        <xs:element ref="Provvedimento"/>
+      </xs:sequence>
+      <xs:attribute name="versione" type="xs:string" fixed="aaaa-mm-gg"/>
+      <xs:attribute name="xml-lang" type="xs:string" fixed="it"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Provvedimento" type="xs:string"/>
+</xs:schema>

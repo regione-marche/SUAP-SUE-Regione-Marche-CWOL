@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="utiDocViewerComponent" el_tipo="7" el_colonne="0" tipo_nome="generico" tipo_tag="div">
+          <properties>
+               <action><![CDATA[#utiDocViewer]]></action>
+               <class><![CDATA[ita-model ita-app ita-dialog {title:"Visualizzatore Documenti", modelBackend:'utiDocViewer'}]]></class>
+          </properties>
+          <engineElement el_nome="divGrid" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[position: absolute; top: 0px; left: 0px; width:350px; bottom: 0px;]]></style>
+               </properties>
+               <engineElement el_nome="gridDocViewer" el_tipo="91" el_colonne="16" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-jqGrid" tipo_tag="table">
+                    <properties>
+                         <class><![CDATA[ita-jqGrid {readerId:'fileid', caption:"Files", resizeToParent:true, shrinkToFit:true, rowNum:1000, rowList:[], navGrid:true, shrinkToFit:true, resizeToParent:true, pginput:false, pgbuttons:false, reloadOnResize: false}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-jqGrid]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="thfileid" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                         <label class="sx ui-widget input"><![CDATA[Nome]]></label>
+                    </engineElement>
+                    <engineElement el_nome="thfile" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                         <label class="sx ui-widget input"><![CDATA[Nome]]></label>
+                    </engineElement>
+                    <engineElement el_nome="fileid" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                         <properties>
+                              <class><![CDATA[{hidden:true}]]></class>
+                         </properties>
+                    </engineElement>
+                    <engineElement el_nome="filename" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+          <engineElement el_nome="divDocument" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[position: absolute; top: 0px; left: 350px; right: 0px; bottom: 0px;]]></style>
+               </properties>
+               <engineElement el_nome="divDownload" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[text-align: center; position: absolute; left: 0px; right: 0px; top: 0px; height: 45px;]]></style>
+                    </properties>
+                    <engineElement el_nome="download_get" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                         <label class="sx ui-widget input"><![CDATA[Scarica file]]></label>
+                         <properties>
+                              <value><![CDATA[Scarica file]]></value>
+                              <class><![CDATA[ita-button-new {iconLeft:'ui-icon ui-icon-disk'}]]></class>
+                              <style><![CDATA[width: 250px; padding-top: 10px; padding-bottom:10px; padding-left: 20px]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="download_open" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                         <label class="sx ui-widget input"><![CDATA[Apri il file con l'editor di sistema]]></label>
+                         <properties>
+                              <value><![CDATA[Apri il file con l'editor di sistema]]></value>
+                              <class><![CDATA[ita-button-new {iconLeft:'ui-icon ui-icon-arrowthickstop-1-s'}]]></class>
+                              <style><![CDATA[width: 250px; padding-top: 10px; padding-bottom:10px; padding-left: 20px]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="download_hidden" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[display: none;]]></style>
+                         </properties>
+                         <engineElement el_nome="download_file" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="invisible" tipo_tag="text">
+                              <tipoProperties>
+                                   <style><![CDATA[visibility: hidden;]]></style>
+                              </tipoProperties>
+                         </engineElement>
+                         <engineElement el_nome="download_url" el_tipo="101" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-hyperlink" tipo_tag="link">
+                              <tipoProperties>
+                                   <class><![CDATA[ita-hyperlink]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_nome="divBoxPreview" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[position: absolute; left: 0px; right: 0px; top: 45px; bottom: 0px;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="headerPreview" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                         <properties>
+                              <Title><![CDATA[Anteprima]]></Title>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                              <style><![CDATA[font-size:0.8em;]]></style>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="divPreview" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[position: absolute; top: 20px; left: 1px; right: 5px; bottom: 5px; overflow: auto;]]></style>
+                         </properties>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[02/09/2019]]></date>
+          <time><![CDATA[12:02:10]]></time>
+          <user><![CDATA[PALC1]]></user>
+          <modelSHA><![CDATA[1bd1060c82519bf706f128e5bdac86547626106f]]></modelSHA>
+     </info></itaEngine>

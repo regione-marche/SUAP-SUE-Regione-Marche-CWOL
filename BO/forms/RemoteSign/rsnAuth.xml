@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="rsnAuth" el_tipo="1" el_colonne="0" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[#rsnAuth]]></action>
+               <class><![CDATA[ita-dialog  {title:"Autenticazione Firma Remota",modal:true,width:500,heigth:300,resizable:false,position:'top', maximizedOnMobile: true }]]></class>
+          </properties>
+          <engineElement el_nome="workSpace" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-data-page]]></class>
+               </properties>
+               <engineElement el_nome="topMsg" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               </engineElement>
+               <engineElement el_nome="divGrigliaAllegati" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                    <engineElement el_nome="gridAllegati" el_tipo="91" el_colonne="10" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-jqGrid" tipo_tag="table">
+                         <properties>
+                              <class><![CDATA[ita-jqGrid {caption: "Documenti Da Firmare",rowNum:1000,width:620,height:100,sortname:'rowid',rowList:[],shrinkToFit:true,autowidth:true ,resizeToParent:true,navGrid:true,navButtonAdd:true,navButtonDel:true ,navButtonEdit:false,readerId:'idx',pgbuttons:false,pginput:false,multiselect:false,columnChooser:false, dataReflow: true}]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-jqGrid]]></class>
+                         </tipoProperties>
+                         <engineElement el_nome="headFileIcon" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                         </engineElement>
+                         <engineElement el_nome="Filename" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Nome File]]></label>
+                         </engineElement>
+                         <engineElement el_nome="headFileSize" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Dim.]]></label>
+                         </engineElement>
+                         <engineElement el_nome="headEsito" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                         </engineElement>
+                         <engineElement el_nome="headSave" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                         </engineElement>
+                         <engineElement el_nome="FileIcon" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[30]]></width>
+                                   <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                              </properties>
+                         </engineElement>
+                         <engineElement el_nome="FILEORIG" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[150]]></width>
+                                   <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                              </properties>
+                         </engineElement>
+                         <engineElement el_nome="FileSize" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[30]]></width>
+                                   <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                              </properties>
+                         </engineElement>
+                         <engineElement el_nome="ResultIcon" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[20]]></width>
+                                   <class><![CDATA[{itaSelectable:true}]]></class>
+                              </properties>
+                         </engineElement>
+                         <engineElement el_nome="SaveIcon" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[20]]></width>
+                                   <class><![CDATA[{itaSelectable:true}]]></class>
+                              </properties>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_nome="InputFileName" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                    <label class="sx ui-widget input" style="width:160px"><![CDATA[File da firmare]]></label>
+                    <properties>
+                         <class><![CDATA[ita-decode]]></class>
+                         <size><![CDATA[40]]></size>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="signMethod" el_tipo="80" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-select" tipo_tag="select">
+                    <label class="sx input" style="width:160px"><![CDATA[Tipo di Firma]]></label>
+                    <properties>
+                         <style><![CDATA[width:300px;]]></style>
+                         <maxchars><![CDATA[20]]></maxchars>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-select ita-edit]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="divCredenziali" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                    <engineElement el_nome="otpauth" el_tipo="80" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-select" tipo_tag="select">
+                         <label class="sx input" style="width:160px"><![CDATA[Dominio Autenticazione]]></label>
+                         <properties>
+                              <style><![CDATA[width:153px;]]></style>
+                              <maxchars><![CDATA[20]]></maxchars>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-select ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="utente" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:160px"><![CDATA[Nome Utente]]></label>
+                         <properties>
+                              <size><![CDATA[20]]></size>
+                              <maxchars><![CDATA[20]]></maxchars>
+                              <class><![CDATA[ita-edit-onchange]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="password" el_tipo="69" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-password" tipo_tag="password">
+                         <label class="sx input" style="width:160px"><![CDATA[Password]]></label>
+                         <properties>
+                              <size><![CDATA[20]]></size>
+                              <maxchars><![CDATA[20]]></maxchars>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-password ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="paperTokenCoords" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-decode" tipo_tag="text">
+                         <label class="sx input" style="width:160px"><![CDATA[Paper Token]]></label>
+                         <properties>
+                              <size><![CDATA[30]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-decode]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="GetPaperTokenCoords" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                         <properties>
+                              <class><![CDATA[{iconLeft:'ui-icon ui-icon-refresh'}]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="otp" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input" style="width:160px"><![CDATA[OTP (One Time Pass)]]></label>
+                         <properties>
+                              <size><![CDATA[8]]></size>
+                              <maxchars><![CDATA[20]]></maxchars>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="Conferma" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                         <properties>
+                              <value><![CDATA[Conferma]]></value>
+                              <style><![CDATA[margin-left: auto;margin-right: auto;margin-top:20px;display: block;]]></style>
+                              <class><![CDATA[ita-button-commit {iconLeft:'ui-icon ui-icon-check',shortCut:'f5'}]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ConfermaCredenziali" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                         <properties>
+                              <value><![CDATA[Conferma]]></value>
+                              <style><![CDATA[margin-left: auto;margin-right: auto;margin-top:20px;display: block;]]></style>
+                              <class><![CDATA[ita-button-commit {iconLeft:'ui-icon ui-icon-check',shortCut:'f5'}]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_nome="bottomMgs" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[18/07/2018]]></date>
+          <time><![CDATA[17:45:53]]></time>
+          <user><![CDATA[a.mucci]]></user>
+          <modelSHA><![CDATA[0511ea6b554c509714cb19a59b68a1d6b248e873]]></modelSHA>
+     </info></itaEngine>

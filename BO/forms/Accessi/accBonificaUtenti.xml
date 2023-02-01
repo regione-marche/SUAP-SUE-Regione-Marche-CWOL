@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="accBonificaUtenti" el_tipo="1" el_colonne="0" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[#accBonificaUtenti]]></action>
+               <class><![CDATA[ita-dialog ita-app ita-layout-diag {title:"Bonifica Utenti",modal:true,width:1000,height:500,modal:false,position:'center'}]]></class>
+          </properties>
+          <engineElement el_nome="workSpace" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+               </properties>
+               <engineElement el_nome="divRisultato" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[height: 100%;]]></style>
+                         <class><![CDATA[ita-div-flex { flexNth: 1, flexColumn: true }]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="divParametri" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[margin-bottom: 10px;]]></style>
+                         </properties>
+                         <engineElement el_nome="divParInsUtente" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                              <properties>
+                                   <title><![CDATA[Parametri inserimento utente Cityware]]></title>
+                                   <class><![CDATA[{ collapse: true }]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="parInsUtenteContainer" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                                   <properties>
+                                        <style><![CDATA[padding: 10px;]]></style>
+                                   </properties>
+                                   <engineElement el_nome="PARINS[UTEDB]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                                        <label class="sx input"><![CDATA[Utente DB]]></label>
+                                        <properties>
+                                             <size><![CDATA[10]]></size>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-edit]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="PARINS[PWDDB]" el_tipo="69" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-password" tipo_tag="password">
+                                        <label class="sx input"><![CDATA[Password DB]]></label>
+                                        <properties>
+                                             <size><![CDATA[10]]></size>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-password ita-edit]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                              </engineElement>
+                         </engineElement>
+                    </engineElement>
+                    <engineElement el_nome="divGridUtenti" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[height: 100%; margin-right: -6px;]]></style>
+                         </properties>
+                         <engineElement el_nome="gridUtenti" el_tipo="91" el_colonne="100" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-jqGrid" tipo_tag="table">
+                              <properties>
+                                   <class><![CDATA[ita-jqGrid { caption: 'Elenco utenti', sortname: 'STATO', sortorder: 'asc', rowNum: 10000, rowList: [], readerId: 'idx', navGrid: true, resizeToParent: true, shrinkToFit: true, navButtonRefresh: true, navButtonExcel: true }]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-jqGrid]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="thUTECWOL" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Utente Cityware.online]]></label>
+                              </engineElement>
+                              <engineElement el_nome="thUTECW" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Utente Cityware]]></label>
+                              </engineElement>
+                              <engineElement el_nome="thSTATO" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Stato]]></label>
+                              </engineElement>
+                              <engineElement el_nome="thBONIFICA" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Bonifica]]></label>
+                              </engineElement>
+                              <engineElement el_nome="UTECWOL" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[400]]></width>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="UTECW" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[400]]></width>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="STATO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[30]]></width>
+                                        <class><![CDATA[{ fixed: true, align: 'center' }]]></class>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="BONIFICA" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[500]]></width>
+                                        <class><![CDATA[{ itaSelectable: true, sortable: false }]]></class>
+                                   </properties>
+                              </engineElement>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[16/12/2019]]></date>
+          <time><![CDATA[16:18:06]]></time>
+          <user><![CDATA[carlo]]></user>
+          <modelSHA><![CDATA[7513c4573ff3b2ca491a9b23cc7d68d67c36860d]]></modelSHA>
+     </info></itaEngine>

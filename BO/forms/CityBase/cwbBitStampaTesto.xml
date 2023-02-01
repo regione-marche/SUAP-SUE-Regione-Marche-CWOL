@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="cwbBitStampaTesto" el_tipo="1" el_colonne="0" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[#cwbBitStampaTesto]]></action>
+               <class><![CDATA[ita-app ita-dialog ita-layout-diag {title:"Selezionare i testi da stampare",width:550,height:500,modal:true,position:'center',modelBackend:'cwbBitStampaTesto'}]]></class>
+          </properties>
+          <engineElement el_nome="workSpace" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+               </properties>
+               <engineElement el_nome="descrizionePasso" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-readonly" tipo_tag="text">
+                    <properties>
+                         <size><![CDATA[75]]></size>
+                    </properties>
+                    <tipoProperties>
+                         <readonly><![CDATA[readonly]]></readonly>
+                         <class><![CDATA[ita-readonly ita-edit]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="divRisultato" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[height:80%;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="gridDtaTesti" el_tipo="91" el_colonne="4" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-jqGrid" tipo_tag="table">
+                         <properties>
+                              <class><![CDATA[ita-jqGrid {readerId:'index',caption: " ",shrinkToFit:true,width:480, height:300,sortname:'CODTESTO',rowNum:13,rowList:[],navGrid:true,resizeToParent:false,filterToolbar:false,columnChooser:false}]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-jqGrid]]></class>
+                         </tipoProperties>
+                         <engineElement el_nome="thStampa" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Stampa ?]]></label>
+                              <properties>
+                                   <width><![CDATA[5]]></width>
+                              </properties>
+                         </engineElement>
+                         <engineElement el_nome="thCODTESTO" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Id]]></label>
+                         </engineElement>
+                         <engineElement el_nome="thDESTESTO" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Descrizione]]></label>
+                         </engineElement>
+                         <engineElement el_nome="tdStampa" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[8]]></width>
+                                   <class><![CDATA[{ align: 'center', itaSelectable: true }]]></class>
+                              </properties>
+                         </engineElement>
+                         <engineElement el_nome="CODTESTO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[4]]></width>
+                              </properties>
+                         </engineElement>
+                         <engineElement el_nome="DESTESTO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[30]]></width>
+                                   <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                              </properties>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_nome="divButton" el_tipo="74" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-div" tipo_tag="div">
+                    <tipoProperties>
+                         <class><![CDATA[ita-div]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="Stampa" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                         <label class="sx ui-widget input"><![CDATA[Stampa]]></label>
+                         <properties>
+                              <value><![CDATA[Stampa]]></value>
+                              <class><![CDATA[ita-button-commit {iconLeft:'ui-icon ui-icon-print' }]]></class>
+                              <style><![CDATA[width:100px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+          <engineElement el_nome="divAppoggio" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-hidden]]></class>
+               </properties>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[12/04/2018]]></date>
+          <time><![CDATA[12:46:17]]></time>
+          <user><![CDATA[PALC1]]></user>
+          <modelSHA><![CDATA[b8e537f5994238ddc42d1f2f37f1d122787a5793]]></modelSHA>
+     </info></itaEngine>

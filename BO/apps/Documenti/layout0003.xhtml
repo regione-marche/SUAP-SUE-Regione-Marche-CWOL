@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">    
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>test 03</title>
+
+
+
+
+        <style>
+            div.header {
+                display: block; 
+                position: running(header);
+                height:120px;
+            }
+            div.footer {
+                display: block; text-align: center;
+                position: running(footer);
+                height:80px;
+                width:100%;
+                margin:10px;                
+            }
+            @page { @top-center { content: element(header) }}
+            @page { @bottom-center { content: element(footer) }}
+            @page {
+                margin-top: 50mm;
+                margin-bottom:50mm;
+                margin-left:5mm;
+                margin-right:5mm;
+                size: A4;
+            }
+
+            html, body, div, span, applet, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            a, abbr, acronym, address, big, cite, code,
+            del, dfn, em, img, ins, kbd, q, s, samp,
+            small, strike, strong, sub, sup, tt, var,
+            b, u, i, center,
+            dl, dt, dd, 
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, embed, 
+            figure, figcaption, footer, header, hgroup, 
+            menu, nav, output, ruby, section, summary,
+            time, mark, audio, video {
+                line-height:normal;
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+            }
+
+            html {
+                background-color: white;
+            }
+            body {
+                margin: 0px;
+                padding: 0px;
+                background-color: white;
+            }
+            .pagebreak {
+                page-break-after: always;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <table cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid gray;" width="228" valign="top">
+                            <p style="text-align: center;"><strong>Sportello Unico per le Attivit&agrave; Produttive</strong></p>
+                            <p style="text-align: center;"><strong><span style="font-size: large;">SUAP</span></strong></p>
+                        </td>
+                        <td style="border: 1px solid gray; text-align: center;" width="201" valign="top">
+                            <p><strong>Comuni associati di</strong></p>
+                            <p><strong>Barchi - Cartoceto</strong></p>
+                            <p><strong>Montemaggiore al Metauro</strong></p>
+                            <p><strong>Orciano di Pesaro - Piagge - Saltara</strong></p>
+                            <p><strong>San Giorgio di Pesaro - Serrungarina</strong></p>
+                        </td>
+                        <td style="border: 1px solid gray; text-align: center;" width="262" valign="top">
+                            <p><strong><em>edilizia, commercio ed esercizio di attivita; produttive e di prestazioni di servizi</em></strong></p>
+                            <p>Via Marconi, 1 - 61030 Calcinelli di SALTARA (PU) Tel. e Fax 0721/892973</p>
+                            <p>e-mail: suap.associato<a href="mailto:tecnico.polverari@comune.saltara.pu.it">@comune.saltara.pu.it</a></p>
+                            <p>PEC: <a href="mailto:suap.associazionesaltara@pecitaly.it">suap.associazionesaltara@pecitaly.it </a></p>
+                            <p>sito web: <a href="http://www.suapassociatosaltara.it/">www.suapassociatosaltara.it</a></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="text-align: center;"><strong><br /></strong></p>
+        </div>        <div class='footer'>
+            <div style="border: thin solid grey;">
+                <p align="center"><strong>Sportello Unico per le Attivita' Produttive</strong></p>
+                <p align="center">Comuni di Barchi - Cartoceto - Montemaggiore al Metauro - Orciano di Pesaro - Piagge - Saltara - San Giorgio di Pesaro - Serrungarina</p>
+                <p align="center">Sede Via Marconi, 1  61030 Calcinelli di Saltata (PU) Tel. e Fax 0721/892973</p>
+                <p align="center">e-mail: suap.associato<a href="mailto:tecnico.polverari@comune.saltara.pu.it">@comune.saltara.pu.it</a> P.E.C.: <a href="mailto:suap.associazionesaltara@pecitaly.it">suap.associazionesaltara@pecitaly.it</a> sito web: <a href="http://www.suapassociatosaltara.it/">www.suapassociatosaltara.it</a></p>
+            </div>
+        </div>
+        <div class='content'>
+            @{$documentbody}@
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,61 @@
+
+PDFTron PDF/A Manager V5.80.
+Copyright (c) 2002-2012 PDFTron Systems Incorporated, www.pdftron.com.
+
+You are running a DEMO version of PDF/A Manager.
+In the demo version, all converted pages will be stamped with a demo stamp.
+
+Usage: pdfa [<options>] file...
+
+OPTIONS:
+
+  --file... arg            A list of folders and/or file names to process.
+  -p [ --pass ] arg        The password to process the input file. The password
+                           is required only in the conversion mode and when the
+                           input document is encrypted.
+  -x [ --noxml ]           Disable XML report generation.
+  -o [ --outdir ] arg      The output directory. The folder can be relative to 
+                           the current working folder. If the folder does not 
+                           exist PDFA will attempt to create the required path.
+                           If this parameter is not specified all files will be
+                           saved relative to the current working folder.
+  -f [ --fname ] arg       The explicit name for the converted file. The 
+                           parameter is used only when converting one file at a
+                           time. The output file will be stored in the 'outdir'
+                           folder.
+  --suffix arg (=_pdfa)    A string to append to all output filenames. This 
+                           option is typically used to tag output filenames 
+                           during multi-file or batch conversion. For example, 
+                           if input file is "my.pdf" and suffix is "_pdfa" the 
+                           output filename will be "my_pdfa.pdf".
+                           
+  -l [ --level ] arg (=1B) PDF/A Conformance Level: [1A, 1B, 2A, 2B, 2U, 3A, 
+                           3B, 3U]
+                           
+                           1A Target PDF/A-1a conformance profile.
+                           1B Target PDF/A-1b conformance profile.
+                           2A Target PDF/A-2a conformance profile.
+                           2B Target PDF/A-2b conformance profile.
+                           2U Target PDF/A-2u conformance profile.
+                           3A Target PDF/A-3a conformance profile.
+                           3B Target PDF/A-3b conformance profile.
+                           3U Target PDF/A-3u conformance profile.
+                           
+  -c [ --convert ]         Convert input PDF files to PDF/A compliant format.
+  -z [ --linearize ]       Linearize the converted files.
+  --nr                     Do not revalidate after conversion.
+  --subfolders             Process all subfolders.
+  --extension arg (=.pdf)  The default file extension used to process PDF 
+                           documents. The default extension is ".pdf".
+  --verb arg (=1)          Set the verbosity level to 'arg' (0-2).
+  -v [ --version ]         Print the version information.
+  -h [ --help ]            Print a listing of available options.
+
+
+Examples:
+  pdfa *.pdf
+  pdfa --level 1B in1.pdf in2.pdf mydir
+  pdfa -o outdir -c in.pdf
+  pdfa -o outdir -c -z -l 1B --subfolders --verb 10 mydir
+  pdfa -o outdir -c --noxml mydir my1.pdf folder/my2.pdf
+

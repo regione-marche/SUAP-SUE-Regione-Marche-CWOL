@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+        <style>
+            div.header {
+                display: block;
+                position: running(header);
+                height:@{$headerHeight}@mm;
+            }
+            div.footer {
+                display: block;
+                position: running(footer);
+                height:@{$footerHeight}@mm;
+            }
+
+            @page {
+                @top-center {
+                content: element(header);
+                vertical-align:bottom;
+                overflow:hidden;
+            }
+            }
+            @page {
+                @bottom-center {
+                content: element(footer);
+                vertical-align:top;
+                overflow:hidden;
+            }
+            }
+            @page {
+                margin-top: @{$marginTop}@mm;
+            margin-bottom:@{$marginBottom}@mm;
+            margin-left:@{$marginLeft}@mm;
+            margin-right:@{$marginRight}@mm;
+            size: @{$pageFormat}@ @{$pageOrientation}@;
+            }
+
+            html, body, div, span, applet, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            a, abbr, acronym, address, big, cite, code,
+            del, dfn, em, img, ins, kbd, q, s, samp,
+            small, strike, strong, sub, sup, tt, var,
+            b, u, i, center,
+            dl, dt, dd,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, embed,
+            figure, figcaption, footer, header, hgroup,
+            menu, nav, output, ruby, section, summary,
+            time, mark, audio, video {
+                line-height:1;
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+            }
+
+            html {
+                background-color: white;
+            }
+            body {
+                margin: 0px;
+                padding: 0px;
+                background-color: white;
+            }
+            p .itaPagebreak {
+                page-break-after: always;
+            }
+            .ita-Wordwrap {
+                white-space: pre-wrap;
+                word-wrap: break-word;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            @{$documentheader}@
+        </div>
+        <div class='footer'>
+            @{$documentfooter}@
+        </div>
+        <div class='content'>
+            @{$documentbody}@
+        </div>
+
+    </body>
+</html>

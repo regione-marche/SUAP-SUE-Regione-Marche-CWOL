@@ -1,0 +1,365 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.1.1-b09 (branches/2.1-6834; 2011-07-16T17:14:48+0000) JAXWS-RI/2.2.5-promoted-b04 JAXWS/2.2. --><xs:schema xmlns:tns="http://hproto.me.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://hproto.me.org/">
+
+    <xs:element name="CercaDocumentoProtocollo" type="tns:CercaDocumentoProtocollo"/>
+
+    <xs:element name="CercaDocumentoProtocolloResponse" type="tns:CercaDocumentoProtocolloResponse"/>
+
+    <xs:element name="CercaRubrica" type="tns:CercaRubrica"/>
+
+    <xs:element name="CercaRubricaResponse" type="tns:CercaRubricaResponse"/>
+
+    <xs:element name="ProtocollazioneIngresso" type="tns:ProtocollazioneIngresso"/>
+
+    <xs:element name="ProtocollazioneIngressoResponse" type="tns:ProtocollazioneIngressoResponse"/>
+
+    <xs:element name="ProtocollazioneUscita" type="tns:ProtocollazioneUscita"/>
+
+    <xs:element name="ProtocollazioneUscitaResponse" type="tns:ProtocollazioneUscitaResponse"/>
+    
+    <xs:element name="SalvaVoceRubrica" type="tns:SalvaVoceRubrica"/>
+
+    <xs:element name="SalvaVoceRubricaResponse" type="tns:SalvaVoceRubricaResponse"/>
+
+    <xs:element name="TestNestedClass" type="tns:TestNestedClass"/>
+
+    <xs:element name="TestNestedClassResponse" type="tns:TestNestedClassResponse"/>
+
+    <xs:element name="add" type="tns:add"/>
+
+    <xs:element name="addAddressbookEntry" type="tns:addAddressbookEntry"/>
+
+    <xs:element name="addAddressbookEntryResponse" type="tns:addAddressbookEntryResponse"/>
+
+    <xs:element name="addResponse" type="tns:addResponse"/>
+
+    <xs:element name="downloadAttachment" type="tns:downloadAttachment"/>
+
+    <xs:element name="downloadAttachmentResponse" type="tns:downloadAttachmentResponse"/>
+
+    <xs:element name="getAddressBook" type="tns:getAddressBook"/>
+
+    <xs:element name="getAddressBookResponse" type="tns:getAddressBookResponse"/>
+
+    <xs:element name="getAddressbookEntry" type="tns:getAddressbookEntry"/>
+
+    <xs:element name="getAddressbookEntryResponse" type="tns:getAddressbookEntryResponse"/>
+
+    <xs:element name="hello" type="tns:hello"/>
+
+    <xs:element name="helloResponse" type="tns:helloResponse"/>
+
+    <xs:element name="uploadAttachment" type="tns:uploadAttachment"/>
+
+    <xs:element name="uploadAttachmentResponse" type="tns:uploadAttachmentResponse"/>
+
+    <xs:complexType name="getAddressBook">
+        <xs:sequence/>
+    </xs:complexType>
+
+    <xs:complexType name="getAddressBookResponse">
+        <xs:sequence>
+            <xs:element name="return" type="tns:cAddressBookItem" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="cAddressBookItem">
+        <xs:sequence>
+            <xs:element name="email" type="xs:string" minOccurs="0"/>
+            <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+            <xs:element name="id" type="xs:int"/>
+            <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="downloadAttachment">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="downloadAttachmentResponse">
+        <xs:sequence>
+            <xs:element name="return" type="xs:base64Binary" nillable="true" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="uploadAttachment">
+        <xs:sequence>
+            <xs:element name="stream" type="xs:base64Binary" nillable="true" minOccurs="0"/>
+            <xs:element name="name" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="uploadAttachmentResponse">
+        <xs:sequence>
+            <xs:element name="return" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="CercaRubrica">
+        <xs:sequence>
+            <xs:element name="reqParametri" type="tns:cParametriRicercaRubrica" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="cParametriRicercaRubrica">
+        <xs:sequence>
+            <xs:element name="descrizione" type="xs:string" minOccurs="0"/>
+            <xs:element name="idfiscale" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="CercaRubricaResponse">
+        <xs:sequence>
+            <xs:element name="return" type="tns:cRubricaResult" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="cRubricaResult">
+        <xs:sequence>
+            <xs:element name="items" type="tns:cCorrispondente" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="messageResult" type="tns:cMessageResult" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="cCorrispondente">
+        <xs:sequence>
+            <xs:element name="cap" type="xs:string" minOccurs="0"/>
+            <xs:element name="citta" type="xs:string" minOccurs="0"/>
+            <xs:element name="codice" type="xs:int"/>
+            <xs:element name="codiceFiscale" type="xs:string" minOccurs="0"/>
+            <xs:element name="cognome" type="xs:string" minOccurs="0"/>
+            <xs:element name="dataNascita" type="xs:dateTime" minOccurs="0"/>
+            <xs:element name="email" type="xs:string" minOccurs="0"/>
+            <xs:element name="fax" type="xs:string" minOccurs="0"/>
+            <xs:element name="indirizzo" type="xs:string" minOccurs="0"/>
+            <xs:element name="nome" type="xs:string" minOccurs="0"/>
+            <xs:element name="partitaIva" type="xs:string" minOccurs="0"/>
+            <xs:element name="prov" type="xs:string" minOccurs="0"/>
+            <xs:element name="ragioneSociale" type="xs:string" minOccurs="0"/>
+            <xs:element name="telefono" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="cMessageResult">
+        <xs:sequence>
+            <xs:element name="descrizione" type="xs:string" minOccurs="0"/>
+            <xs:element name="tipoRisultato" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TestNestedClass">
+        <xs:sequence/>
+    </xs:complexType>
+
+    <xs:complexType name="TestNestedClassResponse">
+        <xs:sequence>
+            <xs:element name="return" type="tns:cOuterClass" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="cOuterClass">
+        <xs:sequence>
+            <xs:element name="dataora" type="xs:dateTime" minOccurs="0"/>
+            <xs:element name="messageResult" type="tns:cMessageResult" minOccurs="0"/>
+            <xs:element name="stringa" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="hello">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="helloResponse">
+        <xs:sequence>
+            <xs:element name="return" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="addAddressbookEntry">
+        <xs:sequence>
+            <xs:element name="entry" type="tns:cAddressBookItem" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="addAddressbookEntryResponse">
+        <xs:sequence>
+            <xs:element name="return" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="getAddressbookEntry">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="getAddressbookEntryResponse">
+        <xs:sequence>
+            <xs:element name="return" type="tns:cAddressBookItem" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="add">
+        <xs:sequence>
+            <xs:element name="i" type="xs:int"/>
+            <xs:element name="j" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="addResponse">
+        <xs:sequence>
+            <xs:element name="return" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="SalvaVoceRubrica">
+        <xs:sequence>
+            <xs:element name="entry" type="tns:cCorrispondente" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="SalvaVoceRubricaResponse">
+        <xs:sequence>
+            <xs:element name="return" type="tns:cRubricaResult" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ProtocollazioneIngresso">
+        <xs:sequence>
+            <xs:element name="reqProtocollo" type="tns:cProtocolloIngresso" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="cProtocolloIngresso">
+        <xs:complexContent>
+            <xs:extension base="tns:cProtocollo">
+                <xs:sequence>
+                    <xs:element name="casellaMittente" type="xs:int"/>
+                    <xs:element name="dataArrivo" type="xs:dateTime" minOccurs="0"/>
+                    <xs:element name="dataProtocolloMittente" type="xs:dateTime" minOccurs="0"/>
+                    <xs:element name="numeroProcolloMittente" type="xs:string" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="cProtocollo">
+        <xs:sequence>
+            <xs:element name="accesso" type="xs:int"/>
+            <xs:element name="anno" type="xs:int"/>
+            <xs:element name="aoo" type="xs:int"/>
+            <xs:element name="classificazione" type="xs:int"/>
+            <xs:element name="codice" type="xs:int"/>
+            <xs:element name="codiceOperatore" type="xs:int"/>
+            <xs:element name="codiceSpedizione" type="xs:int"/>
+            <xs:element name="comunicazioneInterna" type="xs:int"/>
+            <xs:element name="corrispondente" type="xs:int"/>
+            <xs:element name="dataDocumento" type="xs:dateTime" minOccurs="0"/>
+            <xs:element name="dataRegistrazione" type="xs:dateTime" minOccurs="0"/>
+            <xs:element name="dataScadenza" type="xs:dateTime" minOccurs="0"/>
+            <xs:element name="flagCartaceo" type="xs:int"/>
+            <xs:element name="flagInArchivio" type="xs:int"/>
+            <xs:element name="note" type="xs:string" minOccurs="0"/>
+            <xs:element name="numero" type="xs:int"/>
+            <xs:element name="numeroAllegati" type="xs:int"/>
+            <xs:element name="oggetto" type="xs:string" minOccurs="0"/>
+            <xs:element name="protocolloCollegato" type="xs:int"/>
+            <xs:element name="protocolloEmergenza" type="xs:int"/>
+            <xs:element name="protocolloRiscontro" type="xs:int"/>
+            <xs:element name="segnatura" type="xs:string" minOccurs="0"/>
+            <xs:element name="statoPratica" type="xs:int"/>
+            <xs:element name="statoProtocollo" type="xs:int"/>
+            <xs:element name="tipo" type="xs:int"/>
+            <xs:element name="ufficio" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ProtocollazioneIngressoResponse">
+        <xs:sequence>
+            <xs:element name="return" type="tns:cProtocolloIngressoResult" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="cProtocolloIngressoResult">
+        <xs:sequence>
+            <xs:element name="codiceProtocollo" type="xs:int"/>
+            <xs:element name="messageResult" type="tns:cMessageResult" minOccurs="0"/>
+            <xs:element name="numeroProtocollo" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="CercaDocumentoProtocollo">
+        <xs:sequence>
+            <xs:element name="richiesta" type="tns:cParametriRicercaProtocollo" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="cParametriRicercaProtocollo">
+        <xs:sequence>
+            <xs:element name="annoCompetenza" type="xs:string" minOccurs="0"/>
+            <xs:element name="aoo" type="xs:string" minOccurs="0"/>
+            <xs:element name="numeroDocumento" type="xs:string" minOccurs="0"/>
+            <xs:element name="segnatura" type="xs:string" minOccurs="0"/>
+            <xs:element name="tipoProtocollo" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="CercaDocumentoProtocolloResponse">
+        <xs:sequence>
+            <xs:element name="return" type="tns:cRespProtocollo" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="cRespProtocollo">
+        <xs:complexContent>
+            <xs:extension base="tns:cRespDocumento">
+                <xs:sequence>
+                    <xs:element name="dataRegistrazione" type="xs:dateTime" minOccurs="0"/>
+                    <xs:element name="segnatura" type="xs:string" minOccurs="0"/>
+                    <xs:element name="statoProtocollo" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="cRespDocumento">
+        <xs:sequence>
+            <xs:element name="classificazione" type="xs:int"/>
+            <xs:element name="dataDocumento" type="xs:dateTime" minOccurs="0"/>
+            <xs:element name="messageResult" type="tns:cMessageResult" minOccurs="0"/>
+            <xs:element name="numeroDocumento" type="xs:int"/>
+            <xs:element name="oggetto" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ProtocollazioneUscita">
+        <xs:sequence>
+            <xs:element name="reqProtocollo" type="tns:cProtocolloUscita" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="cProtocolloUscita">
+        <xs:complexContent>
+            <xs:extension base="tns:cProtocollo">
+                <xs:sequence/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ProtocollazioneUscitaResponse">
+        <xs:sequence>
+            <xs:element name="return" type="tns:cProtocolloUscitaResult" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="cProtocolloUscitaResult">
+        <xs:sequence>
+            <xs:element name="codiceProtocollo" type="xs:int"/>
+            <xs:element name="messageResult" type="tns:cMessageResult" minOccurs="0"/>
+            <xs:element name="numeroProtocollo" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

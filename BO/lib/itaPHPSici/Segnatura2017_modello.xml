@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SegnaturaSK versione="2017-01-12" xml:lang="it">
+
+
+	<!-- Accompagnatoria: facoltativo, valorizzabile con S o N -->
+	<Accompagnatoria>S</Accompagnatoria>
+
+	<!-- Dati identificativi del protocollo di provenienza (per le protocollazioni in entrata): facoltativi -->
+	<NumeroProtocolloDiProvenienza></NumeroProtocolloDiProvenienza>
+	<DataRegistrazioneProtocolloDiProvenienza></DataRegistrazioneProtocolloDiProvenienza>
+	
+	<!-- Numero e data di registrazione del protocollo nel registro SK: non sono da usare per la richiesta
+	     REGISTRAPROTOCOLLO, in quanto sarà la procedura a determinarli, ma vengono restituiti nella
+	     richiesta INFOPROTOCOLLO.
+  -->
+	<NumeroRegistrazione></NumeroRegistrazione>
+	<DataRegistrazione></DataRegistrazione>
+
+
+	<!-- Flusso: obbligatorio, valorizzabile con E (entrata), U (uscita), I (interno) -->
+	<Flusso></Flusso>
+
+
+	<!-- Mail: facoltativo, valorizzabile con S o N a seconda se si vuole o meno l'invio della email all'atto
+						 della registrazione del protocollo
+	-->
+	<eMail></eMail>
+
+  <!-- Oggetto del protocollo: obbligatorio -->
+  <Oggetto></Oggetto>
+
+  <!-- Tipo documento: facoltativo, valorizzabile con il codice di un tipo documento valido configurato
+                       nella procedura di protocollo. Usare il metodo "DIZIONARIOTIPIDOC" del web-service
+                       per ottenere l'elenco dei tipi documento con codice e denominazione.
+  -->
+  <TipoDocumento></TipoDocumento>
+  
+  <!-- Per protocollo in entrata o interno:
+       L'unico sottoelemento strettamente necessario è la denominazione, tuttavia
+       se si tratta di un protocollo in entrata (e non interno) è consigliata la
+       la valorizzazione delle informazioni di cui si dispone.
+  -->
+	<Mittente>
+	  <!-- l'indirizzo email, facoltativo -->
+		<IndirizzoTelematico></IndirizzoTelematico>
+		<Denominazione></Denominazione>
+		<CodiceAmministrazione></CodiceAmministrazione>
+		<CodiceAOO></CodiceAOO>
+
+		<!-- Elemento Persona: facoltativo -->
+		<Persona>
+			<!-- entrambi gli elementi sono facoltativi -->
+			<Denominazione></Denominazione>
+			<CodiceFiscale></CodiceFiscale>
+		</Persona>
+
+		<!-- Elemento IndirizzoPostale: facoltativo -->
+		<IndirizzoPostale>
+			<!-- Elemento Denominazione alternativo agli elementi separati successivi -->
+			<Denominazione></Denominazione>
+			<!-- Elementi separati alternativi a Denominazione -->
+			<Dug></Dug>
+			<Toponimo></Toponimo>
+			<Civico></Civico>
+			<CAP></CAP>
+			<Comune></Comune>
+			<CodiceISTAT></CodiceISTAT>
+			<Provincia></Provincia>
+			<Nazione></Nazione>
+		</IndirizzoPostale>
+	</Mittente>
+	
+
+  <!-- Per protocollo in uscita -->
+	<Destinatari>
+		<Destinatario>
+		  <!-- in caso di protocollo in uscita con eMail impostato ad "S"
+		       almeno un destinatario deve avere impostato l'IndirizzoTelematico (eMail)
+		  -->
+			<IndirizzoTelematico></IndirizzoTelematico>
+			<Denominazione></Denominazione>
+			<CodiceAmministrazione></CodiceAmministrazione>
+			<CodiceAOO></CodiceAOO>
+
+			<!-- Elemento Persona: facoltativo -->
+			<Persona>
+				<!-- entrambi gli elementi sono facoltativi -->
+				<Denominazione></Denominazione>
+				<CodiceFiscale></CodiceFiscale>
+			</Persona>
+
+			<!-- Elemento IndirizzoPostale: facoltativo -->
+			<IndirizzoPostale>
+				<!-- Elemento Denominazione alternativo agli elementi separati successivi -->
+				<Denominazione></Denominazione>
+				<!-- Elementi separati alternativi a Denominazione -->
+				<Dug></Dug>
+				<Toponimo></Toponimo>
+				<Civico></Civico>
+				<CAP></CAP>
+				<Comune></Comune>
+				<CodiceISTAT></CodiceISTAT>
+				<Provincia></Provincia>
+				<Nazione></Nazione>
+			</IndirizzoPostale>
+		</Destinatario>
+	</Destinatari>
+
+
+  <!-- Classificazioni: facoltativo -->
+	<Classificazioni>
+		
+		<!-- Da 0 a N elementi Classificazione -->
+		<Classificazione>
+		  <!-- Categoria e Classe obbligatori, gli altri elementi facoltativi -->
+			<Categoria></Categoria>
+			<Classe></Classe>
+			<AnnoFascicolo></AnnoFascicolo>
+			<NumeroFascicolo></NumeroFascicolo>
+			<Sottofascicolo></Sottofascicolo>
+		</Classificazione>
+	
+	</Classificazioni>
+
+
+  <!-- Assegnazioni: facoltativo -->
+	<Assegnazioni>
+		<!-- Da 0 a N elementi Assegnazione -->
+		<Assegnazione>
+		  <!-- AssegnatoA obbligatorio, AssegnatoDa facoltativo -->
+			<AssegnatoA>SET1</AssegnatoA>
+			<AssegnatoDa>RESP1</AssegnatoDa>
+		</Assegnazione>
+	</Assegnazioni>
+
+
+  <!-- Documenti: facoltativo -->
+	<Documenti>
+	  <!--
+	    Attributi:
+	    - nome: la denominazione del file (obbligatorio)
+	    - principale: S o N a seconda che il file sia o meno il documento principale (utilizzabile solo su un documento)
+	    - telematico: S o N a seconda che il file sia o meno un riferimento telematico (facoltativo)
+	    - gdoc_id, gdoc_appl e gdoc_vers: compongono la chiave del documento, restituiti dalla LOADFILE (nel caso si
+	                                      tratti di file telematico possono essere omessi, ma per dichiarare un file
+	                                      telematico e contemporaneamente archiviarlo nella procedura di protocollo
+	                                      occorre effettuale prima la loadfile, poi valorizzare questi parametri oltre
+	                                      a quelli inerenti il file telematico)
+	    - duplica_documento: S o N; facoltativo; se non impostato è come se fosse impostato ad N; impostare ad S se si
+	                         vuole duplicare il documento identificato da gdoc_id, gdoc_appl e gdoc_vers, creando un nuovo
+	                         record per il duplicato con un nuovo gdoc_id, e legando il duplicato al protocollo (serve nel
+	                         caso si voglia usare il servizio per protocollare documenti già presenti e appartenenti ad
+	                         altre pratiche senza sovrascriverne i parametri; normalmente non si imposta)
+	    
+	    Sottoelementi:
+	    - DescrizioneDocumento: descrizione testuale del documento (facoltativo)
+	    - CollocazioneTelematica: path per il recupero del file (necessario se attributo telematico ad "S")
+	  	- Impronta: impronta del file telematico (usabile se attributo telematico ad "S")
+	  -->
+	  <Documento nome="" principale="" telematico="" gdoc_id="" gdoc_appl="" gdoc_vers="" duplica_documento="">
+	  	<DescrizioneDocumento></DescrizioneDocumento>
+	  	<CollocazioneTelematica></CollocazioneTelematica>
+	  	<Impronta algoritmo="" codifica=""></Impronta>
+	  </Documento>
+	</Documenti>
+
+</SegnaturaSK>

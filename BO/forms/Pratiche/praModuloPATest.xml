@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="praModuloPATest" el_tipo="1" el_colonne="0" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[#praModuloPATest]]></action>
+               <class><![CDATA[ita-app ita-dialog ita-layout-diag {title:"Test WS Modulo PA"}]]></class>
+          </properties>
+          <engineElement el_nome="workSpace" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[width:800px;height:600px;]]></style>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+               </properties>
+               <engineElement el_nome="divGestione" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="tabConfigurazioni" el_tipo="75" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tab" tipo_tag="div">
+                         <tipoProperties>
+                              <class><![CDATA[ita-tab]]></class>
+                         </tipoProperties>
+                         <engineElement el_nome="divConfig" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[Cofigurazioni Chiamata]]></Title>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="configHead" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                                   <properties>
+                                        <Title><![CDATA[Configura Chiamata]]></Title>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                                        <style><![CDATA[font-size:0.8em;]]></style>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="CONFIG[wsEndpoint]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx input" style="width:200px"><![CDATA[ws-Endpoint]]></label>
+                                   <properties>
+                                        <Size><![CDATA[100]]></Size>
+                                        <Maxchar><![CDATA[200]]></Maxchar>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="CONFIG[wsLogin]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx input" style="width:200px"><![CDATA[ws-Login]]></label>
+                                   <properties>
+                                        <Size><![CDATA[100]]></Size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="CONFIG[wsCodTipScad]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx input" style="width:200px"><![CDATA[Codice Tipo Scadenza]]></label>
+                                   <properties>
+                                        <Size><![CDATA[10]]></Size>
+                                        <Maxchar><![CDATA[20]]></Maxchar>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="CONFIG[wsSubTipScad]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx input" style="width:200px"><![CDATA[Codice Tipo Scadenza]]></label>
+                                   <properties>
+                                        <Size><![CDATA[10]]></Size>
+                                        <Maxchar><![CDATA[20]]></Maxchar>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="CONFIG[wsUser]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx input" style="width:200px"><![CDATA[ws-Utente]]></label>
+                                   <properties>
+                                        <Size><![CDATA[50]]></Size>
+                                        <Maxchar><![CDATA[100]]></Maxchar>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="CONFIG[wsPassword]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx input" style="width:200px"><![CDATA[ws-Password]]></label>
+                                   <properties>
+                                        <Size><![CDATA[50]]></Size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="CONFIG[wsDomain]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx input" style="width:200px"><![CDATA[ws-Domain]]></label>
+                                   <properties>
+                                        <Size><![CDATA[50]]></Size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="TIPOUFFICIO" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx input" style="width:200px"><![CDATA[Tipo Ufficio]]></label>
+                                   <properties>
+                                        <Size><![CDATA[50]]></Size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="CODICEUFFICIO" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx input" style="width:200px"><![CDATA[Codice Ufficio]]></label>
+                                   <properties>
+                                        <Size><![CDATA[50]]></Size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="TIPOLOGIASERVIZIO" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx input" style="width:200px"><![CDATA[Tipologia Servizio]]></label>
+                                   <properties>
+                                        <Size><![CDATA[50]]></Size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="TOKEN" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx input" style="width:200px"><![CDATA[Token]]></label>
+                                   <properties>
+                                        <Size><![CDATA[50]]></Size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                    </engineElement>
+                    <engineElement el_nome="tabTest" el_tipo="75" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tab" tipo_tag="div">
+                         <tipoProperties>
+                              <class><![CDATA[ita-tab]]></class>
+                         </tipoProperties>
+                         <engineElement el_nome="paneGetItaEngineContextToken" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[GetItaEngineContextToken]]></Title>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="callGetItaEngineContextToken" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                   <properties>
+                                        <Value><![CDATA[Send]]></Value>
+                                        <class><![CDATA[{iconLeft:'ui-icon ui-icon-play'}]]></class>
+                                        <style><![CDATA[left:200px;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-button ita-element-animate]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                         <engineElement el_nome="paneDestroyItaEngineContextToken" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[DestroyItaEngineContextToken]]></Title>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="callDestroyItaEngineContextToken" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                   <properties>
+                                        <Value><![CDATA[Send]]></Value>
+                                        <class><![CDATA[{iconLeft:'ui-icon ui-icon-play'}]]></class>
+                                        <style><![CDATA[left:200px;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-button ita-element-animate]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                         <engineElement el_nome="panePubblicaPosizione" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[pubblicaPosizione]]></Title>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="divContainer" el_tipo="74" el_colonne="2" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-div" tipo_tag="div">
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-div]]></class>
+                                   </tipoProperties>
+                                   <engineElement el_nome="divDatiScadenza" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-box" tipo_tag="div">
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                                        </tipoProperties>
+                                        <engineElement el_nome="CODTIPSCAD" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[CODTIPSCAD]]></label>
+                                             <properties>
+                                                  <size><![CDATA[35]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="SUBTIPSCAD" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[SUBTIPSCAD]]></label>
+                                             <properties>
+                                                  <size><![CDATA[35]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="PROGCITYSC" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[PROGCITYSC]]></label>
+                                             <properties>
+                                                  <size><![CDATA[35]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="PROGCITYSCA" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[PROGCITYSCA]]></label>
+                                             <properties>
+                                                  <size><![CDATA[35]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="DESCRPEND" el_tipo="6" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="generico" tipo_tag="textarea">
+                                             <label class="sx input" style="width:200px"><![CDATA[DESCRPEND]]></label>
+                                             <properties>
+                                                  <size><![CDATA[250]]></size>
+                                             </properties>
+                                        </engineElement>
+                                        <engineElement el_nome="MODPROVEN" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[MODPROVEN]]></label>
+                                             <properties>
+                                                  <size><![CDATA[50]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="ANNORIF" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[ANNORIF]]></label>
+                                             <properties>
+                                                  <size><![CDATA[5]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="NUMDOC" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[NUMDOC]]></label>
+                                             <properties>
+                                                  <size><![CDATA[10]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="DATASCADE" el_tipo="61" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-datepicker" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[DATASCADE]]></label>
+                                             <properties>
+                                                  <size><![CDATA[10]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-datepicker ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="IMPDAPAGTO" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[IMPDAPAGTO]]></label>
+                                             <properties>
+                                                  <size><![CDATA[10]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="FLAG_PUBBL" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[FLAG_PUBBL]]></label>
+                                             <properties>
+                                                  <size><![CDATA[10]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="ANNOEMI" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[ANNOEMI]]></label>
+                                             <properties>
+                                                  <size><![CDATA[10]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="NUMEMI" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[NUMEMI]]></label>
+                                             <properties>
+                                                  <size><![CDATA[10]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="IDBOL_SERE" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[IDBOL_SERE]]></label>
+                                             <properties>
+                                                  <size><![CDATA[10]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                   </engineElement>
+                                   <engineElement el_nome="divSoggetto" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-box" tipo_tag="div">
+                                        <properties>
+                                             <Title><![CDATA[Soggetto]]></Title>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                                        </tipoProperties>
+                                        <engineElement el_nome="configDatiSoggetto" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                                             <properties>
+                                                  <Title><![CDATA[Soggetto]]></Title>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                                                  <style><![CDATA[font-size:0.8em;]]></style>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="CODFISCALE" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[CODFISCALE]]></label>
+                                             <properties>
+                                                  <size><![CDATA[50]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="PARTIVA" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[PARTIVA]]></label>
+                                             <properties>
+                                                  <size><![CDATA[50]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="NOME" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[NOME]]></label>
+                                             <properties>
+                                                  <size><![CDATA[50]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="COGNOME" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[COGNOME]]></label>
+                                             <properties>
+                                                  <size><![CDATA[50]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="DATANASC" el_tipo="61" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-datepicker" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[DATANASC]]></label>
+                                             <properties>
+                                                  <size><![CDATA[12]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-datepicker ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="LUOGONASC" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[LUOGONASC]]></label>
+                                             <properties>
+                                                  <size><![CDATA[50]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="COMUNERESID" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[COMUNERESID]]></label>
+                                             <properties>
+                                                  <size><![CDATA[50]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="PROVINCIARESID" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[PROVINCIARESID]]></label>
+                                             <properties>
+                                                  <size><![CDATA[50]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="INDIRIZZORESID" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[INDIRIZZORESID]]></label>
+                                             <properties>
+                                                  <size><![CDATA[50]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="CAP" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[CAP]]></label>
+                                             <properties>
+                                                  <size><![CDATA[50]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="PEC" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[PEC]]></label>
+                                             <properties>
+                                                  <size><![CDATA[50]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                   </engineElement>
+                                   <engineElement el_nome="divRate" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-box" tipo_tag="div">
+                                        <properties>
+                                             <Title><![CDATA[Rate]]></Title>
+                                             <class><![CDATA[ita-data-page]]></class>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                                        </tipoProperties>
+                                        <engineElement el_nome="R1_NUMRATA" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[R1_NUMRATA]]></label>
+                                             <properties>
+                                                  <size><![CDATA[10]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="R1_IMPDAPAGTO" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[R1_IMPDAPAGTO]]></label>
+                                             <properties>
+                                                  <size><![CDATA[10]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="R1_DESCRPEND" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[R1_DESCRPEND]]></label>
+                                             <properties>
+                                                  <size><![CDATA[20]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="R1_DATASCADE" el_tipo="61" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-datepicker" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[R1_DATASCADE]]></label>
+                                             <properties>
+                                                  <size><![CDATA[12]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-datepicker ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="R2_NUMRATA" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[R2_NUMRATA]]></label>
+                                             <properties>
+                                                  <size><![CDATA[10]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="R2_IMPDAPAGTO" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[R2_IMPDAPAGTO]]></label>
+                                             <properties>
+                                                  <size><![CDATA[10]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="R2_DESCRPEND" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[R2_DESCRPEND]]></label>
+                                             <properties>
+                                                  <size><![CDATA[20]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="R2_DATASCADE" el_tipo="61" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-datepicker" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[R2_DATASCADE]]></label>
+                                             <properties>
+                                                  <size><![CDATA[12]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-datepicker ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                   </engineElement>
+                                   <engineElement el_nome="divAggiuntive" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-box" tipo_tag="div">
+                                        <properties>
+                                             <Title><![CDATA[Informazioni Aggiuntive]]></Title>
+                                             <class><![CDATA[ita-data-page]]></class>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                                        </tipoProperties>
+                                        <engineElement el_nome="TARGAVEICOLO" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[TARGAVEICOLO]]></label>
+                                             <properties>
+                                                  <size><![CDATA[10]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="DATAVERBALE" el_tipo="61" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-datepicker" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[DATAVERBALE]]></label>
+                                             <properties>
+                                                  <size><![CDATA[12]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-datepicker ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="IDENTIFICATIVOVERBALE" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx input" style="width:200px"><![CDATA[IDENTIFICATIVOVERBALE]]></label>
+                                             <properties>
+                                                  <size><![CDATA[10]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                   </engineElement>
+                              </engineElement>
+                              <engineElement el_nome="callPubblicaPosizione" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                   <properties>
+                                        <Value><![CDATA[Send]]></Value>
+                                        <class><![CDATA[{iconLeft:'ui-icon ui-icon-play'}]]></class>
+                                        <style><![CDATA[left:200px;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-button ita-element-animate]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                         <engineElement el_nome="paneEseguiPagamento" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[eseguiPagamento]]></Title>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="callEseguiPagamento" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                   <properties>
+                                        <Value><![CDATA[Send]]></Value>
+                                        <class><![CDATA[{iconLeft:'ui-icon ui-icon-play'}]]></class>
+                                        <style><![CDATA[left:200px;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-button ita-element-animate]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="IUV" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx input" style="width:200px"><![CDATA[IUV]]></label>
+                                   <properties>
+                                        <size><![CDATA[30]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="R1_IUV" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx input" style="width:200px"><![CDATA[R1_IUV]]></label>
+                                   <properties>
+                                        <size><![CDATA[30]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="R2_IUV" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx input" style="width:200px"><![CDATA[R2_IUV]]></label>
+                                   <properties>
+                                        <size><![CDATA[30]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                         <engineElement el_nome="paneGeneraBollettino" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[generaBollettino]]></Title>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="callGeneraBollettino" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                   <properties>
+                                        <Value><![CDATA[Send]]></Value>
+                                        <class><![CDATA[{iconLeft:'ui-icon ui-icon-play'}]]></class>
+                                        <style><![CDATA[left:200px;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-button ita-element-animate]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                         <engineElement el_nome="paneRicercaPosizoneIUV" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[ricercaPosizoneIUV]]></Title>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="callRicercaPosizioneIUV" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                   <properties>
+                                        <Value><![CDATA[Send]]></Value>
+                                        <class><![CDATA[{iconLeft:'ui-icon ui-icon-play'}]]></class>
+                                        <style><![CDATA[left:200px;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-button ita-element-animate]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                         <engineElement el_nome="paneRicercaPosizoneChiaveEsterna" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[ricercaPosizoneChiaveEsterna]]></Title>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="callRicercaPosizioneChiaveEsterna" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                   <properties>
+                                        <Value><![CDATA[Send]]></Value>
+                                        <class><![CDATA[{iconLeft:'ui-icon ui-icon-play'}]]></class>
+                                        <style><![CDATA[left:200px;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-button ita-element-animate]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                         <engineElement el_nome="paneRettificaPosizione" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[ricercaRettificaPosizione]]></Title>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="RET_DATASCAD" el_tipo="61" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-datepicker" tipo_tag="text">
+                                   <label class="sx input" style="width:200px"><![CDATA[Data Scadenza]]></label>
+                                   <properties>
+                                        <size><![CDATA[12]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-datepicker ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="RET_IMPORTO" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx input" style="width:200px"><![CDATA[Importo]]></label>
+                                   <properties>
+                                        <size><![CDATA[5]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="RET_CAUSALE" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx input" style="width:200px"><![CDATA[Causale]]></label>
+                                   <properties>
+                                        <size><![CDATA[50]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="RET_IA_TARGA" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx input" style="width:200px"><![CDATA[Targa]]></label>
+                                   <properties>
+                                        <size><![CDATA[10]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="RET_IA_TEST" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx input" style="width:200px"><![CDATA[Test]]></label>
+                                   <properties>
+                                        <size><![CDATA[10]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="callRettificaPosizione" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                   <properties>
+                                        <Value><![CDATA[Send]]></Value>
+                                        <class><![CDATA[{iconLeft:'ui-icon ui-icon-play'}]]></class>
+                                        <style><![CDATA[left:200px;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-button ita-element-animate]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                         <engineElement el_nome="paneRimuoviPosizione" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[rimuoviPoszione]]></Title>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="callRimuoviPosizione" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                   <properties>
+                                        <Value><![CDATA[Send]]></Value>
+                                        <class><![CDATA[{iconLeft:'ui-icon ui-icon-play'}]]></class>
+                                        <style><![CDATA[left:200px;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-button ita-element-animate]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                         <engineElement el_nome="paneRicercaPosizioniDaA" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[ricercaPosizioniDaA]]></Title>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="cercaDaData" el_tipo="61" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-datepicker" tipo_tag="text">
+                                   <label class="sx input"><![CDATA[Da Data]]></label>
+                                   <properties>
+                                        <size><![CDATA[12]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-datepicker ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="cercaAData" el_tipo="61" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-datepicker" tipo_tag="text">
+                                   <label class="sx input"><![CDATA[A Data]]></label>
+                                   <properties>
+                                        <size><![CDATA[12]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-datepicker ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="callRicercaPosizioniDaA" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                   <properties>
+                                        <Value><![CDATA[Send]]></Value>
+                                        <class><![CDATA[{iconLeft:'ui-icon ui-icon-play'}]]></class>
+                                        <style><![CDATA[left:200px;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-button ita-element-animate]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[05/12/2019]]></date>
+          <time><![CDATA[10:25:35]]></time>
+          <user><![CDATA[mario]]></user>
+          <modelSHA><![CDATA[efca3c6b69f54841e3a20ae0911885578e370af9]]></modelSHA>
+     </info></itaEngine>

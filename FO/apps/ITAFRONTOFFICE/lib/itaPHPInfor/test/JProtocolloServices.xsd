@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://webservices.jprotocollo.jente.infor.arezzo.it/" version="1.0">
+
+  <xs:element xmlns:ns1="http://webservices.jprotocollo.jente.infor.arezzo.it/" name="leggiAllegato" type="ns1:leggiAllegato"></xs:element>
+
+  <xs:complexType name="leggiAllegato">
+    <xs:sequence>
+      <xs:element name="richiestaLeggiAllegato" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" name="username" type="xs:string"></xs:element>
+            <xs:element xmlns:ns2="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns2:riferimento"></xs:element>
+            <xs:element form="qualified" name="progressivo" type="xs:integer"></xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="richiestaLeggiAllegato">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="username" type="xs:string"></xs:element>
+        <xs:element xmlns:ns3="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns3:riferimento"></xs:element>
+        <xs:element form="qualified" name="progressivo" type="xs:integer"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="riferimento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:ns4="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns4:registro" minOccurs="0"></xs:element>
+        <xs:element form="qualified" name="anno" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="numero" type="xs:string"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="registro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="codice" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="descrizione" type="xs:string" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element xmlns:ns5="http://webservices.jprotocollo.jente.infor.arezzo.it/" name="leggiAllegatoResponse" type="ns5:leggiAllegatoResponse"></xs:element>
+
+  <xs:complexType name="leggiAllegatoResponse">
+    <xs:sequence>
+      <xs:element name="rispostaLeggiAllegato" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" name="esito" type="xs:string"></xs:element>
+            <xs:element form="qualified" name="messaggio" type="xs:string"></xs:element>
+            <xs:element xmlns:ns6="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns6:documento" minOccurs="0"></xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="rispostaLeggiAllegato">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="esito" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="messaggio" type="xs:string"></xs:element>
+        <xs:element xmlns:ns7="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns7:documento" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="documento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="titolo" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="volume" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element form="qualified" name="codice" type="xs:string"></xs:element>
+              <xs:element form="qualified" name="descrizione" type="xs:string" minOccurs="0"></xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element form="qualified" name="formato" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element form="qualified" name="codice" type="xs:string"></xs:element>
+              <xs:element form="qualified" name="descrizione" type="xs:string" minOccurs="0"></xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element form="qualified" name="nomeFile" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="file" type="xs:base64Binary" minOccurs="0"></xs:element>
+        <xs:element form="qualified" name="progressivo" type="xs:integer" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element xmlns:ns8="http://webservices.jprotocollo.jente.infor.arezzo.it/" name="inserisciInterno" type="ns8:inserisciInterno"></xs:element>
+
+  <xs:complexType name="inserisciInterno">
+    <xs:sequence>
+      <xs:element name="richiestaProtocollaInterno" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" name="username" type="xs:string"></xs:element>
+            <xs:element xmlns:ns9="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns9:protocollaInterno"></xs:element>
+            <xs:element xmlns:ns10="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns10:documento" minOccurs="0"></xs:element>
+            <xs:element form="qualified" name="confermaSegnatura" type="xs:boolean" minOccurs="0"></xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="richiestaProtocollaInterno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="username" type="xs:string"></xs:element>
+        <xs:element xmlns:ns11="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns11:protocollaInterno"></xs:element>
+        <xs:element xmlns:ns12="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns12:documento" minOccurs="0"></xs:element>
+        <xs:element form="qualified" name="confermaSegnatura" type="xs:boolean" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="protocollaInterno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:ns13="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns13:registro" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns14="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns14:sezione" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns15="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns15:corrispondente" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns16="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns16:mittenteInterno" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns17="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns17:smistamenti"></xs:element>
+        <xs:element form="qualified" name="oggetto" type="xs:string"></xs:element>
+        <xs:element xmlns:ns18="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns18:classificazione" minOccurs="0"></xs:element>
+        <xs:element form="qualified" name="dataInvio" type="xs:string" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns19="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns19:estremi" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns20="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns20:anteatto" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns21="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns21:altriDati" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="sezione">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="codice" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="descrizione" type="xs:string" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="corrispondente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="codice" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="descrizione" type="xs:string" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="mittenteInterno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:ns22="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns22:corrispondente"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="smistamenti">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:ns23="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns23:smistamento" maxOccurs="unbounded" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="smistamento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:ns24="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns24:corrispondente"></xs:element>
+        <xs:element form="qualified" name="nota" type="xs:string" minOccurs="0"></xs:element>
+        <xs:element form="qualified" name="presaInCarico" type="xs:boolean" minOccurs="0"></xs:element>
+        <xs:element form="qualified" name="chiusura" type="xs:boolean" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="classificazione">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="titolario" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="descrizione" type="xs:string" minOccurs="0"></xs:element>
+        <xs:element form="qualified" name="fascicolo" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element form="qualified" name="anno" type="xs:string"></xs:element>
+              <xs:element form="qualified" name="numero" type="xs:string"></xs:element>
+              <xs:element form="qualified" name="descrizione" type="xs:string" minOccurs="0"></xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="estremi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="data" type="xs:string" minOccurs="0"></xs:element>
+        <xs:element form="qualified" name="numero" type="xs:string" minOccurs="0"></xs:element>
+        <xs:element form="qualified" name="importo" type="xs:string" minOccurs="0"></xs:element>
+        <xs:element form="qualified" name="allegati" type="xs:string" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="anteatto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:ns25="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns25:registro" minOccurs="0"></xs:element>
+        <xs:element form="qualified" name="anno" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="numero" type="xs:string"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="altriDati">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:ns26="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns26:tipoDocumento" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns27="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns27:tramite" minOccurs="0"></xs:element>
+        <xs:element form="qualified" name="note" type="xs:string" minOccurs="0"></xs:element>
+        <xs:element form="qualified" name="attributo1" type="xs:string" minOccurs="0"></xs:element>
+        <xs:element form="qualified" name="attributo2" type="xs:string" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns28="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns28:affare" minOccurs="0"></xs:element>
+        <xs:element form="qualified" name="visibilita" type="xs:string" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="tipoDocumento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="codice" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="descrizione" type="xs:string" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="tramite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="codice" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="descrizione" type="xs:string" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="affare">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="codice" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="descrizione" type="xs:string" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element xmlns:ns29="http://webservices.jprotocollo.jente.infor.arezzo.it/" name="inserisciInternoResponse" type="ns29:inserisciInternoResponse"></xs:element>
+
+  <xs:complexType name="inserisciInternoResponse">
+    <xs:sequence>
+      <xs:element name="rispostaProtocolla" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" name="esito" type="xs:string"></xs:element>
+            <xs:element form="qualified" name="messaggio" type="xs:string"></xs:element>
+            <xs:element xmlns:ns30="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns30:segnatura" minOccurs="0"></xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="rispostaProtocolla">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="esito" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="messaggio" type="xs:string"></xs:element>
+        <xs:element xmlns:ns31="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns31:segnatura" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="segnatura">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:ns32="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns32:registro"></xs:element>
+        <xs:element xmlns:ns33="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns33:sezione"></xs:element>
+        <xs:element form="qualified" name="anno" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="numero" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="data" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="ora" type="xs:string"></xs:element>
+        <xs:element xmlns:ns34="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns34:amministrazione"></xs:element>
+        <xs:element xmlns:ns35="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns35:classificazione" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns36="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns36:corrispondente" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="amministrazione">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:ns37="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns37:ente"></xs:element>
+        <xs:element xmlns:ns38="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns38:aoo" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns39="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns39:uo" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="codice" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="descrizione" type="xs:string" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="aoo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="codice" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="descrizione" type="xs:string" minOccurs="0"></xs:element>
+        <xs:element form="qualified" name="email" type="xs:string" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="uo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="codice" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="descrizione" type="xs:string" minOccurs="0"></xs:element>
+        <xs:element form="qualified" name="email" type="xs:string" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element xmlns:ns40="http://webservices.jprotocollo.jente.infor.arezzo.it/" name="allegaDocumento" type="ns40:allegaDocumento"></xs:element>
+
+  <xs:complexType name="allegaDocumento">
+    <xs:sequence>
+      <xs:element name="richiestaAllegaDocumento" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" name="username" type="xs:string"></xs:element>
+            <xs:element xmlns:ns41="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns41:riferimento"></xs:element>
+            <xs:element xmlns:ns42="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns42:documento"></xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="richiestaAllegaDocumento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="username" type="xs:string"></xs:element>
+        <xs:element xmlns:ns43="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns43:riferimento"></xs:element>
+        <xs:element xmlns:ns44="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns44:documento"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element xmlns:ns45="http://webservices.jprotocollo.jente.infor.arezzo.it/" name="allegaDocumentoResponse" type="ns45:allegaDocumentoResponse"></xs:element>
+
+  <xs:complexType name="allegaDocumentoResponse">
+    <xs:sequence>
+      <xs:element name="rispostaAllegaDocumento" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" name="esito" type="xs:string"></xs:element>
+            <xs:element form="qualified" name="messaggio" type="xs:string"></xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="rispostaAllegaDocumento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="esito" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="messaggio" type="xs:string"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element xmlns:ns46="http://webservices.jprotocollo.jente.infor.arezzo.it/" name="confermaSegnatura" type="ns46:confermaSegnatura"></xs:element>
+
+  <xs:complexType name="confermaSegnatura">
+    <xs:sequence>
+      <xs:element name="richiestaConfermaSegnatura" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" name="username" type="xs:string"></xs:element>
+            <xs:element xmlns:ns47="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns47:riferimento"></xs:element>
+            <xs:element xmlns:ns48="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns48:documento" minOccurs="0"></xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="richiestaConfermaSegnatura">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="username" type="xs:string"></xs:element>
+        <xs:element xmlns:ns49="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns49:riferimento"></xs:element>
+        <xs:element xmlns:ns50="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns50:documento" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element xmlns:ns51="http://webservices.jprotocollo.jente.infor.arezzo.it/" name="confermaSegnaturaResponse" type="ns51:confermaSegnaturaResponse"></xs:element>
+
+  <xs:complexType name="confermaSegnaturaResponse">
+    <xs:sequence>
+      <xs:element name="rispostaConfermaSegnatura" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" name="esito" type="xs:string"></xs:element>
+            <xs:element form="qualified" name="messaggio" type="xs:string"></xs:element>
+            <xs:element xmlns:ns52="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns52:segnatura" minOccurs="0"></xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="rispostaConfermaSegnatura">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="esito" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="messaggio" type="xs:string"></xs:element>
+        <xs:element xmlns:ns53="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns53:segnatura" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element xmlns:ns54="http://webservices.jprotocollo.jente.infor.arezzo.it/" name="leggiProtocollo" type="ns54:leggiProtocollo"></xs:element>
+
+  <xs:complexType name="leggiProtocollo">
+    <xs:sequence>
+      <xs:element name="richiestaLeggiProtocollo" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" name="username" type="xs:string"></xs:element>
+            <xs:element xmlns:ns55="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns55:riferimento"></xs:element>
+            <xs:element form="qualified" name="allegati" type="xs:boolean"></xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="richiestaLeggiProtocollo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="username" type="xs:string"></xs:element>
+        <xs:element xmlns:ns56="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns56:riferimento"></xs:element>
+        <xs:element form="qualified" name="allegati" type="xs:boolean"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element xmlns:ns57="http://webservices.jprotocollo.jente.infor.arezzo.it/" name="leggiProtocolloResponse" type="ns57:leggiProtocolloResponse"></xs:element>
+
+  <xs:complexType name="leggiProtocolloResponse">
+    <xs:sequence>
+      <xs:element name="rispostaLeggiProtocollo" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" name="esito" type="xs:string"></xs:element>
+            <xs:element form="qualified" name="messaggio" type="xs:string"></xs:element>
+            <xs:element xmlns:ns58="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns58:protocollo" minOccurs="0"></xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="rispostaLeggiProtocollo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="esito" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="messaggio" type="xs:string"></xs:element>
+        <xs:element xmlns:ns59="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns59:protocollo" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="protocollo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:ns60="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns60:registro"></xs:element>
+        <xs:element xmlns:ns61="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns61:sezione"></xs:element>
+        <xs:element form="qualified" name="anno" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="numero" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="dataRegistrazione" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="oraRegistrazione" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="tipo" type="xs:string"></xs:element>
+        <xs:element xmlns:ns62="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns62:soggetti" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns63="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns63:mittenteInterno" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns64="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns64:smistamenti" minOccurs="0"></xs:element>
+        <xs:element form="qualified" name="oggetto" type="xs:string"></xs:element>
+        <xs:element xmlns:ns65="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns65:classificazione" minOccurs="0"></xs:element>
+        <xs:element form="qualified" name="dataArrivoPartenza" type="xs:string" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns66="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns66:estremi" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns67="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns67:anteatto" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns68="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns68:altriDati"></xs:element>
+        <xs:element form="qualified" name="documenti" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element xmlns:ns69="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns69:documento" maxOccurs="unbounded" minOccurs="0"></xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element form="qualified" name="annullamento" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element form="qualified" name="annullato" type="xs:boolean"></xs:element>
+              <xs:element form="qualified" name="atto" type="xs:string" minOccurs="0"></xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="soggetti">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice maxOccurs="unbounded" minOccurs="0">
+          <xs:element xmlns:ns70="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns70:anagrafica"></xs:element>
+          <xs:element xmlns:ns71="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns71:amministrazione"></xs:element>
+          <xs:element xmlns:ns72="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns72:soggetto"></xs:element>
+        </xs:choice>
+        <xs:element form="qualified" maxOccurs="unbounded" name="altriSoggetti" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element xmlns:ns73="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns73:soggetto" minOccurs="0"></xs:element>
+              <xs:element xmlns:ns74="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns74:anagrafica" minOccurs="0"></xs:element>
+              <xs:element xmlns:ns75="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns75:amministrazione" minOccurs="0"></xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="anagrafica">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="codice" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="denominazione" type="xs:string" minOccurs="0"></xs:element>
+        <xs:element form="qualified" name="indirizzo" type="xs:string" minOccurs="0"></xs:element>
+        <xs:element form="qualified" name="email" type="xs:string" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="soggetto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="denominazione" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="indirizzo" type="xs:string" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element xmlns:ns76="http://webservices.jprotocollo.jente.infor.arezzo.it/" name="inviaProtocollo" type="ns76:inviaProtocollo"></xs:element>
+
+  <xs:complexType name="inviaProtocollo">
+    <xs:sequence>
+      <xs:element name="richiestaInviaProtocollo" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" name="username" type="xs:string"></xs:element>
+            <xs:element xmlns:ns77="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns77:riferimento"></xs:element>
+            <xs:element form="qualified" name="account" type="xs:string" minOccurs="0"></xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="richiestaInviaProtocollo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="username" type="xs:string"></xs:element>
+        <xs:element xmlns:ns78="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns78:riferimento"></xs:element>
+        <xs:element form="qualified" name="account" type="xs:string" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element xmlns:ns79="http://webservices.jprotocollo.jente.infor.arezzo.it/" name="inviaProtocolloResponse" type="ns79:inviaProtocolloResponse"></xs:element>
+
+  <xs:complexType name="inviaProtocolloResponse">
+    <xs:sequence>
+      <xs:element name="rispostaInviaProtocollo" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" name="esito" type="xs:string"></xs:element>
+            <xs:element form="qualified" name="messaggio" type="xs:string"></xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="rispostaInviaProtocollo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="esito" type="xs:string"></xs:element>
+        <xs:element form="qualified" name="messaggio" type="xs:string"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element xmlns:ns80="http://webservices.jprotocollo.jente.infor.arezzo.it/" name="inserisciPartenza" type="ns80:inserisciPartenza"></xs:element>
+
+  <xs:complexType name="inserisciPartenza">
+    <xs:sequence>
+      <xs:element name="richiestaProtocollaPartenza" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" name="username" type="xs:string"></xs:element>
+            <xs:element xmlns:ns81="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns81:protocollaPartenza"></xs:element>
+            <xs:element xmlns:ns82="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns82:documento" minOccurs="0"></xs:element>
+            <xs:element form="qualified" name="confermaSegnatura" type="xs:boolean" minOccurs="0"></xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="richiestaProtocollaPartenza">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="username" type="xs:string"></xs:element>
+        <xs:element xmlns:ns83="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns83:protocollaPartenza"></xs:element>
+        <xs:element xmlns:ns84="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns84:documento" minOccurs="0"></xs:element>
+        <xs:element form="qualified" name="confermaSegnatura" type="xs:boolean" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="protocollaPartenza">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:ns85="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns85:registro" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns86="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns86:sezione" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns87="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns87:corrispondente" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns88="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns88:mittenteInterno" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns89="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns89:soggetti"></xs:element>
+        <xs:element form="qualified" name="oggetto" type="xs:string"></xs:element>
+        <xs:element xmlns:ns90="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns90:smistamenti" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns91="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns91:classificazione" minOccurs="0"></xs:element>
+        <xs:element form="qualified" name="dataInvio" type="xs:string" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns92="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns92:estremi" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns93="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns93:anteatto" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns94="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns94:altriDati" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element xmlns:ns95="http://webservices.jprotocollo.jente.infor.arezzo.it/" name="inserisciPartenzaResponse" type="ns95:inserisciPartenzaResponse"></xs:element>
+
+  <xs:complexType name="inserisciPartenzaResponse">
+    <xs:sequence>
+      <xs:element name="rispostaProtocolla" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" name="esito" type="xs:string"></xs:element>
+            <xs:element form="qualified" name="messaggio" type="xs:string"></xs:element>
+            <xs:element xmlns:ns96="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns96:segnatura" minOccurs="0"></xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element xmlns:ns97="http://webservices.jprotocollo.jente.infor.arezzo.it/" name="inserisciArrivo" type="ns97:inserisciArrivo"></xs:element>
+
+  <xs:complexType name="inserisciArrivo">
+    <xs:sequence>
+      <xs:element name="richiestaProtocollaArrivo" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" name="username" type="xs:string"></xs:element>
+            <xs:element xmlns:ns98="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns98:protocollaArrivo"></xs:element>
+            <xs:element xmlns:ns99="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns99:documento" minOccurs="0"></xs:element>
+            <xs:element form="qualified" name="confermaSegnatura" type="xs:boolean" minOccurs="0"></xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="richiestaProtocollaArrivo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element form="qualified" name="username" type="xs:string"></xs:element>
+        <xs:element xmlns:ns100="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns100:protocollaArrivo"></xs:element>
+        <xs:element xmlns:ns101="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns101:documento" minOccurs="0"></xs:element>
+        <xs:element form="qualified" name="confermaSegnatura" type="xs:boolean" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="protocollaArrivo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:ns102="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns102:registro" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns103="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns103:sezione" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns104="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns104:corrispondente" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns105="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns105:soggetti"></xs:element>
+        <xs:element xmlns:ns106="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns106:smistamenti"></xs:element>
+        <xs:element form="qualified" name="oggetto" type="xs:string"></xs:element>
+        <xs:element xmlns:ns107="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns107:classificazione" minOccurs="0"></xs:element>
+        <xs:element form="qualified" name="dataRicezione" type="xs:string" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns108="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns108:estremi" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns109="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns109:anteatto" minOccurs="0"></xs:element>
+        <xs:element xmlns:ns110="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns110:altriDati" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element xmlns:ns111="http://webservices.jprotocollo.jente.infor.arezzo.it/" name="inserisciArrivoResponse" type="ns111:inserisciArrivoResponse"></xs:element>
+
+  <xs:complexType name="inserisciArrivoResponse">
+    <xs:sequence>
+      <xs:element name="rispostaProtocolla" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" name="esito" type="xs:string"></xs:element>
+            <xs:element form="qualified" name="messaggio" type="xs:string"></xs:element>
+            <xs:element xmlns:ns112="http://webservices.jprotocollo.jente.infor.arezzo.it/" ref="ns112:segnatura" minOccurs="0"></xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

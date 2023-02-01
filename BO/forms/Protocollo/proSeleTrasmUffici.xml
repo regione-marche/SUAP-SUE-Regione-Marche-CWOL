@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="proSeleTrasmUffici" el_tipo="1" el_colonne="0" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[#proSeleTrasmUffici]]></action>
+               <class><![CDATA[ita-dialog ita-layout-diag {maximized:false,title:"Selezione Uffici",width:550,height:600,modal:true}]]></class>
+          </properties>
+          <engineElement el_nome="workSpace" el_tipo="74" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-div" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[width:950;]]></style>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+               </properties>
+               <tipoProperties>
+                    <class><![CDATA[ita-div]]></class>
+               </tipoProperties>
+               <engineElement el_nome="divGrigliaUffici" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="generico" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[with:98%; height:450px;]]></style>
+                    </properties>
+                    <engineElement el_nome="gridUffici" el_tipo="91" el_colonne="10" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-jqGrid" tipo_tag="table">
+                         <properties>
+                              <class><![CDATA[{caption: "", shrinkToFit:true, sortname:'UFFCOD', rowNum:10000, rowList:[], navGrid:true, navButtonDel:false, navButtonAdd:false, navButtonEdit:false, navButtonExcel:false, navButtonPrint:false, navButtonRefresh:true, resizeToParent:true, pginput:false, pgbuttons:false ,cellEdit:true, filterToolbar:true,multiselect:true }]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-jqGrid]]></class>
+                         </tipoProperties>
+                         <engineElement el_nome="thCodice" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Codice]]></label>
+                         </engineElement>
+                         <engineElement el_nome="thDescr" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Descrizione]]></label>
+                         </engineElement>
+                         <engineElement el_nome="UFFCOD" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[70]]></width>
+                                   <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                              </properties>
+                         </engineElement>
+                         <engineElement el_nome="UFFDES" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[200]]></width>
+                                   <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                              </properties>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_nome="divGriglaUfficiTree" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-data-page" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[width:98%;height:450px;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="gridUfficiTree" el_tipo="91" el_colonne="90" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-jqGrid" tipo_tag="table">
+                         <properties>
+                              <class><![CDATA[ita-jqGrid {caption: "Organigramma", sortable: false, filterToolbar: false, treeGrid: true, treeGridModel: 'adjacency', ExpandColumn: 'UFFDES', navGrid: true, navButtonRefresh: true, navButtonAdd: false,navButtonDel:false, navButtonEdit: false, resizeToParent: true, shrinkToFit: true}]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-jqGrid]]></class>
+                         </tipoProperties>
+                         <engineElement el_nome="thRowid" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                         </engineElement>
+                         <engineElement el_nome="Indice" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                         </engineElement>
+                         <engineElement el_nome="Descrizione" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                         </engineElement>
+                         <engineElement el_nome="ROWID" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <class><![CDATA[{ hidden: true }]]></class>
+                              </properties>
+                         </engineElement>
+                         <engineElement el_nome="INDICE" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <class><![CDATA[{ hidden: true, key: true }]]></class>
+                              </properties>
+                         </engineElement>
+                         <engineElement el_nome="UFFDES" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <width><![CDATA[300]]></width>
+                                   <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                              </properties>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_nome="divBottoni" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                    <engineElement el_nome="AssegnaPersona" el_tipo="66" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button-validate" tipo_tag="button">
+                         <properties>
+                              <value><![CDATA[Assegna alle Persone]]></value>
+                              <class><![CDATA[{iconLeft:'ui-icon ui-icon-user'}]]></class>
+                              <style><![CDATA[width:200px; height:30px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button-validate ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="AssegnaUfficio" el_tipo="66" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button-validate" tipo_tag="button">
+                         <properties>
+                              <value><![CDATA[Assegna a Ufficio]]></value>
+                              <class><![CDATA[{iconLeft:'ui-icon ui-icon-home'}]]></class>
+                              <style><![CDATA[width:200px; height:30px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button-validate ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+          <engineElement el_nome="divAppoggio" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-hidden]]></class>
+               </properties>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[13/06/2019]]></date>
+          <time><![CDATA[16:18:53]]></time>
+          <user><![CDATA[a.mucci]]></user>
+          <modelSHA><![CDATA[b7e9dcc80079a3a062ef3be9de312b83ce3af76e]]></modelSHA>
+     </info></itaEngine>

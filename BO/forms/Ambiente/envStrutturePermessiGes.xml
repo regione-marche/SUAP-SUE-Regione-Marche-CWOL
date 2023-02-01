@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="envStrutturePermessiGes" el_tipo="1" el_colonne="0" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <class><![CDATA[ita-dialog ita-layout-diag {title:"Gestione Permessi",width:600,height:600,modal:true,position:'center'}]]></class>
+               <action><![CDATA[envStrutturePermessiGes]]></action>
+          </properties>
+          <engineElement el_nome="workSpace" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+                    <style><![CDATA[width:600px;height:200px;]]></style>
+               </properties>
+               <engineElement el_nome="divGestione" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[height:100%;width:100%;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="divOggetto" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[width: 98%; height: 80px; padding: 5px 0 2px 5px; margin-top: 5px;]]></style>
+                         </properties>
+                         <engineElement el_nome="Header" el_tipo="86" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box-highlight" tipo_tag="div">
+                              <properties>
+                                   <class><![CDATA[ui-state-highlight]]></class>
+                                   <style><![CDATA[color:red;font-weight:bold;text-align:rcenter;]]></style>
+                                   <size><![CDATA[height:100%]]></size>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-box-highlight]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                         <engineElement el_nome="Header1" el_tipo="86" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box-highlight" tipo_tag="div">
+                              <properties>
+                                   <class><![CDATA[ui-state-highlight]]></class>
+                                   <style><![CDATA[color:red;font-weight:bold;text-align:rcenter;]]></style>
+                                   <size><![CDATA[height:100%]]></size>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-box-highlight]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                         <engineElement el_nome="Header2" el_tipo="86" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box-highlight" tipo_tag="div">
+                              <properties>
+                                   <class><![CDATA[ui-state-highlight]]></class>
+                                   <style><![CDATA[color:red;font-weight:bold;text-align:rcenter;]]></style>
+                                   <size><![CDATA[height:100%]]></size>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-box-highlight]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                    </engineElement>
+                    <engineElement el_nome="divGridPermessi" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[width: 98%; height: 400px; padding: 5px 0 2px 5px; margin-top: 5px;]]></style>
+                         </properties>
+                         <engineElement el_nome="gridPermessi" el_tipo="91" el_colonne="10" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-jqGrid" tipo_tag="table">
+                              <properties>
+                                   <class><![CDATA[ita-jqGrid {readerId:'id', caption: "Permessi associati",shrinkToFit:true,sortname:'',rowNum:100,rowList:[],navGrid:true,navButtonDel:false,navButtonAdd:true, pgbuttons:false,pginput:false,navButtonEdit:false,navButtonExcel:false,navButtonPrint:false,navButtonRefresh:true,resizeToParent:true,filterToolbar:false}]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-jqGrid]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="thazione" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Azione]]></label>
+                              </engineElement>
+                              <engineElement el_nome="thvalore" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Abilitato]]></label>
+                              </engineElement>
+                              <engineElement el_nome="CHIAVE" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              </engineElement>
+                              <engineElement el_nome="VALORE" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              </engineElement>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+          <engineElement el_nome="buttonBar" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[width: 180px;]]></style>
+                    <class><![CDATA[ita-layout-east ita-buttonbar]]></class>
+               </properties>
+               <engineElement el_nome="Aggiorna" el_tipo="66" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button-validate" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F5 - Aggiorna Permessi]]></value>
+                         <style><![CDATA[width: 98%; margin-bottom: 15px; padding: 4px 5px;]]></style>
+                         <class><![CDATA[{ shortCut: 'f5' }]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button-validate ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[18/04/2019]]></date>
+          <time><![CDATA[16:13:29]]></time>
+          <user><![CDATA[s.bianchini]]></user>
+          <modelSHA><![CDATA[7e6f3e0ad47ce88b8856425cb7e2282906eff913]]></modelSHA>
+     </info></itaEngine>

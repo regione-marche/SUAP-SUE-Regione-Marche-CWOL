@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="itaFrontOffice2" basedir="." xmlns:if="ant:if" xmlns:unless="ant:unless">
+    <property file="build.properties" />
+    <property name="wordpress.build.dir" location="${build.dir}/wordpress" />
+
+    <!-- WORDPRESS -->
+
+    <!-- Target per il deploy della base del framework itaFrontOffice -->
+    <target name="Wordpress deploy (itaFrontOffice)">
+        <property name="deploy.dir" value="${wordpress.deploy.dir}" />
+
+        <delete quiet="true" includeemptydirs="true" if:true="${deploy.clean}">
+            <fileset dir="${deploy.dir}/wp-content/plugins/itaFrontOffice">
+                <exclude name="config/**" />
+                <exclude name="config.inc.php" />
+                <exclude name="includes/config.inc.php" />
+
+                <exclude name="lib/**" />
+            </fileset>
+        </delete>
+
+        <copy todir="${deploy.dir}/wp-content/plugins/itaFrontOffice" overwrite="true">
+            <fileset dir="apps/ITAFRONTOFFICE" excludes="lib/**" />
+            <fileset dir="cms/wordpress/apps/itaFrontOffice" />
+        </copy>
+    </target>
+
+    <!-- Target per il deploy della base del framework PHP itaFrontOffice -->
+    <target name="Wordpress deploy (itaFrontOffice Lib)">
+        <property name="deploy.dir" value="${wordpress.deploy.dir}" />
+
+        <delete dir="${deploy.dir}/wp-content/plugins/itaFrontOffice/lib" quiet="true" includeemptydirs="true" if:true="${deploy.clean}" />
+
+        <copy todir="${deploy.dir}/wp-content/plugins/itaFrontOffice/lib" overwrite="true">
+            <fileset dir="apps/ITAFRONTOFFICE/lib" />
+        </copy>
+    </target>
+
+    <!-- Macro generica per il deploy di un plugin -->
+    <macrodef name="wordpress-deploy-plugin">
+        <attribute name="deploy.dir" default="${wordpress.deploy.dir}" />
+        <attribute name="deploy.subdir" default="/wp-content/plugins" />
+        <attribute name="plugin.app.dir" />
+        <attribute name="plugin.cms.dir" />
+        <attribute name="plugin.pratiche" default="false" />
+
+        <sequential>
+            <delete quiet="true" includeemptydirs="true" if:true="${deploy.clean}">
+                <fileset dir="@{deploy.dir}@{deploy.subdir}/@{plugin.cms.dir}">
+                    <exclude name="config.inc.*.php" />
+                </fileset>
+            </delete>
+
+            <copy todir="@{deploy.dir}@{deploy.subdir}/@{plugin.cms.dir}" overwrite="true">
+                <fileset dir="cms/wordpress/apps/@{plugin.cms.dir}">
+                    <exclude name="*.json" />
+                </fileset>
+            </copy>
+
+            <copy todir="@{deploy.dir}@{deploy.subdir}/@{plugin.cms.dir}/public" overwrite="true">
+                <fileset dir="apps/@{plugin.app.dir}" includes="**/css/**, **/img/**, **/images/**, **/js/**, **/**.js, **/**.css" />
+            </copy>
+
+            <copy todir="@{deploy.dir}@{deploy.subdir}/@{plugin.cms.dir}/includes" overwrite="true">
+                <fileset dir="apps/@{plugin.app.dir}">
+                    <exclude name="**/css/**" />
+                    <exclude name="**/img/**" />
+                    <exclude name="**/images/**" />
+                    <exclude name="**/js/**" />
+                    <exclude name="**/**.js" />
+                    <exclude name="**/**.css" />
+                </fileset>
+            </copy>
+
+            <copy if:true="@{plugin.pratiche}" todir="@{deploy.dir}@{deploy.subdir}/suap_italsoft/includes/BASE_italsoft" overwrite="true">
+                <fileset dir="apps/BASE" />
+            </copy>
+
+            <copy if:true="@{plugin.pratiche}" todir="@{deploy.dir}@{deploy.subdir}/suap_italsoft/public/PRATICHE_italsoft" overwrite="true">
+                <fileset dir="apps/PRATICHE" includes="**/css/**, **/img/**, **/images/**, **/js/**, **/**.js, **/**.css" />
+            </copy>
+
+            <copy if:true="@{plugin.pratiche}" todir="@{deploy.dir}@{deploy.subdir}/suap_italsoft/includes/PRATICHE_italsoft" overwrite="true">
+                <fileset dir="apps/PRATICHE">
+                    <exclude name="**/css/**" />
+                    <exclude name="**/img/**" />
+                    <exclude name="**/images/**" />
+                    <exclude name="**/js/**" />
+                    <exclude name="**/**.js" />
+                    <exclude name="**/**.css" />
+                </fileset>
+            </copy>
+        </sequential>
+    </macrodef>
+
+    <!-- Target per il deploy del plugin SUAP -->
+    <target name="Wordpress deploy (plugin SUAP)">
+        <property name="deploy.dir" value="${wordpress.deploy.dir}" />
+        <wordpress-deploy-plugin deploy.dir="${deploy.dir}" plugin.app.dir="SUAP" plugin.cms.dir="suap_italsoft" plugin.pratiche="true" />
+    </target>
+
+    <!-- Target per il deploy del plugin SUE -->
+    <target name="Wordpress deploy (plugin SUE)">
+        <property name="deploy.dir" value="${wordpress.deploy.dir}" />
+        <wordpress-deploy-plugin deploy.dir="${deploy.dir}" plugin.app.dir="SUE" plugin.cms.dir="sue_italsoft" plugin.pratiche="true" />
+    </target>
+
+    <!-- Target per il deploy del plugin Remote Sign -->
+    <target name="Wordpress deploy (plugin Remote Sign)">
+        <property name="deploy.dir" value="${wordpress.deploy.dir}" />
+        <wordpress-deploy-plugin deploy.dir="${deploy.dir}" plugin.app.dir="REMOTESIGN" plugin.cms.dir="rsn_italsoft" />
+    </target>
+
+    <!-- Macro per il deploy completo -->
+    <macrodef name="wordpress-deploy">
+        <attribute name="deploy.dir" default="${wordpress.deploy.dir}" />
+
+        <sequential>
+            <antcall target="Wordpress deploy (itaFrontOffice)">
+                <param name="deploy.dir" value="@{deploy.dir}"/>
+            </antcall>
+
+            <antcall target="Wordpress deploy (itaFrontOffice Lib)">
+                <param name="deploy.dir" value="@{deploy.dir}"/>
+            </antcall>
+
+            <antcall target="Wordpress deploy (plugin SUAP)">
+                <param name="deploy.dir" value="@{deploy.dir}"/>
+            </antcall>
+
+            <antcall target="Wordpress deploy (plugin SUE)">
+                <param name="deploy.dir" value="@{deploy.dir}"/>
+            </antcall>
+
+            <antcall target="Wordpress deploy (plugin Remote Sign)">
+                <param name="deploy.dir" value="@{deploy.dir}"/>
+            </antcall>
+        </sequential>
+    </macrodef>
+
+    <!-- Target per la build completa (files) -->
+    <target name="2. Wordpress build (files)" description=".">
+        <delete dir="${wordpress.build.dir}" quiet="true" includeemptydirs="true" />
+        <wordpress-deploy deploy.dir="${wordpress.build.dir}" />
+    </target>
+
+    <!-- Target per la build completa (.tar) -->
+    <target name="3. Wordpress build (.tar)" description=".">
+        <wordpress-deploy deploy.dir="${wordpress.build.dir}" />
+        
+        <input message="Inserisci il numero di versione" addproperty="build.version" />
+        <tar
+            destfile="${build.dir}/itafrontoffice-wordpress-${build.version}.tar.gz"
+            basedir="${wordpress.build.dir}"
+            compression="gzip"
+            longfile="posix"
+        />
+        
+        <delete dir="${wordpress.build.dir}" includeemptydirs="true" />
+    </target>
+
+    <!-- Target per il deploy completo -->
+    <target name="1. Wordpress deploy" description=".">
+        <wordpress-deploy />
+    </target>
+
+    <!-- /WORDPRESS -->
+</project>

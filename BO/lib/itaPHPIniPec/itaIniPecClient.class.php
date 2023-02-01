@@ -1,0 +1,168 @@
+<?php
+
+/**
+ *
+ * Classe per collegamento ws IRIDE
+ *
+ * PHP Version 5
+ *
+ * @category   extended library 
+ * @package    lib/itaPHPIride
+ * @author     Andrea Bufarini <andrea.bufarini@italsoft.eu>
+ * @copyright  1987-2015 Italsoft srl
+ * @license
+ * @version    30.06.2015
+ * @link
+ * @see
+ * @since
+ * @deprecated
+ * */
+
+require_once(ITA_LIB_PATH . '/nusoap/nusoap.php');
+require_once(ITA_LIB_PATH . '/nusoap/nusoapmime.php');
+
+//require_once(ITA_LIB_PATH . '/nusoap/nusoap1.2.php');
+
+class itaIniPecClient {
+
+    private $nameSpaces = array();
+    private $namespace = "";
+    private $webservices_uri = "";
+    private $webservices_wsdl = "";
+    private $username = "";
+    private $password = "";
+    private $utente = "";
+    private $timeout = 2400;
+    private $SOAPHeader;
+    private $result;
+    private $error;
+    private $fault;
+    protected $responseAttachments = array();
+
+    public function setTimeout($timeout) {
+        $this->timeout = $timeout;
+    }
+
+    public function setNamespace($namespace) {
+        $this->namespace = $namespace;
+    }
+
+    public function getNameSpaces() {
+        return $this->nameSpaces;
+    }
+
+    public function setNameSpaces($tipo = 'ws') {
+        if ($tipo == 'ws') {
+            $nameSpaces = array("ws" => "http://ws.fpec.gemo.infocamere.it");
+        }
+        $this->nameSpaces = $nameSpaces;
+    }
+
+    public function setWebservices_uri($webservices_uri) {
+        $this->webservices_uri = $webservices_uri;
+    }
+
+    public function setWebservices_wsdl($webservices_wsdl) {
+        $this->webservices_wsdl = $webservices_wsdl;
+    }
+
+    public function setUsername($username) {
+        $this->username = $username;
+    }
+
+    public function setPassword($password) {
+        $this->password = $password;
+    }
+
+    public function getResult() {
+        return $this->result;
+    }
+
+    public function getError() {
+        return $this->error;
+    }
+
+    public function getFault() {
+        return $this->fault;
+    }
+    
+    function getResponseAttachments() {
+        return $this->responseAttachments;
+    }
+
+    function setResponseAttachments($responseAttachments) {
+        $this->responseAttachments = $responseAttachments;
+    }
+
+    
+    private function clearResult() {
+        $this->result = null;
+        $this->error = null;
+        $this->fault = null;
+    }
+
+    private function ws_call($operationName, $soapAction, $param, $ns = "ws:") {
+        $this->clearResult();
+//        $client = new nusoap_client($this->webservices_uri, false);
+        $client = new nusoap_client_mime($this->webservices_uri, false);
+        $client->debugLevel = 0;
+        $client->timeout = $this->timeout > 0 ? $this->timeout : 120;
+        $client->response_timeout = $this->timeout;
+        $client->setCredentials($this->username, $this->password, 'basic');
+        $client->soap_defencoding = 'UTF-8';
+//        $soapAction = $this->namespace . "/" . $operationName;
+//        $soapAction = $operationName;
+        
+        $headers = false;
+        $rpcParams = null;
+        $style = 'rpc';
+        $use = 'literal';
+        $result = $client->call($ns . $operationName, $param, $this->nameSpaces, $soapAction, $headers, $rpcParams, $style, $use);
+
+        //$result = $client->call($operationName, $param, $nameSpaces, $soapAction, $headers, $rpcParams, $style, $use);
+        file_put_contents("C:/tmp/param_$operationName.xml", $param);
+        file_put_contents("C:/tmp/request_$operationName.xml", $client->request);
+        file_put_contents("C:/tmp/response_$operationName.xml", $client->response);
+        $time = time();
+        if ($client->fault) {
+            $this->fault = $client->faultstring;
+            return false;
+        } else {
+            $err = $client->getError();
+            if ($err) {
+                $this->error = $err;
+                return false;
+            }
+        }
+        /**
+         * Legge gli allegati della risposta
+         */
+        $this->responseAttachments = $client->responseAttachments;
+        
+        $this->result = $result;
+        return true;
+    }
+
+    /**
+     * richiestaRichiestaFornituraPec
+     * 
+     * @param string $param
+     * @return type
+     */
+    public function ws_richiestaRichiestaFornituraPec($param) {
+        $nomeDocumentoSoapval = new soapval('nomeDocumento', 'nomeDocumento', $param['nomeDocumento'], false, false);
+        $tipoDocumentoSoapval = new soapval('tipoDocumento', 'tipoDocumento', $param['tipoDocumento'], false, false);
+        $documentoSoapval = new soapval('documento', 'documento', $param['documento'], false, false);
+        $param = "<elencoCf>" . $nomeDocumentoSoapval->serialize("literal") . $tipoDocumentoSoapval->serialize("literal") . $documentoSoapval->serialize() . "</elencoCf>";
+        return $this->ws_call('richiestaRichiestaFornituraPec', 'richiestaFornituraPec', $param);
+    }
+    
+    public function ws_richiestaScaricoFornituraPec($param) {
+        $tipoRichiestaSoapval = new soapval('tipoRichiesta', 'tipoRichiesta', $param['tipoRichiesta'], false, false);
+        $idRichiestaSoapval = new soapval('idRichiesta', 'idRichiesta', $param['idRichiesta'], false, false);
+        $param = "<tokenRichiestaInfocamere>" . $tipoRichiestaSoapval->serialize("literal") . $idRichiestaSoapval->serialize("literal") . "</tokenRichiestaInfocamere>";
+        return $this->ws_call('richiestaScaricoFornituraPec', 'scaricoFornituraPec', $param);
+    }
+ 
+
+}

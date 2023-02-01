@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="cwbAlfrescoViewer" el_tipo="1" el_colonne="0" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[#cwbAlfrescoViewer]]></action>
+               <class><![CDATA[ita-app ita-dialog ita-layout-diag {title:"Visualizzatore documenti Alfresco",width:1280,height:630,modal:true,position:'center',modelBackend:'cwbAlfrescoViewer'}]]></class>
+          </properties>
+          <engineElement el_nome="workSpace" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+                    <title><![CDATA[Gestione flussi provenienza SDI]]></title>
+               </properties>
+               <engineElement el_nome="divGestione" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <properties>
+                         <class><![CDATA[ita-edit-page]]></class>
+                         <style><![CDATA[position: relative; height: 100%]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="divLeft" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[position: absolute; top: 0px; bottom: 0px; left: 0px; width: 500px; border-right: 1px solid #000000; overflow: auto;]]></style>
+                         </properties>
+                         <engineElement el_nome="divTree" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                              <properties>
+                                   <style><![CDATA[position: absolute; top: 0px; left: 0px; right: 0px; height: 300px;]]></style>
+                              </properties>
+                              <engineElement el_nome="treeDocumenti" el_tipo="91" el_colonne="40" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-jqGrid" tipo_tag="table">
+                                   <properties>
+                                        <class><![CDATA[ita-jqGrid { width: 475, height: 250, caption: "Unità documentaria", onExpandNode: false, onCollapseNode: false, sortable: false, rowNum: 10000, filterToolbar: false, treeGrid: true, treeGridModel: 'adjacency', ExpandColumn: 'DOCUMENTO', navGrid: false, navButtonRefresh: false, navButtonAdd: false, navButtonEdit: false, navButtonDel:false, pgbuttons: false, pginput: false, pager: false}]]></class>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-jqGrid]]></class>
+                                   </tipoProperties>
+                                   <engineElement el_nome="thCUSTOMKEY" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Id]]></label>
+                                   </engineElement>
+                                   <engineElement el_nome="thDOCUMENTO" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Descrizione]]></label>
+                                   </engineElement>
+                                   <engineElement el_nome="thDOWNLOAD" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                                   </engineElement>
+                                   <engineElement el_nome="CUSTOMKEY" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <class><![CDATA[{ hidden: true, key: true }]]></class>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_nome="DOCUMENTO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <class><![CDATA[{search:false, sortable: false}]]></class>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_nome="DOWNLOAD" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <class><![CDATA[{search:false, sortable: false, fixed:true, resizable: false}]]></class>
+                                             <width><![CDATA[35]]></width>
+                                        </properties>
+                                   </engineElement>
+                              </engineElement>
+                         </engineElement>
+                         <engineElement el_nome="divFooter" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                              <properties>
+                                   <style><![CDATA[position: absolute; top: 310px; left: 0px; right: 0px; bottom: 0px;]]></style>
+                              </properties>
+                              <engineElement el_nome="fileMetadata" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                                   <properties>
+                                        <style><![CDATA[position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px;]]></style>
+                                   </properties>
+                                   <engineElement el_nome="divTabServizio" el_tipo="75" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tab" tipo_tag="div">
+                                        <properties>
+                                             <style><![CDATA[position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px;]]></style>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-tab]]></class>
+                                        </tipoProperties>
+                                        <engineElement el_nome="tabAlfresco" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                                             <properties>
+                                                  <title><![CDATA[Alfresco]]></title>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-tabpane]]></class>
+                                             </tipoProperties>
+                                             <engineElement el_nome="divTabAlfresco" el_tipo="75" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tab" tipo_tag="div">
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-tab]]></class>
+                                                  </tipoProperties>
+                                                  <engineElement el_nome="tabAlfrescoMetadati" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                                                       <properties>
+                                                            <title><![CDATA[Metadati]]></title>
+                                                       </properties>
+                                                       <tipoProperties>
+                                                            <class><![CDATA[ita-tabpane]]></class>
+                                                       </tipoProperties>
+                                                       <engineElement el_nome="gridMetadatiAlfresco" el_tipo="91" el_colonne="200" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-jqGrid" tipo_tag="table">
+                                                            <properties>
+                                                                 <class><![CDATA[ita-jqGrid {pgbuttons: false, pginput: false, pager: false, rowNum: 10000, width: 470, height: 'auto', caption: '', cellEdit:false, navGrid:false, navButtonDel:false, navButtonAdd:false, resizeToParent:false}]]></class>
+                                                            </properties>
+                                                            <tipoProperties>
+                                                                 <class><![CDATA[ita-jqGrid]]></class>
+                                                            </tipoProperties>
+                                                            <engineElement el_nome="thKEY" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                                            </engineElement>
+                                                            <engineElement el_nome="thMETADATA" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                                                 <label class="sx ui-widget input"><![CDATA[Metadato]]></label>
+                                                            </engineElement>
+                                                            <engineElement el_nome="thVALUE" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                                                 <label class="sx ui-widget input"><![CDATA[Valore]]></label>
+                                                            </engineElement>
+                                                            <engineElement el_nome="KEY" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                                                 <properties>
+                                                                      <class><![CDATA[{hidden: true}]]></class>
+                                                                 </properties>
+                                                            </engineElement>
+                                                            <engineElement el_nome="METADATA" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                                            </engineElement>
+                                                            <engineElement el_nome="VALUE" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                                            </engineElement>
+                                                       </engineElement>
+                                                  </engineElement>
+                                                  <engineElement el_nome="tabAlfrescoAspetti" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                                                       <properties>
+                                                            <title><![CDATA[Aspetti]]></title>
+                                                       </properties>
+                                                       <tipoProperties>
+                                                            <class><![CDATA[ita-tabpane]]></class>
+                                                       </tipoProperties>
+                                                       <engineElement el_nome="gridAspettiAlfresco" el_tipo="91" el_colonne="200" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-jqGrid" tipo_tag="table">
+                                                            <properties>
+                                                                 <class><![CDATA[ita-jqGrid {pgbuttons: false, pginput: false, pager: false, rowNum: 10000, width: 470, height: 'auto', caption: '', cellEdit:true, navGrid:false, navButtonDel:false, navButtonAdd:false, resizeToParent:false}]]></class>
+                                                            </properties>
+                                                            <tipoProperties>
+                                                                 <class><![CDATA[ita-jqGrid]]></class>
+                                                            </tipoProperties>
+                                                            <engineElement el_nome="thKEY" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                                            </engineElement>
+                                                            <engineElement el_nome="thMETADATA" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                                                 <label class="sx ui-widget input"><![CDATA[Metadato]]></label>
+                                                            </engineElement>
+                                                            <engineElement el_nome="thVALUE" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                                                 <label class="sx ui-widget input"><![CDATA[Valore]]></label>
+                                                            </engineElement>
+                                                            <engineElement el_nome="KEY" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                                                 <properties>
+                                                                      <class><![CDATA[{hidden: true}]]></class>
+                                                                 </properties>
+                                                            </engineElement>
+                                                            <engineElement el_nome="METADATA" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                                            </engineElement>
+                                                            <engineElement el_nome="VALUE" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                                                 <properties>
+                                                                      <class><![CDATA[{align:'center', resizable: false, fixed: true}]]></class>
+                                                                      <width><![CDATA[50px]]></width>
+                                                                 </properties>
+                                                            </engineElement>
+                                                       </engineElement>
+                                                  </engineElement>
+                                             </engineElement>
+                                        </engineElement>
+                                   </engineElement>
+                              </engineElement>
+                         </engineElement>
+                    </engineElement>
+                    <engineElement el_nome="filePreview" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[position: absolute; top: 0px; bottom: 0px; left: 500px; right: 0px;]]></style>
+                         </properties>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[28/05/2019]]></date>
+          <time><![CDATA[18:15:33]]></time>
+          <user><![CDATA[CED]]></user>
+          <modelSHA><![CDATA[98dd87c7b3dc1253ffa0d60d80898618fe1a908f]]></modelSHA>
+     </info></itaEngine>

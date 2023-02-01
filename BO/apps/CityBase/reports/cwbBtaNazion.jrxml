@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cwbBtaNazion" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c0b04ec7-4aff-405d-9520-73c56af35943">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.jasperserver.reportUnit" value="/italsoft/reports/apps/CityBase/cwbBtaNazion"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver/services/repository"/>
+	<parameter name="Sql" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[$P!{Sql}]]>
+	</queryString>
+	<field name="CODGRNAZ" class="java.lang.String"/>
+	<field name="DESNAZION" class="java.lang.String"/>
+	<field name="DESNAZI" class="java.lang.String"/>
+	<field name="SIGLANAZ" class="java.lang.String"/>
+	<field name="ISO3166_a2" class="java.lang.String"/>
+	<field name="CODNAZI" class="java.lang.String"/>
+	<sortField name="CODNAZI"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="1c8abdd7-ef4c-487f-8d8a-c9623d2fc860" x="0" y="2" width="555" height="31"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nazionalità]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="24c7b7ae-6ceb-4a68-aea8-3adbf15111e9" x="1" y="2" width="69" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH.mm.ss">
+				<reportElement uuid="2629c0fa-3f8f-4ee8-a971-cf3b0946a8a3" x="70" y="2" width="69" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="88e0a04e-8994-47f9-8e6a-a5078b402b5b" x="238" y="10" width="99" height="31"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nazionalità]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="536cc39f-732e-4446-bf45-5c2ad2c2fb3c" x="86" y="10" width="152" height="31"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descrizione Nazione]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="422254f7-9921-4a37-9af9-586c63af1d53" x="15" y="10" width="71" height="31"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cod.Gruppo Nazionalità]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5b71e03a-6aea-4b02-9ff6-488b384dbc67" x="337" y="10" width="74" height="31"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sigla Nazione]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="84f378cc-7a53-4454-a9f9-12ef1e7c6950" x="504" y="10" width="40" height="31"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="698b8a0d-a107-4e74-844f-3c51dfc9fcc6" x="15" y="40" width="529" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="95ce4dc6-e9b7-4745-9ea1-dc1f86f6879e" x="411" y="10" width="93" height="30"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Cod.ISO 3166 A2]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="b40c57e2-d633-4751-9bcd-2e65866d291b" x="238" y="0" width="99" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{DESNAZION}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="b7686b8f-7d1b-4451-a45b-f146f5696cde" x="86" y="0" width="152" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{DESNAZI}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="7b553382-3ef4-48e6-b775-5198efdd37dd" x="337" y="0" width="74" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{SIGLANAZ}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="0f433a29-82c3-4d51-8a70-e198967947f5" x="504" y="0" width="40" height="20"/>
+				<textElement textAlignment="Center">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CODNAZI}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="334e87b7-2259-4f94-a4ec-97c748a2f655" x="15" y="0" width="71" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CODGRNAZ}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="471f4415-37cb-40d2-a2ee-bfaf5820e03e" x="411" y="0" width="93" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{ISO3166_a2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement uuid="e426be2b-025f-4a74-a92b-25065a76ce6a" x="424" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" di"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="d2b81889-0b81-43b1-a83c-961bf55e8c17" x="504" y="0" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cwbBtaRgruna" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ad6788f5-7388-4dc5-b686-838d690a0f38">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.jasperserver.reportUnit" value="/italsoft/reports/apps/CityBase/cwbBorLicen"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver/services/repository"/>
+	<parameter name="Sql" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[$P!{Sql} ORDER BY CODAREAMA]]>
+	</queryString>
+	<field name="CODAREAMA" class="java.lang.String"/>
+	<field name="CODLICEN" class="java.lang.String"/>
+	<field name="PROGLICEN" class="java.lang.String"/>
+	<field name="DESLICEN" class="java.lang.String"/>
+	<field name="VERSIONE" class="java.lang.String"/>
+	<field name="SOFTHOUSE" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="53" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="45ab9adb-a203-4122-989d-7bb73c8d758b" x="10" y="19" width="535" height="31"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Licenze]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="3bb21618-1db6-4121-836a-d0e03c857c91" x="1" y="0" width="69" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH.mm.ss">
+				<reportElement uuid="d53ce92c-25ea-4169-ad9f-e1d888195d96" x="70" y="0" width="69" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="53" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="900e61d4-d270-4bdb-b7c2-505db793fddd" x="12" y="14" width="69" height="23"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cod.Area]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="96c6e3ba-f571-46e6-9e9f-e88f61224f43" x="81" y="14" width="65" height="23"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cod.Licenza]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="173e3e7b-ec8e-49c3-9cc0-149ada2b6a0b" x="146" y="14" width="38" height="23"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prog.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="84433d11-726a-4f6e-8773-c5b2746dbdf2" x="184" y="14" width="213" height="23"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descrizione Licenza]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="86f0b278-c25e-475d-9139-74b6e3f07b13" x="397" y="14" width="56" height="23"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Versione]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="326a67af-cefa-4c90-ab4f-217bcd6df726" x="453" y="14" width="92" height="23"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Software House]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="71" splitType="Stretch">
+			<line>
+				<reportElement uuid="89a4735f-974c-4726-9a58-3ac3ee82e941" x="12" y="58" width="533" height="1" forecolor="#CCCCCC"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="1788c2be-3b80-4053-a963-29b834f30add" x="12" y="8" width="69" height="40"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CODAREAMA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="0d90eb7f-1254-4ba8-9be3-4017650b47cf" x="81" y="8" width="65" height="40"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CODLICEN}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="4ffe145e-d5bf-440a-a038-46f0fcab55c0" x="146" y="8" width="38" height="40"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{PROGLICEN}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="ec791cb7-9651-4357-811b-4111d3545af5" x="184" y="8" width="213" height="40"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{DESLICEN}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="26e80cf9-2670-4b84-9c0b-418eeb038e20" x="397" y="8" width="56" height="40"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{VERSIONE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="8f4cbf76-79e9-4d33-b287-d0aea9812f25" x="453" y="8" width="92" height="40"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{SOFTHOUSE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement uuid="015a0d68-6cba-4609-8fd2-7bf37263379c" x="435" y="12" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" di"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="f5cda677-4ed2-49cd-bbc5-ef85e2768fff" x="515" y="12" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

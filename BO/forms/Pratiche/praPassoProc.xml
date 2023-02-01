@@ -1,0 +1,2056 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="praPassoProc" el_tipo="1" el_colonne="1" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[#praPassoProc]]></action>
+               <class><![CDATA[ita-dialog ita-layout-diag {title:"Passi del Procedimento Amministrativo",width:800,height:470,modal:true,position:'center',maximized:true}]]></class>
+          </properties>
+          <engineElement el_nome="workSpace" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[width:600px;height:450px;]]></style>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+               </properties>
+               <engineElement el_nome="divGestione" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <properties>
+                         <class><![CDATA[ita-edit-page]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="ITEPAS[ITECOD]" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-readonly" tipo_tag="text">
+                         <label class="sx input" style="width:100px"><![CDATA[Procedimento]]></label>
+                         <properties>
+                              <maxlength><![CDATA[8]]></maxlength>
+                              <size><![CDATA[8]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <readonly><![CDATA[readonly]]></readonly>
+                              <class><![CDATA[ita-readonly ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ITEPAS[ITESEQ]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                         <label class="sx input"><![CDATA[Sequenza]]></label>
+                         <properties>
+                              <maxlength><![CDATA[4]]></maxlength>
+                              <size><![CDATA[5]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="SEQANTECEDENTE" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                         <label class="sx input" style="width:100px"><![CDATA[Antecedente]]></label>
+                         <properties>
+                              <maxlength><![CDATA[4]]></maxlength>
+                              <size><![CDATA[12]]></size>
+                              <class><![CDATA[ita-edit-onblur]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="DESITEKPRE" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-decode" tipo_tag="text">
+                         <properties>
+                              <maxlength><![CDATA[50]]></maxlength>
+                              <size><![CDATA[69]]></size>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-decode]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="RimuoviAntecedente" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                         <properties>
+                              <class><![CDATA[{iconLeft:'ui-icon ui-icon-trash'}]]></class>
+                              <style><![CDATA[width:22px;height:20px;]]></style>
+                              <Title><![CDATA[Rimuovi Antecedente]]></Title>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="VediCollegamenti" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                         <properties>
+                              <class><![CDATA[{iconLeft:'ui-icon ui-icon-arrow-4-diag'}]]></class>
+                              <style><![CDATA[width:22px;height:20px;]]></style>
+                              <Title><![CDATA[Vedi Collegamenti]]></Title>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ITEPAS[ITEDES]" el_tipo="84" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit-multiline" tipo_tag="textarea">
+                         <label class="sx input" style="width:100px"><![CDATA[Descrizione]]></label>
+                         <properties>
+                              <rows><![CDATA[2]]></rows>
+                              <cols><![CDATA[50]]></cols>
+                              <class><![CDATA[{autocomplete:{active:true}} required]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-edit-multiline]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ITEPAS[ITENOT]" el_tipo="84" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-multiline" tipo_tag="textarea">
+                         <label class="sx input" style="width:100px"><![CDATA[Note]]></label>
+                         <properties>
+                              <rows><![CDATA[2]]></rows>
+                              <cols><![CDATA[50]]></cols>
+                              <class><![CDATA[{autocomplete:{active:false}}]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-edit-multiline]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ITEPAS[ITENOTSTYLE]" el_tipo="84" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit-multiline" tipo_tag="textarea">
+                         <label class="sx input"><![CDATA[Note Style]]></label>
+                         <properties>
+                              <rows><![CDATA[2]]></rows>
+                              <cols><![CDATA[30]]></cols>
+                              <class><![CDATA[{autocomplete:{active:false}}]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-edit-multiline]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="tabProcedimento" el_tipo="75" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tab" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[height:350;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-tab]]></class>
+                         </tipoProperties>
+                         <engineElement el_nome="paneDati" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[Dati Principali]]></Title>
+                                   <style><![CDATA[height:auto;]]></style>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="ITEPAS[ITECLT]" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                   <label class="sx input" style="width:100px"><![CDATA[Tipo Passo]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[6]]></maxlength>
+                                        <size><![CDATA[12]]></size>
+                                        <class><![CDATA[ita-edit-onblur required]]></class>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="CLTDES" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-decode" tipo_tag="text">
+                                   <properties>
+                                        <maxlength><![CDATA[60]]></maxlength>
+                                        <size><![CDATA[40]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-decode]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="ITEPAS[ITEDEFSTATO]" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                   <label class="sx input" style="width:100px"><![CDATA[Stato]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[6]]></maxlength>
+                                        <size><![CDATA[12]]></size>
+                                        <class><![CDATA[ita-edit-onblur]]></class>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="DEFSTATODES" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-decode" tipo_tag="text">
+                                   <properties>
+                                        <maxlength><![CDATA[60]]></maxlength>
+                                        <size><![CDATA[40]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-decode]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="ITEPAS[ITERES]" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                   <label class="sx input" style="width:100px"><![CDATA[Responsabile]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[6]]></maxlength>
+                                        <size><![CDATA[12]]></size>
+                                        <class><![CDATA[ita-edit-onblur]]></class>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="Nome" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-decode" tipo_tag="text">
+                                   <properties>
+                                        <maxlength><![CDATA[50]]></maxlength>
+                                        <size><![CDATA[40]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-decode]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="ITEPAS[ITESET]" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-readonly" tipo_tag="text">
+                                   <label class="sx input" style="width:100px"><![CDATA[Settore]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[6]]></maxlength>
+                                        <size><![CDATA[11]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <readonly><![CDATA[readonly]]></readonly>
+                                        <class><![CDATA[ita-readonly ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="SETTORE" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-decode" tipo_tag="text">
+                                   <properties>
+                                        <maxlength><![CDATA[50]]></maxlength>
+                                        <size><![CDATA[44]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-decode]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="ITEPAS[ITESER]" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-readonly" tipo_tag="text">
+                                   <label class="sx input" style="width:100px"><![CDATA[Servizio]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[6]]></maxlength>
+                                        <size><![CDATA[11]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <readonly><![CDATA[readonly]]></readonly>
+                                        <class><![CDATA[ita-readonly ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="SERVIZIO" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-decode" tipo_tag="text">
+                                   <properties>
+                                        <maxlength><![CDATA[50]]></maxlength>
+                                        <size><![CDATA[44]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-decode]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="ITEPAS[ITEOPE]" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-readonly" tipo_tag="text">
+                                   <label class="sx input" style="width:100px"><![CDATA[Unità Operativa]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[6]]></maxlength>
+                                        <size><![CDATA[11]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <readonly><![CDATA[readonly]]></readonly>
+                                        <class><![CDATA[ita-readonly ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="UNITA" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-decode" tipo_tag="text">
+                                   <properties>
+                                        <maxlength><![CDATA[50]]></maxlength>
+                                        <size><![CDATA[44]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-decode]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="ITEPAS[ITEGIO]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx input" style="width:100px"><![CDATA[Giorni]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[6]]></maxlength>
+                                        <size><![CDATA[6]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="ITEPAS[ITETER]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                   <label class="sx ui-widget input"><![CDATA[dalla]]></label>
+                                   <properties>
+                                        <maxlength><![CDATA[80]]></maxlength>
+                                        <size><![CDATA[40]]></size>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="ITEPAS[ITEPRIV]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                   <label class="sx input" style="width:100px"><![CDATA[Passo Italsoft]]></label>
+                                   <properties>
+                                        <style><![CDATA[margin-right:4px;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                         <engineElement el_nome="paneCaratteristiche" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[Caratteristiche]]></Title>
+                                   <style><![CDATA[height:auto;]]></style>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="ITEPAS[ITEPUB]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                   <label class="dx input" style="width:300px"><![CDATA[Passo di Avvio Richiesta (Compilazione On-Line)]]></label>
+                                   <properties>
+                                        <style><![CDATA[margin-right:4px;]]></style>
+                                        <class><![CDATA[ita-edit-onchange]]></class>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="ITEPAS[ITECOM]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                   <label class="dx input"><![CDATA[Passo Comunicazione]]></label>
+                                   <properties>
+                                        <style><![CDATA[margin-right:4px;]]></style>
+                                        <class><![CDATA[ita-edit-onchange]]></class>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="divSuap" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                                   <properties>
+                                        <style><![CDATA[width:auto;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                                   </tipoProperties>
+                                   <engineElement el_nome="hd1" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                                        <properties>
+                                             <Title><![CDATA[Caratteristiche del Passo]]></Title>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                                             <style><![CDATA[font-size:0.8em;]]></style>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="divFlag" el_tipo="7" el_colonne="2" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                                        <engineElement el_nome="ITEPAS[ITEUPL]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                             <label class="dx input" style="width:150px"><![CDATA[Upload]]></label>
+                                             <properties>
+                                                  <style><![CDATA[margin-right:4px;]]></style>
+                                                  <class><![CDATA[ita-edit-onchange]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="ITEPAS[ITEMLT]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                             <label class="dx input"><![CDATA[Upload Multiplo]]></label>
+                                             <properties>
+                                                  <style><![CDATA[margin-right:4px;]]></style>
+                                                  <class><![CDATA[ita-edit-onchange]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="DivUpload" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-box" tipo_tag="div">
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                                             </tipoProperties>
+                                             <engineElement el_nome="ITEPAS[ITEEXT]" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-readonly" tipo_tag="text">
+                                                  <label class="top input" style="width:120px"><![CDATA[Estensioni Previste]]></label>
+                                                  <properties>
+                                                       <style><![CDATA[margin-right:4px;]]></style>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <readonly><![CDATA[readonly]]></readonly>
+                                                       <class><![CDATA[ita-readonly ita-edit]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="SvuotaExt" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                                                  <properties>
+                                                       <class><![CDATA[ita-button-delete {iconLeft:'ui-icon ui-icon-trash'}]]></class>
+                                                       <style><![CDATA[width:24px;height:20px;]]></style>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-button ita-element-animate]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="estensione" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                                                  <label class="top input"><![CDATA[Estensione]]></label>
+                                                  <properties>
+                                                       <style><![CDATA[margin-right:4px;]]></style>
+                                                       <class><![CDATA[ita-edit-onblur]]></class>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-edit]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="ITEPAS[ITEFILE]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                                  <label class="dx input"><![CDATA[Upload Automatico]]></label>
+                                                  <properties>
+                                                       <style><![CDATA[margin-right:4px;]]></style>
+                                                       <class><![CDATA[ita-edit-onchange]]></class>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="accorpaPDFUpload" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                                  <label class="dx input" style="width:220px"><![CDATA[Accorpa nel Rapporto Completo]]></label>
+                                                  <properties>
+                                                       <style><![CDATA[margin-right:4px;]]></style>
+                                                       <class><![CDATA[ita-edit-onchange]]></class>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="ITEPAS[ITEIFC]" el_tipo="80" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-select" tipo_tag="select">
+                                                  <label class="sx input"><![CDATA[Inserisci nel file COMUNICA]]></label>
+                                                  <properties>
+                                                       <style><![CDATA[margin-right:4px;]]></style>
+                                                       <class><![CDATA[ita-edit-onchange]]></class>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-select ita-edit]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="ITEPAS[ITETAL]" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                                  <label class="sx input"><![CDATA[Tipo Allegato]]></label>
+                                                  <properties>
+                                                       <maxlength><![CDATA[80]]></maxlength>
+                                                       <size><![CDATA[50]]></size>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="SvuotaTipi" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                                  <properties>
+                                                       <class><![CDATA[ita-button-delete {iconLeft:'ui-icon ui-icon-trash'}]]></class>
+                                                       <style><![CDATA[width:24px;height:20px;]]></style>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-button ita-element-animate]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="ITEPAS[ITEPRI]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                                  <label class="dx input" style="width:150px"><![CDATA[Allegato Principale]]></label>
+                                                  <properties>
+                                                       <style><![CDATA[margin-right:4px;]]></style>
+                                                       <class><![CDATA[ita-edit-onchange]]></class>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="ITEPAS[ITEQALLE]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                                  <label class="dx input" style="width:150px"><![CDATA[Qualifica Allegato]]></label>
+                                                  <properties>
+                                                       <style><![CDATA[margin-right:4px;]]></style>
+                                                       <class><![CDATA[ita-edit-onchange]]></class>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="NomeFileUpload" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                                  <properties>
+                                                       <size><![CDATA[80]]></size>
+                                                       <class><![CDATA[ita-edit-onblur]]></class>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="ITEPAS[ITEQCLA]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                                  <label class="dx input" style="width:150px"><![CDATA[Chiedi Classificazione]]></label>
+                                                  <properties>
+                                                       <style><![CDATA[margin-right:4px;]]></style>
+                                                       <class><![CDATA[ita-edit-onchange]]></class>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="Classificazioni" el_tipo="80" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-select" tipo_tag="select">
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-select ita-edit]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="ITEPAS[ITEQDEST]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                                  <label class="dx input"><![CDATA[Chiedi Destinazione]]></label>
+                                                  <properties>
+                                                       <style><![CDATA[margin-right:4px;]]></style>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="ITEPAS[ITEQNOTE]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                                  <label class="dx input"><![CDATA[Includi Descrizione]]></label>
+                                                  <properties>
+                                                       <style><![CDATA[margin-right:4px;]]></style>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="divRiservato" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                                                  <engineElement el_nome="divRiservatoSelect" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                                                       <properties>
+                                                            <style><![CDATA[display: inline-block; vertical-align: top;]]></style>
+                                                       </properties>
+                                                       <engineElement el_nome="ITEPAS[ITEFLRISERVATO]" el_tipo="80" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-select" tipo_tag="select">
+                                                            <label class="top input"><![CDATA[Riservatezza]]></label>
+                                                            <properties>
+                                                                 <class><![CDATA[ita-edit-onchange]]></class>
+                                                            </properties>
+                                                            <tipoProperties>
+                                                                 <class><![CDATA[ita-select ita-edit]]></class>
+                                                            </tipoProperties>
+                                                       </engineElement>
+                                                  </engineElement>
+                                                  <engineElement el_nome="divRiservatoEspressione" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                                                       <properties>
+                                                            <style><![CDATA[display: inline-block;]]></style>
+                                                       </properties>
+                                                       <engineElement el_nome="espressioneRiservato" el_tipo="84" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-multiline" tipo_tag="textarea">
+                                                            <label class="top input" style="width:160px"><![CDATA[Riservato se]]></label>
+                                                            <properties>
+                                                                 <cols><![CDATA[50]]></cols>
+                                                                 <row><![CDATA[6]]></row>
+                                                            </properties>
+                                                            <tipoProperties>
+                                                                 <class><![CDATA[ita-edit ita-edit-multiline]]></class>
+                                                            </tipoProperties>
+                                                       </engineElement>
+                                                       <engineElement el_nome="apriEspressioneRiservato" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                                            <label class="sx ui-widget input"><![CDATA[Apri]]></label>
+                                                            <properties>
+                                                                 <class><![CDATA[{ iconLeft: 'ui-icon ui-icon-wrench' }]]></class>
+                                                            </properties>
+                                                            <tipoProperties>
+                                                                 <class><![CDATA[ita-button ita-element-animate]]></class>
+                                                            </tipoProperties>
+                                                       </engineElement>
+                                                  </engineElement>
+                                             </engineElement>
+                                        </engineElement>
+                                        <engineElement el_nome="ITEPAS[ITESTR]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                             <label class="dx input" style="width:150px"><![CDATA[Compilazione on-line]]></label>
+                                             <properties>
+                                                  <style><![CDATA[margin-right:4px;]]></style>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="ITEPAS[ITEPST]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                             <label class="dx input" style="width:200px"><![CDATA[Pubblica Stato Passo]]></label>
+                                             <properties>
+                                                  <style><![CDATA[margin-right:4px;]]></style>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="ITEPAS[ITEDOW]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                             <label class="dx input"><![CDATA[Download]]></label>
+                                             <properties>
+                                                  <style><![CDATA[margin-right:4px;]]></style>
+                                                  <class><![CDATA[ita-edit-onchange]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="ITEPAS[ITEDAT]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                             <label class="dx input" style="width:230px"><![CDATA[Raccolta Dati]]></label>
+                                             <properties>
+                                                  <style><![CDATA[margin-right:4px;]]></style>
+                                                  <class><![CDATA[ita-edit-onchange]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="ITEPAS[ITEQSTDAG]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                             <label class="dx input" style="width:400px"><![CDATA[Conferma i dati per proseguire nel procedimento.]]></label>
+                                             <properties>
+                                                  <style><![CDATA[margin-right:4px;]]></style>
+                                                  <class><![CDATA[ita-edit-onchange]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="ITEPAS[ITERDM]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                             <label class="dx input" style="width:230px"><![CDATA[Raccolta Dati Multipla]]></label>
+                                             <properties>
+                                                  <style><![CDATA[margin-right:4px;]]></style>
+                                                  <class><![CDATA[ita-edit-onchange]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="ITEPAS[ITEPRR]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                             <label class="dx input" style="width:230px"><![CDATA[Richiesta Protocollo Remoto]]></label>
+                                             <properties>
+                                                  <style><![CDATA[margin-right:4px;]]></style>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="DivRaccolta" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-box" tipo_tag="div">
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                                             </tipoProperties>
+                                             <engineElement el_nome="ITEPAS[ITECOL]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                                                  <label class="sx ui-widget input"><![CDATA[N. Colonne]]></label>
+                                                  <properties>
+                                                       <size><![CDATA[4]]></size>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-edit]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="pdfTestoBase" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                                                  <properties>
+                                                       <class><![CDATA[{iconLeft:'ui-icon ui-icon-document'}]]></class>
+                                                       <value><![CDATA[Testo Base PDF]]></value>
+                                                       <title><![CDATA[Testo Base per PDF]]></title>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-button ita-element-animate]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="ITEPAS[ITENRA]" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                                  <label class="sx ui-widget input" style="width:230px"><![CDATA[Numero Raccolte]]></label>
+                                                  <properties>
+                                                       <size><![CDATA[30]]></size>
+                                                       <maxlength><![CDATA[100]]></maxlength>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="accorpaPDFTestoBase" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                                  <label class="sx ui-widget input"><![CDATA[Accorpa nel Rapporto Completo]]></label>
+                                                  <properties>
+                                                       <title><![CDATA[Accorpa il PDF risultato nel rapporto completo]]></title>
+                                                       <class><![CDATA[ita-edit-onchange]]></class>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="ITEPAS[ITECUSTOMTML]" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                                                  <label class="sx ui-widget input"><![CDATA[Template Personalizzato]]></label>
+                                                  <properties>
+                                                       <size><![CDATA[50]]></size>
+                                                       <maxlength><![CDATA[200]]></maxlength>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-edit]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                        </engineElement>
+                                        <engineElement el_nome="DivRapporto" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="generico" tipo_tag="div">
+                                             <engineElement el_nome="ITEPAS[ITEDRR]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                                  <label class="dx input" style="width:230px"><![CDATA[Rapporto Completo Richiesta]]></label>
+                                                  <properties>
+                                                       <style><![CDATA[margin-right:4px;]]></style>
+                                                       <class><![CDATA[ita-edit-onchange]]></class>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="rapportoConfig" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                                                  <properties>
+                                                       <value><![CDATA[Configura Rapporto]]></value>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-button ita-element-animate]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                        </engineElement>
+                                        <engineElement el_nome="ITEPAS[ITEPDR]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                             <label class="dx input"><![CDATA[Passo dipedenza per rapporto completo]]></label>
+                                             <properties>
+                                                  <style><![CDATA[margin-right:4px;]]></style>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="ITEPAS[ITERIF]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                             <label class="dx input"><![CDATA[Riferimento ad altro procedimento]]></label>
+                                             <properties>
+                                                  <style><![CDATA[margin-right:4px;]]></style>
+                                                  <class><![CDATA[ita-edit-onchange]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="ITEPAS[ITESOSTF]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                             <label class="dx input"><![CDATA[Sostituzione Files]]></label>
+                                             <properties>
+                                                  <style><![CDATA[margin-right:4px;]]></style>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="ITEPAS[ITERICUNI]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                             <label class="dx input"><![CDATA[Accorpa Richieste per pratica Unica]]></label>
+                                             <properties>
+                                                  <style><![CDATA[margin-right:4px;]]></style>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="ITEPAS[ITEDIS]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                             <label class="dx input"><![CDATA[Distinta Allegati]]></label>
+                                             <properties>
+                                                  <style><![CDATA[margin-right:4px;]]></style>
+                                                  <class><![CDATA[ita-edit-onchange]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="ITEPAS[ITEDISCOMUNICA]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                             <label class="dx input"><![CDATA[Distinta Infocamere]]></label>
+                                             <properties>
+                                                  <style><![CDATA[margin-right:4px;]]></style>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="DivDistinta" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-box" tipo_tag="div">
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                                             </tipoProperties>
+                                             <engineElement el_nome="pdfTestoBaseDis" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                                                  <properties>
+                                                       <class><![CDATA[{iconLeft:'ui-icon ui-icon-document'}]]></class>
+                                                       <value><![CDATA[Testo Base PDF]]></value>
+                                                       <title><![CDATA[Testo Base per PDF]]></title>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-button ita-element-animate]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="uploadAutomatico" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                                  <label class="sx ui-widget input"><![CDATA[Upload Automatico]]></label>
+                                                  <properties>
+                                                       <title><![CDATA[Upload Automatico]]></title>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="accorpaPDFTestoBaseDis" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                                  <label class="sx ui-widget input"><![CDATA[Accorpa la distinta nel Rapporto Completo]]></label>
+                                                  <properties>
+                                                       <title><![CDATA[Accorpa la distinta rapporto completo]]></title>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                        </engineElement>
+                                        <engineElement el_nome="divRiferimento" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-box" tipo_tag="div">
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                                             </tipoProperties>
+                                             <engineElement el_nome="ITEPAS[ITEPROC]" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                                  <label class="sx ui-widget input" style="width:100px"><![CDATA[Procedimento]]></label>
+                                                  <properties>
+                                                       <maxlength><![CDATA[6]]></maxlength>
+                                                       <size><![CDATA[8]]></size>
+                                                       <class><![CDATA[ita-edit-onblur]]></class>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="DesProcedimento" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-decode" tipo_tag="text">
+                                                  <properties>
+                                                       <maxlength><![CDATA[80]]></maxlength>
+                                                       <size><![CDATA[100]]></size>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-decode]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="RifSvuota" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                                  <properties>
+                                                       <class><![CDATA[ita-button-delete {iconLeft:'ui-icon ui-icon-trash'}]]></class>
+                                                       <style><![CDATA[width:24px;height:20px;]]></style>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-button ita-element-animate]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="DalPasso" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                                  <label class="sx ui-widget input" style="width:100px"><![CDATA[Dal Passo]]></label>
+                                                  <properties>
+                                                       <maxlength><![CDATA[6]]></maxlength>
+                                                       <size><![CDATA[8]]></size>
+                                                       <class><![CDATA[ita-readonly]]></class>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="DesDalPasso" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-decode" tipo_tag="text">
+                                                  <properties>
+                                                       <maxlength><![CDATA[80]]></maxlength>
+                                                       <size><![CDATA[100]]></size>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-decode]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="AlPasso" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                                  <label class="sx ui-widget input" style="width:100px"><![CDATA[Al Passo]]></label>
+                                                  <properties>
+                                                       <maxlength><![CDATA[6]]></maxlength>
+                                                       <size><![CDATA[8]]></size>
+                                                       <class><![CDATA[ita-readonly]]></class>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="DesAlPasso" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-decode" tipo_tag="text">
+                                                  <properties>
+                                                       <maxlength><![CDATA[80]]></maxlength>
+                                                       <size><![CDATA[100]]></size>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-decode]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                        </engineElement>
+                                   </engineElement>
+                                   <engineElement el_nome="divBut1" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                                        <engineElement el_nome="ITEPAS[ITEWRD]" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                             <label class="sx input" style="width:120px"><![CDATA[Testo Associato]]></label>
+                                             <properties>
+                                                  <maxlength><![CDATA[100]]></maxlength>
+                                                  <size><![CDATA[50]]></size>
+                                                  <class><![CDATA[ita-readonly]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="Svuota2" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                                             <properties>
+                                                  <class><![CDATA[ita-button-delete {iconLeft:'ui-icon ui-icon-trash'}]]></class>
+                                                  <style><![CDATA[width:24px;height:20px;]]></style>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-button ita-element-animate]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="FileLocaleTesto" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                                             <properties>
+                                                  <value><![CDATA[F7 - Importa Testo]]></value>
+                                                  <class><![CDATA[{iconLeft:'ita-icon-open-folder-16x16',shortCut:'f7'}]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-button ita-element-animate]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="PassoPrecUpl" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                             <label class="top input"><![CDATA[Passo Upload da Scaricare]]></label>
+                                             <properties>
+                                                  <maxlength><![CDATA[6]]></maxlength>
+                                                  <size><![CDATA[20]]></size>
+                                                  <class><![CDATA[ita-readonly]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="PassoPrecUplDesc" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-decode" tipo_tag="text">
+                                             <properties>
+                                                  <maxlength><![CDATA[50]]></maxlength>
+                                                  <size><![CDATA[40]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-decode]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="PassoPrecSvuota" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                             <properties>
+                                                  <class><![CDATA[ita-button-delete {iconLeft:'ui-icon ui-icon-trash'}]]></class>
+                                                  <style><![CDATA[width:24px;height:20px;]]></style>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-button ita-element-animate]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="ClassificazioneDocumenti" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                             <label class="sx input" style="width:120px"><![CDATA[Classificazione Doc]]></label>
+                                             <properties>
+                                                  <maxlength><![CDATA[100]]></maxlength>
+                                                  <size><![CDATA[50]]></size>
+                                                  <class><![CDATA[ita-readonly]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="ClassificazioneDocumentiSvuota" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                             <properties>
+                                                  <class><![CDATA[ita-button-delete {iconLeft:'ui-icon ui-icon-trash'}]]></class>
+                                                  <style><![CDATA[width:24px;height:20px;]]></style>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-button ita-element-animate]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="WRDPRECOMPILED" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                             <label class="sx input" style="width:120px"><![CDATA[Testo Precompilato]]></label>
+                                             <properties>
+                                                  <maxlength><![CDATA[100]]></maxlength>
+                                                  <size><![CDATA[50]]></size>
+                                                  <class><![CDATA[ita-readonly]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="Precompila" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                             <properties>
+                                                  <class><![CDATA[ita-button-delete {iconLeft:'ui-icon ui-icon-pencil'}]]></class>
+                                                  <style><![CDATA[width:24px;height:20px;]]></style>
+                                                  <title><![CDATA[pre-compila]]></title>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-button ita-element-animate]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="divUrl" el_tipo="74" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-div" tipo_tag="div">
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-div]]></class>
+                                             </tipoProperties>
+                                             <engineElement el_nome="divText" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                                                  <properties>
+                                                       <style><![CDATA[display:inline-block;vertical-align:top;]]></style>
+                                                  </properties>
+                                                  <engineElement el_nome="iteurl" el_tipo="84" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-multiline" tipo_tag="textarea">
+                                                       <label class="sx input" style="width:120px"><![CDATA[Url Associato]]></label>
+                                                       <properties>
+                                                            <cols><![CDATA[70]]></cols>
+                                                            <rows><![CDATA[3]]></rows>
+                                                       </properties>
+                                                       <tipoProperties>
+                                                            <class><![CDATA[ita-edit ita-edit-multiline]]></class>
+                                                       </tipoProperties>
+                                                  </engineElement>
+                                             </engineElement>
+                                             <engineElement el_nome="divButton" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                                                  <properties>
+                                                       <style><![CDATA[display:inline-block;]]></style>
+                                                  </properties>
+                                                  <engineElement el_nome="buttVediUrl" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                                                       <properties>
+                                                            <class><![CDATA[{iconLeft:'ui-icon ui-icon-search'}]]></class>
+                                                            <style><![CDATA[width:24px;height:20px;]]></style>
+                                                       </properties>
+                                                       <tipoProperties>
+                                                            <class><![CDATA[ita-button ita-element-animate]]></class>
+                                                       </tipoProperties>
+                                                  </engineElement>
+                                                  <engineElement el_nome="Dizionario" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                                                       <properties>
+                                                            <value><![CDATA[Dizionario]]></value>
+                                                            <class><![CDATA[{iconLeft:'ita-icon-dictionary-16x16'}]]></class>
+                                                       </properties>
+                                                       <tipoProperties>
+                                                            <class><![CDATA[ita-button ita-element-animate]]></class>
+                                                       </tipoProperties>
+                                                  </engineElement>
+                                             </engineElement>
+                                        </engineElement>
+                                   </engineElement>
+                                   <engineElement el_nome="divBut2" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                                        <engineElement el_nome="ITEPAS[ITEIMG]" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                             <label class="sx input" style="width:120px"><![CDATA[Immagine]]></label>
+                                             <properties>
+                                                  <maxlength><![CDATA[100]]></maxlength>
+                                                  <size><![CDATA[50]]></size>
+                                                  <class><![CDATA[ita-readonly]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="Svuota3" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                                             <properties>
+                                                  <class><![CDATA[ita-button-delete {iconLeft:'ui-icon ui-icon-trash'}]]></class>
+                                                  <style><![CDATA[width:24px;height:20px;]]></style>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-button ita-element-animate]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="FileLocale" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                                             <properties>
+                                                  <value><![CDATA[F8 - Allega da File]]></value>
+                                                  <class><![CDATA[{iconLeft:'ita-icon-open-folder-16x16',shortCut:'f8'}]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-button ita-element-animate]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="OpenDescBox" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                             <properties>
+                                                  <class><![CDATA[{iconLeft:'ui-icon ui-icon-document'}]]></class>
+                                                  <value><![CDATA[Descrizione Box]]></value>
+                                                  <title><![CDATA[Descrizione Box]]></title>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-button ita-element-animate]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                   </engineElement>
+                                   <engineElement el_nome="divBut3" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                                        <engineElement el_nome="ITEPAS[ITEHELP]" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                             <label class="sx input" style="width:120px"><![CDATA[Help]]></label>
+                                             <properties>
+                                                  <maxlength><![CDATA[100]]></maxlength>
+                                                  <size><![CDATA[50]]></size>
+                                                  <class><![CDATA[ita-readonly]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="Svuota4" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                                             <properties>
+                                                  <class><![CDATA[ita-button-delete {iconLeft:'ui-icon ui-icon-trash'}]]></class>
+                                                  <style><![CDATA[width:24px;height:20px;]]></style>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-button ita-element-animate]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="CaricaHelp" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                                             <properties>
+                                                  <value><![CDATA[F9 - Carica Help]]></value>
+                                                  <class><![CDATA[{iconLeft:'ita-icon-open-folder-16x16',shortCut:'f9'}]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-button ita-element-animate]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                   </engineElement>
+                                   <engineElement el_nome="ITEPAS[ITEPAY]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                        <label class="sx input" style="width:120px"><![CDATA[Pagamento Online]]></label>
+                                        <properties>
+                                             <style><![CDATA[margin-right:4px;]]></style>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="ITEPAS[ITERUO]" el_tipo="80" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-select" tipo_tag="select">
+                                        <label class="sx input" style="width:120px"><![CDATA[Passo gestito da]]></label>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-select ita-edit]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="divCtrCampi" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                                        </tipoProperties>
+                                        <engineElement el_nome="hd2" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                                             <properties>
+                                                  <Title><![CDATA[Passo di Download per controllo campi]]></Title>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                                                  <style><![CDATA[font-size:0.8em;]]></style>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="CtrPasso" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                             <label class="sx ui-widget input" style="width:100px"><![CDATA[Passo]]></label>
+                                             <properties>
+                                                  <maxlength><![CDATA[6]]></maxlength>
+                                                  <size><![CDATA[8]]></size>
+                                                  <class><![CDATA[ita-readonly]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="CtrDesPasso" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-decode" tipo_tag="text">
+                                             <properties>
+                                                  <maxlength><![CDATA[50]]></maxlength>
+                                                  <size><![CDATA[40]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-decode]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="CtrSvuota" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                                             <properties>
+                                                  <class><![CDATA[ita-button-delete {iconLeft:'ui-icon ui-icon-trash'}]]></class>
+                                                  <style><![CDATA[width:24px;height:20px;]]></style>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-button ita-element-animate]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                   </engineElement>
+                                   <engineElement el_nome="divPassoTemplate" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                                        </tipoProperties>
+                                        <engineElement el_nome="hdPT" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                                             <properties>
+                                                  <Title><![CDATA[Passo Template per Campi Aggiuntivi]]></Title>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                                                  <style><![CDATA[font-size:0.8em;]]></style>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="TemplateProc" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                             <label class="sx ui-widget input" style="width:100px"><![CDATA[Procedimento]]></label>
+                                             <properties>
+                                                  <maxlength><![CDATA[6]]></maxlength>
+                                                  <size><![CDATA[8]]></size>
+                                                  <class><![CDATA[ita-readonly]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="DesProc" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-decode" tipo_tag="text">
+                                             <properties>
+                                                  <maxlength><![CDATA[200]]></maxlength>
+                                                  <size><![CDATA[100]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-decode]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="TemplateSvuota" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                             <properties>
+                                                  <class><![CDATA[ita-button-delete {iconLeft:'ui-icon ui-icon-trash'}]]></class>
+                                                  <style><![CDATA[width:24px;height:20px;]]></style>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-button ita-element-animate]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="TemplatePasso" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit" tipo_tag="text">
+                                             <label class="sx ui-widget input" style="width:100px"><![CDATA[Passo]]></label>
+                                             <properties>
+                                                  <maxlength><![CDATA[6]]></maxlength>
+                                                  <size><![CDATA[8]]></size>
+                                                  <class><![CDATA[ita-readonly]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="DesPasso" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-decode" tipo_tag="text">
+                                             <properties>
+                                                  <maxlength><![CDATA[200]]></maxlength>
+                                                  <size><![CDATA[100]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-decode]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                   </engineElement>
+                                   <engineElement el_nome="divPassiFinali" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                                        </tipoProperties>
+                                        <engineElement el_nome="hd3" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                                             <properties>
+                                                  <Title><![CDATA[Passi Finalizzazione Procedimenti]]></Title>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                                                  <style><![CDATA[font-size:0.8em;]]></style>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="ITEPAS[ITEIRE]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                             <label class="dx input" style="width:300px"><![CDATA[Invia Richiesta]]></label>
+                                             <properties>
+                                                  <style><![CDATA[margin-right:4px;]]></style>
+                                                  <class><![CDATA[ita-edit-onchange]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="DivMail" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-box" tipo_tag="div">
+                                             <properties>
+                                                  <style><![CDATA[display:inline-block;]]></style>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                                             </tipoProperties>
+                                             <engineElement el_nome="MailTestoBase" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                                                  <properties>
+                                                       <class><![CDATA[{iconLeft:'ui-icon ui-icon-document'}]]></class>
+                                                       <value><![CDATA[Testi Base Mail]]></value>
+                                                       <title><![CDATA[Testi Base Mail]]></title>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-button ita-element-animate]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="ITEPAS[ITEMRI]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                                  <label class="dx input" style="width:220px"><![CDATA[Blocca Mail Richidente]]></label>
+                                                  <properties>
+                                                       <style><![CDATA[margin-right:4px;]]></style>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="ITEPAS[ITEMRE]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                                  <label class="dx input" style="width:220px"><![CDATA[Blocca Mail Responsabile]]></label>
+                                                  <properties>
+                                                       <style><![CDATA[margin-right:4px;]]></style>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                        </engineElement>
+                                        <engineElement el_nome="ITEPAS[ITEZIP]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                             <label class="dx input" style="width:300px"><![CDATA[Invio a Camera di Commercio]]></label>
+                                             <properties>
+                                                  <style><![CDATA[margin-right:4px;]]></style>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="ITEPAS[ITEAGE]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                             <label class="dx input" style="width:300px"><![CDATA[Invio ad Agenzia Fiscale]]></label>
+                                             <properties>
+                                                  <style><![CDATA[margin-right:4px;]]></style>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="ITEPAS[ITECTB]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                             <label class="dx input" style="width:300px"><![CDATA[Produci Modello da Testo Base]]></label>
+                                             <properties>
+                                                  <style><![CDATA[margin-right:4px;]]></style>
+                                                  <class><![CDATA[ita-edit-onchange]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="DivCompilaTestoBase" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-box" tipo_tag="div">
+                                             <properties>
+                                                  <style><![CDATA[display:inline-block;]]></style>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                                             </tipoProperties>
+                                             <engineElement el_nome="editTestoBase" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                                                  <properties>
+                                                       <class><![CDATA[{iconLeft:'ui-icon ui-icon-document'}]]></class>
+                                                       <style><![CDATA[width:24px;height:20px;]]></style>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-button ita-element-animate]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                        </engineElement>
+                                        <engineElement el_nome="ITEPAS[ITERICSUB]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                             <label class="dx input" style="width:300px"><![CDATA[Accorpa a Pratica Unica]]></label>
+                                             <properties>
+                                                  <style><![CDATA[margin-right:4px;]]></style>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                   </engineElement>
+                              </engineElement>
+                              <engineElement el_nome="divCaricaBO" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                                   <engineElement el_nome="hd6" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                                        <properties>
+                                             <Title><![CDATA[Parametri Ribaltamento]]></Title>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                                             <style><![CDATA[font-size:0.8em;]]></style>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="ITEPAS[ITECARICAAUTO]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                        <label class="sx input"><![CDATA[Carica Passo su Bo]]></label>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="ITEPAS[ITEAPRIAUTO]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                        <label class="sx input"><![CDATA[Apri Automaticamente]]></label>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="ITEPAS[ITEASSAUTO]" el_tipo="80" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-select" tipo_tag="select">
+                                        <label class="sx input"><![CDATA[Assegnato a:]]></label>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-select ita-edit]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                              </engineElement>
+                              <engineElement el_nome="divGenerali" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                                   <properties>
+                                        <style><![CDATA[width:auto;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                                   </tipoProperties>
+                                   <engineElement el_nome="" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                                        <properties>
+                                             <Title><![CDATA[Caratteristiche Generali]]></Title>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                                             <style><![CDATA[font-size:0.8em;]]></style>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="MailTestoBaseComunicazione" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                        <properties>
+                                             <class><![CDATA[{iconLeft:'ui-icon ui-icon-document'}]]></class>
+                                             <value><![CDATA[Testo Base Mail Comunicazione]]></value>
+                                             <title><![CDATA[Testo Base Mail Comunicazione]]></title>
+                                             <style><![CDATA[margin-left:108px;]]></style>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-button ita-element-animate]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="divGridDestinatari" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                                        <engineElement el_nome="gridDestinatari" el_tipo="91" el_colonne="10" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-jqGrid" tipo_tag="table">
+                                             <properties>
+                                                  <class><![CDATA[ita-jqGrid {caption: "Destinatari per l'eventuale Comunicazione in Partenza",autowidth:false,rowNum:2000,rowList:[], width:1010,height:150,navGrid:false, navGrid:true,navButtonAdd:true,navButtonDel:true,navButtonEdit:false ,pgbuttons:false,pginput:false,readerId:'idx',resizeToParent:true}]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-jqGrid]]></class>
+                                             </tipoProperties>
+                                             <engineElement el_nome="Denominazione" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                                  <label class="sx ui-widget input"><![CDATA[Denominazione]]></label>
+                                             </engineElement>
+                                             <engineElement el_nome="Codice" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                                  <label class="sx ui-widget input"><![CDATA[Codice]]></label>
+                                                  <properties>
+                                                       <width><![CDATA[50]]></width>
+                                                  </properties>
+                                             </engineElement>
+                                             <engineElement el_nome="Ruolo" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                                  <label class="sx ui-widget input"><![CDATA[Ruolo]]></label>
+                                             </engineElement>
+                                             <engineElement el_nome="DENOMINAZIONE" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                                  <properties>
+                                                       <width><![CDATA[130]]></width>
+                                                       <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                                  </properties>
+                                             </engineElement>
+                                             <engineElement el_nome="CODICE" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                                  <properties>
+                                                       <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                                  </properties>
+                                             </engineElement>
+                                             <engineElement el_nome="RUOLO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                                  <properties>
+                                                       <width><![CDATA[150]]></width>
+                                                       <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                                  </properties>
+                                             </engineElement>
+                                        </engineElement>
+                                   </engineElement>
+                                   <engineElement el_nome="ITEPAS[ITECDE]" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                        <label class="sx input ita-hidden" style="width:100px"><![CDATA[Dest Comun.]]></label>
+                                        <properties>
+                                             <maxlength><![CDATA[6]]></maxlength>
+                                             <size><![CDATA[12]]></size>
+                                             <class><![CDATA[ita-edit-onblur]]></class>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="DESTINATARIO" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-decode" tipo_tag="text">
+                                        <properties>
+                                             <maxlength><![CDATA[60]]></maxlength>
+                                             <size><![CDATA[40]]></size>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-decode]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="ITEPAS[ITEINT]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                        <label class="dx input" style="width:200px"><![CDATA[Intestatario Pratica]]></label>
+                                        <properties>
+                                             <style><![CDATA[margin-right:4px;]]></style>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="ITEPAS[ITETBA]" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-readonly" tipo_tag="text">
+                                        <label class="sx input" style="width:100px"><![CDATA[Testo Base]]></label>
+                                        <properties>
+                                             <maxlength><![CDATA[100]]></maxlength>
+                                             <size><![CDATA[50]]></size>
+                                        </properties>
+                                        <tipoProperties>
+                                             <readonly><![CDATA[readonly]]></readonly>
+                                             <class><![CDATA[ita-readonly ita-edit]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="DocumentoOgg" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-readonly" tipo_tag="text">
+                                        <properties>
+                                             <maxlength><![CDATA[100]]></maxlength>
+                                             <size><![CDATA[50]]></size>
+                                        </properties>
+                                        <tipoProperties>
+                                             <readonly><![CDATA[readonly]]></readonly>
+                                             <class><![CDATA[ita-readonly ita-edit]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="CercaDocumento" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                                        <properties>
+                                             <class><![CDATA[{iconLeft:'ui-icon ui-icon-search'}]]></class>
+                                             <style><![CDATA[width:24px;height:20px;]]></style>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-button ita-element-animate]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="VediDocumento" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                                        <properties>
+                                             <class><![CDATA[{iconLeft:'ui-icon ui-icon-document'}]]></class>
+                                             <style><![CDATA[width:24px;height:20px;]]></style>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-button ita-element-animate]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="TogliDocumento" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                        <properties>
+                                             <class><![CDATA[{iconLeft:'ui-icon ui-icon-trash'}]]></class>
+                                             <style><![CDATA[width:24px;height:20px;]]></style>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-button ita-element-animate]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="ITEPAS[ITECOMDEST]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                        <label class="sx input"><![CDATA[Crea Passi Comunicazione da Destinazioni]]></label>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                              </engineElement>
+                         </engineElement>
+                         <engineElement el_nome="paneCondizioniSalti" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <title><![CDATA[Condizioni e salti]]></title>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="hd5" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                                   <properties>
+                                        <title><![CDATA[Condizioni e Salti]]></title>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                                        <style><![CDATA[font-size:0.8em;]]></style>
+                                   </tipoProperties>
+                              </engineElement>
+                              <engineElement el_nome="divCondizioniSalti" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                                   <properties>
+                                        <style><![CDATA[padding: 10px;]]></style>
+                                   </properties>
+                                   <engineElement el_nome="divObb" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                                        <properties>
+                                             <style><![CDATA[margin-bottom: 5px;]]></style>
+                                        </properties>
+                                        <engineElement el_nome="divObb1" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                                             <engineElement el_nome="ITEPAS[ITEOBL]" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                                                  <label class="dx input"><![CDATA[Operazione Obbligatoria]]></label>
+                                                  <properties>
+                                                       <style><![CDATA[margin: 0 8px 0 145px;]]></style>
+                                                       <class><![CDATA[ita-edit-onchange]]></class>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-edit ita-checkbox]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                        </engineElement>
+                                        <engineElement el_nome="ObblEspressione" el_tipo="84" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-multiline" tipo_tag="textarea">
+                                             <label class="sx input" style="width:160px"><![CDATA[Passo Obbligatorio se]]></label>
+                                             <properties>
+                                                  <cols><![CDATA[70]]></cols>
+                                                  <row><![CDATA[10]]></row>
+                                                  <class><![CDATA[ita-edit-onblur]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-edit-multiline]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="ApriObblExpr" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                                             <label class="sx ui-widget input"><![CDATA[Apri]]></label>
+                                             <properties>
+                                                  <class><![CDATA[{iconLeft:'ui-icon ui-icon-wrench'}]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-button ita-element-animate]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                   </engineElement>
+                                   <engineElement el_nome="AttivaEspressione" el_tipo="84" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-multiline" tipo_tag="textarea">
+                                        <label class="sx input" style="width:160px"><![CDATA[Passo Attivo se]]></label>
+                                        <properties>
+                                             <cols><![CDATA[70]]></cols>
+                                             <row><![CDATA[10]]></row>
+                                             <class><![CDATA[ita-edit-onblur]]></class>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-edit ita-edit-multiline]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="ApriAttivaExpr" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                        <label class="sx ui-widget input"><![CDATA[Apri]]></label>
+                                        <properties>
+                                             <class><![CDATA[{iconLeft:'ui-icon ui-icon-wrench'}]]></class>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-button ita-element-animate]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="br" el_tipo="72" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="br">
+                                   </engineElement>
+                                   <engineElement el_nome="SaltaPasso" el_tipo="93" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-radio" tipo_tag="radio">
+                                        <label class="dx input"><![CDATA[Salta al passo]]></label>
+                                        <properties>
+                                             <class><![CDATA[ita-edit-onchange]]></class>
+                                             <style><![CDATA[margin: 0 8px 0 145px;]]></style>
+                                             <name><![CDATA[ITEPAS[ITEQST]]]></name>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-edit ita-radio]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="PassoDomanda" el_tipo="93" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-radio" tipo_tag="radio">
+                                        <label class="dx input"><![CDATA[Passo domanda]]></label>
+                                        <properties>
+                                             <class><![CDATA[ita-edit-onchange]]></class>
+                                             <style><![CDATA[margin: 0 8px 0 0;]]></style>
+                                             <name><![CDATA[ITEPAS[ITEQST]]]></name>
+                                             <value><![CDATA[1]]></value>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-edit ita-radio]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="SaltaMultiplo" el_tipo="93" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-radio" tipo_tag="radio">
+                                        <label class="dx input"><![CDATA[Salto passo multi]]></label>
+                                        <properties>
+                                             <class><![CDATA[ita-edit-onchange]]></class>
+                                             <style><![CDATA[margin: 0 8px 0 0;]]></style>
+                                             <name><![CDATA[ITEPAS[ITEQST]]]></name>
+                                             <value><![CDATA[2]]></value>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-edit ita-radio]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="divGridVaiPasso" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                                        <properties>
+                                             <style><![CDATA[width: 600px; margin-left: 164px;]]></style>
+                                        </properties>
+                                        <engineElement el_nome="gridVaiPasso" el_tipo="91" el_colonne="20" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-jqGrid" tipo_tag="table">
+                                             <properties>
+                                                  <class><![CDATA[ita-jqGrid { shrinkToFit: true, resizeToParent: true, caption: false, sortorder: 'asc', readerId: 'idx', sortname: 'ITESEQEXPR', rowNum: 10, rowList: [], autowidth: true, navGrid: true, navButtonDel: true, navButtonAdd: true, navButtonEdit: false, navButtonExcel: false, navButtonPrint: false, navButtonRefresh: false, pgbuttons: false, pginput: false }]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-jqGrid]]></class>
+                                             </tipoProperties>
+                                             <engineElement el_nome="SequenzaSalto" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                                  <label class="sx ui-widget input"><![CDATA[Sequenza]]></label>
+                                             </engineElement>
+                                             <engineElement el_nome="DescrizioneSalto" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                                  <label class="sx ui-widget input"><![CDATA[Descrizione]]></label>
+                                             </engineElement>
+                                             <engineElement el_nome="PassoDestinazione" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                                  <label class="sx ui-widget input"><![CDATA[Passo destinazione]]></label>
+                                             </engineElement>
+                                             <engineElement el_nome="Condizione" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                                  <label class="sx ui-widget input"><![CDATA[Condizione]]></label>
+                                             </engineElement>
+                                             <engineElement el_nome="ITESEQEXPR" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                                  <properties>
+                                                       <width><![CDATA[20]]></width>
+                                                       <class><![CDATA[{ align: 'right', sortable: false }]]></class>
+                                                  </properties>
+                                             </engineElement>
+                                             <engineElement el_nome="ITEVPADESC" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                                  <properties>
+                                                       <width><![CDATA[100]]></width>
+                                                       <class><![CDATA[{ sortable: false }]]></class>
+                                                  </properties>
+                                             </engineElement>
+                                             <engineElement el_nome="PASSODEST" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                                  <properties>
+                                                       <width><![CDATA[120]]></width>
+                                                       <class><![CDATA[{ sortable: false }]]></class>
+                                                  </properties>
+                                             </engineElement>
+                                             <engineElement el_nome="CONDIZIONE" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                                  <properties>
+                                                       <width><![CDATA[100]]></width>
+                                                       <class><![CDATA[{ sortable: false }]]></class>
+                                                  </properties>
+                                             </engineElement>
+                                        </engineElement>
+                                   </engineElement>
+                                   <engineElement el_nome="divDomanda" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                                        <engineElement el_nome="Destinazione" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                             <label class="sx ui-widget input" style="width:160px"><![CDATA[Vai al Passo (Risposta SI)]]></label>
+                                             <properties>
+                                                  <maxlength><![CDATA[6]]></maxlength>
+                                                  <size><![CDATA[8]]></size>
+                                                  <class><![CDATA[ita-readonly]]></class>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="DescrizioneVai" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-decode" tipo_tag="text">
+                                             <properties>
+                                                  <maxlength><![CDATA[50]]></maxlength>
+                                                  <size><![CDATA[40]]></size>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-decode]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="Svuota" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                             <properties>
+                                                  <class><![CDATA[ita-button-delete {iconLeft:'ui-icon ui-icon-trash'}]]></class>
+                                                  <style><![CDATA[width:24px;height:20px;]]></style>
+                                             </properties>
+                                             <tipoProperties>
+                                                  <class><![CDATA[ita-button ita-element-animate]]></class>
+                                             </tipoProperties>
+                                        </engineElement>
+                                        <engineElement el_nome="divRispostaNo" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                                             <engineElement el_nome="DestinazioneNo" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                                  <label class="sx ui-widget input" style="width:160px"><![CDATA[Vai al Passo (Risposta NO)]]></label>
+                                                  <properties>
+                                                       <maxlength><![CDATA[6]]></maxlength>
+                                                       <size><![CDATA[8]]></size>
+                                                       <class><![CDATA[ita-readonly]]></class>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="DescrizioneVaiNo" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-decode" tipo_tag="text">
+                                                  <properties>
+                                                       <maxlength><![CDATA[50]]></maxlength>
+                                                       <size><![CDATA[40]]></size>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-decode]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                             <engineElement el_nome="SvuotaNo" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                                                  <properties>
+                                                       <class><![CDATA[ita-button-delete {iconLeft:'ui-icon ui-icon-trash'}]]></class>
+                                                       <style><![CDATA[width:24px;height:20px;]]></style>
+                                                  </properties>
+                                                  <tipoProperties>
+                                                       <class><![CDATA[ita-button ita-element-animate]]></class>
+                                                  </tipoProperties>
+                                             </engineElement>
+                                        </engineElement>
+                                   </engineElement>
+                              </engineElement>
+                         </engineElement>
+                         <engineElement el_nome="paneDatiAggiuntivi" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[Dati Aggiuntivi]]></Title>
+                                   <class><![CDATA[ita-data-page]]></class>
+                                   <style><![CDATA[height: 460px;]]></style>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                         <engineElement el_nome="paneEventi" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[Validazione]]></Title>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="divEventi" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                                   <properties>
+                                        <style><![CDATA[width:600px;heigth:auto;]]></style>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                                   </tipoProperties>
+                                   <engineElement el_nome="hd4" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                                        <properties>
+                                             <Title><![CDATA[Eventi Passo]]></Title>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                                             <style><![CDATA[font-size:0.8em;]]></style>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="ITEPAS[ITEIVA]" el_tipo="61" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-datepicker" tipo_tag="text">
+                                        <label class="sx input" style="width:100px"><![CDATA[Valido dal]]></label>
+                                        <properties>
+                                             <maxlength><![CDATA[10]]></maxlength>
+                                             <size><![CDATA[12]]></size>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-datepicker ita-edit]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="ITEPAS[ITESTAP]" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                        <label class="sx input"><![CDATA[Stato]]></label>
+                                        <properties>
+                                             <maxlength><![CDATA[6]]></maxlength>
+                                             <size><![CDATA[6]]></size>
+                                             <class><![CDATA[ita-edit-onblur]]></class>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="Stato1" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-decode" tipo_tag="text">
+                                        <properties>
+                                             <maxlength><![CDATA[50]]></maxlength>
+                                             <size><![CDATA[20]]></size>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-decode]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="ITEPAS[ITEFVA]" el_tipo="61" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-datepicker" tipo_tag="text">
+                                        <label class="sx ui-widget input" style="width:100px"><![CDATA[Chiuso il]]></label>
+                                        <properties>
+                                             <maxlength><![CDATA[10]]></maxlength>
+                                             <size><![CDATA[12]]></size>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-datepicker ita-edit]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="ITEPAS[ITESTCH]" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                        <label class="sx input"><![CDATA[Stato]]></label>
+                                        <properties>
+                                             <maxlength><![CDATA[6]]></maxlength>
+                                             <size><![CDATA[6]]></size>
+                                             <class><![CDATA[ita-edit-onblur]]></class>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="Stato2" el_tipo="83" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-decode" tipo_tag="text">
+                                        <properties>
+                                             <maxlength><![CDATA[50]]></maxlength>
+                                             <size><![CDATA[20]]></size>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-decode]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                              </engineElement>
+                              <engineElement el_nome="divElenco" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                                   </tipoProperties>
+                                   <engineElement el_nome="gridEspressioniOut" el_tipo="91" el_colonne="10" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-jqGrid" tipo_tag="table">
+                                        <properties>
+                                             <class><![CDATA[ita-jqGrid {caption: "Espressioni di valutazione della validità dei campi",shrinkToFit:true,width:400,rowNum:100000,cmTemplate: {sortable: false},rowList:[],navGrid:true,navButtonDel:true,navButtonAdd:true, navButtonEdit:false,navButtonExcel:false,navButtonPrint:false,navButtonRefresh:false,resizeToParent:false,pginput:false,pgbuttons:false,cellEdit:true,resizeToParent:true,readerId:'idx'}]]></class>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-jqGrid]]></class>
+                                        </tipoProperties>
+                                        <engineElement el_nome="Sequenza_th" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                             <label class="sx ui-widget input"><![CDATA[Seq.]]></label>
+                                        </engineElement>
+                                        <engineElement el_nome="Descrizione" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                             <label class="sx ui-widget input"><![CDATA[Descrizione]]></label>
+                                        </engineElement>
+                                        <engineElement el_nome="Espressione" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                             <label class="sx ui-widget input"><![CDATA[Espressione]]></label>
+                                        </engineElement>
+                                        <engineElement el_nome="Azione" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                             <label class="sx ui-widget input"><![CDATA[Azione]]></label>
+                                        </engineElement>
+                                        <engineElement el_nome="Messaggio" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                             <label class="sx ui-widget input"><![CDATA[Messaggio]]></label>
+                                        </engineElement>
+                                        <engineElement el_nome="SEQUENZA" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                             <properties>
+                                                  <width><![CDATA[10]]></width>
+                                                  <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                             </properties>
+                                        </engineElement>
+                                        <engineElement el_nome="DESCRIZIONE" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                             <properties>
+                                                  <width><![CDATA[70]]></width>
+                                                  <class><![CDATA[ui-state-default ui-corner-all ui-state-default ui-corner-all {editable:true}]]></class>
+                                             </properties>
+                                        </engineElement>
+                                        <engineElement el_nome="ESPRESSIONE" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                             <properties>
+                                                  <width><![CDATA[70]]></width>
+                                                  <class><![CDATA[ui-state-default ui-corner-all]]></class>
+                                             </properties>
+                                        </engineElement>
+                                        <engineElement el_nome="AZIONE" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                             <properties>
+                                                  <width><![CDATA[10]]></width>
+                                                  <class><![CDATA[ui-state-default ui-corner-all ui-state-default ui-corner-all {editable:true,edittype:"select",editoptions:{value:"1:Continua;2:Blocca"}}]]></class>
+                                             </properties>
+                                        </engineElement>
+                                        <engineElement el_nome="MESSAGGIO" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                             <properties>
+                                                  <width><![CDATA[70]]></width>
+                                                  <class><![CDATA[ui-state-default ui-corner-all ui-state-default ui-corner-all {editable:true}]]></class>
+                                             </properties>
+                                        </engineElement>
+                                   </engineElement>
+                              </engineElement>
+                              <engineElement el_nome="divControllo" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                                   </tipoProperties>
+                                   <engineElement el_nome="Hd1" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                                        <properties>
+                                             <Title><![CDATA[Espressioni]]></Title>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                                             <style><![CDATA[font-size:0.8em;]]></style>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="Campi" el_tipo="68" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit-lookup" tipo_tag="text">
+                                        <label class="sx input" style="width:100px"><![CDATA[Campo]]></label>
+                                        <properties>
+                                             <size><![CDATA[40]]></size>
+                                             <maxchars><![CDATA[80]]></maxchars>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-edit ita-edit-lookup]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="Condizione" el_tipo="80" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-select" tipo_tag="select">
+                                        <label class="sx input" style="width:100px"><![CDATA[Condizione]]></label>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-select ita-edit]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="ValoreCtr" el_tipo="67" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-edit" tipo_tag="text">
+                                        <label class="sx ui-widget input" style="width:100px"><![CDATA[Valore]]></label>
+                                        <properties>
+                                             <maxlength><![CDATA[50]]></maxlength>
+                                             <size><![CDATA[50]]></size>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-edit]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="CreaCtr" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                                        <properties>
+                                             <value><![CDATA[F6 - Crea Condizione]]></value>
+                                             <class><![CDATA[{iconLeft:'ita-icon-open-folder-16x16',shortCut:'f6'}]]></class>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-button ita-element-animate]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                                   <engineElement el_nome="AnnullaCtr" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                                        <properties>
+                                             <value><![CDATA[F8 - Annulla]]></value>
+                                             <class><![CDATA[{iconLeft:'ita-icon-open-folder-16x16',shortCut:'f8'}]]></class>
+                                        </properties>
+                                        <tipoProperties>
+                                             <class><![CDATA[ita-button ita-element-animate]]></class>
+                                        </tipoProperties>
+                                   </engineElement>
+                              </engineElement>
+                         </engineElement>
+                         <engineElement el_nome="paneAzioni" el_tipo="76" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-tabpane" tipo_tag="div">
+                              <properties>
+                                   <Title><![CDATA[Azioni FO]]></Title>
+                                   <class><![CDATA[ita-data-page]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-tabpane]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="divAzioni" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                                   </tipoProperties>
+                              </engineElement>
+                         </engineElement>
+                    </engineElement>
+                    <engineElement el_nome="ITEPAS[ITEKPRE]" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="invisible" tipo_tag="text">
+                         <tipoProperties>
+                              <style><![CDATA[visibility: hidden;]]></style>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+          <engineElement el_nome="buttonBar" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[width:160px;]]></style>
+                    <class><![CDATA[ita-layout-east ita-buttonbar ita-buttonbar-medium]]></class>
+               </properties>
+               <engineElement el_nome="Aggiungi" el_tipo="66" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button-validate" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F5-Aggiungi]]></value>
+                         <class><![CDATA[ita-button-commit {iconLeft:'ui-icon ui-icon-disk',shortCut:'f5'}]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button-validate ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="Aggiorna" el_tipo="66" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button-validate" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F6-Aggiorna]]></value>
+                         <class><![CDATA[ita-button-commit {iconLeft:'ui-icon ui-icon-disk',shortCut:'f6'}]]></class>
+                         <size><![CDATA[10]]></size>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button-validate ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="Duplica" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[F4-Duplica]]></value>
+                         <class><![CDATA[ita-button-new {iconLeft:'ui-icon ui-icon-copy',shortCut:'f4'}]]></class>
+                         <size><![CDATA[10]]></size>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="DuplicaDatiAgg" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                    <properties>
+                         <value><![CDATA[Duplica Dati<br>Aggiuntivi]]></value>
+                         <class><![CDATA[ita-button-new {iconLeft:'ui-icon ui-icon-copy'}]]></class>
+                         <size><![CDATA[10]]></size>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+          </engineElement>
+          <engineElement el_nome="divAppoggio" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-hidden]]></class>
+               </properties>
+               <engineElement el_nome="ITEPAS[ROWID]" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="invisible" tipo_tag="text">
+                    <tipoProperties>
+                         <style><![CDATA[visibility: hidden;]]></style>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="ITEPAS[ITEKEY]" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="invisible" tipo_tag="text">
+                    <tipoProperties>
+                         <style><![CDATA[visibility: hidden;]]></style>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="ITEPAS[ITEVPA]" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="invisible" tipo_tag="text">
+                    <tipoProperties>
+                         <style><![CDATA[visibility: hidden;]]></style>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="ITEPAS[ITEVPN]" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="invisible" tipo_tag="text">
+                    <tipoProperties>
+                         <style><![CDATA[visibility: hidden;]]></style>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="ITEPAS[ITECTP]" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="invisible" tipo_tag="text">
+                    <tipoProperties>
+                         <style><![CDATA[visibility: hidden;]]></style>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="ITEPAS[ITEATE]" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="invisible" tipo_tag="text">
+                    <tipoProperties>
+                         <style><![CDATA[visibility: hidden;]]></style>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="ITEPAS[ITEDAP]" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="invisible" tipo_tag="text">
+                    <tipoProperties>
+                         <style><![CDATA[visibility: hidden;]]></style>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="ITEPAS[ITEALP]" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="invisible" tipo_tag="text">
+                    <tipoProperties>
+                         <style><![CDATA[visibility: hidden;]]></style>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="ANAPRA[ROWID]" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="invisible" tipo_tag="text">
+                    <tipoProperties>
+                         <style><![CDATA[visibility: hidden;]]></style>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="ITEPAS[ITEOBE]" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="invisible" tipo_tag="text">
+                    <tipoProperties>
+                         <style><![CDATA[visibility: hidden;]]></style>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="ITEPAS[ITEDWP]" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="invisible" tipo_tag="text">
+                    <tipoProperties>
+                         <style><![CDATA[visibility: hidden;]]></style>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="ITEPAS[TEMPLATEKEY]" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="invisible" tipo_tag="text">
+                    <tipoProperties>
+                         <style><![CDATA[visibility: hidden;]]></style>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="ITEPAS[ROWID_DOC_CLASSIFICAZIONE]" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="invisible" tipo_tag="text">
+                    <tipoProperties>
+                         <style><![CDATA[visibility: hidden;]]></style>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_nome="ITEPAS[ITEEXPRRISERVATO]" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="invisible" tipo_tag="text">
+                    <tipoProperties>
+                         <style><![CDATA[visibility: hidden;]]></style>
+                    </tipoProperties>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[03/07/2019]]></date>
+          <time><![CDATA[13:26:09]]></time>
+          <user><![CDATA[tania]]></user>
+          <modelSHA><![CDATA[0f2480018f33bc4535fa682309238c08279479a9]]></modelSHA>
+     </info></itaEngine>

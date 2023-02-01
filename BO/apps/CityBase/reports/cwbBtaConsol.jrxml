@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cwbBtaConsol" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0de2cca3-6651-48fd-8cd1-a9afef6336e1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.jasperserver.reportUnit" value="/italsoft/reports/apps/CityBase/cwbBtaConsol"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver/services/repository"/>
+	<parameter name="Sql" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[$P!{Sql}]]>
+	</queryString>
+	<field name="CODCONSOL" class="java.lang.String"/>
+	<field name="DESCONSOL" class="java.lang.String"/>
+	<field name="DESLOCAL" class="java.lang.String"/>
+	<field name="INDIRCON1" class="java.lang.String"/>
+	<field name="INDIRCON2" class="java.lang.String"/>
+	<field name="DATAINIZ" class="java.lang.String"/>
+	<field name="DATAFINE" class="java.lang.String"/>
+	<sortField name="CODCONSOL"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="1f9f52c8-a5a2-4de5-9751-e2f8ee514559" x="2" y="10" width="550" height="31"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Elenco Consolati]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="f70b8320-fb88-4f20-826e-7135e373b422" x="14" y="10" width="69" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH.mm.ss">
+				<reportElement uuid="da2a4f7d-a2cb-4a15-9408-3ea0968d1fa4" x="83" y="10" width="69" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="8f234001-2217-4393-9007-3711636d6bb0" x="2" y="0" width="117" height="27"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descrizione Consolato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c99bbc52-304d-4362-a993-087c17cf31f1" x="353" y="1" width="79" height="27"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Località Ente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="87c1b81f-7e07-4653-ba67-d880e38bef47" x="497" y="0" width="55" height="27"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="8bbc1956-a50d-4dca-ae84-bd871e9366c3" x="2" y="27" width="550" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="4462ce0f-4aad-41fc-b3d4-e6972b2b9f4d" x="432" y="0" width="65" height="27"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data inizio Data fine]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d298fcd0-216e-48b7-a42e-5927f0848523" x="119" y="1" width="113" height="27"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Indirizzo 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bbb9f2bf-efb1-4a57-b22f-a6532672381b" x="232" y="0" width="121" height="27"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Indirizzo 2]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="44" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="ce6f96c9-e6d4-410a-b4c6-6f98937f0d2b" x="2" y="0" width="117" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DESCONSOL}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="742a4651-5e23-4950-8d5a-e890ebc28b11" x="353" y="0" width="79" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DESLOCAL}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f54191ee-d046-49c5-926b-b67053ceecc3" x="497" y="0" width="55" height="20"/>
+				<textElement textAlignment="Center">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CODCONSOL}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy">
+				<reportElement uuid="8191a386-c75e-4b47-b2bd-dc83e8d1b647" x="432" y="0" width="65" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{DATAINIZ}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="c9cb8e4e-5df8-4c4b-9794-0c2590870cb0" x="432" y="20" width="65" height="20"/>
+				<textElement textAlignment="Center">
+					<font isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DATAFINE}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="5c0b8eee-f81f-4538-a897-1947e3a0a35e" x="119" y="0" width="113" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{INDIRCON1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="2ae2d6a0-fa01-4af0-9097-7a5d224cab83" x="232" y="0" width="121" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{INDIRCON2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="b4201a51-d29c-4a5c-937e-36210dddd054" x="432" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" di"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="bb475151-ff99-4466-b611-eb832e7f41d0" x="512" y="0" width="40" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

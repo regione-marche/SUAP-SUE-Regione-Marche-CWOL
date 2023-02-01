@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE REPORT SYSTEM "PHPReport.dtd">
+<REPORT>
+    <TITLE>Anagrafica Utenti</TITLE>
+    <BACKGROUND_COLOR>#FFFFFF</BACKGROUND_COLOR>
+    <PAGE BORDER="1" SIZE="25" CELLSPACING="0" CELLPADDING="5" WIDTH="500">
+      <HEADER>
+         <ROW>
+            <COL COLSPAN="8"> </COL>
+         </ROW>
+         <ROW>
+            <COL COLSPAN="8">&nbsp;</COL>
+         </ROW>
+         <ROW>
+            <COL>Codice</COL>
+            <COL>Login</COL>
+            <COL>Gruppo</COL>
+            <COL>Ultima Password</COL>
+            <COL>Durata</COL>
+            <COL>Scadenza</COL>
+            <COL>Numero Accessi</COL>
+            <COL>Minuti Inattività</COL>
+         </ROW>
+
+      </HEADER>
+      <FOOTER>
+         <ROW>
+            <COL ALIGN="RIGHT" COLSPAN="1">Pag. Numero:</COL>
+            <COL ALIGN="LEFT" NUMBERFORMATEX="0" TYPE="EXPRESSION">$this->getPageNum()</COL>
+         </ROW>
+      </FOOTER>
+
+   </PAGE>
+
+    <GROUPS>
+        <GROUP NAME="maingroup">
+            <FIELDS>
+                <ROW>
+                    <COL TYPE="FIELD">UTECOD</COL>
+                    <COL TYPE="FIELD">UTELOG</COL>
+                    <COL TYPE="FIELD">GRUDES</COL>
+                    <COL TYPE="FIELD">UTEUPA</COL>
+                    <COL TYPE="FIELD">UTEDPA</COL>
+                    <COL TYPE="FIELD">UTESPA</COL>
+                    <COL TYPE="FIELD">UTEFIL_1</COL>
+                    <COL TYPE="FIELD">UTEFIL_2</COL>
+                </ROW>
+            </FIELDS>
+        </GROUP>
+    </GROUPS>
+</REPORT>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="cwbEseguiAsync" el_tipo="1" el_colonne="0" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <class><![CDATA[ita-app ita-dialog ita-layout-diag {title:"Allinea Rendicontazioni",width:1100,height:580,modal:true,position:'center',modelBackend:'cwbEseguiAsync', dateReturn:'iso'}]]></class>
+               <action><![CDATA[#cwbEseguiAsync]]></action>
+          </properties>
+          <engineElement el_nome="workSpace" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+                    <title><![CDATA[Allinea Rendicontazioni Async]]></title>
+               </properties>
+               <engineElement el_nome="divRisultato" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="spanOra" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-span" tipo_tag="span">
+                         <tipoProperties>
+                              <class><![CDATA[ita-span]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="divTestata" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[margin-bottom:20px]]></style>
+                         </properties>
+                         <engineElement el_nome="gridLogTestata" el_tipo="91" el_colonne="16" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-jqGrid" tipo_tag="table">
+                              <properties>
+                                   <class><![CDATA[ita-jqGrid {sortname:'PK DESC',readerId:'PK',caption: "Eventi Disponibili",shrinkToFit:true,width:850,height:110,sortname:'PK',rowNum:4,rowList:[],navGrid:false,resizeToParent:true,filterToolbar:false,onSelectRow:true,reloadOnResize: false}]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-jqGrid]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="thPK_TESTATA" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Id]]></label>
+                              </engineElement>
+                              <engineElement el_nome="thDATI_TESTATA" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Messaggio]]></label>
+                              </engineElement>
+                              <engineElement el_nome="thDATAOPER_TESTATA" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Data mod.]]></label>
+                              </engineElement>
+                              <engineElement el_nome="thTIMEOPER_TESTATA" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Ora mod.]]></label>
+                              </engineElement>
+                              <engineElement el_nome="PK_TESTATA" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[6]]></width>
+                                        <class><![CDATA[{align:'right'}]]></class>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="DATI_TESTATA" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[40]]></width>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="DATAOPER_TESTATA" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[10]]></width>
+                                        <class><![CDATA[{formatter:'date',search:false,align:'center'}]]></class>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="TIMEOPER_TESTATA" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[5]]></width>
+                                        <class><![CDATA[{search:false}]]></class>
+                                   </properties>
+                              </engineElement>
+                         </engineElement>
+                    </engineElement>
+                    <engineElement el_nome="divDettaglio" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                         <engineElement el_nome="spanRiepilogo" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-span" tipo_tag="span">
+                              <tipoProperties>
+                                   <class><![CDATA[ita-span]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                         <engineElement el_nome="gridLogDettaglio" el_tipo="91" el_colonne="16" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-jqGrid" tipo_tag="table">
+                              <properties>
+                                   <class><![CDATA[ita-jqGrid {sortname:'PK DESC',readerId:'PK',caption: "Dettaglio Evento",shrinkToFit:true,width:850,height:350,sortname:'PK',rowNum:15,rowList:[],navGrid:false,resizeToParent:true,filterToolbar:false,reloadOnResize: false}]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-jqGrid]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="thPK" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Id]]></label>
+                              </engineElement>
+                              <engineElement el_nome="thTIPOEVENTO_format" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Tipo]]></label>
+                              </engineElement>
+                              <engineElement el_nome="thDATI" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Messaggio]]></label>
+                              </engineElement>
+                              <engineElement el_nome="thDATAOPER" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Data mod.]]></label>
+                              </engineElement>
+                              <engineElement el_nome="thTIMEOPER" el_tipo="55" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Ora mod.]]></label>
+                              </engineElement>
+                              <engineElement el_nome="PK" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[6]]></width>
+                                        <class><![CDATA[{align:'right'}]]></class>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="TIPOEVENTO_format" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[10]]></width>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="DATI" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <width><![CDATA[40]]></width>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="DATAOPER" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <class><![CDATA[{formatter:'date',search:false,align:'center'}]]></class>
+                                        <width><![CDATA[8]]></width>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="TIMEOPER" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <class><![CDATA[{search:false,align:'center'}]]></class>
+                                        <width><![CDATA[8]]></width>
+                                   </properties>
+                              </engineElement>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[10/01/2020]]></date>
+          <time><![CDATA[15:12:01]]></time>
+          <user><![CDATA[italsoft]]></user>
+          <modelSHA><![CDATA[60c939d760ecec4209848f318bdaa79b17a3a943]]></modelSHA>
+     </info></itaEngine>

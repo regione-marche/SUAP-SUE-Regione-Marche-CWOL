@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_id="37124" el_nome="utiWebTwain" el_tipo="1" el_colonne="0" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <class><![CDATA[ita-dialog ita-layout-diag {title:"Scansione Immagini",width:800,height:640,modal:true,position:'center',resizable:false}]]></class>
+               <action><![CDATA[#utiWebTwain]]></action>
+          </properties>
+          <engineElement el_id="37125" el_nome="workSpace" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-data-page ita-layout-center ita-workspace]]></class>
+                    <style><![CDATA[width:550px;]]></style>
+               </properties>
+               <engineElement el_id="37126" el_nome="divTwain" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[width:450px;height:520px;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_id="37127" el_nome="divBrowse" el_tipo="70" el_colonne="3" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[width:450px;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                    </tipoProperties>
+                    <engineElement el_id="37128" el_nome="divLeft" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                         <engineElement el_id="37129" el_nome="ImgDelete" el_tipo="94" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button-client" tipo_tag="button">
+                              <properties>
+                                   <class><![CDATA[ita-twain-imgDel {iconLeft:'ui-icon ui-icon-trash'}]]></class>
+                                   <onClick><![CDATA[btnRemoveCurrentImage_onclick()]]></onClick>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-button-client ita-element-animate]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                    </engineElement>
+                    <engineElement el_id="37130" el_nome="divCenter" el_tipo="7" el_colonne="4" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                         <engineElement el_id="37131" el_nome="ImgPrev" el_tipo="94" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button-client" tipo_tag="button">
+                              <properties>
+                                   <class><![CDATA[ita-twain-imgPrev {iconLeft:'ui-icon ui-icon-seek-prev'}]]></class>
+                                   <onClick><![CDATA[btnPreImage_onclick()]]></onClick>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-button-client ita-element-animate]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                         <engineElement el_id="37132" el_nome="currImg" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-readonly" tipo_tag="text">
+                              <properties>
+                                   <size><![CDATA[3]]></size>
+                                   <maxchars><![CDATA[3]]></maxchars>
+                                   <class><![CDATA[ita-twain-currImage]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <readonly><![CDATA[readonly]]></readonly>
+                                   <class><![CDATA[ita-readonly ita-edit]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                         <engineElement el_id="37133" el_nome="totImg" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-readonly" tipo_tag="text">
+                              <label class="sx input"><![CDATA[/]]></label>
+                              <properties>
+                                   <size><![CDATA[3]]></size>
+                                   <maxchars><![CDATA[3]]></maxchars>
+                                   <class><![CDATA[ita-twain-totImage]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <readonly><![CDATA[readonly]]></readonly>
+                                   <class><![CDATA[ita-readonly ita-edit]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                         <engineElement el_id="37134" el_nome="ImgNext" el_tipo="94" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button-client" tipo_tag="button">
+                              <properties>
+                                   <class><![CDATA[ita-twain-imgNext {iconLeft:'ui-icon ui-icon-seek-next'}]]></class>
+                                   <onClick><![CDATA[btnNextImage_onclick()]]></onClick>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-button-client ita-element-animate]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                    </engineElement>
+                    <engineElement el_id="37135" el_nome="divRight" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                         <engineElement el_id="37136" el_nome="previewSelect" el_tipo="80" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-select" tipo_tag="select">
+                              <label class="sx ui-widget input"><![CDATA[Vedi Immagini]]></label>
+                              <properties>
+                                   <class><![CDATA[ita-twain-Preview]]></class>
+                                   <onchange><![CDATA[slPreviewMode()]]></onchange>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-select ita-edit]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+          <engineElement el_id="37137" el_nome="buttonBar" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-data-page ita-layout-east ita-buttonbar]]></class>
+                    <style><![CDATA[width:300px;]]></style>
+               </properties>
+               <engineElement el_id="37138" el_nome="divSource" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                    <tipoProperties>
+                         <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                    </tipoProperties>
+                    <engineElement el_id="37139" el_nome="" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                         <properties>
+                              <Title><![CDATA[Sorgente Acqusizione]]></Title>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                              <style><![CDATA[font-size:0.8em;]]></style>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_id="37140" el_nome="SourceName" el_tipo="80" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-select" tipo_tag="select">
+                         <label class="top input"><![CDATA[Dispositivo]]></label>
+                         <properties>
+                              <class><![CDATA[ita-edit-onchange ita-twain-SourceNameItems]]></class>
+                              <size><![CDATA[1]]></size>
+                              <maxchars><![CDATA[200]]></maxchars>
+                              <style><![CDATA[width:200px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-select ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_id="37141" el_nome="SalvaImpostazioni" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                         <properties>
+                              <class><![CDATA[{iconLeft:'ui-icon ui-icon-disk'}]]></class>
+                              <style><![CDATA[width:22px;height:20px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_id="37142" el_nome="ShowSource" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                         <label class="sx ui-widget input"><![CDATA[Mostra Interfaccia]]></label>
+                         <properties>
+                              <class><![CDATA[ita-twain-IfShowUI]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-checkbox]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_id="37143" el_nome="PixelBW" el_tipo="93" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-radio" tipo_tag="radio">
+                         <label class="sx input"><![CDATA[B/N]]></label>
+                         <properties>
+                              <class><![CDATA[ita-twain-PixelType]]></class>
+                              <name><![CDATA[pixelType]]></name>
+                              <value></value>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-radio]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_id="37144" el_nome="PixelGray" el_tipo="93" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-radio" tipo_tag="radio">
+                         <label class="sx input"><![CDATA[Grigio]]></label>
+                         <properties>
+                              <class><![CDATA[ita-twain-pixelType]]></class>
+                              <name><![CDATA[pixelType]]></name>
+                              <value><![CDATA[1]]></value>
+                              <checked><![CDATA[checked]]></checked>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-radio]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_id="37145" el_nome="PixelColor" el_tipo="93" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-radio" tipo_tag="radio">
+                         <label class="sx input"><![CDATA[Colore]]></label>
+                         <properties>
+                              <class><![CDATA[ita-twain-pixelType]]></class>
+                              <name><![CDATA[pixelType]]></name>
+                              <value><![CDATA[2]]></value>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-radio]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_id="37146" el_nome="Resolution" el_tipo="80" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-select" tipo_tag="select">
+                         <label class="top input"><![CDATA[Risoluzione (ppi)]]></label>
+                         <properties>
+                              <class><![CDATA[ita-twain-Resolution]]></class>
+                              <size><![CDATA[1]]></size>
+                              <maxchars><![CDATA[200]]></maxchars>
+                              <style><![CDATA[width:100px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-select ita-edit]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_id="37147" el_nome="" el_tipo="72" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="br">
+                    </engineElement>
+                    <engineElement el_id="37148" el_nome="Acquisisci" el_tipo="94" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button-client" tipo_tag="button">
+                         <properties>
+                              <onClick><![CDATA[AcquireImage()]]></onClick>
+                              <value><![CDATA[F7 - Acquisisci]]></value>
+                              <class><![CDATA[{iconLeft:'ita-icon-scanner-24x24',shortCut:'f7'}]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button-client ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_id="37149" el_nome="divFeeder" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                    <tipoProperties>
+                         <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                    </tipoProperties>
+                    <engineElement el_id="37150" el_nome="" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                         <properties>
+                              <Title><![CDATA[Caricatore]]></Title>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                              <style><![CDATA[font-size:0.8em;]]></style>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_id="37151" el_nome="Feeder" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                         <label class="sx input" style="width:100px"><![CDATA[ADF]]></label>
+                         <properties>
+                              <class><![CDATA[ita-twain-IfFeederEnabled]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-checkbox]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_id="37152" el_nome="FronteRetro" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                         <label class="sx input" style="width:100px"><![CDATA[Fronte/Retro]]></label>
+                         <properties>
+                              <class><![CDATA[ita-twain-IfDuplexEnabled ]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-checkbox]]></class>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_id="37153" el_nome="divImage" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                    <tipoProperties>
+                         <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                    </tipoProperties>
+                    <engineElement el_id="37154" el_nome="" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                         <properties>
+                              <Title><![CDATA[Gestione Immagine]]></Title>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                              <style><![CDATA[font-size:0.8em;]]></style>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_id="37155" el_nome="RotateSx" el_tipo="94" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button-client" tipo_tag="button">
+                         <properties>
+                              <class><![CDATA[{iconLeft:'ita-icon-rotate-left-24x24'}]]></class>
+                              <value><![CDATA[Ruota Sx]]></value>
+                              <onClick><![CDATA[RotateSx()]]></onClick>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button-client ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_id="37156" el_nome="RotateDx" el_tipo="94" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button-client" tipo_tag="button">
+                         <properties>
+                              <class><![CDATA[{iconLeft:'ita-icon-rotate-right-24x24'}]]></class>
+                              <value><![CDATA[Ruota Dx]]></value>
+                              <onClick><![CDATA[RotateDx()]]></onClick>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button-client ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_id="37157" el_nome="divUpload" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                    <tipoProperties>
+                         <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                    </tipoProperties>
+                    <engineElement el_id="37158" el_nome="" el_tipo="79" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-header" tipo_tag="div">
+                         <properties>
+                              <Title><![CDATA[Salva Immagine]]></Title>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-header ui-widget-header ui-corner-all]]></class>
+                              <style><![CDATA[font-size:0.8em;]]></style>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_id="37159" el_nome="ImageJpg" el_tipo="93" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-radio" tipo_tag="radio">
+                         <label class="sx input"><![CDATA[JPEG]]></label>
+                         <properties>
+                              <class><![CDATA[ita-twain-ImageType]]></class>
+                              <name><![CDATA[ImageType]]></name>
+                              <value><![CDATA[1]]></value>
+                              <onClick><![CDATA[rdsave_onclick()]]></onClick>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-radio]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_id="37160" el_nome="ImageTiff" el_tipo="93" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-radio" tipo_tag="radio">
+                         <label class="sx input"><![CDATA[TIFF]]></label>
+                         <properties>
+                              <class><![CDATA[ita-twain-ImageType]]></class>
+                              <name><![CDATA[ImageType]]></name>
+                              <value><![CDATA[2]]></value>
+                              <onClick><![CDATA[rdTIFFsave_onclick()]]></onClick>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-radio]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_id="37161" el_nome="ImagePdf" el_tipo="93" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-radio" tipo_tag="radio">
+                         <label class="sx input"><![CDATA[PDF]]></label>
+                         <properties>
+                              <class><![CDATA[ita-twain-ImageType]]></class>
+                              <name><![CDATA[ImageType]]></name>
+                              <value><![CDATA[4]]></value>
+                              <onClick><![CDATA[rdPDFsave_onclick()]]></onClick>
+                              <checked><![CDATA[checked]]></checked>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-radio]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_id="37162" el_nome="MultiImage" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                         <label class="dx input"><![CDATA[Multi Pagina]]></label>
+                         <properties>
+                              <class><![CDATA[ita-twain-MultiPage]]></class>
+                              <checked><![CDATA[checked]]></checked>
+                              <style><![CDATA[margin-right:4px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-checkbox]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_id="37163" el_nome="" el_tipo="72" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="br">
+                    </engineElement>
+                    <engineElement el_id="37164" el_nome="Stampa" el_tipo="89" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-checkbox" tipo_tag="checkbox">
+                         <label class="dx input"><![CDATA[Stampa su foglio]]></label>
+                         <properties>
+                              <checked><![CDATA[checked]]></checked>
+                              <style><![CDATA[margin-right:4px;]]></style>
+                              <class><![CDATA[ita-edit-onchange]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-edit ita-checkbox]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_id="37165" el_nome="" el_tipo="72" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="br">
+                    </engineElement>
+                    <engineElement el_id="37166" el_nome="btnSalva" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                         <properties>
+                              <Value><![CDATA[F5 - Salva]]></Value>
+                              <class><![CDATA[{iconLeft:'ita-icon-open-folder-24x24',shortCut:'f5'}]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_id="37167" el_nome="btnChiudi" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                         <properties>
+                              <Value><![CDATA[F8 - Chiudi]]></Value>
+                              <class><![CDATA[{iconLeft:'ita-icon-rotate-left-24x24',shortCut:'f8'}]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_id="37168" el_nome="divTwainCap" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                    <tipoProperties>
+                         <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                    </tipoProperties>
+               </engineElement>
+               <engineElement el_id="37169" el_nome="divTwainDevices" el_tipo="70" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-box" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[display:none;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-box ui-widget-content ui-corner-all]]></class>
+                    </tipoProperties>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[11/12/2015]]></date>
+          <time><![CDATA[14:38:58]]></time>
+          <user><![CDATA[michele]]></user>
+          <modelSHA><![CDATA[dae43747fc2ade4f49986e93103d4b809353a359]]></modelSHA>
+     </info></itaEngine>

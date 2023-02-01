@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="utiFilebox" el_tipo="1" el_colonne="0" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[#utiFilebox]]></action>
+               <class><![CDATA[ita-dialog ita-layout-diag {title:"Filebox",width:980,height:500,modal:true,position:'center'}]]></class>
+          </properties>
+          <engineElement el_nome="workSpace" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[width:600px;height:480px;]]></style>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+               </properties>
+               <engineElement el_nome="divGestione" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <properties>
+                         <class><![CDATA[ita-edit-page]]></class>
+                         <style><![CDATA[height:88%;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="divButtons" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[margin-bottom:5px;]]></style>
+                         </properties>
+                         <engineElement el_nome="btnUpload" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                              <label class="sx ui-widget input"><![CDATA[Carica]]></label>
+                              <properties>
+                                   <class><![CDATA[{iconLeft:'ita-icon-upload-32x32'}]]></class>
+                                   <style><![CDATA[width:180px;height:35px;font-size:1.3em;]]></style>
+                                   <value><![CDATA[Carica]]></value>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-button ita-element-animate]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                         <engineElement el_nome="btnProtocollaFilesSelezionati" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                              <label class="sx ui-widget input"><![CDATA[Scarica file]]></label>
+                              <properties>
+                                   <value><![CDATA[Protocolla]]></value>
+                                   <class><![CDATA[ita-button-new {iconLeft:'ita-icon-register-document-16x16'}]]></class>
+                                   <style><![CDATA[width:180px;height:35px;font-size:1.3em;]]></style>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-button ita-element-animate]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                    </engineElement>
+                    <engineElement el_nome="gridFiles" el_tipo="91" el_colonne="9" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-jqGrid" tipo_tag="table">
+                         <properties>
+                              <class><![CDATA[ita-jqGrid {readerId:'TABLEKEY', caption: "Elenco files", shrinkToFit:true, width:900, sortname:'FILENAME', navGrid:true, navButtonDel:false, navButtonAdd:false, navButtonEdit:false, navButtonExcel:false, navButtonPrint:false, multiselect:true, navButtonRefresh:false, resizeToParent:true, filterToolbar:false, showInlineButtons: { view: true, edit: false, delete: false}, showAuditColumns: false, rowNum:25, rowList:[25, 50, 100, 200, 'Tutte'], reloadOnResize: false}]]></class>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-jqGrid]]></class>
+                         </tipoProperties>
+                         <engineElement el_nome="thFILENAME" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Nome file]]></label>
+                         </engineElement>
+                         <engineElement el_nome="thDATA" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Data]]></label>
+                         </engineElement>
+                         <engineElement el_nome="thPATH" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              <label class="sx ui-widget input"><![CDATA[Data]]></label>
+                         </engineElement>
+                         <engineElement el_nome="thAZIONI" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                         </engineElement>
+                         <engineElement el_nome="FILENAME" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                         </engineElement>
+                         <engineElement el_nome="DATA" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <class><![CDATA[{align:'center',  fixed:true}]]></class>
+                                   <width><![CDATA[120px;]]></width>
+                              </properties>
+                         </engineElement>
+                         <engineElement el_nome="PATH" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <class><![CDATA[{hidden:true}]]></class>
+                              </properties>
+                         </engineElement>
+                         <engineElement el_nome="AZIONI" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                              <properties>
+                                   <class><![CDATA[ui-state-default ui-corner-all {itaSelectable:true, sortable: false, search: false, fixed: true}]]></class>
+                                   <style><![CDATA[cursor:pointer]]></style>
+                                   <width><![CDATA[50]]></width>
+                              </properties>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[09/02/2020]]></date>
+          <time><![CDATA[17:15:39]]></time>
+          <user><![CDATA[michele]]></user>
+          <modelSHA><![CDATA[eb15bb74ec2ef187c0d69f4761c298b15bf76463]]></modelSHA>
+     </info></itaEngine>

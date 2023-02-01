@@ -1,0 +1,1506 @@
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+
+/* 
+Document   : itaStyle
+Created on : 28-ago-2009, 16.49.24
+Author     : utente
+Description:
+Purpose of the stylesheet follows.
+*/
+
+/* 
+TODO customize this sample style
+Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+html { overflow: hidden; }
+
+.ui-menu-itacontainer {
+    display: inline-block;
+    z-index: 10;
+}
+
+.ui-menu-itacontainer .col {
+    display: inline-block;
+    float: left;
+}
+
+.ui-menu-itacontainer .ui-menu {
+    padding: 4px;
+    margin-top: 0 !important;
+}
+
+.ui-menu-itacontainer > .ui-menu {
+    border: 0;
+    font-size: .9em;
+}
+
+.ui-menu-itacontainer a span.loading {
+    background: url('images/ui-anim_basic_16x16.gif') no-repeat;
+    float: right;
+    width: 16px;
+    height: 16px;
+}
+
+.ui-menu-itacontainer .ui-menu-item {
+    min-width: 140px;
+    margin: 2px 0;
+    white-space: nowrap;
+    padding-right: 18px;
+    list-style: none !important;
+}
+
+.ui-menu-item > a {
+    border: 1px solid transparent;
+    margin: 0 !important;
+    padding: 3px 0.4em !important;
+}
+
+.ui-menu-itacontainer .ui-menu:empty {
+    visibility: hidden !important;
+}
+
+.ui-menu + .ui-menu {
+    border-left: 1px solid #ddd;
+}
+
+.ui-menu.scrollable {
+    padding: 22px 4px;
+}
+
+.ui-menu > .ui-menu-scroll-up, .ui-menu > .ui-menu-scroll-down {
+    position: absolute;
+    left: 0;
+    display: block;
+    background-color: #ddd;
+    height: 18px;
+    width: 100%;
+}
+
+.ui-menu > .ui-menu-scroll-up > .ui-icon, .ui-menu > .ui-menu-scroll-down > .ui-icon {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+
+.ui-menu > .ui-menu-scroll-up {
+    top: 0;
+}
+
+.ui-menu > .ui-menu-scroll-down {
+    bottom: 0;
+}
+
+#desktop{
+
+}
+
+#ita-desktop-south, #ita-desktop-north, #ita-desktop-center, #ita-desktop-west, #ita-desktop-east{
+    background-color:transparent !important ;
+    padding: 0px ! important ;
+    margin: 0px ! important ;
+    border: 0 !important;
+    overflow:hidden !important;
+}
+
+/*#desktopHeader {
+    margin: 1px 1px 1px 1px;
+    height:41px;
+    overflow:hidden;
+    position:relative;
+} 
+
+#desktopHeaderTitle{
+    vertical-align:middle;
+    display:inline;
+    font-size:1.5em;
+    margin:2px;
+}
+#desktopHeaderInfo{
+    vertical-align:middle;
+    width: 100%;
+    display:inline;
+    font-size:1em;
+    margin:2px;
+}
+
+#desktopTitlebarWrapper {
+    margin-top:0px;
+    height:20px;
+    overflow:hidden;
+}
+#desktopTitlebar {
+    height:20px;
+    padding:2px;
+}
+
+#desktopFooterWrapper {
+    margin: 1px 1px 1px 1px;
+    height:24px;
+    overflow:hidden;
+    position:relative;
+}
+
+#desktopFooter {
+    font-family:Verdana,Arial,Helvetica,sans-serif;
+    font-size:0.8em;
+    height:18px;
+    float:left;
+}
+*/
+
+#menuapp{
+    padding:2px;
+}
+
+#titolomenu{
+    height:20px;
+    padding:2px;
+}
+
+/*  itaEngine Icons Classes */
+.ita-icon { display: block; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat; }
+.ita-icon-excel { width: 16px; height: 16px; background-image: url(images/MSExcel-16x16.png); }
+.ita-icon-gridprint { width: 16px; height: 16px; background-image: url(images/GridPrint-16x16.png); }
+.ita-icon-scanner-128x128 { width: 128px; height: 128px; background-image: url(images/Scanner-128x128.png); }
+.ita-icon-scanner-64x64 { width: 64px; height: 64px; background-image: url(images/Scanner-64x64.png); }
+.ita-icon-scanner-32x32 { width: 32px; height: 32px; background-image: url(images/Scanner-32x32.png); }
+.ita-icon-scanner-24x24 { width: 24px; height: 24px; background-image: url(images/Scanner-24x24.png); }
+.ita-icon-scanner-16x16 { width: 16px; height: 16px; background-image: url(images/Scanner-16x16.png); }
+.ita-icon-bullet-blue-24x24 { width: 24px; height: 24px; background-image: url(images/bullet-blue-24x24.png); }
+.ita-icon-bullet-blue-16x16 { width: 16px; height: 16px; background-image: url(images/bullet-blue-16x16.png); }
+.ita-icon-bullet-green-24x24 { width: 24px; height: 24px; background-image: url(images/bullet-green-24x24.png); }
+.ita-icon-bullet-green-24x24-old { width: 24px; height: 24px; background-image: url(images/bullet-green-24x24_save.png); }
+.ita-icon-bullet-green-16x16 { width: 16px; height: 16px; background-image: url(images/bullet-green-16x16.png); }
+.ita-icon-bullet-red-24x24 { width: 24px; height: 24px; background-image: url(images/bullet-red-24x24.png); }
+.ita-icon-bullet-red-24x24-old { width: 24px; height: 24px; background-image: url(images/bullet-red-24x24_save.png); }
+.ita-icon-bullet-red-16x16 { width: 16px; height: 16px; background-image: url(images/bullet-red-16x16.png); }
+.ita-icon-bullet-yellow-24x24 { width: 24px; height: 24px; background-image: url(images/bullet-yellow-24x24.png); }
+.ita-icon-bullet-yellow-16x16 { width: 16px; height: 16px; background-image: url(images/bullet-yellow-16x16.png); }
+.ita-icon-bullet-gray-24x24 { width: 24px; height: 24px; background-image: url(images/bullet-gray-24x24.png); }
+.ita-icon-bullet-gray-16x16 { width: 16px; height: 16px; background-image: url(images/bullet-gray-16x16.png); }
+.ita-icon-bullet-orange-24x24 { width: 24px; height: 24px; background-image: url(images/bullet-orange-24x24.png); }
+.ita-icon-bullet-orange-16x16 { width: 16px; height: 16px; background-image: url(images/bullet-orange-16x16.png); }
+.ita-icon-bullet-grey-16x16 { width: 16px; height: 16px; background-image: url(images/bullet-grey-16x16.png); }
+.ita-icon-register-document-128x128 { width: 128px; height: 128px; background-image: url(images/Register-document-128x128.png); }
+.ita-icon-register-document-64x64 { width: 64px; height: 64px; background-image: url(images/Register-document-64x64.png); }
+.ita-icon-register-document-32x32 { width: 32px; height: 32px; background-image: url(images/Register-document-32x32.png); }
+.ita-icon-register-document-24x24 { width: 24px; height: 24px; background-image: url(images/Register-document-24x24.png); }
+.ita-icon-register-document-16x16 { width: 16px; height: 16px; background-image: url(images/Register-document-16x16.png); }
+.ita-icon-register-document-green-128x128 { width: 128px; height: 128px; background-image: url(images/Register-document-green-128x128.png); }
+.ita-icon-register-document-green-64x64 { width: 64px; height: 64px; background-image: url(images/Register-document-green-64x64.png); }
+.ita-icon-register-document-green-32x32 { width: 32px; height: 32px; background-image: url(images/Register-document-green-32x32.png); }
+.ita-icon-register-document-green-24x24 { width: 24px; height: 24px; background-image: url(images/Register-document-green-24x24.png); }
+.ita-icon-register-document-green-16x16 { width: 16px; height: 16px; background-image: url(images/Register-document-green-16x16.png); }
+
+.ita-icon-comment-edit-128x128 { width: 128px; height: 128px; background-image: url(images/comment-edit-128x128.png); }
+.ita-icon-comment-new-128x128 { width: 128px; height: 128px; background-image: url(images/comment-new-128x128.png); }
+.ita-icon-comment-new-32x32 { width: 32px; height: 32px; background-image: url(images/comment-new-32x32.png); }
+.ita-icon-comment-new-16x16 { width: 16px; height: 16px; background-image: url(images/comment-new-16x16.png); }
+.ita-icon-comment-128x128 { width: 128px; height: 128px; background-image: url(images/comment-128x128.png); }
+
+.ita-icon-open-folder-128x128 { width: 128px; height: 128px; background-image: url(images/Open-folder-128x128.png); }
+.ita-icon-open-folder-64x64 { width: 64px; height: 64px; background-image: url(images/Open-folder-64x64.png); }
+.ita-icon-open-folder-32x32 { width: 32px; height: 32px; background-image: url(images/Open-folder-32x32.png); }
+.ita-icon-open-folder-24x24 { width: 24px; height: 24px; background-image: url(images/Open-folder-24x24.png); }
+.ita-icon-open-folder-16x16 { width: 16px; height: 16px; background-image: url(images/Open-folder-16x16.png); }
+.ita-icon-sub-folder-128x128 { width: 128px; height: 128px; background-image: url(images/Sub-folder-128x128.png); }
+.ita-icon-sub-folder-64x64   { width: 64px; height: 64px; background-image:   url(images/Sub-folder-64x64.png); }
+.ita-icon-sub-folder-32x32   { width: 32px; height: 32px; background-image:   url(images/Sub-folder-32x32.png); }
+.ita-icon-sub-folder-24x24   { width: 24px; height: 24px; background-image:   url(images/Sub-folder-24x24.png); }
+.ita-icon-sub-folder-16x16 { width: 16px; height: 16px; background-image:    url(images/Sub-folder-16x16.png); }
+.ita-icon-mail-128x128 { width: 128px; height: 128px; background-image: url(images/Mail-128x128.png); }
+.ita-icon-mail-64x64 { width: 64px; height: 64px; background-image: url(images/Mail-64x64.png); }
+.ita-icon-mail-32x32 { width: 32px; height: 32px; background-image: url(images/Mail-32x32.png); }
+.ita-icon-mail-24x24 { width: 24px; height: 24px; background-image: url(images/Mail-24x24.png); }
+.ita-icon-mail-16x16 { width: 16px; height: 16px; background-image: url(images/Mail-16x16.png); }
+.ita-icon-check-green-128x128 { width: 128px; height: 128px; background-image: url(images/Check-green-128x128.png); }
+.ita-icon-check-green-64x64 { width: 64px; height: 64px; background-image: url(images/Check-green-64x64.png); }
+.ita-icon-check-green-32x32 { width: 32px; height: 32px; background-image: url(images/Check-green-32x32.png); }
+.ita-icon-check-green-24x24 { width: 24px; height: 24px; background-image: url(images/Check-green-24x24.png); }
+.ita-icon-check-green-16x16 { width: 16px; height: 16px; background-image: url(images/Check-green-16x16.png); }
+.ita-icon-check-yellow-128x128 { width: 128px; height: 128px; background-image: url(images/Check-yellow-128x128.png); }
+.ita-icon-check-yellow-64x64 { width: 64px; height: 64px; background-image: url(images/Check-yellow-64x64.png); }
+.ita-icon-check-yellow-32x32 { width: 32px; height: 32px; background-image: url(images/Check-yellow-32x32.png); }
+.ita-icon-check-yellow-24x24 { width: 24px; height: 24px; background-image: url(images/Check-yellow-24x24.png); }
+.ita-icon-check-yellow-16x16 { width: 16px; height: 16px; background-image: url(images/Check-yellow-16x16.png); }
+.ita-icon-check-grey-128x128 { width: 128px; height: 128px; background-image: url(images/Check-grey-128x128.png); }
+.ita-icon-check-grey-64x64 { width: 64px; height: 64px; background-image: url(images/Check-grey-64x64.png); }
+.ita-icon-check-grey-32x32 { width: 32px; height: 32px; background-image: url(images/Check-grey-32x32.png); }
+.ita-icon-check-grey-24x24 { width: 24px; height: 24px; background-image: url(images/Check-grey-24x24.png); }
+.ita-icon-check-grey-16x16 { width: 16px; height: 16px; background-image: url(images/Check-grey-16x16.png); }
+.ita-icon-check-red-128x128 { width: 128px; height: 128px; background-image: url(images/Check-red-128x128.png); }
+.ita-icon-check-red-64x64 { width: 64px; height: 64px; background-image: url(images/Check-red-64x64.png); }
+.ita-icon-check-red-32x32 { width: 32px; height: 32px; background-image: url(images/Check-red-32x32.png); }
+.ita-icon-check-red-24x24 { width: 24px; height: 24px; background-image: url(images/Check-red-24x24.png); }
+.ita-icon-check-red-16x16 { width: 16px; height: 16px; background-image: url(images/Check-red-16x16.png); }
+.ita-icon-check-blue-128x128 { width: 128px; height: 128px; background-image: url(images/Check-blue-128x128.png); }
+.ita-icon-check-blue-64x64 { width: 64px; height: 64px; background-image: url(images/Check-blue-64x64.png); }
+.ita-icon-check-blue-32x32 { width: 32px; height: 32px; background-image: url(images/Check-blue-32x32.png); }
+.ita-icon-check-blue-24x24 { width: 24px; height: 24px; background-image: url(images/Check-blue-24x24.png); }
+.ita-icon-check-blue-16x16 { width: 16px; height: 16px; background-image: url(images/Check-blue-16x16.png); }
+.ita-icon-check-orange-128x128 { width: 128px; height: 128px; background-image: url(images/Check-orange-128x128.png); }
+.ita-icon-check-orange-64x64 { width: 64px; height: 64px; background-image: url(images/Check-orange-64x64.png); }
+.ita-icon-check-orange-32x32 { width: 32px; height: 32px; background-image: url(images/Check-orange-32x32.png); }
+.ita-icon-check-orange-24x24 { width: 24px; height: 24px; background-image: url(images/Check-orange-24x24.png); }
+.ita-icon-check-orange-16x16 { width: 16px; height: 16px; background-image: url(images/Check-orange-16x16.png); }
+/*frecce verdi*/
+.ita-icon-arrow-green-dx-128x128 { width: 128px; height: 128px; background-image: url(images/Arrow-green-dx-128x128.png); }
+.ita-icon-arrow-green-dx-64x64 { width: 64px; height: 64px; background-image: url(images/Arrow-green-dx-64x64.png); }
+.ita-icon-arrow-green-dx-32x32 { width: 32px; height: 32px; background-image: url(images/Arrow-green-dx-32x32.png); }
+.ita-icon-arrow-green-dx-24x24 { width: 24px; height: 24px; background-image: url(images/Arrow-green-dx-24x24.png); }
+.ita-icon-arrow-green-dx-16x16 { width: 16px; height: 16px; background-image: url(images/Arrow-green-dx-16x16.png); }
+.ita-icon-arrow-green-sx-128x128 { width: 128px; height: 128px; background-image: url(images/Arrow-green-sx-128x128.png); }
+.ita-icon-arrow-green-sx-64x64 { width: 64px; height: 64px; background-image: url(images/Arrow-green-sx-64x64.png); }
+.ita-icon-arrow-green-sx-32x32 { width: 32px; height: 32px; background-image: url(images/Arrow-green-sx-32x32.png); }
+.ita-icon-arrow-green-sx-24x24 { width: 24px; height: 24px; background-image: url(images/Arrow-green-sx-24x24.png); }
+.ita-icon-arrow-green-sx-16x16 { width: 16px; height: 16px; background-image: url(images/Arrow-green-sx-16x16.png); }
+.ita-icon-arrow-green-up-128x128 { width: 128px; height: 128px; background-image: url(images/Arrow-green-up-128x128.png); }
+.ita-icon-arrow-green-up-64x64 { width: 64px; height: 64px; background-image: url(images/Arrow-green-up-64x64.png); }
+.ita-icon-arrow-green-up-32x32 { width: 32px; height: 32px; background-image: url(images/Arrow-green-up-32x32.png); }
+.ita-icon-arrow-green-up-24x24 { width: 24px; height: 24px; background-image: url(images/Arrow-green-up-24x24.png); }
+.ita-icon-arrow-green-up-16x16 { width: 16px; height: 16px; background-image: url(images/Arrow-green-up-16x16.png); }
+.ita-icon-arrow-green-down-128x128 { width: 128px; height: 128px; background-image: url(images/Arrow-green-down-128x128.png); }
+.ita-icon-arrow-green-down-64x64 { width: 64px; height: 64px; background-image: url(images/Arrow-green-down-64x64.png); }
+.ita-icon-arrow-green-down-32x32 { width: 32px; height: 32px; background-image: url(images/Arrow-green-down-32x32.png); }
+.ita-icon-arrow-green-down-24x24 { width: 24px; height: 24px; background-image: url(images/Arrow-green-down-24x24.png); }
+.ita-icon-arrow-green-down-16x16 { width: 16px; height: 16px; background-image: url(images/Arrow-green-down-16x16.png); }
+/*frecce rosse*/
+.ita-icon-arrow-red-dx-128x128 { width: 128px; height: 128px; background-image: url(images/Arrow-red-dx-128x128.png); }
+.ita-icon-arrow-red-dx-64x64 { width: 64px; height: 64px; background-image: url(images/Arrow-red-dx-64x64.png); }
+.ita-icon-arrow-red-dx-32x32 { width: 32px; height: 32px; background-image: url(images/Arrow-red-dx-32x32.png); }
+.ita-icon-arrow-red-dx-24x24 { width: 24px; height: 24px; background-image: url(images/Arrow-red-dx-24x24.png); }
+.ita-icon-arrow-red-dx-16x16 { width: 16px; height: 16px; background-image: url(images/Arrow-red-dx-16x16.png); }
+.ita-icon-arrow-red-sx-128x128 { width: 128px; height: 128px; background-image: url(images/Arrow-red-sx-128x128.png); }
+.ita-icon-arrow-red-sx-64x64 { width: 64px; height: 64px; background-image: url(images/Arrow-red-sx-64x64.png); }
+.ita-icon-arrow-red-sx-32x32 { width: 32px; height: 32px; background-image: url(images/Arrow-red-sx-32x32.png); }
+.ita-icon-arrow-red-sx-24x24 { width: 24px; height: 24px; background-image: url(images/Arrow-red-sx-24x24.png); }
+.ita-icon-arrow-red-sx-16x16 { width: 16px; height: 16px; background-image: url(images/Arrow-red-sx-16x16.png); }
+.ita-icon-arrow-red-up-128x128 { width: 128px; height: 128px; background-image: url(images/Arrow-red-up-128x128.png); }
+.ita-icon-arrow-red-up-64x64 { width: 64px; height: 64px; background-image: url(images/Arrow-red-up-64x64.png); }
+.ita-icon-arrow-red-up-32x32 { width: 32px; height: 32px; background-image: url(images/Arrow-red-up-32x32.png); }
+.ita-icon-arrow-red-up-24x24 { width: 24px; height: 24px; background-image: url(images/Arrow-red-up-24x24.png); }
+.ita-icon-arrow-red-up-16x16 { width: 16px; height: 16px; background-image: url(images/Arrow-red-up-16x16.png); }
+.ita-icon-arrow-red-down-128x128 { width: 128px; height: 128px; background-image: url(images/Arrow-red-down-128x128.png); }
+.ita-icon-arrow-red-down-64x64 { width: 64px; height: 64px; background-image: url(images/Arrow-red-down-64x64.png); }
+.ita-icon-arrow-red-down-32x32 { width: 32px; height: 32px; background-image: url(images/Arrow-red-down-32x32.png); }
+.ita-icon-arrow-red-down-24x24 { width: 24px; height: 24px; background-image: url(images/Arrow-red-down-24x24.png); }
+.ita-icon-arrow-red-down-16x16 { width: 16px; height: 16px; background-image: url(images/Arrow-red-down-16x16.png); }
+
+.ita-icon-repubblica-128x128 { width: 128px; height: 128px; background-image: url(images/Repubblica-128x128.png); }
+.ita-icon-repubblica-64x64 { width: 64px; height: 64px; background-image: url(images/Repubblica-64x64.png); }
+.ita-icon-repubblica-32x32 { width: 32px; height: 32px; background-image: url(images/Repubblica-32x32.png); }
+.ita-icon-repubblica-24x24 { width: 24px; height: 24px; background-image: url(images/Repubblica-24x24.png); }
+.ita-icon-repubblica-16x16 { width: 16px; height: 16px; background-image: url(images/Repubblica-16x16.png); }
+.ita-icon-mail-closed-24x24 { width: 24px; height: 24px; background-image: url(images/Mail-closed-24x24.png); }
+.ita-icon-mail-opened-24x24 { width: 24px; height: 24px; background-image: url(images/Mail-opened-24x24.png); }
+.ita-icon-mail-opened-v-24x24 { width: 24px; height: 24px; background-image: url(images/Mail-opened-v-24x24.png); }
+.ita-icon-mail-closed-i-24x24 { width: 24px; height: 24px; background-image: url(images/Mail-closed-i-24x24.png); }
+.ita-icon-mail-closed-c-24x24 { width: 24px; height: 24px; background-image: url(images/Mail-closed-c-24x24.png); }
+.ita-icon-mail-closed-v-24x24 { width: 24px; height: 24px; background-image: url(images/Mail-closed-v-24x24.png); }
+.ita-icon-prev-24x24 { width: 24px; height: 24px; background-image: url(images/prev-24x24.png); }
+.ita-icon-prev-16x16 { width: 16px; height: 16px; background-image: url(images/prev-16x16.png); }
+.ita-icon-next-24x24 { width: 24px; height: 24px; background-image: url(images/next-24x24.png); }
+.ita-icon-next-16x16 { width: 16px; height: 16px; background-image: url(images/next-16x16.png); }
+.ita-icon-pagup-24x24 { width: 24px; height: 24px; background-image: url(images/pagup-24x24.png); }
+.ita-icon-pagup-16x16 { width: 16px; height: 16px; background-image: url(images/pagup-16x16.png); }
+.ita-icon-pagdown-24x24 { width: 24px; height: 24px; background-image: url(images/pagdown-24x24.png); }
+.ita-icon-pagdown-16x16 { width: 16px; height: 16px; background-image: url(images/pagdown-16x16.png); }
+.ita-icon-list-24x24 { width: 24px; height: 24px; background-image: url(images/list-24x24.png); }
+.ita-icon-clip-128x128 { width: 128px; height: 128px; background-image: url(images/Clip-128x128.png); }
+.ita-icon-clip-64x64 { width: 64px; height: 64px; background-image: url(images/Clip-64x64.png); }
+.ita-icon-clip-32x32 { width: 32px; height: 32px; background-image: url(images/Clip-32x32.png); }
+.ita-icon-clip-24x24 { width: 24px; height: 24px; background-image: url(images/Clip-24x24.png); }
+.ita-icon-clip-16x16 { width: 16px; height: 16px; background-image: url(images/Clip-16x16.png); }
+.ita-icon-apertagray-128x128 { width: 128px; height: 128px; background-image: url(images/apertagray-128x128.png); }
+.ita-icon-apertagray-64x64 { width: 64px; height: 64px; background-image: url(images/apertagray-64x64.png); }
+.ita-icon-apertagray-32x32 { width: 32px; height: 32px; background-image: url(images/apertagray-32x32.png); }
+.ita-icon-apertagray-24x24 { width: 24px; height: 24px; background-image: url(images/apertagray-24x24.png); }
+.ita-icon-apertagray-16x16 { width: 16px; height: 16px; background-image: url(images/apertagray-16x16.png); }
+.ita-icon-apertagreen-128x128 { width: 128px; height: 128px; background-image: url(images/apertagreen-128x128.png); }
+.ita-icon-apertagreen-64x64 { width: 64px; height: 64px; background-image: url(images/apertagreen-64x64.png); }
+.ita-icon-apertagreen-32x32 { width: 32px; height: 32px; background-image: url(images/apertagreen-32x32.png); }
+.ita-icon-apertagreen-24x24 { width: 24px; height: 24px; background-image: url(images/apertagreen-24x24.png); }
+.ita-icon-apertagreen-16x16 { width: 16px; height: 16px; background-image: url(images/apertagreen-16x16.png); }
+.ita-icon-chiusagray-128x128 { width: 128px; height: 128px; background-image: url(images/chiusagray-128x128.png); }
+.ita-icon-chiusagray-64x64 { width: 64px; height: 64px; background-image: url(images/chiusagray-64x64.png); }
+.ita-icon-chiusagray-32x32 { width: 32px; height: 32px; background-image: url(images/chiusagray-32x32.png); }
+.ita-icon-chiusagray-24x24 { width: 24px; height: 24px; background-image: url(images/chiusagray-24x24.png); }
+.ita-icon-chiusagray-16x16 { width: 16px; height: 16px; background-image: url(images/chiusagray-16x16.png); }
+.ita-icon-chiusagreen-128x128 { width: 128px; height: 128px; background-image: url(images/chiusagreen-128x128.png); }
+.ita-icon-chiusagreen-64x64 { width: 64px; height: 64px; background-image: url(images/chiusagreen-64x64.png); }
+.ita-icon-chiusagreen-32x32 { width: 32px; height: 32px; background-image: url(images/chiusagreen-32x32.png); }
+.ita-icon-chiusagreen-24x24 { width: 24px; height: 24px; background-image: url(images/chiusagreen-24x24.png); }
+.ita-icon-chiusagreen-16x16 { width: 16px; height: 16px; background-image: url(images/chiusagreen-16x16.png); }
+.ita-icon-inoltrata-128x128 { width: 128px; height: 128px; background-image: url(images/inoltrata-128x128.png); }
+.ita-icon-inoltrata-64x64 { width: 64px; height: 64px; background-image: url(images/inoltrata-64x64.png); }
+.ita-icon-inoltrata-32x32 { width: 32px; height: 32px; background-image: url(images/inoltrata-32x32.png); }
+.ita-icon-inoltrata-24x24 { width: 24px; height: 24px; background-image: url(images/inoltrata-24x24.png); }
+.ita-icon-inoltrata-16x16 { width: 16px; height: 16px; background-image: url(images/inoltrata-16x16.png); }
+.ita-icon-rotate-left-128x128 { width: 128px; height: 128px; background-image: url(images/Rotate-left-128x128.png); }
+.ita-icon-rotate-left-64x64 { width: 64px; height: 64px; background-image: url(images/Rotate-left-64x64.png); }
+.ita-icon-rotate-left-32x32 { width: 32px; height: 32px; background-image: url(images/Rotate-left-32x32.png); }
+.ita-icon-rotate-left-24x24 { width: 24px; height: 24px; background-image: url(images/Rotate-left-24x24.png); }
+.ita-icon-rotate-left-16x16 { width: 16px; height: 16px; background-image: url(images/Rotate-left-16x16.png); }
+.ita-icon-rotate-right-128x128 { width: 128px; height: 128px; background-image: url(images/Rotate-right-128x128.png); }
+.ita-icon-rotate-right-64x64 { width: 64px; height: 64px; background-image: url(images/Rotate-right-64x64.png); }
+.ita-icon-rotate-right-32x32 { width: 32px; height: 32px; background-image: url(images/Rotate-right-32x32.png); }
+.ita-icon-rotate-right-24x24 { width: 24px; height: 24px; background-image: url(images/Rotate-right-24x24.png); }
+.ita-icon-rotate-right-16x16 { width: 16px; height: 16px; background-image: url(images/Rotate-right-16x16.png); }
+.ita-icon-cerca-doc-128x128 { width: 128px; height: 128px; background-image: url(images/cerca-doc-128x128.png); }
+.ita-icon-cerca-doc-64x64 { width: 64px; height: 64px; background-image: url(images/cerca-doc-64x64.png); }
+.ita-icon-cerca-doc-32x32 { width: 32px; height: 32px; background-image: url(images/cerca-doc-32x32.png); }
+.ita-icon-cerca-doc-24x24 { width: 24px; height: 24px; background-image: url(images/cerca-doc-24x24.png); }
+.ita-icon-cerca-doc-16x16 { width: 16px; height: 16px; background-image: url(images/cerca-doc-16x16.png); }
+.ita-icon-new-128x128 { width: 128px; height: 128px; background-image: url(images/new-128x128.png); }
+.ita-icon-new-64x64 { width: 64px; height: 64px; background-image: url(images/new-64x64.png); }
+.ita-icon-new-32x32 { width: 32px; height: 32px; background-image: url(images/new-32x32.png); }
+.ita-icon-new-24x24 { width: 24px; height: 24px; background-image: url(images/new-24x24.png); }
+.ita-icon-new-16x16 { width: 16px; height: 16px; background-image: url(images/new-16x16.png); }
+.ita-icon-view-tree-128x128 { width: 128px; height: 128px; background-image: url(images/view-tree-128x128.png); }
+.ita-icon-view-tree-64x64 { width: 64px; height: 64px; background-image: url(images/view-tree-64x64.png); }
+.ita-icon-view-tree-32x32 { width: 32px; height: 32px; background-image: url(images/view-tree-32x32.png); }
+.ita-icon-view-tree-24x24 { width: 24px; height: 24px; background-image: url(images/view-tree-24x24.png); }
+.ita-icon-view-tree-16x16 { width: 16px; height: 16px; background-image: url(images/view-tree-16x16.png); }
+.ita-icon-excel-128x128 { width: 128px; height: 128px; background-image: url(images/excel-128x128.png); }
+.ita-icon-excel-64x64 { width: 64px; height: 64px; background-image: url(images/excel-64x64.png); }
+.ita-icon-excel-32x32 { width: 32px; height: 32px; background-image: url(images/excel-32x32.png); }
+.ita-icon-excel-24x24 { width: 24px; height: 24px; background-image: url(images/excel-24x24.png); }
+.ita-icon-excel-16x16 { width: 16px; height: 16px; background-image: url(images/excel-16x16.png); }
+.ita-icon-word-128x128 { width: 128px; height: 128px; background-image: url(images/word-128x128.png); }
+.ita-icon-word-64x64 { width: 64px; height: 64px; background-image: url(images/word-64x64.png); }
+.ita-icon-word-32x32 { width: 32px; height: 32px; background-image: url(images/word-32x32.png); }
+.ita-icon-word-24x24 { width: 24px; height: 24px; background-image: url(images/word-24x24.png); }
+.ita-icon-word-16x16 { width: 16px; height: 16px; background-image: url(images/word-16x16.png); }
+.ita-icon-pdf-128x128 { width: 128px; height: 128px; background-image: url(images/pdf-128x128.png); }
+.ita-icon-pdf-64x64 { width: 64px; height: 64px; background-image: url(images/pdf-64x64.png); }
+.ita-icon-pdf-32x32 { width: 32px; height: 32px; background-image: url(images/pdf-32x32.png); }
+.ita-icon-pdf-24x24 { width: 24px; height: 24px; background-image: url(images/pdf-24x24.png); }
+.ita-icon-pdf-16x16 { width: 16px; height: 16px; background-image: url(images/pdf-16x16.png); }
+.ita-icon-play-128x128 { width: 128px; height: 128px; background-image: url(images/play-128x128.png); }
+.ita-icon-play-64x64 { width: 64px; height: 64px; background-image: url(images/play-64x64.png); }
+.ita-icon-play-32x32 { width: 32px; height: 32px; background-image: url(images/play-32x32.png); }
+.ita-icon-play-24x24 { width: 24px; height: 24px; background-image: url(images/play-24x24.png); }
+.ita-icon-play-16x16 { width: 16px; height: 16px; background-image: url(images/play-16x16.png); }
+.ita-icon-rtf-128x128 { width: 128px; height: 128px; background-image: url(images/rtf-128x128.png); }
+.ita-icon-rtf-64x64 { width: 64px; height: 64px; background-image: url(images/rtf-64x64.png); }
+.ita-icon-rtf-32x32 { width: 32px; height: 32px; background-image: url(images/rtf-32x32.png); }
+.ita-icon-rtf-24x24 { width: 24px; height: 24px; background-image: url(images/rtf-24x24.png); }
+.ita-icon-rtf-16x16 { width: 16px; height: 16px; background-image: url(images/rtf-16x16.png); }
+.ita-icon-document-128x128 { width: 128px; height: 128px; background-image: url(images/document-128x128.png); }
+.ita-icon-document-64x64 { width: 64px; height: 64px; background-image: url(images/document-64x64.png); }
+.ita-icon-document-32x32 { width: 32px; height: 32px; background-image: url(images/document-32x32.png); }
+.ita-icon-document-24x24 { width: 24px; height: 24px; background-image: url(images/document-24x24.png); }
+.ita-icon-document-16x16 { width: 16px; height: 16px; background-image: url(images/document-16x16.png); }
+.ita-icon-cerca-128x128 { width: 128px; height: 128px; background-image: url(images/cerca-128x128.png); }
+.ita-icon-cerca-64x64 { width: 64px; height: 64px; background-image: url(images/cerca-64x64.png); }
+.ita-icon-cerca-32x32 { width: 32px; height: 32px; background-image: url(images/cerca-32x32.png); }
+.ita-icon-cerca-24x24 { width: 24px; height: 24px; background-image: url(images/cerca-24x24.png); }
+.ita-icon-cerca-16x16 { width: 16px; height: 16px; background-image: url(images/cerca-16x16.png); }
+.ita-icon-print-128x128 { width: 128px; height: 128px; background-image: url(images/print-128x128.png); }
+.ita-icon-print-64x64 { width: 64px; height: 64px; background-image: url(images/print-64x64.png); }
+.ita-icon-print-32x32 { width: 32px; height: 32px; background-image: url(images/print-32x32.png); }
+.ita-icon-print-24x24 { width: 24px; height: 24px; background-image: url(images/print-24x24.png); }
+.ita-icon-print-16x16 { width: 16px; height: 16px; background-image: url(images/print-16x16.png); }
+.ita-icon-chart-128x128 { width: 128px; height: 128px; background-image: url(images/chart-128x128.png); }
+.ita-icon-chart-64x64 { width: 64px; height: 64px; background-image: url(images/chart-64x64.png); }
+.ita-icon-chart-32x32 { width: 32px; height: 32px; background-image: url(images/chart-32x32.png); }
+.ita-icon-chart-24x24 { width: 24px; height: 24px; background-image: url(images/chart-24x24.png); }
+.ita-icon-chart-16x16 { width: 16px; height: 16px; background-image: url(images/chart-16x16.png); }
+.ita-icon-ingranaggio-16x16 { width: 16px; height: 16px; background-image: url(images/ingranaggio-16x16.png); }
+.ita-icon-ingranaggio-24x24 { width: 24px; height: 24px; background-image: url(images/ingranaggio-24x24.png); }
+.ita-icon-ingranaggio-32x32 { width: 32px; height: 32px; background-image: url(images/ingranaggio-32x32.png); }
+.ita-icon-ingranaggio-64x64 { width: 64px; height: 64px; background-image: url(images/ingranaggio-64x64.png); }
+.ita-icon-stock-mail-24x24 { width: 24px; height: 24px; background-image: url(images/stock-mail-24x24.png); }
+.ita-icon-stock-mail-32x32 { width: 32px; height: 32px; background-image: url(images/stock-mail-32x32.png); }
+.ita-icon-red-mail-24x24 { width: 24px; height: 24px; background-image: url(images/red-mail-24x24.png); }
+.ita-icon-red-mail-32x32 { width: 32px; height: 32px; background-image: url(images/red-mail-32x32.png); }
+.ita-icon-power-16x16 { width: 16px; height: 16px; background-image: url(images/power-16x16.png); }
+.ita-icon-power-24x24 { width: 24px; height: 24px; background-image: url(images/power-24x24.png); }
+.ita-icon-power-32x32 { width: 32px; height: 32px; background-image: url(images/power-32x32.png); }
+.ita-icon-power-64x64 { width: 64px; height: 64px; background-image: url(images/power-64x64.png); }
+.ita-icon-power-128x128 { width: 128px; height: 128px; background-image: url(images/power-128x128.png); }
+.ita-icon-user-key-16x16 { width: 16px; height: 16px; background-image: url(images/user-key-16x16.png); }
+.ita-icon-user-key-24x24 { width: 24px; height: 24px; background-image: url(images/user-key-24x24.png); }
+.ita-icon-user-key-32x32 { width: 32px; height: 32px; background-image: url(images/user-key-32x32.png); }
+.ita-icon-user-key-64x64 { width: 64px; height: 64px; background-image: url(images/user-key-64x64.png); }
+.ita-icon-user-key-128x128 { width: 128px; height: 128px; background-image: url(images/user-key-128x128.png); }
+.ita-icon-tools-32x32 { width: 32px; height: 32px; background-image: url(images/tools-32x32.png); }
+.ita-icon-tools-64x64 { width: 64px; height: 64px; background-image: url(images/tools-64x64.png); }
+.ita-icon-tools-128x128 { width: 128px; height: 128px; background-image: url(images/tools-128x128.png); }
+.ita-icon-winzip-16x16 { width: 16px; height: 16px; background-image: url(images/winzip-16x16.jpg); }
+.ita-icon-winzip-24x24 { width: 24px; height: 24px; background-image: url(images/winzip-24x24.png); }
+.ita-icon-winzip-32x32 { width: 32px; height: 32px; background-image: url(images/winzip-32x32.jpg); }
+.ita-icon-winzip-64x64 { width: 64px; height: 64px; background-image: url(images/winzip-64x64.jpg); }
+.ita-icon-winzip-128x128 { width: 128px; height: 128px; background-image: url(images/winzip-128x128.jpg); }
+.ita-icon-testobase-32x32 { width: 32px; height: 32px; background-image: url(images/testobase-32x32.jpg); }
+.ita-icon-add-16x16 { width: 16px; height: 16px; background-image: url(images/add-16x16.png); }
+.ita-icon-add-24x24 { width: 24px; height: 24px; background-image: url(images/add-24x24.png); }
+.ita-icon-add-32x32 { width: 32px; height: 32px; background-image: url(images/add-32x32.png); }
+.ita-icon-add-64x64 { width: 64px; height: 64px; background-image: url(images/add-64x64.png); }
+.ita-icon-add-128x128 { width: 128px; height: 128px; background-image: url(images/add-128x128.png); }
+.ita-icon-delete-16x16 { width: 16px; height: 16px; background-image: url(images/delete-16x16.png); }
+.ita-icon-delete-24x24 { width: 24px; height: 24px; background-image: url(images/delete-24x24.png); }
+.ita-icon-delete-32x32 { width: 32px; height: 32px; background-image: url(images/delete-32x32.png); }
+.ita-icon-delete-64x64 { width: 64px; height: 64px; background-image: url(images/delete-64x64.png); }
+.ita-icon-delete-128x128 { width: 128px; height: 128px; background-image: url(images/delete-128x128.png); }
+.ita-icon-key-24x24 { width: 24px; height: 24px; background-image: url(images/key-24x24.gif); }
+.ita-icon-portrait-128x128 { width: 128px; height: 128px; background-image: url(images/portraitdoc-128x128.png); }
+.ita-icon-portrait-64x64 { width: 64px; height: 64px; background-image: url(images/portraitdoc-64x64.png); }
+.ita-icon-portrait-32x32 { width: 32px; height: 32px; background-image: url(images/portraitdoc-32x32.png); }
+.ita-icon-portrait-16x16 { width: 16px; height: 16px; background-image: url(images/portraitdoc-16x16.png); }
+.ita-icon-landscape-128x128 { width: 128px; height: 128px; background-image: url(images/landscapedoc-128x128.png); }
+.ita-icon-landscape-64x64 { width: 64px; height: 64px; background-image: url(images/landscapedoc-64x64.png); }
+.ita-icon-landscape-32x32 { width: 32px; height: 32px; background-image: url(images/landscapedoc-32x32.png); }
+.ita-icon-firmato-32x32 { width: 32px; height: 32px; background-image: url(images/firmato-32x32.png); }
+.ita-icon-ftp-32x32 { width: 32px; height: 32px; background-image: url(images/ftp-icon-32x32.png); }
+.ita-icon-ftp-64x64 { width: 64px; height: 64px; background-image: url(images/ftp-icon-64x64.png); }
+.ita-icon-ftp-128x128 { width: 128px; height: 128px; background-image: url(images/ftp-icon-128x128.png); }
+.ita-icon-unlock-128x128 { width: 128px; height: 128px; background-image: url(images/unlock-128x128.png); }
+.ita-icon-unlock-64x64 { width: 64px; height: 64px; background-image: url(images/unlock-64x64.png); }
+.ita-icon-unlock-32x32 { width: 32px; height: 32px; background-image: url(images/unlock-32x32.png); }
+.ita-icon-unlock-24x24 { width: 24px; height: 24px; background-image: url(images/unlock-24x24.png); }
+.ita-icon-unlock-16x16 { width: 16px; height: 16px; background-image: url(images/unlock-16x16.png); }
+.ita-icon-mail-tamper-16x16 { width: 16px; height: 16px; background-image: url(images/mail-tamper-16x16.png); }
+.ita-icon-mail-tamper-24x24 { width: 24px; height: 24px; background-image: url(images/mail-tamper-24x24.png); }
+.ita-icon-mail-tamper-32x32 { width: 32px; height: 32px; background-image: url(images/mail-tamper-32x32.png); }
+.ita-icon-mail-tamper-64x64 { width: 64px; height: 64px; background-image: url(images/mail-tamper-64x64.png); }
+.ita-icon-mail-tamper-128x128 { width: 128px; height: 128px; background-image: url(images/mail-tamper-128x128.png); }
+.ita-icon-mail-verify-16x16 { width: 16px; height: 16px; background-image: url(images/mail-verify-16x16.png); }
+.ita-icon-mail-verify-24x24 { width: 24px; height: 24px; background-image: url(images/mail-verify-24x24.png); }
+.ita-icon-mail-verify-32x32 { width: 32px; height: 32px; background-image: url(images/mail-verify-32x32.png); }
+.ita-icon-mail-verify-64x64 { width: 64px; height: 64px; background-image: url(images/mail-verify-64x64.png); }
+.ita-icon-mail-verify-128x128 { width: 128px; height: 128px; background-image: url(images/mail-verify-128x128.png); }
+.ita-icon-mail-green-verify-16x16 { width: 16px; height: 16px; background-image: url(images/mail-green-verify-16x16.png); }
+.ita-icon-mail-green-verify-24x24 { width: 24px; height: 24px; background-image: url(images/mail-green-verify-24x24.png); }
+.ita-icon-mail-green-verify-32x32 { width: 32px; height: 32px; background-image: url(images/mail-green-verify-32x32.png); }
+.ita-icon-mail-green-verify-64x64 { width: 64px; height: 64px; background-image: url(images/mail-green-verify-64x64.png); }
+.ita-icon-mail-green-verify-128x128 { width: 128px; height: 128px; background-image: url(images/mail-green-verify-128x128.png); }
+.ita-icon-lock-128x128 { width: 128px; height: 128px; background-image: url(images/lock-icon-128x128.png); }
+.ita-icon-lock-64x64 { width: 64px; height: 64px; background-image: url(images/lock-icon-64x64.png); }
+.ita-icon-lock-32x32 { width: 32px; height: 32px; background-image: url(images/lock-icon-32x32.png); }
+.ita-icon-lock-24x24 { width: 24px; height: 24px; background-image: url(images/lock-icon-24x24.png); }
+.ita-icon-lock-16x16 { width: 16px; height: 16px; background-image: url(images/lock-icon-16x16.png); }
+.ita-icon-evidenzia-16x16 { width: 16px; height: 16px; background-image: url(images/evidenzia-16x16.png); }
+.ita-icon-evidenzia-24x24 { width: 24px; height: 24px; background-image: url(images/evidenzia-24x24.png); }
+.ita-icon-evidenzia-32x32 { width: 32px; height: 32px; background-image: url(images/evidenzia-32x32.png); }
+.ita-icon-evidenzia-64x64 { width: 64px; height: 64px; background-image: url(images/evidenzia-64x64.png); }
+.ita-icon-evidenzia-128x128 { width: 128px; height: 128px; background-image: url(images/evidenzia-128x128.png); }
+.ita-icon-flag-eu-16x16 { width: 16px; height: 16px; background-image: url(images/flag-eu-16x16.png); }
+.ita-icon-flag-eu-24x24 { width: 24px; height: 24px; background-image: url(images/flag-eu-24x24.png); }
+.ita-icon-flag-eu-32x32 { width: 32px; height: 32px; background-image: url(images/flag-eu-32x32.png); }
+.ita-icon-flag-eu-64x64 { width: 64px; height: 34px; background-image: url(images/flag-eu-64x64.png); }
+.ita-icon-flag-eu-128x128 { width: 128px; height: 128px; background-image: url(images/flag-eu-128x128.png); }
+.ita-icon-flag-it-16x16 { width: 16px; height: 16px; background-image: url(images/flag-it-16x16.png); }
+.ita-icon-flag-it-24x24 { width: 24px; height: 24px; background-image: url(images/flag-it-24x24.png); }
+.ita-icon-flag-it-32x32 { width: 32px; height: 32px; background-image: url(images/flag-it-32x32.png); }
+.ita-icon-flag-it-64x64 { width: 64px; height: 34px; background-image: url(images/flag-it-64x64.png); }
+.ita-icon-flag-it-128x128 { width: 128px; height: 128px; background-image: url(images/flag-it-128x128.png); }
+
+.ita-icon-sha256-128x128 { width: 128px; height: 128px; background-image: url(images/sha256-128x128.png); }
+.ita-icon-sha256-64x64 { width: 64px; height: 64px; background-image: url(images/sha256-64x64.png); }
+.ita-icon-sha256-32x32 { width: 32px; height: 32px; background-image: url(images/sha256-32x32.png); }
+.ita-icon-sha256-24x24 { width: 24px; height: 24px; background-image: url(images/sha256-24x24.png); }
+.ita-icon-sha256-16x16 { width: 16px; height: 16px; background-image: url(images/sha256-16x16.png); }
+
+
+.ita-icon-transferlr-16x16 { width: 16px; height: 16px; background-image: url(images/transferlr-16x16.png); }
+.ita-icon-transferlr-24x24 { width: 24px; height: 24px; background-image: url(images/transferlr-24x24.png); }
+.ita-icon-transferlr-32x32 { width: 32px; height: 32px; background-image: url(images/transferlr-32x32.png); }
+.ita-icon-transferlr-64x64 { width: 64px; height: 64px; background-image: url(images/transferlr-64x64.png); }
+.ita-icon-transferlr-128x128 { width: 128px; height: 128px; background-image: url(images/transferlr-128x128.png); }
+
+
+.ita-icon-File-Ext-32x32 { width: 32px; height: 32px; background-image: url(images/document-32x32.png); }
+.ita-icon-File-Ext-eml-32x32 { width: 32px; height: 32px; background-image: url(images/File-Extension-Eml-32x32.png); }
+.ita-icon-File-Ext-pdf-32x32 { width: 32px; height: 32px; background-image: url(images/File-Extension-Pdf-32x32.png); }
+.ita-icon-File-Ext-doc-32x32 { width: 32px; height: 32px; background-image: url(images/File-Extension-Doc-32x32.png); }
+.ita-icon-File-Ext-docx-32x32 { width: 32px; height: 32px; background-image: url(images/File-Extension-Docx-32x32.png); }
+.ita-icon-File-Ext-xml-32x32 { width: 32px; height: 32px; background-image: url(images/File-Extension-Xml-32x32.png); }
+.ita-icon-File-Ext-xhtml-32x32 { width: 32px; height: 32px; background-image: url(images/File-Extension-Xhtml-32x32.png); }
+.ita-icon-File-Ext-jpg-32x32 { width: 32px; height: 32px; background-image: url(images/File-Extension-Jpg-32x32.png); }
+.ita-icon-File-Ext-p7m-32x32 { width: 32px; height: 32px; background-image: url(images/File-Extension-P7m-32x32.png); }
+.ita-icon-File-Ext-p7s-32x32 { width: 32px; height: 32px; background-image: url(images/File-Extension-P7s-32x32.png); }
+.ita-icon-File-Ext-txt-32x32 { width: 32px; height: 32px; background-image: url(images/File-Extension-Txt-32x32.png); }
+.ita-icon-File-Ext-xls-32x32 { width: 32px; height: 32px; background-image: url(images/File-Extension-Xls-32x32.png); }
+.ita-icon-File-Ext-csv-32x32 { width: 32px; height: 32px; background-image: url(images/File-Extension-Csv-32x32.png); }
+.ita-icon-File-Ext-zip-32x32 { width: 32px; height: 32px; background-image: url(images/File-Extension-Zip-32x32.png); }
+.ita-icon-user-32x32 { width: 32px; height: 32px; background-image: url(images/User-32x32.png); }
+.ita-icon-user-16x16 { width: 16px; height: 16px; background-image: url(images/User-16x16.png); }
+.ita-icon-group-24x24 { width: 24px; height: 24px; background-image: url(images/Group-24x24.png); }
+.ita-icon-group-32x32 { width: 32px; height: 32px; background-image: url(images/Group-32x32.png); }
+.ita-icon-group-16x16 { width: 16px; height: 16px; background-image: url(images/Group-16x16.png); }
+
+.ita-icon-shield-green-16x16 { width: 16px; height: 16px; background-image: url(images/shield-green-16x16.png); }
+.ita-icon-shield-green-24x24 { width: 24px; height: 24px; background-image: url(images/shield-green-24x24.png); }
+.ita-icon-shield-green-32x32 { width: 32px; height: 32px; background-image: url(images/shield-green-32x32.png); }
+.ita-icon-shield-green-64x64 { width: 64px; height: 64px; background-image: url(images/shield-green-64x64.png); }
+.ita-icon-shield-green-128x128 { width: 128px; height: 128px; background-image: url(images/shield-green-128x128.png); }
+.ita-icon-shield-red-16x16 { width: 16px; height: 16px; background-image: url(images/shield-red-16x16.png); }
+.ita-icon-shield-red-24x24 { width: 24px; height: 24px; background-image: url(images/shield-red-24x24.png); }
+.ita-icon-shield-red-32x32 { width: 32px; height: 32px; background-image: url(images/shield-red-32x32.png); }
+.ita-icon-shield-red-64x64 { width: 64px; height: 64px; background-image: url(images/shield-red-64x64.png); }
+.ita-icon-shield-red-128x128 { width: 128px; height: 128px; background-image: url(images/shield-red-128x128.png); }
+.ita-icon-shield-grey-16x16 { width: 16px; height: 16px; background-image: url(images/shield-grey-16x16.png); }
+.ita-icon-shield-grey-24x24 { width: 24px; height: 24px; background-image: url(images/shield-grey-24x24.png); }
+.ita-icon-shield-grey-32x32 { width: 32px; height: 32px; background-image: url(images/shield-grey-32x32.png); }
+.ita-icon-shield-grey-64x64 { width: 64px; height: 64px; background-image: url(images/shield-grey-64x64.png); }
+.ita-icon-shield-grey-128x128 { width: 128px; height: 128px; background-image: url(images/shield-grey-128x128.png); }
+.ita-icon-shield-blue-16x16 { width: 16px; height: 16px; background-image: url(images/shield-blue-16x16.png); }
+.ita-icon-shield-blue-24x24 { width: 24px; height: 24px; background-image: url(images/shield-blue-24x24.png); }
+.ita-icon-shield-blue-32x32 { width: 32px; height: 32px; background-image: url(images/shield-blue-32x32.png); }
+.ita-icon-shield-blue-64x64 { width: 64px; height: 64px; background-image: url(images/shield-blue-64x64.png); }
+.ita-icon-shield-blue-128x128 { width: 128px; height: 128px; background-image: url(images/shield-blue-128x128.png); }
+.ita-icon-divieto-16x16 { width: 16px; height: 16px; background-image: url(images/divieto-16x16.png); }
+.ita-icon-divieto-24x24 { width: 24px; height: 24px; background-image: url(images/divieto-24x24.png); }
+.ita-icon-divieto-32x32 { width: 32px; height: 32px; background-image: url(images/divieto-32x32.png); }
+.ita-icon-divieto-64x64 { width: 64px; height: 64px; background-image: url(images/divieto-64x64.png); }
+.ita-icon-divieto-128x128 { width: 128px; height: 128px; background-image: url(images/divieto-128x128.png); }
+.ita-icon-codFis-128x128 { width: 128px; height: 128px; background-image: url(images/codFis-128x128.png); }
+.ita-icon-codFis-64x64 { width: 64px; height: 64px; background-image: url(images/codFis-64x64.png); }
+.ita-icon-codFis-32x32 { width: 32px; height: 32px; background-image: url(images/codFis-32x32.png); }
+.ita-icon-codFis-24x24 { width: 24px; height: 24px; background-image: url(images/codFis-24x24.png); }
+.ita-icon-codFis-16x16 { width: 16px; height: 16px; background-image: url(images/codFis-16x16.png); }
+
+.ita-icon-sigillo-256x256 { width: 256px; height: 256px; background-image: url(images/sigillo-256x256.png); }
+.ita-icon-sigillo-128x128 { width: 128px; height: 128px; background-image: url(images/sigillo-128x128.png); }
+.ita-icon-sigillo-64x64 { width: 64px; height: 64px; background-image: url(images/sigillo-64x64.png); }
+.ita-icon-sigillo-32x32 { width: 32px; height: 32px; background-image: url(images/sigillo-32x32.png); }
+.ita-icon-sigillo-24x24 { width: 24px; height: 24px; background-image: url(images/sigillo-24x24.png); }
+.ita-icon-sigillo-16x16 { width: 16px; height: 16px; background-image: url(images/sigillo-16x16.png); }
+
+.ita-icon-download-128x128 { width: 128px; height: 128px; background-image: url(images/download-128x128.png); }
+.ita-icon-download-64x64 { width: 64px; height: 64px; background-image: url(images/download-64x64.png); }
+.ita-icon-download-32x32 { width: 32px; height: 32px; background-image: url(images/download-32x32.png); }
+.ita-icon-download-24x24 { width: 24px; height: 24px; background-image: url(images/download-24x24.png); }
+.ita-icon-download-16x16 { width: 16px; height: 16px; background-image: url(images/download-16x16.png); }
+.ita-icon-upload-128x128 { width: 128px; height: 128px; background-image: url(images/upload-128x128.png); }
+.ita-icon-upload-64x64 { width: 64px; height: 64px; background-image: url(images/upload-64x64.png); }
+.ita-icon-upload-32x32 { width: 32px; height: 32px; background-image: url(images/upload-32x32.png); }
+.ita-icon-upload-24x24 { width: 24px; height: 24px; background-image: url(images/upload-24x24.png); }
+.ita-icon-upload-16x16 { width: 16px; height: 16px; background-image: url(images/upload-16x16.png); }
+.ita-icon-pt-128x128 { width: 128px; height: 128px; background-image: url(images/pt-128x128.png); }
+.ita-icon-pt-64x64 { width: 64px; height: 64px; background-image: url(images/pt-64x64.png); }
+.ita-icon-pt-32x32 { width: 32px; height: 32px; background-image: url(images/pt-32x32.png); }
+.ita-icon-pt-24x24 { width: 24px; height: 24px; background-image: url(images/pt-24x24.png); }
+.ita-icon-pt-16x16 { width: 16px; height: 16px; background-image: url(images/pt-16x16.png); }
+
+.ita-icon-yellow-alert-128x128 { width: 128px; height: 128px; background-image: url(images/yellow-alert-128x128.png); }
+.ita-icon-yellow-alert-64x64 { width: 64px; height: 64px; background-image: url(images/yellow-alert-64x64.png); }
+.ita-icon-yellow-alert-32x32 { width: 32px; height: 32px; background-image: url(images/yellow-alert-32x32.png); }
+.ita-icon-yellow-alert-24x24 { width: 24px; height: 24px; background-image: url(images/yellow-alert-24x24.png); }
+.ita-icon-yellow-alert-16x16 { width: 16px; height: 16px; background-image: url(images/yellow-alert-16x16.png); }
+
+.ita-icon-misura-128x128 { width: 128px; height: 128px; background-image: url(images/misura-128x128.png); }
+.ita-icon-misura-64x64 { width: 64px; height: 64px; background-image: url(images/misura-64x64.png); }
+.ita-icon-misura-32x32 { width: 32px; height: 32px; background-image: url(images/misura-32x32.png); }
+.ita-icon-misura-24x24 { width: 24px; height: 24px; background-image: url(images/misura-24x24.png); }
+.ita-icon-misura-16x16 { width: 16px; height: 16px; background-image: url(images/misura-16x16.png); }
+
+.ita-icon-document-open-128x128 { width: 128px; height: 128px; background-image: url(images/document-open-128x128.png); }
+.ita-icon-document-open-64x64 { width: 64px; height: 64px; background-image: url(images/document-open-64x64.png); }
+.ita-icon-document-open-32x32 { width: 32px; height: 32px; background-image: url(images/document-open-32x32.png); }
+.ita-icon-document-open-24x24 { width: 24px; height: 24px; background-image: url(images/document-open-24x24.png); }
+.ita-icon-document-open-16x16 { width: 16px; height: 16px; background-image: url(images/document-open-16x16.png); }
+
+.ita-icon-pdftotif-128x128 { width: 128px; height: 128px; background-image: url(images/pdftotif-128x128.png); }
+.ita-icon-pdftotif-64x64 { width: 64px; height: 64px; background-image: url(images/pdftotif-64x64.png); }
+.ita-icon-pdftotif-32x32 { width: 32px; height: 32px; background-image: url(images/pdftotif-32x32.png); }
+.ita-icon-pdftotif-24x24 { width: 24px; height: 24px; background-image: url(images/pdftotif-24x24.png); }
+.ita-icon-pdftotif-16x16 { width: 16px; height: 16px; background-image: url(images/pdftotif-16x16.png); }
+
+.ita-icon-spreadsheet-128x128 { width: 128px; height: 128px; background-image: url(images/spreadsheet-128x128.png); }
+.ita-icon-spreadsheet-64x64 { width: 64px; height: 64px; background-image: url(images/spreadsheet-64x64.png); }
+.ita-icon-spreadsheet-32x32 { width: 32px; height: 32px; background-image: url(images/spreadsheet-32x32.png); }
+.ita-icon-spreadsheet-24x24 { width: 24px; height: 24px; background-image: url(images/spreadsheet-24x24.png); }
+.ita-icon-spreadsheet-16x16 { width: 16px; height: 16px; background-image: url(images/spreadsheet-16x16.png); }
+
+.ita-icon-save-128x128 { width: 128px; height: 128px; background-image: url(images/save-128x128.png); }
+.ita-icon-save-64x64 { width: 64px; height: 64px; background-image: url(images/save-64x64.png); }
+.ita-icon-save-32x32 { width: 32px; height: 32px; background-image: url(images/save-32x32.png); }
+.ita-icon-save-24x24 { width: 24px; height: 24px; background-image: url(images/save-24x24.png); }
+.ita-icon-save-16x16 { width: 24px; height: 24px; background-image: url(images/save-16x16.png); }
+
+.ita-icon-flag-green-16x16{ width: 16px; height: 16px; background-image: url(images/flag-green-16x16.png); }
+.ita-icon-flag-green-24x24{ width: 24px; height: 24px; background-image: url(images/flag-green-24x24.png); }
+.ita-icon-flag-green-32x32{ width: 32px; height: 32px; background-image: url(images/flag-green-32x32.png); }
+.ita-icon-flag-green-48x48 { width: 48px; height: 48px; background-image: url(images/flag-green-48x48.png); }
+.ita-icon-flag-red-16x16 { width: 16px; height: 16px; background-image: url(images/flag-red-16x16.png); }
+.ita-icon-flag-red-24x24 { width: 24px; height: 24px; background-image: url(images/flag-red-24x24.png); }
+.ita-icon-flag-red-32x32 { width: 32px; height: 32px; background-image: url(images/flag-red-32x32.png); }
+.ita-icon-flag-red-48x48 { width: 48px; height: 48px; background-image: url(images/flag-red-48x48.png); }
+.ita-icon-flag-yellow-16x16 { width: 16px; height: 16px; background-image: url(images/flag-yellow-16x16.png); }
+.ita-icon-flag-yellow-24x24 { width: 24px; height: 24px; background-image: url(images/flag-yellow-24x24.png); }
+.ita-icon-flag-yellow-32x32 { width: 32px; height: 32px; background-image: url(images/flag-yellow-32x32.png); }
+.ita-icon-flag-yellow-48x48 { width: 48px; height: 48px; background-image: url(images/flag-yellow-48x48.png); }
+.ita-icon-forms-128x128 { width: 128px; height: 128px; background-image: url(images/forms-128x128.png); }
+.ita-icon-forms-64x64 { width: 64px; height: 64px; background-image: url(images/forms-64x64.png); }
+.ita-icon-forms-32x32 { width: 32px; height: 32px; background-image: url(images/forms-32x32.png); }
+.ita-icon-forms-24x24 { width: 24px; height: 24px; background-image: url(images/forms-24x24.png); }
+.ita-icon-forms-16x16 { width: 16px; height: 16px; background-image: url(images/forms-16x16.png); }
+
+.ita-icon-home-64x64 { width: 64px; height: 64px; background-image: url(images/home-64x64.png); }
+.ita-icon-home-32x32 { width: 32px; height: 32px; background-image: url(images/home-32x32.png); }
+
+.ita-icon-semaforo-32x32 { width: 32px; height: 32px; background-image: url(images/semaforo-32x32.png); }
+.ita-icon-semaforo-64x64 { width: 64px; height: 64px; background-image: url(images/semaforo-64x64.png); }
+.ita-icon-semaforo-128x128 { width: 128px; height: 128px; background-image: url(images/semaforo-128x128.png); }
+.ita-icon-semaforo-blue-24x24 { width: 24px; height: 24px; background-image: url(images/semaforo-blue-24x24.png); }
+.ita-icon-semaforo-blue-32x32 { width: 32px; height: 32px; background-image: url(images/semaforo-blue-32x32.png); }
+.ita-icon-semaforo-blue-64x64 { width: 64px; height: 64px; background-image: url(images/semaforo-blue-64x64.png); }
+.ita-icon-semaforo-blue-128x128 { width: 128px; height: 128px; background-image: url(images/semaforo-blue-128x128.png); }
+
+.ita-icon-star-yellow-128x128 { width: 128px; height: 128px; background-image: url(images/Star-yellow-128x128.png); }
+.ita-icon-star-yellow-64x64 { width: 64px; height: 64px; background-image: url(images/Star-yellow-64x64.png); }
+.ita-icon-star-yellow-32x32 { width: 32px; height: 32px; background-image: url(images/Star-yellow-32x32.png); }
+.ita-icon-star-yellow-24x24 { width: 24px; height: 24px; background-image: url(images/Star-yellow-24x24.png); }
+.ita-icon-star-yellow-16x16 { width: 16px; height: 16px; background-image: url(images/Star-yellow-16x16.png); }
+
+.ita-icon-map-position-128x128 { width: 128px; height: 128px; background-image: url(images/map-position-128x128.png); }
+.ita-icon-map-position-64x64   { width: 64px; height: 64px;   background-image: url(images/map-position-64x64.png); }
+.ita-icon-map-position-32x32   { width: 32px; height: 32px;   background-image: url(images/map-position-32x32.png); }
+.ita-icon-map-position-24x24   { width: 24px; height: 24px;   background-image: url(images/map-position-24x24.png); }
+.ita-icon-map-position-16x16   { width: 16px; height: 16px;   background-image: url(images/map-position-16x16.png); }
+
+.ita-icon-google-maps-32x32 { width: 32px; height: 32px; background-image: url(images/google-maps-32x32.png); }
+
+/* icons in tinymce (24x24) */
+
+.ita-icon-bitmap-16x16 { width: 16px; height: 16px; background-image: url(images/bitmap-16x16.png); }
+.ita-icon-bitmap-24x24 { width: 24px; height: 24px; background-image: url(images/bitmap-24x24.png) !important; }
+.ita-icon-bitmap-32x32 { width: 32px; height: 32px; background-image: url(images/bitmap-32x32.png); }
+.ita-icon-bitmap-64x64 { width: 64px; height: 64px; background-image: url(images/bitmap-64x64.png); }
+.ita-icon-bitmap-128x128 { width: 128px; height: 128px; background-image: url(images/bitmap-128x128.png); }
+.ita-icon-dictionary-16x16 { width: 16px; height: 16px; background-image: url(images/dictionary-16x16.png); }
+.ita-icon-dictionary-24x24 { width: 24px; height: 24px; background-image: url(images/dictionary-24x24.png) !important; }
+.ita-icon-dictionary-32x32 { width: 32px; height: 32px; background-image: url(images/dictionary-32x32.png); }
+.ita-icon-dictionary-64x64 { width: 64px; height: 64px; background-image: url(images/dictionary-64x64.png); }
+.ita-icon-dictionary-128x128 { width: 128px; height: 128px; background-image: url(images/dictionary-128x128.png); }
+.ita-icon-edit-16x16 { width: 16px; height: 16px; background-image: url(images/edit-16x16.png); }
+.ita-icon-edit-24x24 { width: 24px; height: 24px; background-image: url(images/edit-24x24.png) !important; }
+.ita-icon-edit-32x32 { width: 32px; height: 32px; background-image: url(images/edit-32x32.png); }
+.ita-icon-edit-128x128 { width: 128px; height: 128px; background-image: url(images/edit-128x128.png); }
+.ita-icon-euro-blue-16x16 { width: 16px; height: 16px; background-image: url(images/euro-blue-16x16.png); }
+.ita-icon-euro-blue-24x24 { width: 24px; height: 24px; background-image: url(images/euro-blue-24x24.png) !important; }
+.ita-icon-euro-blue-32x32 { width: 32px; height: 32px; background-image: url(images/euro-blue-32x32.png); }
+.ita-icon-euro-blue-64x64 { width: 64px; height: 64px; background-image: url(images/euro-blue-64x64.png); }
+.ita-icon-euro-blue-128x128 { width: 128px; height: 128px; background-image: url(images/euro-blue-128x128.png); }
+
+.ita-icon-timbro-16x16 { width: 16px; height: 16px; background-image: url(images/timbro-16x16.png); }
+.ita-icon-timbro-24x24 { width: 24px; height: 24px; background-image: url(images/timbro-24x24.png) !important; }
+.ita-icon-timbro-32x32 { width: 32px; height: 32px; background-image: url(images/timbro-32x32.png); }
+.ita-icon-timbro-64x64 { width: 64px; height: 64px; background-image: url(images/timbro-64x64.png); }
+.ita-icon-timbro-128x128 { width: 128px; height: 128px; background-image: url(images/timbro-128x128.png); }
+
+.ita-icon-publish-16x16 { width: 16px; height: 16px; background-image: url(images/publish-16x16.png); }
+.ita-icon-publish-24x24 { width: 24px; height: 24px; background-image: url(images/publish-24x24.png); }
+.ita-icon-publish-32x32 { width: 32px; height: 32px; background-image: url(images/publish-32x32.png); }
+.ita-icon-no-publish-24x24 { width: 24px; height: 24px; background-image: url(images/no-publish-24x24.png); }
+.ita-icon-no-publish-32x32 { width: 32px; height: 32px; background-image: url(images/no-publish-32x32.png); }
+
+.ita-icon-excel-flat-128x128 { width: 128px; height: 128px; background-image: url(images/excel-flat-128x128.png); }
+.ita-icon-excel-flat-64x64 { width: 64px; height: 64px; background-image: url(images/excel-flat-64x64.png); }
+.ita-icon-excel-flat-32x32 { width: 32px; height: 32px; background-image: url(images/excel-flat-32x32.png); }
+.ita-icon-excel-flat-24x24 { width: 24px; height: 24px; background-image: url(images/excel-flat-24x24.png); }
+.ita-icon-excel-flat-16x16 { width: 16px; height: 16px; background-image: url(images/excel-flat-16x16.png); }
+
+.ita-icon-document-ris-128x128 { width: 128px; height: 128px; background-image: url(images/document-ris-128x128.png); }
+.ita-icon-document-ris-64x64 { width: 64px; height: 64px; background-image: url(images/document-ris-64x64.png); }
+.ita-icon-document-ris-32x32 { width: 32px; height: 32px; background-image: url(images/document-ris-32x32.png); }
+.ita-icon-document-ris-24x24 { width: 24px; height: 24px; background-image: url(images/document-ris-24x24.png); }
+.ita-icon-document-ris-16x16 { width: 16px; height: 16px; background-image: url(images/document-ris-16x16.png); }
+
+.ita-icon-document-ris-del-128x128 { width: 128px; height: 128px; background-image: url(images/document-ris-del-128x128.png); }
+.ita-icon-document-ris-del-64x64 { width: 64px; height: 64px; background-image: url(images/document-ris-del-64x64.png); }
+.ita-icon-document-ris-del-32x32 { width: 32px; height: 32px; background-image: url(images/document-ris-del-32x32.png); }
+.ita-icon-document-ris-del-24x24 { width: 24px; height: 24px; background-image: url(images/document-ris-del-24x24.png); }
+.ita-icon-document-ris-del-16x16 { width: 16px; height: 16px; background-image: url(images/document-ris-del-16x16.png); }
+
+.ita-icon-chiusared-128x128 { width: 128px; height: 128px; background-image: url(images/chiusared-128x128.png); }
+.ita-icon-chiusared-64x64 { width: 64px; height: 64px; background-image: url(images/chiusared-64x64.png); }
+.ita-icon-chiusared-32x32 { width: 32px; height: 32px; background-image: url(images/chiusared-32x32.png); }
+.ita-icon-chiusared-24x24 { width: 24px; height: 24px; background-image: url(images/chiusared-24x24.png); }
+.ita-icon-chiusared-16x16 { width: 16px; height: 16px; background-image: url(images/chiusared-16x16.png); }
+.ita-icon-apertared-128x128 { width: 128px; height: 128px; background-image: url(images/apertared-128x128.png); }
+.ita-icon-apertared-64x64 { width: 64px; height: 64px; background-image: url(images/apertared-64x64.png); }
+.ita-icon-apertared-32x32 { width: 32px; height: 32px; background-image: url(images/apertared-32x32.png); }
+.ita-icon-apertared-24x24 { width: 24px; height: 24px; background-image: url(images/apertared-24x24.png); }
+.ita-icon-apertared-16x16 { width: 16px; height: 16px; background-image: url(images/apertared-16x16.png); }
+
+.ita-icon-safe-128x128 { width: 128px; height: 128px; background-image: url(images/safe-128x128.png); }
+.ita-icon-safe-64x64 { width: 64px; height: 64px; background-image: url(images/safe-64x64.png); }
+.ita-icon-safe-32x32 { width: 32px; height: 32px; background-image: url(images/safe-32x32.png); }
+.ita-icon-safe-24x24 { width: 24px; height: 24px; background-image: url(images/safe-24x24.png); }
+.ita-icon-safe-16x16 { width: 16px; height: 16px; background-image: url(images/safe-16x16.png); }
+
+.ita-icon-qrcode-32x32 { width: 32px; height: 32px; background-image: url(images/qrcode-32x32.png); }
+
+.ita-icon-footsteps-128x128 { width: 128px; height: 128px; background-image: url(images/footsteps-128x128.png); }
+.ita-icon-footsteps-64x64 { width: 64px; height: 64px; background-image: url(images/footsteps-64x64.png); }
+.ita-icon-footsteps-32x32 { width: 32px; height: 32px; background-image: url(images/footsteps-32x32.png); }
+.ita-icon-footsteps-24x24 { width: 24px; height: 24px; background-image: url(images/footsteps-24x24.png); }
+.ita-icon-footsteps-16x16 { width: 16px; height: 16px; background-image: url(images/footsteps-16x16.png); }
+
+.ita-icon-scanner-network-128x128 { width: 128px; height: 128px; background-image: url(images/scanner-network-128x128.png); }
+.ita-icon-scanner-network-64x64 { width: 64px; height: 64px; background-image: url(images/scanner-network-64x64.png); }
+.ita-icon-scanner-network-32x32 { width: 32px; height: 32px; background-image: url(images/scanner-network-32x32.png); }
+.ita-icon-scanner-network-24x24 { width: 24px; height: 24px; background-image: url(images/scanner-network-24x24.png); }
+.ita-icon-scanner-network-16x16 { width: 16px; height: 16px; background-image: url(images/scanner-network-16x16.png); }
+
+.ita-icon-regioneMarche-128x128 { width: 128px; height: 128px; background-image: url(images/regioneMarche-128x128.png); }
+.ita-icon-regioneMarche-64x64 { width: 64px; height: 64px; background-image: url(images/regioneMarche-64x64.png); }
+.ita-icon-regioneMarche-32x32 { width: 32px; height: 32px; background-image: url(images/regioneMarche-32x32.png); }
+.ita-icon-regioneMarche-24x24 { width: 24px; height: 24px; background-image: url(images/regioneMarche-24x24.png); }
+.ita-icon-regioneMarche-16x16 { width: 16px; height: 16px; background-image: url(images/regioneMarche-16x16.png); }
+.ita-icon-clearfield-16x16 { width: 16px; height: 16px; background-image: url(images/clearfield-16x16.png); }
+
+.ita-icon-regioneToscana-64x64 { width: 64px; height: 64px; background-image: url(images/regioneToscana-64x64.png); }
+.ita-icon-regioneToscana-32x32 { width: 32px; height: 32px; background-image: url(images/regioneToscana-32x32.png); }
+.ita-icon-regioneToscana-24x24 { width: 24px; height: 24px; background-image: url(images/regioneToscana-24x24.png); }
+.ita-icon-regioneToscana-16x16 { width: 16px; height: 16px; background-image: url(images/regioneToscana-16x16.png); }
+
+.ita-icon-find-64x64 { width: 64px; height: 64px; background-image: url(images/find-64x64.png); }
+.ita-icon-find-32x32 { width: 32px; height: 32px; background-image: url(images/find-32x32.png); }
+.ita-icon-find-24x24 { width: 24px; height: 24px; background-image: url(images/find-24x24.png); }
+.ita-icon-find-16x16 { width: 16px; height: 16px; background-image: url(images/find-16x16.png); }
+
+/* TinyMCE 4.x Visualaid icon fix */
+i.mce-ico.mce-i-visualaid { border: 1px dotted #000; }
+
+/* form edit elements */
+.ita-field{
+    margin:2px;
+    display:inline-block;
+    vertical-align:bottom;
+}
+
+.ita-edit-tinymce-wrapper-fullwidth .mce-panel {
+    border: 0;
+}
+
+.ita-edit, .ita-edit-multiline, .ita-select, .ita-edit-lookup, .ita-edit-upload, .ita-edit-tinymce{
+    background-color:white;
+    background:white;
+    color:black;
+    /*font-family:sans-serif;*/
+    margin:0px;
+    padding:0px;
+}
+
+.ita-span{
+    padding: 0 0 5px;
+    display: inline-block;
+}
+
+.ita-edit{
+    min-height:16px;
+}
+
+.ita-edit-lookup-button, ita-edit-upload-button {
+    padding-left:3px;
+    /*position:absolute; */
+}
+
+
+input{
+    padding-left:2px;
+    padding-right:2px;
+    padding-bottom:0px;
+    padding-top:0px;
+
+}
+
+input.ita-decode{
+    background-color:lightyellow;
+    background:lightyellow;
+    color:black;
+    margin:0px;
+    padding:0px;
+    /*font-family:sans-serif*/
+}
+
+
+input.ita-readonly,textarea.ita-readonly,select.ita-readonly{
+    background-color: lightyellow;
+    color:black;
+    margin:0px;
+    padding:0px;
+}
+
+.ui-datepicker{
+    z-index:5000000000;
+}
+
+.ita-hidden{
+    display:none;
+}
+
+label.sx{
+    display:block;
+    float:left;
+    text-align:right;
+    padding:0 5px 0 0;
+}
+label.top{
+    display:block;
+}
+label.dx{
+    display:block;
+    float:right;
+}
+label.bot{
+    display:block;
+}
+.ita-Wordwrap {
+    white-space: pre-wrap   !important;   /* CSS3 */
+    white-space: -moz-pre-wrap; /* Firefox */
+    white-space: -pre-wrap;     /* Opera <7 */
+    white-space: -o-pre-wrap;   /* Opera 7 */
+    word-wrap: break-word   !important;      /* IE */
+}
+
+/* itaEngine Containers Styles */
+
+.ita-datapage{
+    padding:1px;
+    margin:2px;
+}
+
+.ita-div{
+    /*position:relative;*/
+}
+
+.ita-font-normal{
+    font-weight: normal !important;
+}
+.ita-font-bold{
+    font-weight: bold !important;
+}
+
+.ita-font-style-italic{
+    font-style:italic !important;
+}
+
+.ita-style-color-red{
+    color:red;
+    font-size:1.2em;
+}
+
+.ita-text-decoration-underline{
+    text-decoration:underline !important;
+}
+
+.ita-box, .ita-box-error, .ita-box-highlight{
+    /*display:inline-block;*/
+    /*float:left;*/
+    position:relative;
+    /*    padding:2px;
+    margin:2px; */
+    padding:0px;
+    margin:2px;
+
+}
+
+.ita-eqcontainer{
+    overflow:hidden;
+}
+
+.ita-iframe{
+    overflow:scroll;
+}
+
+.ita-tab{
+    padding:0px;
+    margin:0px;
+}
+
+.ita-tabpane{
+    overflow:auto;
+}
+
+.ita-header{
+    padding:2px;
+    margin:1px;
+
+}
+.ita-button-right{
+    margin-left: 0px;
+}
+
+.ita-button-left{
+    margin-right: 0px;
+}
+
+.ita-button , .ita-button-validate , .ita-button-client{
+    cursor:url;
+    /*    margin:2px; */
+    margin:2px;
+    position:relative;
+    vertical-align: bottom;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+
+.ita-button-icon-left {
+    /*
+    position: absolute;
+    margin:auto;
+    left:1px;
+    top:0;
+    bottom:0;    
+    display:inline-block;
+    */
+    margin:0px;
+    float: left;
+}
+
+.ita-button-text{
+    float:left;
+    margin: 1px;
+}
+.ita-button-text-content{
+    text-align:center;
+    padding-left:2px;
+    padding-right:2px;
+}
+.ita-button-icon-rigth {
+    /*    margin:1px;*/
+    margin:0px;
+    float: left;
+}
+
+/* .ita-transparency
+{   
+opacity:0.3;
+filter:alpha(opacity=30);
+-moz-opacity:0.3;
+background-color:#000000;
+width:1500px;
+height:1500px;
+position:absolute;
+top:0px;
+left:0px;
+z-index:-1;
+}
+*/
+.ita-sortable { width: 96%;
+                padding-top:2px;
+                padding-left:4px;
+                padding-bottom: 100px;
+                float:left;
+}
+.ita-portlet { width:99%;
+               height:100%;
+               /*padding-bottom:2px;*/
+               margin:2px;
+               float:left;
+               overflow: hidden;
+               box-shadow: 2px 2px 10px #888;               
+}
+.ita-portlet-header { margin: 0.3em; padding-bottom: 4px; padding-left: 0.2em; }
+.ita-portlet-header .ui-icon { float: right; }
+.ita-portlet-content { height:100%;
+                       padding: 0.4em;
+}
+.ita-sortable .ui-sortable-placeholder { border: 1px dotted black; visibility: visible !important; height: 50px !important; }
+.ita-sortable .ui-sortable-placeholder * { visibility: hidden; }
+
+.ita-menugrid > .gs-w {
+    color: #fff;
+    line-height: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.ita-menugrid > .gs-w .onhover {
+    display: none;
+}
+
+.ita-menugrid > .gs-w:hover .onhover {
+    display: block;
+}
+
+/*.ita-menugrid > .gs-w > div {
+    padding: 10px;
+}*/
+
+#ita-controlbar {
+    width:250px;
+    height:auto;    
+    padding-top:2px;
+    padding-right:2px;
+}
+
+/*
+   .ita-portlet, ita-portletactived{
+    overflow:hidden;
+    position:relative;
+    background:transparent;
+    padding:0.2em;
+    height:100%;
+}
+*/
+
+.ui-dialog-titlebar{
+    height:16px;
+    padding:2px;
+}
+
+div.ui-dialog{
+    font-size:100%;
+    box-shadow: 2px 2px 10px #888;    
+}
+
+.ita-button-control{
+    float:right;
+}
+
+/*
+.ita-portlet-header-title{
+    float:left;
+}
+*/
+
+/*
+.ita-portlet-content{
+    clear:right;
+    height:inherit;
+    position:relative;
+    background:transparent;
+    padding-top:0.3em;
+    padding-bottom:0.3em;
+}
+*/
+
+.ita-form{
+    position:relative;
+}
+
+form{
+    position:relative;
+}
+
+.formBody{
+    position:relative;
+    height:100%;
+
+}
+
+.ui-jqgrid {
+    font-size:.8em;
+    margin:2px;
+}
+
+.ui-widget {
+    font-size: 1em;
+}
+
+.ui-tabs .ui-tabs-panel{
+    padding: 0.4em 0.2em;
+}
+
+.ita-icon-right{
+    margin-left:3px;
+    float:right;
+    display:inline-block;
+}
+.ita-icon-left{
+    margin-right:3px;
+    float:left;
+    display:inline-block;
+}
+
+
+/*
+.ita-timer{
+    right:0;
+    float:right;
+}
+*/
+body{
+    /*    background-image:url('images/wallp03.png'); */
+    overflow:hidden;
+    font-size: 75%;
+}
+
+/* PERSONALIZZAZIONI ALLO STILE DI JQUERYUI */
+
+
+/*
+.ui-autocomplete-loading { background: white url('images/ui-anim_basic_16x16.gif') right center no-repeat; }
+.ui-autocomplete{max-height:140px;overflow-y:auto;overflow-x:hidden;padding-right:20px;}
+*/
+/* IE 6 doesn't support max-height. FIX BUG
+*/
+/* 
+* html .ui-autocomplete {height: 140px;}
+.ui-datepicker-trigger{height:19px;width:19px}
+*/
+
+/* VERSIONE 3.0 */
+#appletIFrame{height:0;position:absolute;}
+body{overflow:hidden;font-size:75%;margin:0;padding:0;}
+
+
+#desktopHeader{position:relative;}
+#headerBar{padding:3px 5px;margin:0;overflow:hidden;border:0;}
+/*#desktopBody{overflow:auto;position:relative;background:#eee}*/
+#desktopFooterWrapper{height:24px;overflow:hidden;position:absolute;bottom:0;left:0;width:100%;display:none;}
+#desktopFooter{font-size:0.8em;}
+#desktopLogo{float:left;height:21px;margin-top:-2px;margin-right:6px;}
+#info{float:left;margin:6px 0 0;}
+#buttons{float:left;padding:0px 10px;border-left:1px dotted #555;margin:0 10px;}
+#buttons div.button{float:left;}
+#desktopHeaderTitle{display:inline;font-size:1.5em;}
+#desktopHeaderInfo{display:inline;margin:0 2px;}
+#desktopTitlebar{height:20px;padding:2px;}
+
+.ita-appPane{overflow:auto;position:relative;background:#eee}
+
+.fg-button { clear:left; margin:0 4px; padding: .4em 1em; text-decoration:none !important; cursor:pointer; position: relative; text-align: center; zoom: 1; }
+/*
+.fg-button .ui-icon { position: absolute; top: 50%; margin-top: -8px; left: 50%; margin-left: -8px; }
+*/
+a.fg-button { float:left;  }
+button.fg-button { width:auto; overflow:visible; } /* removes extra button width in IE */
+.fg-button-icon-left { padding-left: 2.1em; }
+.fg-button-icon-right { padding-right: 2.1em; }
+.fg-button-icon-left .ui-icon { right: auto; left: 1.5em; margin-left: 0; }
+.fg-button-icon-right .ui-icon { left: auto; right: 1.5em; margin-left: 0; }
+.fg-button-icon-solo { display:block; width:8px; text-indent: -9999px; }	 /* solo icon buttons must have block properties for the text-indent to work */	
+.fg-button.ui-state-loading .ui-icon { background: url(spinner_bar.gif) no-repeat 0 0; }
+.hidden { position:absolute; top:0; left:-9999px; width:1px; height:1px; overflow:hidden; }
+
+/* Styles for jQuery menu widget
+Author:	Maggie Wachs, maggie@filamentgroup.com
+Date:		September 2008
+*/
+
+/* REQUIRED STYLES - the menus will only render correctly with these rules */	
+.fg-menu-container{position:absolute;top:0;left:-999px;padding:.4em;overflow:hidden;z-index:100000}
+.fg-menu-container.fg-menu-flyout { overflow: visible; }
+.fg-menu, .fg-menu ul { list-style-type:none; padding: 0; margin:0; }
+.fg-menu { position:relative; }
+.fg-menu-flyout .fg-menu { position:static; }
+.fg-menu ul { position:absolute; top:0; }
+.fg-menu ul ul { top:-1px; }
+.fg-menu-container.fg-menu-ipod .fg-menu-content, 
+.fg-menu-container.fg-menu-ipod .fg-menu-content ul { background: none !important; }
+.fg-menu.fg-menu-scroll,
+.fg-menu ul.fg-menu-scroll { overflow: scroll;  overflow-x: hidden; }
+.fg-menu li { clear:both; float:left; width:100%; margin: 0; padding:0; border: 0; }	
+.fg-menu li li { font-size:1em; } /* inner li font size must be reset so that they don't blow up */
+.fg-menu-flyout ul ul { padding: .4em; }
+.fg-menu-flyout li { position:relative; }
+.fg-menu-scroll { overflow: scroll; overflow-x: hidden; }
+.fg-menu-breadcrumb { margin: 0; padding: 0; }
+.fg-menu-footer {  margin-top: .4em; padding: .4em; }
+.fg-menu-header {  margin-bottom: .4em; padding: .4em; }
+.fg-menu-breadcrumb li { float: left; list-style: none; margin: 0; padding: 0 .2em; font-size: .9em; opacity: .7; }
+.fg-menu-breadcrumb li.fg-menu-prev-list,
+.fg-menu-breadcrumb li.fg-menu-current-crumb { clear: left; float: none; opacity: 1; }
+.fg-menu-breadcrumb li.fg-menu-current-crumb { padding-top: .2em; }
+.fg-menu-breadcrumb a, 
+.fg-menu-breadcrumb span { float: left; }
+.fg-menu-footer a:link,
+.fg-menu-footer a:visited { float:left; width:100%; text-decoration: none; }
+.fg-menu-footer a:hover,
+.fg-menu-footer a:active {  }
+.fg-menu-footer a span { float:left; cursor: pointer; }
+.fg-menu-breadcrumb .fg-menu-prev-list a:link,
+.fg-menu-breadcrumb .fg-menu-prev-list a:visited,
+.fg-menu-breadcrumb .fg-menu-prev-list a:hover,
+.fg-menu-breadcrumb .fg-menu-prev-list a:active { background-image: none; text-decoration:none; }
+.fg-menu-breadcrumb .fg-menu-prev-list a { float: left; padding-right: .4em; }
+.fg-menu-breadcrumb .fg-menu-prev-list a .ui-icon { float: left; }	
+.fg-menu-breadcrumb .fg-menu-current-crumb a:link,
+.fg-menu-breadcrumb .fg-menu-current-crumb a:visited,
+.fg-menu-breadcrumb .fg-menu-current-crumb a:hover,
+.fg-menu-breadcrumb .fg-menu-current-crumb a:active { display:block; background-image:none; font-size:1.3em; text-decoration:none; }
+
+/* REQUIRED LINK STYLES: links are "display:block" by default; if the menu options are split into 
+        selectable node links and 'next' links, the script floats the node links left and floats the 'next' links to the right	*/
+.fg-menu a:link,
+.fg-menu a:visited,
+.fg-menu a:hover,
+.fg-menu a:active { float:left; width:92%; padding:.3em 3%; text-decoration:none; outline: 0 !important; }
+.fg-menu a { border: 1px dashed transparent; font-size:.9em}
+.fg-menu a.ui-state-default:link,
+.fg-menu a.ui-state-default:visited,
+.fg-menu a.ui-state-default:hover,
+.fg-menu a.ui-state-default:active,
+.fg-menu a.ui-state-hover:link,
+.fg-menu a.ui-state-hover:visited,
+.fg-menu a.ui-state-hover:hover,
+.fg-menu a.ui-state-hover:active,
+.fg-menu a.ui-state-active:link,
+.fg-menu a.ui-state-active:visited,
+.fg-menu a.ui-state-active:hover,
+.fg-menu a.ui-state-active:active { border-style: solid; font-weight: normal; }
+.fg-menu a span { display:block; cursor:pointer; }
+
+/* SUGGESTED STYLES - for use with jQuery UI Themeroller CSS */	
+.fg-menu-indicator span { float:left; }
+.fg-menu-indicator span.ui-icon { float:right; }
+.fg-menu-content.ui-widget-content, 
+.fg-menu-content ul.ui-widget-content { border:0; }
+
+/* ICONS AND DIVIDERS */
+.fg-menu.fg-menu-has-icons a:link,
+.fg-menu.fg-menu-has-icons a:visited,
+.fg-menu.fg-menu-has-icons a:hover,
+.fg-menu.fg-menu-has-icons a:active { padding-left:20px; }
+.fg-menu .horizontal-divider hr, .fg-menu .horizontal-divider span { padding:0; margin:5px .6em; }
+.fg-menu .horizontal-divider hr { border:0; height:1px; }
+.fg-menu .horizontal-divider span { font-size:.9em; text-transform: uppercase; padding-left:.2em; }
+.fg-menu.col{border-left:1px solid #ddd}
+.fg-menu.firstCol{border:0}
+.fg-menu a span.loading{background:url('images/ui-anim_basic_16x16.gif') no-repeat;float:right;width:16px;height:16px;}
+.fg-menu .menu-open{background:#DDD !important;}
+.fg-menu .menu-scroll{background:#ddd;height:14px;width:100%;text-align:center;position:absolute;left:0;}
+.fg-menu .menu-scroll-up{top:0;border-bottom:1px solid #ccc}
+.fg-menu .menu-scroll-down{bottom:0;border-top:1px solid #ccc}
+.fg-menu .menu-scroll span{float:none;margin:auto;}
+
+.fg-menu2{overflow: auto;}
+.fg-menu2 li a{display: block;font-size:.9em;text-decoration:none}
+.fg-menu2 li a:hover{font-weight:normal}
+
+/*TABS PRINCIPALI*/
+/*
+#mainTabs{background:none;border:0;padding:0;border-top:1px solid #555;
+          border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;}
+#mainTabs > .ui-tabs-nav{background:#fff;border-width:0 0 1px;border-color:#ccc;
+                         border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;padding-top:2px;}
+#mainTabs > .ui-tabs-nav .ui-tabs-active{background:#4297d7}
+#mainTabs > .ui-tabs-nav .ui-tabs-active a{color:#fff}
+*/
+#mainTabs {background:none;border:0;padding:0;border-top:1px solid #555;border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;}
+#mainTabs > .ui-tabs-nav{ border-width:0 0 1px;border-color:#ccc;border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;padding-top:2px;}
+#mainTabs li .ui-icon{float:left;margin:.4em .2em 0 0;cursor:pointer;}
+#mainTabs.ui-tabs .ui-tabs-panel{padding:0;}
+#mainTabs .appPath{display:block;padding:2px 6px 0;font-size:.8em;height:1.3em;margin:0 -0.2em;border-bottom:1px solid #333;}
+#mainTabs .appPath .ui-icon-triangle-1-e{background-position:-32px -18px;display:inline-block;vertical-align:middle;}
+
+
+/*BUTTON BAR*/
+.ita-app{overflow:hidden}
+.ita-buttonbar-wrap{float:right;overflow:hidden;background:#ccc !important;width:13em;}
+.ita-buttonbar-content{height: 100%;}
+.ita-buttonbar{margin:0 0 0 1px;background:#eee;border-left:1px solid #fff;padding:10px 5px;}
+.ita-buttonbar button{}
+.ita-buttonbar br{display:none;}
+.ita-buttonbar-handle{float:right;position:relative;margin-left:2px;padding:1px;width:15px;}
+/* attributi obsoleti */
+/*.ita-workspace{float:left;padding:10px 0;}*/
+/*.ita-workspace.ui-widget-content{border:0;}*/
+
+/*BUTTON BAR DIALOG*/
+.ita-buttonbar-dialog{background:#eee;border-left:1px solid #fff;padding:10px 5px;height:100%;}
+.ita-buttonbar-dialog > br{display:none;}
+
+/*SLIDER FONT*/
+#themes{position:absolute;right:320px;top:5px}
+#themes a{padding:3px 3px 3px 6px;color:#fff;font-size:12px}
+#fontsize_wrapper{position:absolute;top:0;right:130px;width:180px;margin-top:10px;font-size:12px;border-left:1px dotted #333;padding:3px 2px 3px 10px;overflow:hidden}
+#fontsize_slider{margin-left:65px;}
+#fontsize{float:left}
+
+.ita-toolBarButton {width:26px;}
+.ita-noticePad {display:none;width:250px}
+.ita-noticeContent {background-color: #000000;color: white;padding:5px;opacity:0.9;margin: 4px;width:225px;height:100px;}
+.ita-noticeLabel {font-weight: bold; background-color: #000000;color: white;padding:5px;opacity:0.7;margin: 4px;width:225px;height:30px;}
+.ita-noticeContent > a:link {color:#FFFFFF;}
+.ita-noticeContent > a:visited {color:#FFFFFF;}
+.ita-noticeContent > a:hover {color:#FFC907;}
+.ita-noticeContent > a:active {color:#FFFFFF;}
+
+.ita-msgBlock {background-color: #000000;color: white;padding:5px;opacity:0.8;margin: 4px}
+
+.ita-progress-bar {
+    position: relative;
+    padding: 0px;
+}
+
+.ita-progress-label {
+    position: absolute;
+    text-align: center;
+    left:0;
+    top: 4px;
+    margin: 0 auto;
+}
+
+.ita-progress-label-span{
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff;
+    display: inline-block;
+}
+
+.ita-tapering-blue{
+    background-image: linear-gradient(to right, #AACFEF 0%, #FFFFFF 100%);
+}
+.ita-tapering-green{
+    background-image: linear-gradient(to right, #96ED8C 0%, #FFFFFF 100%);
+}
+.ita-tapering-gray{
+    background-image: linear-gradient(to right, #C2C2C2 0%, #FFFFFF 100%);
+}
+
+
+/*
+.ui-icon{width:18px;height:18px;}
+*/
+
+#logout_wrapper{position:absolute;top:0;right:10px;width:80px;margin-top:10px;font-size:12px;border-left:1px dotted #333;padding:3px 2px 3px 10px;overflow:hidden}
+#logout_button{margin-left:65px;}
+#logout{float:left}
+
+
+/*JQGRID PERSONALIZZAZIONI*/
+.ui-jqgrid .ui-jqgrid-htable th div{height:1.2em}
+
+/*FULLCALENDAR CUSTOM*/
+.fc-highlight { background-color: #9bfbff; }
+
+/* WHITE ICONS */
+.ui-icon-white { background-image: url("./images/ui-icons_ffffff_256x240.png") !important; }
+
+.ui-icon-google { background-image: url("./images/Google2-16x16.png") !important; background-position: 0px 1px; }
+
+/* TINYMCE FULLSCREEN FIX */
+.mce-fullscreen .ita-workspace { z-index: auto !important; }
+
+/* ui-color-picker over ui-dialog fix */
+.ui-colorpicker-dialog { z-index: 120; /* > 100 */ }
+
+.ita-expand-div {
+    overflow: auto;
+    min-height: 10px;
+}
+
+.ita-ui-simple-tooltip {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    color: #444;
+    border-radius: 3px;
+    font-size: .8em;
+    font-weight: normal;
+    box-shadow: none;
+    opacity: 1;
+}
+
+.ui-menu-itacontainer, .ui-menu-itacontainer li > ul {
+    box-shadow: 2px 2px 10px #888;
+}
+
+ul.ui-menu ul.ui-menu {
+    z-index: 1;
+}
+
+/**
+ * Override per visualizzatore di log / Prism.css
+ */
+#ita-desktop pre[class*="language-"]::before, #ita-desktop pre[class*="language-"]::after { box-shadow: none; }
+
+/**
+ * Stili per nuove icone
+ */
+html body .ui-icon::after { font-size: .75em; }
+.ita-button-element.ita-button-icon-left::after { margin-top: -.45em; }
+.s-ico { position: relative; top: 2px; }
+.ui-pg-table.navtable .ui-icon { font-size: 16px; }
+
+.ui-jqgrid .ui-pg-table { height: 32px; }
+
+.ui-jqgrid .ui-pg-table td,
+.ui-jqgrid .ui-jqgrid-pager .ui-pg-div { padding: 0; }
+
+.ui-menu-itacontainer .ui-menu-item .ui-menu-icon { position: relative; top: -1px; }
+
+.ui-datepicker-trigger { padding: 0; }
+.ita-plupload-browser, .ui-datepicker-trigger { margin-top: -2px; }
+
+.ui-colorpicker-dialog { padding: 10px 10px 0; }
+.ui-colorpicker-dialog tr { text-align: center; }
+
+.ui-colorpicker .ui-colorpicker-swatches {
+    height: auto;
+    width: auto !important;
+    max-width: 184px;
+}
+
+.ui-colorpicker .ui-colorpicker-swatches .ui-colorpicker-swatch {
+    width: 22px;
+    height: 22px;
+}
+
+.ui-layout-toggler-east-open,
+.ui-layout-toggler-west-open,
+.ui-layout-toggler-north-open,
+.ui-layout-toggler-south-open,
+.ui-layout-toggler-east-closed,
+.ui-layout-toggler-west-closed,
+.ui-layout-toggler-north-closed,
+.ui-layout-toggler-south-closed {
+    background-size: 80% 100% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.ui-layout-toggler-east-open,
+.ui-layout-toggler-west-closed { background-image: url('./images/resizerArrowR.png') !important; }
+.ui-layout-toggler-east-closed,
+.ui-layout-toggler-west-open { background-image: url('./images/resizerArrowL.png') !important; }
+.ui-layout-toggler-north-open,
+.ui-layout-toggler-south-closed { background-image: url('./images/resizerArrowT.png') !important; }
+.ui-layout-toggler-north-closed,
+.ui-layout-toggler-south-open { background-image: url('./images/resizerArrowB.png') !important; }
+
+label.input.hidden { display: none; }
+
+.ui-icon.ita-fullscreen-toggle {
+    position: absolute !important;
+    left: 6px;
+    top: 6px;
+    cursor: pointer;
+    font-size: 20px !important;
+    opacity: .3;
+    padding: 2px !important;
+    background-color: white !important;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    z-index: 9999;
+}
+
+.ita-fullscreen-toggle:hover { opacity: 1; }
+
+.ita-fullscreen-container {
+    position: relative !important;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.ita-fullscreen-active {
+    top: 0; right: 0; bottom: 0; left: 0;
+    margin: 0 !important;
+    position: absolute !important;
+    z-index: 9998;
+}
+
+
+.ita-hide-borders,
+.ita-jqgrid-hide-borders tr, .ita-jqgrid-hide-borders td { border: 0 !important; }
+
+.ui-resizable-helper { border: 3px dotted blue; }
+
+input[type="checkbox"] + .ita-input-tooltip-icon,
+input[type="radio"] + .ita-input-tooltip-icon { margin-top: 7px !important; }
+.ita-input-tooltip-icon { color: rgb(46, 110, 158); font-size: 17px !important; float: right; height: 1px !important; margin-left: 2px !important; margin-top: 9px !important; overflow: visible !important;  }
+.ita-input-tooltip { border-top: 0; border-left: 0; border-right: 0; border-bottom-width: 3px !important; border-radius: 3px; text-transform: none; box-shadow: none; font-weight: normal; opacity: 1; padding: 8px 16px; }
+.ita-input-tooltip > .arrow::after { opacity: 1; border-top: 0; border-left: 0; border-right-width: 3px; border-bottom-width: 3px; }
+
+.ita-edit-lookup-trigger > .ui-icon { height: 1px; overflow: visible; top: -1px; }

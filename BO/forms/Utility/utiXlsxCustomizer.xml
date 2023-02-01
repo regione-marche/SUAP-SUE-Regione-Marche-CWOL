@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="utiXlsxCustomizer" el_tipo="1" el_colonne="0" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[#utiXlsxCustomizer]]></action>
+               <class><![CDATA[ita-app ita-dialog ita-layout-diag {title:"Configurazione export Excel",width:900,height:600,modal:true,position:'center',modelBackend:'utiXlsxCustomizer'}]]></class>
+          </properties>
+          <engineElement el_nome="workSpace" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+                    <title><![CDATA[Configurazione export Excel]]></title>
+               </properties>
+               <engineElement el_nome="divWrapper" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[height: 100%; width: 100%; position: relative;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="divHeader" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[position: absolute; top: 0px; right: 0px; left: 0px; height: 25px;]]></style>
+                         </properties>
+                         <engineElement el_nome="NAMEFORM" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-readonly" tipo_tag="text">
+                              <label class="sx input" style="width:120px"><![CDATA[Pagina di origine]]></label>
+                              <properties>
+                                   <style><![CDATA[width: 150px;]]></style>
+                              </properties>
+                              <tipoProperties>
+                                   <readonly><![CDATA[readonly]]></readonly>
+                                   <class><![CDATA[ita-readonly ita-edit]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                         <engineElement el_nome="MODEL" el_tipo="85" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-readonly" tipo_tag="text">
+                              <label class="sx input" style="width:180px"><![CDATA[Modello]]></label>
+                              <properties>
+                                   <style><![CDATA[width: 350px;]]></style>
+                              </properties>
+                              <tipoProperties>
+                                   <readonly><![CDATA[readonly]]></readonly>
+                                   <class><![CDATA[ita-readonly ita-edit]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                    </engineElement>
+                    <engineElement el_nome="divGrid" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[position: absolute; top: 25px; left: 0px; right: 0px; bottom: 35px;]]></style>
+                         </properties>
+                         <engineElement el_nome="gridMetadati" el_tipo="91" el_colonne="200" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-jqGrid" tipo_tag="table">
+                              <properties>
+                                   <class><![CDATA[ita-jqGrid {readerId:'KEY', caption: "Configurazione esportazione Excel", shrinkToFit: true, rowNum: 10000, rowList: [], navGrid: true, navButtonDel: true, navButtonAdd: true, navButtonEdit: false, navButtonExcel: false, navButtonPrint: false, filterToolbar: false, navButtonRefresh: false, resizeToParent: true, pgbuttons: false, pginput: false, sortablerows:true}]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-jqGrid]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="thKEY" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              </engineElement>
+                              <engineElement el_nome="thFIELD" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Campo origine]]></label>
+                              </engineElement>
+                              <engineElement el_nome="thDESCRIZIONE" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Descrizione]]></label>
+                              </engineElement>
+                              <engineElement el_nome="thWIDTH" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Larghezza]]></label>
+                              </engineElement>
+                              <engineElement el_nome="thFORMAT" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Formato]]></label>
+                              </engineElement>
+                              <engineElement el_nome="thHEADERSTYLE" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Stile<br>Titolo]]></label>
+                              </engineElement>
+                              <engineElement el_nome="thCOLUMNSTYLE" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Stile<br>Colonna]]></label>
+                              </engineElement>
+                              <engineElement el_nome="thCOLUMNORDER" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Ord.]]></label>
+                              </engineElement>
+                              <engineElement el_nome="KEY" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <class><![CDATA[{hidden: true, sortable: false}]]></class>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="FIELD" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <class><![CDATA[{fixed: true, sortable: false}]]></class>
+                                        <width><![CDATA[120]]></width>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="DESCRIZIONE" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <class><![CDATA[{sortable: false}]]></class>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="WIDTH" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <class><![CDATA[{fixed: true, sortable: false}]]></class>
+                                        <width><![CDATA[50]]></width>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="FORMAT" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <class><![CDATA[{fixed: true, sortable: false}]]></class>
+                                        <width><![CDATA[90]]></width>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="HEADERSTYLE" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <class><![CDATA[{fixed: true, itaSelectable: true, sortable: false, align: 'center'}]]></class>
+                                        <width><![CDATA[40]]></width>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="COLUMNSTYLE" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <class><![CDATA[{fixed: true, itaSelectable: true, sortable: false, align: 'center'}]]></class>
+                                        <width><![CDATA[40]]></width>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="COLUMNORDER" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <class><![CDATA[{fixed: true, itaSelectable: true, sortable: false, align: 'center'}]]></class>
+                                        <width><![CDATA[40]]></width>
+                                   </properties>
+                              </engineElement>
+                         </engineElement>
+                    </engineElement>
+                    <engineElement el_nome="divFooter" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[position: absolute; right: 0px; bottom: 0px; height: 25px; text-align: right;]]></style>
+                         </properties>
+                         <engineElement el_nome="LOAD" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                              <label class="sx ui-widget input"><![CDATA[Carica]]></label>
+                              <properties>
+                                   <value><![CDATA[Carica]]></value>
+                                   <class><![CDATA[{iconLeft:'ui-icon ui-icon-upload'}]]></class>
+                                   <width><![CDATA[100px]]></width>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-button ita-element-animate]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                         <engineElement el_nome="DELETE" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                              <label class="sx ui-widget input"><![CDATA[Elimina]]></label>
+                              <properties>
+                                   <value><![CDATA[Elimina]]></value>
+                                   <class><![CDATA[{iconLeft:'ui-icon ui-icon-closethick'}]]></class>
+                                   <width><![CDATA[100px]]></width>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-button ita-element-animate]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                         <engineElement el_nome="SAVE" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                              <label class="sx ui-widget input"><![CDATA[Salva]]></label>
+                              <properties>
+                                   <value><![CDATA[Salva]]></value>
+                                   <class><![CDATA[{iconLeft:'ui-icon ui-icon-download'}]]></class>
+                                   <width><![CDATA[100px]]></width>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-button ita-element-animate]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                         <engineElement el_nome="PRINT" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                              <label class="sx ui-widget input"><![CDATA[Stampa]]></label>
+                              <properties>
+                                   <value><![CDATA[Estrai]]></value>
+                                   <class><![CDATA[{iconLeft:'ui-icon ui-icon-file-report'}]]></class>
+                                   <width><![CDATA[100px]]></width>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-button ita-element-animate]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                    </engineElement>
+                    <engineElement el_nome="divFooter2" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[position: absolute; left: 0px; bottom: 0px; height: 25px; text-align: left;]]></style>
+                         </properties>
+                         <engineElement el_nome="ADDALL" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                              <label class="sx ui-widget input"><![CDATA[Inserisci tutti]]></label>
+                              <properties>
+                                   <value><![CDATA[Inserisci tutti]]></value>
+                                   <class><![CDATA[{iconLeft:'ui-icon ui-icon-radio-on'}]]></class>
+                                   <width><![CDATA[100px]]></width>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-button ita-element-animate]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                         <engineElement el_nome="REMOVEALL" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                              <label class="sx ui-widget input"><![CDATA[Rimuovi tutti]]></label>
+                              <properties>
+                                   <value><![CDATA[Rimuovi tutti]]></value>
+                                   <class><![CDATA[{iconLeft:'ui-icon ui-icon-radio-off'}]]></class>
+                                   <width><![CDATA[100px]]></width>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-button ita-element-animate]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+               <engineElement el_nome="divHidden" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[display: none;]]></style>
+                    </properties>
+                    <engineElement el_nome="PROGINT" el_tipo="54" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="invisible" tipo_tag="text">
+                         <tipoProperties>
+                              <style><![CDATA[visibility: hidden;]]></style>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[26/06/2018]]></date>
+          <time><![CDATA[16:49:49]]></time>
+          <user><![CDATA[italsoft]]></user>
+          <modelSHA><![CDATA[5a8fcb2395d3d366fa4da19f1819e466766aeb88]]></modelSHA>
+     </info></itaEngine>

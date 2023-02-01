@@ -1,0 +1,39 @@
+POST /Info-ws/services/dettaglioAutoveicoloBase/ HTTP/1.0
+Host: www.ilportaledellautomobilista.it:443
+User-Agent: NuSOAP/0.9.5 (1.123)
+Content-Type: text/xml; charset=UTF-8
+SOAPAction: ""
+Content-Length: 1281
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns4903="Array">
+    <SOAP-ENV:Header>
+        <wsse:Security
+            xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+            SOAP-ENV:mustUnderstand="1">
+            <wsse:UsernameToken
+                xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+                wsu:Id="XWSSGID-1253605895203984534550">
+                <wsse:Username>OFBGAB1001</wsse:Username>
+                <wsse:Password
+                    Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">
+                    ****
+                </wsse:Password>
+            </wsse:UsernameToken>
+        </wsse:Security>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+        <inf:dettaglioAutoveicoloBaseRequest>
+            <inf:login>
+                <inf:codicePin></inf:codicePin>
+            </inf:login>
+            <inf:dettaglioAutoveicoloBaseInput>
+                <inf:targa>
+                    <inf:numeroTarga>NU1K0247</inf:numeroTarga>
+                </inf:targa>
+            </inf:dettaglioAutoveicoloBaseInput>
+            <inf:pdf>false</inf:pdf>
+        </inf:dettaglioAutoveicoloBaseRequest>
+
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

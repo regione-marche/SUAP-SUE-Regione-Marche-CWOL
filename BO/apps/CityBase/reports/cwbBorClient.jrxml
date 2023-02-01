@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cwbBtaRgruna" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ad6788f5-7388-4dc5-b686-838d690a0f38">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.jasperserver.reportUnit" value="/italsoft/reports/apps/CityBase/cwbBtaClient"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver/services/repository"/>
+	<parameter name="Sql" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[$P!{Sql}]]>
+	</queryString>
+	<field name="DESENTE" class="java.lang.String"/>
+	<field name="INDIRENTE" class="java.lang.String"/>
+	<field name="CAP" class="java.lang.String"/>
+	<field name="DESLOCAL" class="java.lang.String"/>
+	<field name="PROVINCIA" class="java.lang.String"/>
+	<field name="CODFISCALE" class="java.lang.String"/>
+	<field name="PARTIVA" class="java.lang.String"/>
+	<field name="PROGCLIENT" class="java.lang.String"/>
+	<field name="DATAINIZ" class="java.lang.String"/>
+	<field name="DATAFINE" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="23942477-49dc-447d-9727-f36264c695ec" x="2" y="20" width="553" height="33"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Clienti]]></text>
+			</staticText>
+			<textField pattern="HH.mm.ss">
+				<reportElement uuid="4a668790-a2c1-4251-a28b-58f256493510" x="71" y="0" width="69" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="2fa6082e-ca1a-40ae-9852-469da8619056" x="2" y="0" width="69" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="92704435-78aa-4f1e-a672-aed2df702ce9" x="2" y="2" width="65" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descrizione]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0ce9a458-7024-4670-90d4-4dba36ccc7b8" x="67" y="2" width="80" height="30"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Indirizzo / Cod.Fiscale]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a4cb64bb-4c22-40ae-a9e4-c2c7675f00ec" x="353" y="2" width="40" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CAP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ebfb0a68-e195-44db-aba9-1cb44104d8d4" x="226" y="2" width="77" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Località]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ad829775-ed1c-4003-824e-2b413e858953" x="303" y="2" width="50" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Provincia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="91bbbdb4-748e-4a8b-be75-9909da34b448" x="147" y="2" width="79" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[P.IVA]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="53f554ad-e133-4442-8bb0-a9fbfda6cba3" x="-4" y="35" width="555" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="343ce89f-7976-40d5-a49f-c77b1624ec4a" x="393" y="2" width="63" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data inizio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9348507c-d7e5-4567-93f3-1986352eec6e" x="456" y="2" width="54" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data fine]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ff1ebd80-cf6d-4c1a-81c6-39b95b6a25fa" x="510" y="2" width="45" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="53" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="6b05814d-8959-4f7f-b167-265b54f9b84c" x="3" y="5" width="67" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{DESENTE}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="baa8e455-45f5-4f1c-85ba-886ae9efd6c0" x="70" y="5" width="79" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{INDIRENTE}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="f06f3dbb-66f6-414e-8e69-02453922c3d2" x="355" y="5" width="40" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CAP}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="6f87e2fb-697e-470e-86df-1d16e9a9dc88" x="226" y="5" width="79" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{DESLOCAL}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="c5e74d00-ee4c-4413-81e7-df24a12d1aff" x="305" y="5" width="50" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{PROVINCIA}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="2c70b410-a269-40b2-90ca-61894788b87c" x="70" y="32" width="79" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CODFISCALE}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="d4ddedc9-bc7d-49b0-ad03-3cba5171c750" x="149" y="5" width="77" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{PARTIVA}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="ffdd2bc4-3537-480b-a1d7-ba98422df4f4" x="393" y="5" width="63" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{DATAINIZ}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="11d132fb-0b74-4342-a201-af2ec9fadff7" x="456" y="5" width="54" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{DATAFINE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c649efd0-4ffd-4baf-91a7-de88355b8c32" x="510" y="5" width="45" height="20"/>
+				<textElement textAlignment="Center">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PROGCLIENT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement uuid="67b2d3bc-87ed-4cdf-a68a-43b03870e6a9" x="435" y="13" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" di"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="4010cdd7-513c-4295-9846-199b409f2fc8" x="515" y="13" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cwbBtaRgruna" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ad6788f5-7388-4dc5-b686-838d690a0f38">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.jasperserver.reportUnit" value="/italsoft/reports/apps/CityBase/cwbBtaLocal"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver/services/repository"/>
+	<parameter name="Sql" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[$P!{Sql} ]]>
+	</queryString>
+	<field name="CODNAZPRO" class="java.lang.String"/>
+	<field name="CODLOCAL" class="java.lang.String"/>
+	<field name="DESLOCAL" class="java.lang.String"/>
+	<field name="PROVINCIA" class="java.lang.String"/>
+	<field name="CAP" class="java.lang.String"/>
+	<field name="CODBELFI" class="java.lang.String"/>
+	<field name="DESTRIBU" class="java.lang.String"/>
+	<field name="TERREST" class="java.lang.String"/>
+	<field name="CODCATASTO" class="java.lang.String"/>
+	<sortField name="CODNAZPRO"/>
+	<sortField name="CODLOCAL"/>
+	<sortField name="DESLOCAL"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="31a62466-584f-4961-9b15-31cd1d1a35cb" x="11" y="6" width="544" height="31"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Località]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="18878d38-6423-4e63-a524-a49848366f4b" x="1" y="11" width="65" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH.mm.ss">
+				<reportElement uuid="9135d31d-2b7c-4004-abe6-47b06b0b185a" x="66" y="11" width="68" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="dfc1354d-3518-4b5d-bed7-ccb72a4ef836" x="-1" y="0" width="70" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Codice ISTAT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="278208a5-25df-4d54-8296-2d8b6f7af6bf" x="69" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Località]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6c087bc1-5bfc-4c18-b83c-95fbc2178c7e" x="169" y="0" width="55" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Provincia]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="2ad1e535-658b-47e7-a7e0-c40852ec8d91" x="11" y="20" width="529" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="1832696b-1587-498d-88f2-b5d07a2aac48" x="224" y="1" width="39" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CAP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b8a04787-25d9-4af4-89dc-f69500894954" x="263" y="0" width="63" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cod.Belfiore]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c7733d7d-8301-4737-8b96-6a4fe6774c8f" x="326" y="1" width="78" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Des.Tribunale]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8fb006ce-9c4a-4b1b-a52c-6d890701591f" x="404" y="1" width="74" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cod.Ter.Estero]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="456e69d0-ad59-42a1-b42a-689a85c4a6de" x="478" y="1" width="77" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cod.Catasto]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="e6cb7eb7-2b3f-467e-9f20-1476b28d5db9" x="69" y="5" width="100" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{DESLOCAL}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="7728cf54-eba1-4663-8237-a4dc53809599" x="169" y="5" width="55" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{PROVINCIA}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="711f3831-701f-443f-a93e-dae08f48e9bd" x="224" y="5" width="39" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CAP}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="08401188-2e7f-4f18-9d38-fc17c80da9c0" x="263" y="5" width="63" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CODBELFI}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="40a3a949-8d3a-4cde-adcc-ced19ff04a30" x="326" y="5" width="78" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{DESTRIBU}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fa6c13cc-b310-4312-8f61-23e393adbd0c" x="404" y="5" width="74" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{TERREST}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="43818188-e25a-4a13-8b81-fa7016f0f988" x="478" y="5" width="77" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CODCATASTO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="092df143-1872-4285-b785-682430d07e6f" x="1" y="5" width="34" height="20"/>
+				<textElement textAlignment="Center">
+					<font isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CODNAZPRO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="db445022-f911-40ad-87f8-cb4861f3bb7d" x="35" y="5" width="34" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CODLOCAL}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="21" splitType="Stretch">
+			<textField evaluationTime="Report">
+				<reportElement uuid="e3604ffe-b76e-498d-b61d-9651465ddb7e" x="515" y="0" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="675900ed-7502-4916-9bfd-dc710fb10729" x="435" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" di"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="envLockConsole" el_tipo="1" el_colonne="" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[#envLockConsole]]></action>
+               <class><![CDATA[ita-app ita-dialog ita-layout-diag {title:"Console Lock",width:900,height:500,modal:true,position:'center',modelBackend:'envLockConsole'}]]></class>
+          </properties>
+          <engineElement el_nome="workSpace" el_tipo="7" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+                    <title><![CDATA[Console Lock]]></title>
+               </properties>
+               <engineElement el_nome="divMainTabs" el_tipo="75" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="1" tipo_nome="ita-tab" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[height: 100%;]]></style>
+                         <class><![CDATA[ita-div-flex { flexSelector: '.ita-tabpane', flexColumn: true, eventActivate: true }]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-tab]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="tabSysLock" el_tipo="76" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="ita-tabpane" tipo_tag="div">
+                         <properties>
+                              <title><![CDATA[System]]></title>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-tabpane]]></class>
+                         </tipoProperties>
+                         <engineElement el_nome="divContainerSysLock" el_tipo="7" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="div">
+                              <properties>
+                                   <style><![CDATA[padding: 1rem; box-sizing: border-box; height: 100%; overflow: hidden;]]></style>
+                              </properties>
+                              <engineElement el_nome="gridSysLock" el_tipo="91" el_colonne="8" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="ita-jqGrid" tipo_tag="table">
+                                   <properties>
+                                        <class><![CDATA[ita-jqGrid {readerId:'ROWID',caption: "System Lock", shrinkToFit:true, width:1000, sortname:'LOCKTIME', navGrid:true, navButtonDel:true, navButtonAdd:false, navButtonEdit:false, navButtonExcel:false, navButtonPrint:false, filterToolbar:true, navButtonRefresh:true, resizeToParent:true, showInlineButtons: { view: false, edit: false, delete: false}, showAuditColumns: false, rowNum:9999, reloadOnResize: false, rowList:['Tutte']}]]></class>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-jqGrid]]></class>
+                                   </tipoProperties>
+                                   <engineElement el_nome="thROWID" el_tipo="55" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Id]]></label>
+                                   </engineElement>
+                                   <engineElement el_nome="thLOCKRECID" el_tipo="55" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Id Record]]></label>
+                                   </engineElement>
+                                   <engineElement el_nome="thLOCKTOKEN" el_tipo="55" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Token]]></label>
+                                   </engineElement>
+                                   <engineElement el_nome="thLOCKTIME" el_tipo="55" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Data/ora inizio]]></label>
+                                   </engineElement>
+                                   <engineElement el_nome="thLOCKEXP" el_tipo="55" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Data/ora scadenza]]></label>
+                                   </engineElement>
+                                   <engineElement el_nome="ROWID" el_tipo="56" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <class><![CDATA[{align:'center', fixed:true};]]></class>
+                                             <width><![CDATA[40px;]]></width>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_nome="LOCKRECID" el_tipo="56" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="td">
+                                   </engineElement>
+                                   <engineElement el_nome="LOCKTOKEN" el_tipo="56" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="td">
+                                   </engineElement>
+                                   <engineElement el_nome="LOCKTIME" el_tipo="56" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <class><![CDATA[{align:'center', fixed:true, search:false}]]></class>
+                                             <width><![CDATA[140px]]></width>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_nome="LOCKEXP" el_tipo="56" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <class><![CDATA[{align:'center', fixed:true, search:false};]]></class>
+                                             <width><![CDATA[140px]]></width>
+                                        </properties>
+                                   </engineElement>
+                              </engineElement>
+                         </engineElement>
+                    </engineElement>
+                    <engineElement el_nome="tabCWLock" el_tipo="76" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="ita-tabpane" tipo_tag="div">
+                         <properties>
+                              <title><![CDATA[Cityware]]></title>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-tabpane]]></class>
+                         </tipoProperties>
+                         <engineElement el_nome="divContainerCWLock" el_tipo="7" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="div">
+                              <properties>
+                                   <style><![CDATA[padding: 1rem; box-sizing: border-box; height: 100%; overflow: hidden;]]></style>
+                              </properties>
+                              <engineElement el_nome="gridCWLock" el_tipo="91" el_colonne="8" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="ita-jqGrid" tipo_tag="table">
+                                   <properties>
+                                        <class><![CDATA[ita-jqGrid {readerId:'ID_LOCK',caption: "Lock Cityware", shrinkToFit:true, width:1000, sortname:'DATAORAINI', navGrid:true, navButtonDel:true, navButtonAdd:false, navButtonEdit:false, navButtonExcel:false, navButtonPrint:false, filterToolbar:true, navButtonRefresh:true, resizeToParent:true, showInlineButtons: { view: false, edit: false, delete: false}, showAuditColumns: false, rowNum:9999, rowList:['Tutte'], reloadOnResize: false}]]></class>
+                                   </properties>
+                                   <tipoProperties>
+                                        <class><![CDATA[ita-jqGrid]]></class>
+                                   </tipoProperties>
+                                   <engineElement el_nome="thID_LOCK" el_tipo="55" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Id]]></label>
+                                   </engineElement>
+                                   <engineElement el_nome="thID_RECORD" el_tipo="55" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Id Record]]></label>
+                                   </engineElement>
+                                   <engineElement el_nome="thCLASSE" el_tipo="55" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Classe]]></label>
+                                   </engineElement>
+                                   <engineElement el_nome="thUTENTE" el_tipo="55" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Utente]]></label>
+                                   </engineElement>
+                                   <engineElement el_nome="thCONN_ID" el_tipo="55" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Id Connessione]]></label>
+                                   </engineElement>
+                                   <engineElement el_nome="thDATAORAINI" el_tipo="55" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Data/ora inizio]]></label>
+                                   </engineElement>
+                                   <engineElement el_nome="thDURATA" el_tipo="55" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="th">
+                                        <label class="sx ui-widget input"><![CDATA[Durata]]></label>
+                                   </engineElement>
+                                   <engineElement el_nome="ID_LOCK" el_tipo="56" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <class><![CDATA[{align:'center', fixed:true};]]></class>
+                                             <width><![CDATA[40px;]]></width>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_nome="ID_RECORD" el_tipo="56" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="td">
+                                   </engineElement>
+                                   <engineElement el_nome="CLASSE" el_tipo="56" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="td">
+                                   </engineElement>
+                                   <engineElement el_nome="UTENTE" el_tipo="56" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="td">
+                                   </engineElement>
+                                   <engineElement el_nome="CONN_ID" el_tipo="56" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="td">
+                                   </engineElement>
+                                   <engineElement el_nome="DATAORAINI" el_tipo="56" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <class><![CDATA[{align:'center', search:false, fixed:true};]]></class>
+                                             <width><![CDATA[140px;]]></width>
+                                        </properties>
+                                   </engineElement>
+                                   <engineElement el_nome="DURATA" el_tipo="56" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="td">
+                                        <properties>
+                                             <class><![CDATA[{align:'right', fixed: true, search:false};]]></class>
+                                             <width><![CDATA[50px]]></width>
+                                        </properties>
+                                   </engineElement>
+                              </engineElement>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+          <engineElement el_nome="buttonBar" el_tipo="7" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <style><![CDATA[width:200px;]]></style>
+                    <class><![CDATA[ita-layout-east ita-buttonbar ita-buttonbar-medium-center ita-buttonbar-medium-center]]></class>
+               </properties>
+               <engineElement el_nome="Cancella" el_tipo="62" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="1" tipo_nome="ita-button" tipo_tag="button">
+                    <label class="sx input" style="width:120px"><![CDATA[Cancella]]></label>
+                    <properties>
+                         <value><![CDATA[Cancella]]></value>
+                         <class><![CDATA[ita-button-delete {iconLeft:'ui-icon ui-icon-trash'}]]></class>
+                         <style><![CDATA[width:140px;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-button ita-element-animate]]></class>
+                    </tipoProperties>
+               </engineElement>
+          </engineElement>
+          <engineElement el_nome="divAppoggio" el_tipo="7" el_colonne="" disp_colspan="" disp_rowspan="" disp_acapo="" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-hidden]]></class>
+               </properties>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[25/10/2019]]></date>
+          <time><![CDATA[11:41:44]]></time>
+          <user><![CDATA[italsoft]]></user>
+          <modelSHA><![CDATA[85a7ef6dc1de5f059212598d113da50e4867fe4a]]></modelSHA>
+     </info></itaEngine>

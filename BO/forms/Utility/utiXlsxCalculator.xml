@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="utiXlsxCalculator" el_tipo="1" el_colonne="0" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[#utiXlsxCalculator]]></action>
+               <class><![CDATA[ita-app ita-dialog ita-layout-diag {title:"Configurazione campo custom Excel",width:900,height:600,modal:true,position:'center',modelBackend:'utiXlsxCalculator'}]]></class>
+          </properties>
+          <engineElement el_nome="workSpace" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+                    <title><![CDATA[Configurazione campo custom Excel]]></title>
+               </properties>
+               <engineElement el_nome="divWrapper" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <properties>
+                         <style><![CDATA[height: 100%; width: 100%; position: relative;]]></style>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="divGrid" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[position: absolute; top: 0px; left: 0px; right: 0px; bottom: 30px;]]></style>
+                         </properties>
+                         <engineElement el_nome="gridMetadati" el_tipo="91" el_colonne="200" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-jqGrid" tipo_tag="table">
+                              <properties>
+                                   <class><![CDATA[ita-jqGrid {readerId:'KEY', caption: "Configurazione campo custom Excel", shrinkToFit: true, rowNum: 10000, rowList: [], navGrid: true, navButtonDel: true, navButtonAdd: true, navButtonEdit: false, navButtonExcel: false, navButtonPrint: false, filterToolbar: false, navButtonRefresh: false, resizeToParent: true, pgbuttons: false, pginput: false}]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-jqGrid]]></class>
+                              </tipoProperties>
+                              <engineElement el_nome="thKEY" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                              </engineElement>
+                              <engineElement el_nome="thTYPE" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Tipo]]></label>
+                              </engineElement>
+                              <engineElement el_nome="thVALUE" el_tipo="57" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="vuoto" tipo_tag="th">
+                                   <label class="sx ui-widget input"><![CDATA[Valore]]></label>
+                              </engineElement>
+                              <engineElement el_nome="KEY" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <class><![CDATA[{hidden: true, sortable: false}]]></class>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="TYPE" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <class><![CDATA[{fixed: true, resizable: false, sortable: false}]]></class>
+                                        <width><![CDATA[120]]></width>
+                                   </properties>
+                              </engineElement>
+                              <engineElement el_nome="VALUE" el_tipo="56" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="td">
+                                   <properties>
+                                        <class><![CDATA[{sortable: false}]]></class>
+                                   </properties>
+                              </engineElement>
+                         </engineElement>
+                    </engineElement>
+                    <engineElement el_nome="divFooter" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+                         <properties>
+                              <style><![CDATA[position: absolute; bottom: 0px; right: 0px; left: 0px; height: 25px; text-align: right;]]></style>
+                         </properties>
+                         <engineElement el_nome="SAVE" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                              <properties>
+                                   <value><![CDATA[Salva]]></value>
+                                   <style><![CDATA[width: 100px;]]></style>
+                                   <class><![CDATA[{iconLeft:'ui-icon ui-icon-download'}]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-button ita-element-animate]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                         <engineElement el_nome="ANNULLA" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                              <properties>
+                                   <value><![CDATA[Annulla]]></value>
+                                   <style><![CDATA[width: 100px;]]></style>
+                                   <class><![CDATA[{iconLeft:'ui-icon ui-icon-closethick'}]]></class>
+                              </properties>
+                              <tipoProperties>
+                                   <class><![CDATA[ita-button ita-element-animate]]></class>
+                              </tipoProperties>
+                         </engineElement>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[23/04/2018]]></date>
+          <time><![CDATA[15:14:17]]></time>
+          <user><![CDATA[italsoft]]></user>
+          <modelSHA><![CDATA[7f12e0f44cf3c69778aacb5402d94e92ba80904f]]></modelSHA>
+     </info></itaEngine>

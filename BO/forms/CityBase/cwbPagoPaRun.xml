@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itaEngine>
+     <engineModel el_nome="cwbPagoPaRun" el_tipo="1" el_colonne="0" tipo_nome="generico" tipo_tag="form">
+          <properties>
+               <action><![CDATA[#cwbPagoPaRun]]></action>
+               <class><![CDATA[ita-app ita-dialog ita-layout-diag {title:"Lancia metodi PagoPa",width:900,height:500,modal:true,position:'center',modelBackend:'cwbPagoPaRun'}]]></class>
+          </properties>
+          <engineElement el_nome="workSpace" el_tipo="7" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="div">
+               <properties>
+                    <class><![CDATA[ita-layout-center ita-workspace]]></class>
+                    <title><![CDATA[Lanciatore metodi PagoPa]]></title>
+               </properties>
+               <engineElement el_nome="divGestione" el_tipo="90" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-data-page" tipo_tag="div">
+                    <properties>
+                         <class><![CDATA[ita-edit-page]]></class>
+                    </properties>
+                    <tipoProperties>
+                         <class><![CDATA[ita-data-page]]></class>
+                    </tipoProperties>
+                    <engineElement el_nome="Inserimento" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                         <label class="sx input" style="width:120px"><![CDATA[Inserimento]]></label>
+                         <properties>
+                              <value><![CDATA[Inserimento]]></value>
+                              <style><![CDATA[width:170px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="span_Inserimento" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-span" tipo_tag="span">
+                         <properties>
+                              <Value><![CDATA[--> Riversamento dati da BWE_PENDEN (scadenze con FLAG_PUBBL>=3) a BGE_AGID_SCADENZE.]]></Value>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-span]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="ElaboraScarti" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                         <label class="sx input" style="width:120px"><![CDATA[ElaboraScarti]]></label>
+                         <properties>
+                              <value><![CDATA[Elabora Scarti]]></value>
+                              <style><![CDATA[width:170px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="span_ElaboraScarti" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-span" tipo_tag="span">
+                         <properties>
+                              <Value><![CDATA[--> Rielabora le scadenze scartate verificando se sono stati cambiati dei dati.]]></Value>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-span]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="Pubblicazione" el_tipo="66" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button-validate" tipo_tag="button">
+                         <label class="sx input" style="width:120px"><![CDATA[Pubblicazione]]></label>
+                         <properties>
+                              <value><![CDATA[Pubblicazione]]></value>
+                              <style><![CDATA[width:170px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button-validate ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="span_Pubblicazione" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-span" tipo_tag="span">
+                         <properties>
+                              <Value><![CDATA[--> Pubblicazione delle scadenze sul nodo di pagamento (invio flusso dati a intermediario)]]></Value>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-span]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PubblicazioneTest" el_tipo="66" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button-validate" tipo_tag="button">
+                         <label class="sx input" style="width:120px"><![CDATA[Pubblicazione TEST!]]></label>
+                         <properties>
+                              <value><![CDATA[Pubblicazione TEST!]]></value>
+                              <style><![CDATA[width:170px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button-validate ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="span_PubblicazioneTest" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-span" tipo_tag="span">
+                         <properties>
+                              <Value><![CDATA[--> TEST Pubblicazione delle scadenze! Viene creata esclusivamente la fornitura senza inviarla (Vengono modificati anche gli archivi AGID).]]></Value>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-span]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="PubblicazioneTestSF" el_tipo="66" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button-validate" tipo_tag="button">
+                         <label class="sx input" style="width:120px"><![CDATA[Pubblicazione TEST (Solo Fornitura)!]]></label>
+                         <properties>
+                              <value><![CDATA[Pubblicazione TEST (Solo Fornitura)!]]></value>
+                              <style><![CDATA[width:170px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button-validate ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="span_PubblicazioneTestSF" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-span" tipo_tag="span">
+                         <properties>
+                              <Value><![CDATA[--> TEST Pubblicazione delle scadenze! Viene creata esclusivamente la fornitura senza inviarla (Non vengono alterati gli archivi AGID).]]></Value>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-span]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="RicevutaAccettazionePubblicazione" el_tipo="66" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button-validate" tipo_tag="button">
+                         <label class="sx input" style="width:120px"><![CDATA[Ricevuta Accettazione Pubblicazione]]></label>
+                         <properties>
+                              <value><![CDATA[Ricevuta Accettazione Pubblicazione]]></value>
+                              <style><![CDATA[width:170px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button-validate ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="span_RicevutaAccettazionePubblicazione" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-span" tipo_tag="span">
+                         <properties>
+                              <Value><![CDATA[--> Gestione della Ricevuta di Accettazione di Pubblicazione fornita dall'intermediario]]></Value>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-span]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="RicevutaPubbl" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                         <label class="sx input" style="width:120px"><![CDATA[Ricevuta Pubblicazione]]></label>
+                         <properties>
+                              <Value><![CDATA[Ricevuta Pubblicazione]]></Value>
+                              <style><![CDATA[width:170px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="span_RicevutaPubblicazione" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-span" tipo_tag="span">
+                         <properties>
+                              <Value><![CDATA[--> Gestione della Ricevuta di Pubblicazione fornita dall'intermediario]]></Value>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-span]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="Arricchimento" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                         <label class="sx input" style="width:120px"><![CDATA[Arricchimento]]></label>
+                         <properties>
+                              <value><![CDATA[Arricchimento]]></value>
+                              <style><![CDATA[width:170px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="span_Arricchimento" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-span" tipo_tag="span">
+                         <properties>
+                              <Value><![CDATA[--> Gestione Fornitura di Pubblicazione Arricchita.]]></Value>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-span]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="Rendicontazione" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                         <label class="sx input" style="width:120px"><![CDATA[Rendicontazione]]></label>
+                         <properties>
+                              <value><![CDATA[Rendicontazione]]></value>
+                              <style><![CDATA[width:170px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="span_Rendicontazione" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-span" tipo_tag="span">
+                         <properties>
+                              <Value><![CDATA[--> Rendicontazione scadenze.]]></Value>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-span]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="Riconciliazione" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                         <label class="sx ui-widget input"><![CDATA[Riconciliazione]]></label>
+                         <properties>
+                              <value><![CDATA[Riconciliazione]]></value>
+                              <style><![CDATA[width:170px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="span_Riconciliazione" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-span" tipo_tag="span">
+                         <properties>
+                              <Value><![CDATA[--> Riconciliazione scadenze.]]></Value>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-span]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="Cancellazione" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                         <properties>
+                              <value><![CDATA[Cancellazione]]></value>
+                              <style><![CDATA[width:170px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="span_Cancellazione" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-span" tipo_tag="span">
+                         <properties>
+                              <Value><![CDATA[--> Cancellazione scadenze.]]></Value>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-span]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="RicevutaAccettazioneCancellazione" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                         <properties>
+                              <value><![CDATA[Ricevuta Accettazione di Cancellazione]]></value>
+                              <style><![CDATA[width:170px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="span_RicevutaAccettazioneCancellazione" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-span" tipo_tag="span">
+                         <properties>
+                              <Value><![CDATA[--> Ricevuta di Accettazione Cancellazione Scadenze.]]></Value>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-span]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="RicevutaCancellazione" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                         <properties>
+                              <value><![CDATA[Ricevuta Cancellazione]]></value>
+                              <style><![CDATA[width:170px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="span_RicevutaCancellazione" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-span" tipo_tag="span">
+                         <properties>
+                              <Value><![CDATA[--> Ricevuta Cancellazione Scadenze.]]></Value>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-span]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="brGenerico" el_tipo="72" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="generico" tipo_tag="br">
+                    </engineElement>
+                    <engineElement el_nome="PubblicazioneDiretta" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                         <label class="sx input" style="width:120px"><![CDATA[PubblicazioneDiretta]]></label>
+                         <properties>
+                              <value><![CDATA[Pubblicazione Diretta]]></value>
+                              <style><![CDATA[width:170px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="span_PubblicazioneDiretta" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-span" tipo_tag="span">
+                         <properties>
+                              <Value><![CDATA[--> Pubblicazione diretta per intermediario NEXT STEP SOLUTION]]></Value>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-span]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="RiceviRuoloIUV" el_tipo="62" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="0" tipo_nome="ita-button" tipo_tag="button">
+                         <label class="sx input" style="width:120px"><![CDATA[RiceviRuoloIUV]]></label>
+                         <properties>
+                              <value><![CDATA[Ricevi ruolo IUV]]></value>
+                              <style><![CDATA[width:170px;]]></style>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-button ita-element-animate]]></class>
+                         </tipoProperties>
+                    </engineElement>
+                    <engineElement el_nome="span_RiceviRuoloIUV" el_tipo="92" el_colonne="0" disp_colspan="0" disp_rowspan="0" disp_acapo="1" tipo_nome="ita-span" tipo_tag="span">
+                         <properties>
+                              <Value><![CDATA[--> Ricevi ruolo IUV per intermediario NEXT STEP SOLUTION]]></Value>
+                         </properties>
+                         <tipoProperties>
+                              <class><![CDATA[ita-span]]></class>
+                         </tipoProperties>
+                    </engineElement>
+               </engineElement>
+          </engineElement>
+     </engineModel>
+     <info>
+          <date><![CDATA[12/09/2017]]></date>
+          <time><![CDATA[16:22:32]]></time>
+          <user><![CDATA[italsoft]]></user>
+          <modelSHA><![CDATA[0f70f4c2b07eafb7b14eafa8203ddd27dc7f5e67]]></modelSHA>
+     </info></itaEngine>
