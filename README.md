@@ -2,7 +2,7 @@
 
 ## Descrizione
 
-SUAP CWOL Ë un portale di presentazione istanze online per le attivit‡ produttive.
+SUAP CWOL √® un portale di presentazione istanze online per le attivit√† produttive e di gestione delle procedure di backoffice.
 
 ## Per iniziare
 
